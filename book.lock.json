@@ -2215,12 +2215,21 @@
  },
  "updated": "2026-10-16",
  "zenodo": {
-  "draft": {
-   "doi": "10.5281/zenodo.23419248",
-   "html": "https://zenodo.org/deposit/23419248",
-   "id": 23419248,
-   "reserved_on": "2026-10-16",
-   "version": "1.0.0"
-  }
+  "concept_doi": "10.5281/zenodo.23419247",
+  "doi": "10.5281/zenodo.23419248",
+  "html": "https://zenodo.org/records/23419248",
+  "latest_id": 23419248,
+  "tag": "v1.0.0",
+  "version": "1.0.0",
+  "versions": [
+   {
+    "doi": "10.5281/zenodo.23419248",
+    "html": "https://zenodo.org/records/23419248",
+    "id": 23419248,
+    "published_on": "2026-10-16",
+    "tag": "v1.0.0",
+    "version": "1.0.0"
+   }
+  ]
  }
 }
