@@ -1,0 +1,20 @@
+import json, numpy as np, matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
+plt.rcParams.update({"font.family":"serif","font.size":9,"axes.spines.top":False,"axes.spines.right":False,"savefig.bbox":"tight","savefig.dpi":220})
+o=json.load(open('flt_eis.json')); fr=json.load(open('frey_like.json')); C=['#1F3B63','#9C3D1F','#4E8F5A','#B08A2E']
+ps=[2,3,5,7,11,13]; cp=lambda p:1-(p*p-2)/((p*p-1)*(p-1))
+fig,ax=plt.subplots(1,2,figsize=(6.6,2.7))
+pp=np.arange(2,14); ax[0].plot(ps,[cp(p) for p in ps],'-',color='0.6',lw=1,label=r'$c_p$, image $\mathrm{GL}_2(\mathbb{F}_p)$')
+ax[0].plot(ps,[o['share'][f'37a1_{p}'][0] for p in ps],'o',color=C[0],ms=4,label='37a1')
+ax[0].plot(ps,[o['share'][f'11a1_{p}'][0] for p in ps],'s',mfc='none',color=C[1],ms=6,label='11a1')
+ax[0].plot(ps,[fr[str(p)] for p in ps],'^',color=C[2],ms=4,label=r'Frey type, $3+5^3=2^7$')
+ax[0].set_xlabel('$p$'); ax[0].set_ylabel('Eisenstein Thorin shape'); ax[0].set_xticks(ps); ax[0].legend(frameon=False,fontsize=6.5)
+ax[0].set_title('shape $c(E,p)$: zero means Eisenstein mod $p$',fontsize=8)
+lam=np.array(o['lam'])
+for (k,c,lab,p) in [('37a1_5',C[0],r'37a1 mod 5',5),('37a1_7',C[3],r'37a1 mod 7',7),('11a1_5',C[1],r'11a1 mod 5',5)]:
+    shape=0 if k=='11a1_5' else cp(p)
+    ax[1].plot(lam,(1+lam)**(-shape),'-',color=c,lw=1.3,label=lab+rf', $(1+\lambda)^{{-{shape:.3f}}}$' if shape else lab+', shape 0')
+    ax[1].plot(lam[::2],np.array(o['laplace'][k+'_1.01'])[::2],'o',color=c,ms=2.5)
+    ax[1].plot(lam[::2],np.array(o['laplace'][k+'_1.002'])[::2],'x',color=c,ms=3.5)
+ax[1].set_xlabel(r'$\lambda$'); ax[1].set_ylabel(r'$\mathbb{E}e^{-\lambda\,\Xi_\sigma(Q)}$'); ax[1].legend(frameon=False,fontsize=6.3)
+ax[1].set_title(r'Gamma limits; dots $\sigma=1.01$, crosses $\sigma=1.002$',fontsize=8)
+plt.tight_layout(); plt.savefig('figs/flt_eisenstein.pdf'); plt.close()

@@ -1,0 +1,160 @@
+\chapter[Signed Thorin Measures]{Signed Thorin Measures and the Argument Principle}\label{ch:scholze}
+
+By Theorem~\ref{thm:10bmain}, the generalized Riemann hypothesis (GRH) for an automorphic $L$ function holds if and only if its Thorin measure, with unit atoms at the squared ordinates $\gamma_k^2$ of its zeros, is a positive measure on $(0,\infty)$. This chapter computes a smoothed signed version of that measure, with no hypothesis on the zeros, by Stieltjes inversion of the logarithmic derivative of the clock $\Lambda(c+\sqrt s)/\Lambda(c)$ at distance $\varepsilon$ above its cut; positivity of the resulting density $u_\varepsilon$ for every $\varepsilon$, together with the absence of real zeros, which $u_\varepsilon$ does not see, is the Herglotz criterion of Theorem~\ref{thm:10bmain}(e). We compute $u_\varepsilon$ for $\zeta$, $L(s,\chi_{12})$ and $L(s,\Delta)$, show how an off line pair of zeros appears in it and why one value of $\varepsilon$ cannot exclude such a pair, and count zeros by the argument principle, which sees every zero at once. Such a positivity statement contains GRH and is not evidence for it; a finite computation tests it to a height, and none below is certified, since none has error control.
+
+\section{Where Scholze's work enters}\label{sec:scholzegalois}
+
+The $L$ functions of this chapter are classical. For a cuspidal automorphic representation $\pi$ of $\GL_n$ over $\Q$, the completed function $\Lambda(s,\pi)$, its continuation to an entire function of order one and its functional equation are due to Godement and Jacquet \cite{godementjacquet1972}, after Hecke and Tate for $n=1$ \cite{hecke1918,tate1967} and Hecke for modular forms \cite{hecke1936,hecke1937}; the conductor is that of Jacquet, Piatetski Shapiro and Shalika \cite{jpss1981}. The archimedean factor is determined by the component $\pi_\infty$ through Langlands's archimedean correspondence \cite{langlands1989,knapp1994}; for the $L$ function of a motive it is fixed by the Hodge numbers and the action of complex conjugation \cite{serre1970}.
+
+Scholze's work enters on the Galois side. He attached Galois representations to torsion classes in the cohomology of the locally symmetric spaces of $\GL_n$ over totally real and CM fields \cite{scholze2015}, and gave a new proof \cite{scholze2013} of the local Langlands correspondence for $\GL_n$ of Harris and Taylor and of Henniart \cite{harristaylor2001,henniart2000}. The torsion representations feed the potential automorphy theorems of Allen, Calegari, Caraiani, Gee, Helm, Le Hung, Newton, Scholze, Taylor and Thorne \cite{allen2023}: for an elliptic curve over a CM field, and more generally for a rank two compatible system of weight zero, every symmetric power $L$ function has meromorphic continuation to $\C$ and a functional equation (Corollary~7.1.13 there). A meromorphic continuation does not give the entire completed function that Theorem~\ref{thm:10bmain} needs, and a torsion class has no complex $L$ function at all. Fargues and Scholze \cite{farguesscholze2026} attach to every irreducible smooth representation of a reductive group over a nonarchimedean local field a semisimple $L$ parameter; for $\GL_n$ it is the semisimplification of the parameter of the local correspondence, and it does not determine the local $L$ and $\varepsilon$ factors (the trivial and the Steinberg representations of $\GL_2(\Q_p)$ share one).
+
+None of this enters the computations below, nor does Deligne's Galois representation of $\Delta$ \cite{deligne1971}. What the Galois side supplies is new $L$ functions: once a representation of $\operatorname{Gal}(\overline{\Q}/\Q)$ is shown to be cuspidal automorphic, its $L$ function falls under Theorem~\ref{thm:10bmain} and the methods of this chapter.
+
+\section{The signed density of a clock}\label{sec:scholzesigned}
+
+Let $\pi$ be self dual, $\pi\cong\tilde\pi$, with $\Lambda(s,\pi)$ completed as in Section~\ref{sec:10bcompletion}, the conductor factor $N_\pi^{s/2}$ included; here $c=\frac12$, except that for $\Delta$ we keep the classical normalisation of Chapter~\ref{ch:10}, with centre $c=6$. Let $r$ be the order of $\Lambda(s,\pi)$ at $s=c$ and $\Xi^{\mathrm{sd}}_\pi(z)=\Lambda(c+z,\pi)/z^r$ as in Definition~\ref{def:10bxi} (for $\Delta$ the definition carries a factor $2$, which cancels in $G_\pi$); it is even, since $\varepsilon(\pi)=(-1)^r$ (Lemma~\ref{lem:10bcompletion}(v)). The \emph{clock}\index{clock} of $\pi$ is
+\[
+G_\pi(s)=\frac{\Xi^{\mathrm{sd}}_\pi(\sqrt s)}{\Xi^{\mathrm{sd}}_\pi(0)},
+\]
+an entire function of order at most $\frac12$ with $G_\pi(0)=1$ and $G_\pi^2=F_\pi$; for $\zeta$, with $\Lambda=\xi$, it is $F_\zeta$ itself. The three $L$ functions of this chapter have root number $+1$ and $\Lambda(c,\pi)\ne0$, so $r=0$ and $G_\pi(s)=\Lambda(c+\sqrt s,\pi)/\Lambda(c,\pi)$; we assume $r=0$ from now on.
+
+List the zeros of $\Xi^{\mathrm{sd}}_\pi$ in pairs $\pm i\gamma_k$ with multiplicity and put $t_k=\gamma_k^2$, as in \eqref{eq:10batoms}. Then $G_\pi(s)=\prod_k(1+s/t_k)$ and
+\begin{equation}\label{eq:scholzelog}
+\frac{G_\pi'}{G_\pi}(s)=\sum_k\frac1{s+t_k}=\frac1{2\sqrt s}\,\frac{\Lambda'}{\Lambda}(c+\sqrt s,\pi).
+\end{equation}
+Every zero $c+\delta+i\gamma$ of $\Lambda(s,\pi)$ has $|\delta|<\frac12$ (Lemma~\ref{lem:10bcompletion}(iii)). A zero on the line, $\delta=0<\gamma$, gives the atom $\gamma^2>0$; a zero with $\gamma>0$ and $\delta\ne0$, with its reflection $c-\delta+i\gamma$, gives the conjugate atoms $A\pm iB$, where $A=\gamma^2-\delta^2$ and $B=2\gamma|\delta|$; and a real zero $c\pm\beta$ gives the atom $-\beta^2$. By Theorem~\ref{thm:10bmain}, with $\Xi^{\mathrm{sd}}_\pi$ for $\Xi_\pi$, GRH for $\pi$ holds if and only if $1/G_\pi$ is the Laplace transform of a generalized gamma convolution (Definition~\ref{def:ch10ggc}); its Thorin measure is then $\tau_\pi=\sum_k\delta_{t_k}$, and $(G_\pi'/G_\pi)(s)=\int\tau_\pi(dt)/(s+t)$.
+
+For $\varepsilon>0$ and real $z$ the \emph{signed density}\index{signed Thorin density} of $\pi$ is
+\[
+u_\varepsilon(z)=-\frac1\pi\operatorname{Im}\frac{G_\pi'}{G_\pi}(-z+i\varepsilon).
+\]
+By \eqref{eq:scholzelog} it is computed from $\Lambda'/\Lambda$ alone, at points to the right of the critical line, and needs no hypothesis. Under GRH it is the Lorentzian smoothing of $\tau_\pi$ at width $\varepsilon$, which tends to $\tau_\pi$ as $\varepsilon\to0$ (Stieltjes inversion\index{Stieltjes inversion} \cite{akhiezer1965}). The condition $u_\varepsilon\ge0$ for all $\varepsilon>0$ and real $z$ says $\operatorname{Im}(G_\pi'/G_\pi)\le0$ on the upper half plane: it is the inequality of the Herglotz criterion of Theorem~\ref{thm:10bmain}(e), with $G_\pi$ for $F_\pi$, read on the lines $\operatorname{Im}s=\varepsilon$ (Problem~14.2 maps it on a grid); the criterion also excludes real zeros, which give positive Lorentzians (Proposition~\ref{prop:scholzelobe}(iii)). Write $\sqrt{-z+i\varepsilon}=a+iy$ with $a,y>0$, so that $z=y^2-a^2$ and $\varepsilon=2ay$, and let $L=(\Lambda'/\Lambda)(c+a+iy,\pi)$. Then
+\[
+u_\varepsilon(z)=\frac{y\operatorname{Re}L-a\operatorname{Im}L}{2\pi(a^2+y^2)},\qquad V_a(y^2)=\frac{\operatorname{Re}L}{2\pi y},
+\]
+where $V_a$ is the density of Theorem~\ref{thm:10dshift}, formed with $\Xi^{\mathrm{sd}}_\pi$ for $\Xi_\pi$. So $u_\varepsilon$ and $V_a$ read $\Lambda'/\Lambda$ on the same vertical line, at distance $a=\varepsilon/(2y)$ to the right of the centre; $u_\varepsilon$ adds the term in $\operatorname{Im}L$ and the factor $y^2/(a^2+y^2)$. At $z=A$ the threshold $\varepsilon=B$ of the next proposition is the point $a+iy=|\delta|+i\gamma$, the condition $|\operatorname{Re}z_k|=a$ of Theorem~\ref{thm:10dshift}, and the lobe is the dip of $V_a$ described after it.
+
+\begin{proposition}[The negative lobe]\label{prop:scholzelobe}\index{negative lobe}
+Let $\pi$ be as above, with $r=0$, and $\varepsilon>0$.
+\begin{enumerate}
+\item[(i)] A zero $c+i\gamma$, $\gamma>0$, of multiplicity $m$ contributes to $u_\varepsilon$ the Lorentzian $\frac m\pi\,\varepsilon/((z-\gamma^2)^2+\varepsilon^2)$, of mass $m$ and height $m/(\pi\varepsilon)$, centred at $\gamma^2$.
+\item[(ii)] A zero $c+\delta+i\gamma$ with $\gamma>0$ and $\delta\ne0$, together with its reflection, contributes
+\[
+\frac1\pi\,\frac{B+\varepsilon}{(z-A)^2+(B+\varepsilon)^2}-\frac1\pi\,\frac{B-\varepsilon}{(z-A)^2+(B-\varepsilon)^2}.
+\]
+For $\varepsilon<B$ this is negative exactly on $|z-A|<(B^2-\varepsilon^2)^{1/2}$ and equals $-2\varepsilon/(\pi(B^2-\varepsilon^2))$ at $z=A$; its integral over $z$ is $0$, and its absolute value is at most $2\varepsilon/(\pi(B-\varepsilon)^2)$.
+\item[(iii)] A real zero $c\pm\beta$, $0<\beta<\frac12$, contributes a Lorentzian centred at $-\beta^2$, positive at every $z$.
+\item[(iv)] If $\Lambda(\sigma,\pi)\ne0$ for every real $\sigma$, then $u_\varepsilon(z)\ge0$ for all real $z$ and all $\varepsilon>0$ (away from the poles of $G_\pi'/G_\pi$) if and only if every zero lies on the line. If moreover no zero has ordinate in $(0,\frac12]$, the same holds with $z$ restricted to $(0,\infty)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+An atom $t=A'+iB'$ contributes $-\pi^{-1}\operatorname{Im}(-z+i\varepsilon+t)^{-1}=\pi^{-1}(B'+\varepsilon)/((z-A')^2+(B'+\varepsilon)^2)$, a Lorentzian centred at $A'$ of mass $\operatorname{sign}(B'+\varepsilon)$; with $B'=0$ this gives (i) and (iii). In (ii) put $x=z-A$ and $f(b)=b/(x^2+b^2)$, so that the pair contributes $\pi^{-1}(f(b_1)-f(b_2))$ with $b_1=B+\varepsilon$ and $b_2=B-\varepsilon$. Since $f(b_1)-f(b_2)=(b_1-b_2)(x^2-b_1b_2)/((x^2+b_1^2)(x^2+b_2^2))$, it has the sign of $x^2-(B^2-\varepsilon^2)$; its value at $x=0$ is $\pi^{-1}(1/b_1-1/b_2)$, its two terms have masses $1$ and $-1$, and $|f'(b)|\le b^{-2}$ with the mean value theorem gives the bound. In (iv), if every zero is on the line every term is positive. Conversely let $c+\delta+i\gamma$ be a zero of multiplicity $m$ with $\delta\ne0$; by hypothesis $\gamma\ne0$, and we may take $\gamma>0$. As $\varepsilon\uparrow B$ its pair contributes $-2m\varepsilon/(\pi(B^2-\varepsilon^2))\to-\infty$ at $z=A$, while the other terms stay bounded near $(z,\varepsilon)=(A,B)$: a term is unbounded there only if its atom is $A-iB$, and the series converges uniformly there because $\sum_k|t_k|^{-1}<\infty$. So $u_\varepsilon(A)<0$ for $\varepsilon$ close to $B$. If no ordinate lies in $(0,\frac12]$, then $\gamma>\frac12>|\delta|$ and $A>0$.
+\end{proof}
+
+At a fixed $\varepsilon$ the sign of $u_\varepsilon$ excludes nothing by itself. A pair with $B<\varepsilon$ contributes two positive Lorentzians, and a pair with $B>\varepsilon$ shows only if the other atoms contribute less than $2\varepsilon/(\pi(B^2-\varepsilon^2))$ near $z=A$. An atom on the line at $A$ adds $1/(\pi\varepsilon)$ there, and for $B=3\varepsilon$ the three Lorentzians sum to
+\[
+\frac{3\varepsilon(x^4+2\varepsilon^2x^2+16\varepsilon^4)}{\pi(x^2+16\varepsilon^2)(x^2+4\varepsilon^2)(x^2+\varepsilon^2)}>0,\qquad x=z-A,
+\]
+so the pair is masked (Open Problem~\ref{op:scholzelobe}). By (ii) the contribution of each off line pair tends to $0$ as $\varepsilon\to0$: in the limit $u_\varepsilon$ sees only the real atoms, whether or not GRH holds, and off line zeros are seen only at positive $\varepsilon$.
+
+\section{Three clocks}\label{sec:scholzeclocks}
+
+The computations use $\zeta$ with $\Lambda=\xi$; $L(s,\chi_{12})$, where $\chi_{12}$ is the even real character of $\Q(\sqrt3)$, with $\Lambda(s,\chi_{12})=(12/\pi)^{s/2}\Gamma(s/2)L(s,\chi_{12})$; and $L(s,\Delta)$, with $\Lambda(s,\Delta)=(2\pi)^{-s}\Gamma(s)L(s,\Delta)$ and $c=6$. Their P\'olya kernels are positive: P\'olya's kernel \eqref{eq:ch10polya}; the kernel $\Phi_{12}(u)=e^{u/2}\eta(ie^{2u})$ of Section~\ref{beta:sec:eta}, built from $\eta$, the theta function of $\chi_{12}$ by Euler's pentagonal identity; and $\Delta(ie^u)e^{6u}$ (Proposition~\ref{prop:ch10mellin}). So $\Lambda(c+x,\pi)$, a positive multiple of $\int\Phi(u)e^{xu}\,du$, is positive for real $x$, the hypothesis of Proposition~\ref{prop:scholzelobe}(iv) holds, and the lowest ordinates, $14.13$, $3.80$ and $9.22$, exceed $\frac12$.
+
+Positivity of the kernel holds for $\zeta$, $\Delta$ and every multiplicative eta product (the paragraph after Lemma~\ref{lem:10bkernel}) and for $\chi_{-4}$ and $\chi_{12}$ (Chapter~\ref{ch:beta}), but not in general. For the even real character $\chi$ of conductor $53$ the kernel is negative at $u=0$, since $\sum_{n\ge1}\chi(n)e^{-\pi n^2/53}=-0.111$, and infinitely many even real characters have a theta function with a positive real zero \cite{louboutinmunsch2013}; the kernels of infinitely many imaginary quadratic fields change sign (Theorem~\ref{thm:sf:inert}); and for the eigenform $f$ of weight $24$ and level one with $a(2)=540-12\sqrt{144169}$, whose root number is $+1$, the kernel $f(ie^u)e^{12u}$ is negative at $u=0$, where $f(i)=-0.0095$. Open Problem~\ref{op:scholzekernel} asks which kernels are positive.
+
+We computed $u_2$ on a grid in $z$ with mpmath at twenty digits: for $\zeta$ from the logarithmic derivative of $\xi$, for $\chi_{12}$ from the Hurwitz zeta functions $\zeta(s,b/12)$, and for $\Delta$ from Hecke's integral of Proposition~\ref{prop:ch10mellin}, folded at $y=1$, and its derivative \cite{hecke1936}, with grid steps $0.875$ for $T=35$ and $1$ for $\Delta$ with $T=30$. Independently, sign changes of $t\mapsto\Lambda(c+it,\pi)$, refined by bisection, located the zeros on the line (Table~\ref{tab:scholzescan}).
+
+\begin{table}[ht]
+\centering
+\caption{Zeros on the line below height $T$, and the minimum and mass of $u_2$ on $(0,T^2]$ (numerical, not certified).}\label{tab:scholzescan}
+\begin{tabular}{lcccc}
+clock & $T$ & zeros on the line & $\min u_2$ & mass of $u_2$\\[2pt]
+$\zeta$, $c=\frac12$ & $35$ & $5$ & $2.4\cdot10^{-5}$ & $4.99$\\
+$L(s,\chi_{12})$, $c=\frac12$ & $35$ & $17$ & $4.0\cdot10^{-4}$ & $17.2$\\
+$L(s,\Delta)$, $c=6$ & $30$ & $8$ & $1.3\cdot10^{-4}$ & $7.98$
+\end{tabular}
+\end{table}
+
+On each range $u_2$ is positive. For $\zeta$ and $\Delta$ its minimum sits at the first grid point, since $u_2$ increases on $(0,t_1)$; for $\chi_{12}$ it is the trough at $z=1158.5$ between the last atom below $35^2$ and the first above. Every sampled peak lies within six per cent of $1/(2\pi)=0.159$ and within half a grid step of an atom. The excess mass $17.2$ for $\chi_{12}$ is leakage from the Lorentzians of the atoms above $35^2$, mostly that of the zero at $35.027$, and shrinks with $\varepsilon$ (the mass is $17.14$ at $\varepsilon=1$). The ordinates found, whose squares are the atoms of $\tau_\zeta$, $\tau_{\chi_{12}}$ and $\tau_\Delta$, agree with PARI/GP \cite{pari2023} to $10^{-13}$; the first of them are
+\[
+\begin{aligned}
+\tau_\zeta:\;& 14.134725,\ 21.022040,\ 25.010858,\ 30.424876,\ 32.935062, \\
+\tau_{\chi_{12}}:\;& 3.804628,\ 6.692223,\ 8.890593,\ 11.188393,\ 12.966179,\ \dots \\
+\tau_\Delta:\;& 9.222379,\ 13.907550,\ 17.442777,\ 19.656513,\\
+& 22.336104,\ 25.274637,\ 26.804391,\ 28.831683 .
+\end{aligned}
+\]
+
+To see the lobe of Proposition~\ref{prop:scholzelobe}(ii), take the first five atoms of $\tau_\zeta$ and move the third zero off the line by $\delta=0.3$, so that $A=625.45$ and $B=15.01$. At $\varepsilon=2$ the signed density of this toy clock has a negative lobe of depth $-5.7\cdot10^{-3}$ centred at $z=A$, close to the value $-2\varepsilon/(\pi(B^2-\varepsilon^2))$ of the pair alone, and at $\varepsilon=20>B$ the lobe is gone. The test fires on this isolated pair; by the masking example it need not fire on a pair with an atom on the line near $A$.
+
+For $\zeta$ the total variation distance on $(0,35^2]$ between $u_\varepsilon$ and the Lorentzian smoothing of the five atoms below $35^2$ is $0.0062$, $0.0031$ and $0.0015$ at $\varepsilon=2$, $1$ and $\frac12$. It is the leakage into the window of the atoms $t_k>T^2$, since those below contribute equally to both,
+\begin{align*}
+&\frac1\pi\sum_{t_k>T^2}\Bigl[\arctan\frac{t_k}\varepsilon-\arctan\frac{t_k-T^2}\varepsilon\Bigr]\\
+&\qquad=\frac\varepsilon\pi\sum_{t_k>T^2}\Bigl[\frac1{t_k-T^2}-\frac1{t_k}\Bigr]+O(\varepsilon^3),
+\end{align*}
+which for $\zeta$ at $T=35$ is $0.00619$, $0.00310$ and $0.00155$. So the two measures agree as $\varepsilon\to0$, as they must once every zero below height $35$ is on the line. The largest sampled values, $0.3175$ at $\varepsilon=1$ and $0.6300$ at $\varepsilon=\frac12$, are within about one per cent of $1/(\pi\varepsilon)$, so no peak carries a double atom.
+
+\section{Zero counts by the argument principle}\label{sec:scholzewinding}
+
+The smoothed mass only approximates a count, and by Proposition~\ref{prop:scholzelobe} one value of $\varepsilon$ can miss an off line pair; the argument principle\index{argument principle} sees every zero. Suppose that $\Lambda(s,\pi)$ has no real zero, and let $N_\pi(T)$ be the number of zeros $c+\delta+i\gamma$ with $0<\gamma\le T$, on the line or not, counted with multiplicity. For $a>\frac12$ and $T$ not an ordinate these are the zeros inside the rectangle $R=c+[-a,a]\times i[0,T]$, and
+\[
+N_\pi(T)=\frac1{2\pi}\operatorname{var}_{\partial R}\arg\Lambda(s,\pi),
+\]
+the change of $\arg\Lambda$ around $\partial R$ divided by $2\pi$, which needs no derivative. Computed from samples, it is guaranteed to be right if $\arg\Lambda$ moves by less than $\pi$ between consecutive samples: the phase steps, each reduced to $(-\pi,\pi]$, add up around a closed contour to $2\pi$ times an integer whatever the sampling, so an integer output is no check by itself. If $N_\pi(T)$ equals the number of sign changes of the real function $t\mapsto\Lambda(c+it,\pi)$ on $(0,T]$, every zero of height at most $T$ is on the line and simple. Table~\ref{tab:scholzewinding} gives the counts for $a=0.9$.
+
+\begin{table}[ht]
+\centering
+\caption{Sign changes of $\Lambda(c+it)$ on $(0,T]$ and winding numbers of $\Lambda$ around $\partial R$, from $400$ samples per side at twelve digits (numerical, not certified).}\label{tab:scholzewinding}
+\begin{tabular}{lccc}
+clock & $T$ & sign changes of $\Lambda(c+it)$ & winding number\\[2pt]
+$\zeta$ & $35$ & $5$ & $5$\\
+$\zeta$ & $200$ & $79$ & $79$\\
+$L(s,\chi_{12})$ & $35$ & $17$ & $17$\\
+$L(s,\chi_{12})$ & $100$ & $67$ & $67$\\
+$L(s,\Delta)$ & $30$ & $8$ & $8$
+\end{tabular}
+\end{table}
+
+In every row the two counts agree, and the largest phase step between samples is $0.39\pi$, for $\zeta$ at $T=200$. With $100$, $50$ and $25$ samples per side the same code returns the integers $35$, $-5$ and $-1$ there. So, numerically, every zero of $\zeta$ below height $200$, of $L(s,\chi_{12})$ below $100$ and of $L(s,\Delta)$ below $30$ is on the line and simple. This is not a certificate, which would need interval arithmetic with a bound for $|\Lambda'/\Lambda|$ on each side (Problem~\ref{cp:scholzewinding}) or Turing's method \cite{turing1953,booker2006}. That these zeros lie on the line is known: Backlund reported that the $79$ zeros of $\zeta$ below height $200$ lie on the line \cite{backlund1914}, a statement contained in later verifications \cite{platttrudgian2021}, Rumely verified GRH for the primitive characters of conductor at most $13$ to height $10^4$ \cite{rumely1993}, and Hiary, Ireland and Kyi verified that every zero of $L(s,\Delta)$ up to height $84$ is on the line \cite[Section~7.3]{hik2027}. The counts agree with the main terms of the Riemann von Mangoldt formula and its analogues \cite{titchmarsh1986,iwanieckowalski2004}: $79.19$, $67.55$ and $7.97$ for $T=200$, $100$ and $30$.
+
+The $\Delta$ row needs care. On the line $|\Lambda(6+it,\Delta)|$ carries the factor $t^{11/2}e^{-\pi t/2}$ and falls to $5\cdot10^{-17}$ at $t=30$ and $2.6\cdot10^{-36}$ at $t=60$, against an integrand of size $10^{-3}$ in Hecke's integral; at twelve digits about two correct digits remain at $t=30$ and none from $t=35$ on. The winding number is still $8$, but the zero search is not reliable: at twelve digits, grids of $100$ to $400$ points on $(0,30]$ find $8$ sign changes and grids of $600$ to $1200$ points find two spurious ones between the zeros at $25.27$ and $26.80$. The grid of the run in the table is not recorded; the eight ordinates of $\tau_\Delta$ come from the run at twenty digits, where each of seventeen grids of $100$ to $3000$ points gives them. At fifty digits one evaluation at $t=60$ takes about $0.57$ seconds, about $15$ minutes for a contour of $1600$ points. Beyond $T\approx30$ the clock of $\Delta$ is better computed from the Ramanujan coefficients through a smoothed approximate functional equation, with about $t/(2\pi)$ terms at height $t$, for instance as in Rubinstein's method \cite[Section~3.3]{rubinstein2005}, where a factor $w^{-s}$ with $|w|=1$ offsets the exponential decay of the gamma factor; Problem~13.1 asks for the zeros of $\Lambda(6+it,\Delta)$ to height $10^5$, with the count certified by Turing's method.
+
+\subsection{Open problems}
+
+\begin{problem}[Positive P\'olya kernels]\label{op:scholzekernel}
+Characterise the self dual $L$ functions with root number $+1$ whose P\'olya kernel is positive (Section~\ref{sec:scholzeclocks}); for a form of level one, positivity fails as soon as the form has a zero of odd order on the imaginary axis. Is positivity, at fixed degree, decided by finitely many coefficients and the conductor?
+\end{problem}
+
+\begin{problem}[Masking of the negative lobe]\label{op:scholzelobe}
+Find conditions on the zeros near height $\gamma$ under which $u_\varepsilon\ge0$ at one $\varepsilon$ excludes a zero $c+\delta+i\gamma$ with $2\gamma|\delta|>\varepsilon$; equivalently, compare the depth $2\varepsilon/(\pi(B^2-\varepsilon^2))$ of the lobe of an off line pair with the contribution of the neighbouring atoms near $z=A$ (compare the dip of $V_a$ after Theorem~\ref{thm:10dshift}).
+\end{problem}
+
+\section{Notes}
+
+Theorem~\ref{thm:10bmain} extends \cite{polson2018vdp}, and the densities $V_a$ of Theorem~\ref{thm:10dshift} are, for $\xi$, its Theorem~18; Stieltjes inversion is classical \cite{stieltjes1894,akhiezer1965}. Proposition~\ref{prop:scholzelobe}, the masking identity and the leakage formula are elementary consequences of \eqref{eq:scholzelog}; for $\xi$ the Poisson kernel smoothing of the ordinates and its limit are in \cite{polson2018vdp}, and \cite{polson2026thorin} shows that pointwise positivity of the Thorin density of $\xi(\sigma)/\xi(\sigma+s)$ forces every extremal zero onto the critical line, with an explicit negative value of the density when the first zero is off the line. The computations of Sections~\ref{sec:scholzeclocks} and~\ref{sec:scholzewinding} were made for this book. P\'olya's kernel is in \cite{polya1926}, the kernel of $\chi_{12}$ comes from $\eta$ through Euler's pentagonal identity (Section~\ref{beta:sec:eta}), and that of $\Delta$ is Hecke's Mellin transform \cite{hecke1936}; the values for the character of conductor $53$ and the eigenform of weight $24$ were computed for this book. RH and GRH are verified far beyond the heights of Table~\ref{tab:scholzewinding} for $\zeta$ and $\chi_{12}$ \cite{platttrudgian2021,platt2016}, and for $\Delta$ to height $84$ \cite{hik2027}; Turing's method is in \cite{turing1953}, and its extension to other $L$ functions in \cite{booker2006}. The scripts are in \texttt{scholze/} (Appendix~\ref{app:B}); PARI/GP \cite{pari2023} gave independent zero lists and values.
+
+\section{Exercises}
+
+\begin{enumerate}
+\item Derive the formulas for $u_\varepsilon(z)$ and $V_a(y^2)$ in Section~\ref{sec:scholzesigned}, and show that $u_\varepsilon(z)-V_a(y^2)=-a(a\operatorname{Re}L+y\operatorname{Im}L)/(2\pi y(a^2+y^2))$.
+\item Add an atom on the line at $A$ to the pair of Proposition~\ref{prop:scholzelobe}(ii), and show that the sum is negative at $z=A$ if and only if $B/\sqrt3<\varepsilon<B$. Verify the masking identity for $B=3\varepsilon$.
+\item Derive the closed form of the leakage in Section~\ref{sec:scholzeclocks}, and show that its expansion in $\varepsilon$ has no term of order $\varepsilon^2$.
+\item Let $\Lambda$ be holomorphic and zero free near a closed polygon $P$, with $|\Lambda'/\Lambda|\le M$ on $P$. Show that sampled phase differences, reduced to $(-\pi,\pi]$, add up to $2\pi$ times an integer, and that this integer is the winding number of $\Lambda$ around $P$ when consecutive samples are less than $\pi/M$ apart along $P$.
+\item Let $f$ be the eigenform of weight $18$ and level one. From $f(-1/\tau)=\tau^{18}f(\tau)$ show that $f(i)=0$, that the kernel $f(ie^u)e^{9u}$ is odd, and that $\Lambda(9+z,f)/z$ is even.
+\end{enumerate}
+
+\section{Open computational problems}
+
+\begin{compproblem}[Signs of P\'olya kernels across degrees]\label{cp:scholzekernel}
+Objective: decide for self dual $L$ functions of degree at most four with root number $+1$ whether the P\'olya kernel of $\Xi^{\mathrm{sd}}_\pi$ (Lemma~\ref{lem:10bkernel}) is positive, and where it first changes sign. Objects and scale: the $L$ functions of degree at most $4$ and conductor at most $10^3$ in the LMFDB \cite{lmfdb} (newforms, symmetric squares, Rankin Selberg products, Hilbert modular forms over $\Q(\sqrt5)$), and the eigenforms of level one and weight up to $100$ with root number $+1$. Route: the kernel as the inverse Fourier transform of $\Lambda(c+it,\pi)/\Lambda(c,\pi)$ from PARI/GP \texttt{lfun} \cite{pari2023}, or from a theta series where one exists; signs proved in ball arithmetic, positivity on a grid with bounds for the derivative and the tails. Deliverable: a table by degree, weight and conductor giving positivity proved on $\R$, or a negative value with its location and error bound. Why it matters: a positive kernel is the hypothesis of Proposition~\ref{prop:10bcumulants} and Theorem~\ref{thm:10dvdp}, and makes $\Lambda$ positive on the real axis, as Proposition~\ref{prop:scholzelobe}(iv) needs; Problems~\ref{cp:sfkernel} and~\ref{cp:sfreal} ask the same for quadratic fields.
+\end{compproblem}
+
+\begin{compproblem}[Zero counts by the argument principle in ball arithmetic]\label{cp:scholzewinding}
+Objective: turn the sampled counts of Table~\ref{tab:scholzewinding} into proved counts. Objects and scale: $\zeta$, $L(s,\chi_{12})$ and $L(s,\Delta)$ to height $T=200$, the last through the approximate functional equation. Route: $\Lambda$ on $\partial R$ in ball arithmetic, with adaptive subdivision until the change of $\arg\Lambda$ between consecutive points is provably below $\pi$; Turing's method \cite{turing1953,booker2006} as an independent check. Deliverable: proved values of $N_\pi(T)$ for $T\le200$ and the number of evaluations each needs. Why it matters: it replaces the sampled counts of this chapter by proofs; the counts for $\zeta$ and $\chi_{12}$, and for $\Delta$ to height $84$, are known \cite{platttrudgian2021,rumely1993,hik2027}, so the value lies in a method that needs only values of $\Lambda$ and carries over to the $L$ functions of Problem~\ref{cp:scholzekernel}.
+\end{compproblem}
+
+\begin{compproblem}[Window leakage of signed Thorin densities]\label{cp:scholzeleak}
+Objective: test the leakage formula of Section~\ref{sec:scholzeclocks}, and use the leakage of $u_\varepsilon$ near the edge of a window to recover the first atoms above it. Objects and scale: $\zeta$ and $L(s,\chi_{12})$ with $T\le35$, $L(s,\Delta)$ with $T\le30$, and $\varepsilon\in\{2,1,\frac12,\frac14\}$. Route: $u_\varepsilon$ from \texttt{scholze/signed\_thorin.py}, minus the Lorentzian smoothing of the atoms below $T^2$, fitted on $(0,T^2]$ by least squares with Lorentzians at unknown atoms above $T^2$ and the smooth density of zeros for the far tail. Deliverable: the measured leakage against the closed form for each $\varepsilon$, the recovered atoms against the true ones, and how many atoms above $T^2$ the fit determines to a given accuracy. Why it matters: to first order in $\varepsilon$ the total leakage is one weighted sum over the atoms above $T^2$, so single atoms must come from the shape of the remainder; the answer says how far a signed density on a finite window sees beyond it.
+\end{compproblem}

@@ -1,0 +1,181 @@
+\chapter{A Computational Programme}\label{ch:14}
+
+Chapters~\ref{ch:01} to \ref{ch:13} of this book pose computational problems that we have deliberately left open. They are not exercises. Each one asks for a computation at a scale beyond what we carried out for the book, and each was chosen because its answer would sharpen a theorem, test a conjecture, or calibrate a heuristic that appears in the text. This chapter collects them into a single programme, organises them into workstreams, and sets out the standards we propose for carrying them out. The programme is the agenda of the second author's computational work over the coming years, and we hope that readers will take up parts of it.
+
+\section{Principles}
+
+The computations in this book are experiments on deterministic objects. A sequence of Frobenius traces is not a sample from a distribution; it is a fixed arithmetic sequence that, by theorem or by conjecture, behaves in the limit like one. This has consequences for how results should be reported.
+
+\begin{enumerate}
+\item Certified where possible. Point counts, Hecke matrices, isogeny graphs and $L$ function zeros can be computed exactly or with rigorous error bounds. A claim such as ``every nontrivial Ihara pole lies on the circle'' should come with the arithmetic that certifies it, not only a floating point check.
+\item Statistical where necessary. When a conjecture predicts a limiting law or constant (a Brownian bridge, a Kolmogorov distribution, a Lang and Trotter constant), the test statistic, the null law and the reference population must be stated in advance. Cross sectional comparisons across many curves, as in Chapter~\ref{ch:05}, are often more informative than a single long sequence, because they turn one deterministic path into many approximately independent ones.
+\item Scaled with care. Many statistics converge slowly. The scaled discrepancy $\sqrt n\,D_n$ and the rank bias are predicted to approach their limits at logarithmic rates (Chapter~\ref{ch:05}), and the Lang and Trotter counts of that chapter, which grow like $\sqrt x/\log x$ and number at most a few hundred below $10^7$, have a relative Poisson error of order $x^{-1/4}$ up to logarithmic factors. In both cases a factor of ten in the range of primes buys little. The programme favours breadth (more curves, more levels, more forms) over depth whenever the conjectured limit is a law across families.
+\item Reproducible. Every table should be regenerable from a script and a seed. Appendix~\ref{app:B} prints the core routines and lists the scripts and stored results behind the numbers of this book, together with an archive of the scripts in a layout with relative paths, but several of them still read files from the wrong folder, so making every table regenerable from a single command comes before scaling the computations up.
+\end{enumerate}
+
+\section{Workstreams}
+
+We group the problems into six workstreams. Problem N.M denotes Computational Problem N.M, the Mth computational problem of Chapter N (Problem 5.2 is the second computational problem of Chapter~\ref{ch:05}).
+
+\subsection{Workstream I: Frobenius data at scale}
+
+This workstream builds the basic data: traces of Frobenius for elliptic curves, genus two Jacobians and modular forms, at scales well beyond those of this book. The engine is a point counting pipeline (Problem 5.4), using baby step giant step and the average polynomial time methods of Harvey \cite{harvey2014} and of Harvey and Sutherland \cite{harveysutherland2014} for elliptic and hyperelliptic curves, and GPU kernels for the embarrassingly parallel part. On this foundation sit the Sato Tate atlas (Problem 1.1), the Weyl averages and fingerprints (Problems 4.1 and 4.2), joint laws of pairs and twists (Problems 3.3 and 4.3), the Brownian bridge test (Problems 5.1 and 30.1), the Lang and Trotter constants (Problem 5.2), Koblitz's conjecture on the primes at which the number of points is prime, whose local densities are the Eisenstein shapes of Chapter~\ref{ch:flt} (Problem 22.2), the rank bias at high rank (Problem 5.3), the Chebotarev races (Problem 3.1), Gamma process tests of Chebotarev laws, with their Euler Kronecker drifts, and of joint Sato Tate laws (Problem 20.3), Gamma shape estimates for symmetric powers and $\GL_3$ motives (Problem 20.4, a Dirichlet density counterpart of Problems 4.1 and 4.2), the three colourings of the prime factors of uniform random integers by Frobenius class, with the proportions of integers that avoid a class (Problem 24.1), the Mertens constants of the fields of $x^n-x-1$, whose group is $S_n$ (Problem 24.2), and tables of $\tau(p)$ (Problem 2.1). The impostor detection problem (Problem 1.2) is the statistical counterpart of Proposition~\ref{prop:01limits}.
+
+\subsection{Workstream II: families, symmetry and random matrices}
+
+The second workstream concerns families of $L$ functions. Its problems are the one level density for quadratic twists of 11a (Problem 6.1), moments of quadratic $L$ functions against the Keating and Snaith predictions (Problem 6.2), nearest neighbour spacings for the zeros of $L(s,\Delta)$ at heights from $10^8$ on (Problem 6.3, which continues Problem 12.3), Hecke eigenvalue tables for newforms of level up to $10^4$ and even weight up to $12$ (Problem 2.2), near coincidences of newforms (Problem 1.3), the congruences between newforms of level $M$ and newforms of level dividing $Mq$, new at $q$, predicted by Ribet's level raising condition, read as vanishing discrepancy Thorin masses (Problem 22.3), and the use of the functional equation defect as a test statistic (Problem 2.3), extended to the twisted P\'olya kernels of Weil's converse theorem and to Artin representations (Problem 20.2). The computational core is tables of Hecke eigenvalues and fast evaluation of $L$ functions and their zeros across large families, for which the LMFDB \cite{lmfdb} and the rigorous methods of Booker and Platt are the natural references.
+
+\subsection{Workstream III: buildings, graphs and hitting times}
+
+The third workstream extends Chapters~\ref{ch:07} and \ref{ch:08} and the first section of Chapter~\ref{ch:hit}. It asks for the rate of vertical convergence of Hecke spectra to the Plancherel measures (Problem 9.1), quotients of a regular tree by congruence and by random noncongruence subgroups of a Lubotzky Phillips Sarnak lattice (Problem 9.2), Plancherel statistics for $\GL_3$ through Hecke operators on quotients of the building of $\PGL_3(\Q_2)$ by lattices from definite unitary groups in three variables (Problem 9.3), the second order term of the Kemeny constant (Problems 10.1 and 30.2), the laws of the critical groups of isogeny graphs at fixed degree against the Haar model of Munier and Shnidman and the Cohen Lenstra law (Problem 21.1), hitting times between supersingular curves, which govern the cost of naive path search in isogeny cryptography, for $N$ up to $10^7$ (Problem 10.2), other degrees and ordinary isogeny volcanoes (Problem 10.3), and Ihara zeta functions of random lifts (Problem 10.4). Here exact linear algebra on sparse graphs (isogeny graphs with $N\le10^5$, so up to about $8300$ vertices, and building quotients with up to $10^5$ vertices), together with Monte Carlo walks on graphs with up to $8\times10^5$ vertices, is the main tool.
+
+\subsection{Workstream IV: \texorpdfstring{$L$}{L} functions as laws}
+
+The fourth workstream concerns the probabilistic representations of Part IV. It includes the value distribution of $\log L(\sigma+it,\Delta)$ against its two random Euler product models (Problem 11.1), large deviation rate functions (Problem 11.2), universality (Problem 11.3), the Thorin measure of $\Delta$ to height $10^5$ (Problem 13.1), the de Bruijn Newman constant of $\Delta$ (Problem 13.2), complete monotonicity across weights and levels (Problem 13.3), the degenerate Thorin atom for curves of rank two (Problem 13.4), tables of the extreme value laws $M_f$ for all multiplicative eta products (Problem 27.1), variance reduction and zero location by simulation (Problem 27.2), and the extension to eigenforms that are not eta products (Problem 27.3). The Thorin framework of Chapters~\ref{ch:10b} and \ref{ch:10c} adds its own problems: certified Thorin Hankel determinants computed from central derivatives (Problem 14.1), the Herglotz test (Problem 14.2), collision times of the Thorin atoms of $\Delta$ (Problem 14.3), a regularised Thorin computation for a Selberg zeta function (Problem 14.4), comb statistics against the zeros of $L(s,\Delta)$ (Problem 15.1), large deviations of passage times on finite isogeny graphs against the tree formula (Problem 15.2), local parabolic tests of the Ramanujan conjecture for Maass forms (Problem 15.3), and Thorin combs of curves of genus three and four (Problem 15.4). Chapter~\ref{ch:10d} adds four more: a certified Patie test with Bernstein gamma interpolation (Problem 16.1), transported Thorin densities at basepoints inside the critical strip (Problem 16.2), first passage tables and large deviations for Euler subordinators (Problem 16.3), and van Dantzig and P\'olya frequency tests for the partner variables of $L$ functions (Problem 16.4). Chapter~\ref{ch:squarefree} asks for the squarefree error beyond $10^{18}$ (Problem 17.1), the oscillations of the counts of squarefree ideals of $\Q(i)$ and $\Q(\sqrt{-3})$ (Problem 17.2), and the signs of the P\'olya kernels of imaginary and of real quadratic fields (Problems 17.3 and 17.4). Chapter~\ref{ch:beta} asks whether, for the real characters of conductor up to $10^3$, $\operatorname{Re}\Lambda'/\Lambda$ is smallest on the real axis along the lines to the right of the centre (Problem 18.1), carries its computations to the Hecke characters of the Gaussian field (Problem 18.2), asks for the response of its criteria to synthetic off line zeros (Problem 18.3), and adds $L(s,\chi_{-4})$ to Problem 16.2. Chapter~\ref{ch:scholze} asks for the signs of P\'olya kernels of degree up to four (Problem 19.1), zero counts by the argument principle in ball arithmetic (Problem 19.2) and the window leakage of signed Thorin densities (Problem 19.3). Chapter~\ref{ch:recip} adds the Galois heat trace of an icosahedral Artin representation with trivial determinant, hence self dual and even (Problem 20.1), where a certified violation of complete monotonicity would disprove Artin's conjecture or the generalized Riemann hypothesis for it, although finitely many such inequalities are not known to confirm them, even to a finite height; it needs the complete monotonicity pipeline of Problem 13.3 and the ball arithmetic of Problem 14.1. Chapter~\ref{ch:hit} adds the explosion cumulants of the same representation, the integrals of its heat trace against $1$ and $x$, computed from its Frobenius classes, conductor and gamma factor (Problem 21.2): on the range of $x$ that the primes control they are compared with the zeros, and in full with the power sums $\sum\gamma^{-2}$ and $\sum\gamma^{-4}$ that the route of Problem 14.1 computes from central derivatives. It also asks which real odd characters of conductor below $10^6$ have a positive signed exit density, which excludes a real zero of their $L$ function (Problem 21.3). Chapter~\ref{ch:flt} asks for the integrals of the heat trace against $1$, $x$ and $x^2$ for one elliptic curve from each isogeny class of conductor below $10^3$, of either root number, with the constant $\frac r2$ of a central zero of order $r$ removed; under GRH for $L(s,E)$, and when $r=0$, they are the first three cumulants of an explosion time (Problem 22.1). Chapter~\ref{ch:lap} asks for its inversions on elliptic curves of both root numbers, the Frobenius traces from Bohr means of the transported density, the P\'olya kernel from Bromwich inversion and the Cauchy superpositions over the zeros (Problem 23.1); for the zeros recovered from the derivatives of the heat trace by the Post Widder formula, at the orders that the tests of Problem 20.1 compute (Problem 23.2); and for the laws of the Thorin variables of $\xi$, $\Delta$ and $L(s,\chi_{-4})$ at basepoints in and to the right of the critical strip, by Talbot inversion (Problem 23.3). Chapter~\ref{ch:pd} asks for the laws of the class shares of the zeta random integer near $\sigma=1$, against the Beta limits of the Dirichlet process (Problem 24.3). These problems require high precision arithmetic (central derivatives to hundreds or thousands of digits in Problems 14.1 and 16.1) and, for Lévy densities near the origin, very many zeros; they are where the probabilistic reformulations of the Riemann hypothesis for $L$ functions of low degree can be stress tested.
+
+\subsection{Workstream V: inference}
+
+The fifth workstream collects the problems of inference. Chapter~\ref{ch:11b} contributes Duke equidistribution rates for Heegner points (Problem 28.1), reference priors on conjugacy classes under anisotropic noise (Problem 28.2), the accuracy of $p^*$ and the coverage of right Haar intervals in location scale and von Mises models (Problem 28.3), and CM points and Hecke orbits on Shimura curves (Problem 28.4).
+
+The workstream also turns Chapter~\ref{ch:12} into a working classifier. It asks for the Sato Tate group of $y^2=x^6+x^3+1$ (Problem 29.1), a likelihood library for all 52 groups of abelian surfaces with a sequential classifier and the matrix of error exponents (Problem 29.2), empirical Sato Tate groups in genus two and three (Problem 3.2), and an empirical Bayes prior over groups in genus three (Problem 29.3).
+
+\subsection{Workstream VI: exponential sums, random groups and log correlated fields}
+
+Three further chapters, two in Part II and one in Part IV, extend the programme. Chapter~\ref{ch:06b} asks for horizontal statistics of Kloosterman angles (Problem 7.1), the law of the maximum of Kloosterman paths against the random Fourier series of Kowalski and Sawin (Problem 7.2), sums of Kloosterman sums as a probe of the spectral gap (Problem 7.3), and Birch paths (Problem 7.4). Chapter~\ref{ch:06c} asks for Cohen Lenstra statistics for all $|D|\le10^9$ and in windows near $10^{10}$ and $10^{11}$, with the secondary term separated (Problem 8.1), Selmer groups and ranks by height (Problem 8.2), Shafarevich Tate groups against the alternating cokernel model (Problem 8.3), and class groups of cubic and quartic fields (Problem 8.4). Chapter~\ref{ch:09b} asks for Selberg's central limit theorem and the hybrid constant for $L(s,\Delta)$ at heights up to $10^8$ (Problem 12.1), the law of the maxima predicted by Fyodorov, Hiary and Keating (Problem 12.2), pair correlation and spacings of the zeros of $L(s,\Delta)$ at larger height (Problem 12.3), and Harper's constant for random multiplicative functions (Problem 12.4).
+
+\section{The problems at a glance}
+
+Table~\ref{tab:14all} lists all problems with the scale we propose and a priority. Priority A marks problems whose answer would change a statement in this book; B marks problems that would extend the data substantially; C marks longer term or exploratory problems.
+
+{\small
+\begin{longtable}{p{0.9cm}p{5.3cm}p{3.0cm}p{0.5cm}}
+\caption{Open computational problems.}\label{tab:14all}\\
+\toprule
+No. & Problem & Scale & Pr.\\
+\midrule
+\endfirsthead
+\toprule
+No. & Problem & Scale & Pr.\\
+\midrule
+\endhead
+1.1 & Sato Tate atlas for elliptic curves & conductor $\le 10^5$ & B\\
+1.2 & Detecting impostors & $p<10^8$ & C\\
+1.3 & Near coincidences of newforms & level $\le 10^4$ & C\\
+2.1 & Ramanujan tau at scale & $p<10^{11}$ & B\\
+2.2 & Hecke eigenvalue tables & level $\le 10^4$ & B\\
+2.3 & Functional equations as a test statistic & level $\le 10^3$ & C\\
+3.1 & Chebotarev statistics and bias races & $p \le 10^{10}$ & B\\
+3.2 & Empirical Sato Tate groups in genus 2 and 3 & LMFDB, $p\le2^{30}$ & A\\
+3.3 & Joint Sato Tate independence & conductor $<10^4$, \mbox{$p<10^9$} & B\\
+4.1 & Weyl averages at scale & $p \le 10^{10}$ & B\\
+4.2 & Fingerprints of genus two Jacobians & all 52 groups & A\\
+4.3 & Joint laws of pairs and twists & $10^3$ pairs, $p\le 10^9$ & B\\
+5.1 & Brownian bridge test at scale & $p\le 10^{10}$; $10^3$ curves, $p\le 10^9$ & A\\
+5.2 & Lang Trotter constants & $p \le 10^{12}$ & A\\
+5.3 & Bias at high rank & rank $\ge 4$, $p<10^9$ & A\\
+5.4 & A GPU point counting pipeline & $p\le10^{10}$ & A\\
+6.1 & One level density, quadratic twists of 11a & conductor $11d^2\le 10^8$ & B\\
+6.2 & Keating Snaith versus moments of quadratic $L$ functions & $|d| \le 10^9$ & B\\
+6.3 & Spacings of zeros of $L(s,\Delta)$ & heights $10^8$ to $10^{20}$ & C\\
+7.1 & Horizontal statistics of Kloosterman angles & $p \le 10^8$ & B\\
+7.2 & Law of the maximum of Kloosterman paths & $p \le 10^6$ & B\\
+7.3 & Sums of Kloosterman sums and the spectral gap & $x \le 10^7$ & A\\
+7.4 & Birch paths & $p \le 10^6$ & C\\
+8.1 & Cohen Lenstra at scale with the secondary term & all $|D|\le 10^9$, windows to $10^{11}$ & A\\
+8.2 & Selmer groups and ranks by height & $H \le 10^{10}$ & A\\
+8.3 & Shafarevich Tate groups against BKLPR & conductor $\le 5\cdot10^5$ & B\\
+8.4 & Class groups of cubic and quartic fields & cubic $|D|\le10^9$, quartic $|D|\le10^8$ & C\\
+9.1 & Rate of vertical convergence & levels $\le 10^5$ & A\\
+9.2 & Noncongruence quotients & index $\le 10^3$ & C\\
+9.3 & Plancherel statistics for $\GL_3$ & $10^5$ vertices & C\\
+10.1 & Second order term of the Kemeny constant & $N \le 10^6$ & A\\
+10.2 & Hitting times on large supersingular graphs & $N \le 10^7$ & B\\
+10.3 & Other degrees and ordinary curves & $\ell \le 7$ & B\\
+10.4 & Ihara zeta for random lifts & degree $k\le 100$, $10^4$ lifts & C\\
+11.1 & Value distribution of $\log L(\sigma+it,\Delta)$ & $t \le 10^6$ & B\\
+11.2 & Large deviation rate functions & $t \le 10^7$ & C\\
+11.3 & Testing universality & $t \le 10^7$ & C\\
+12.1 & Selberg's theorem and the hybrid constant at height $10^8$ & $T\le 10^8$ & A\\
+12.2 & The law of the maximum & heights $10^{10}$ to $10^{22}$ & A\\
+12.3 & Pair correlation and spacings for $\Delta$ to height $10^7$ & height $10^5$; blocks at $10^6$, $10^7$ & B\\
+12.4 & Harper's constant and critical chaos & $x\le 10^{10}$ & B\\
+13.1 & Thorin measure of $\Delta$ to height $10^5$ & $2.8\times10^5$ zeros & A\\
+13.2 & de Bruijn Newman constant of $\Delta$ & $\lambda\le\tfrac18$, height $10^4$ & B\\
+13.3 & Monotonicity across weights and levels & weight $\le24$, \mbox{level $\le500$} & B\\
+13.4 & Rank two curves and the degenerate atom & 50 curves, height $10^3$ & B\\
+14.1 & Certified Thorin Hankel determinants & LMFDB, size 20 & A\\
+14.2 & The Herglotz test in the upper half plane & conductor $<10^4$ & B\\
+14.3 & Collision times of the Thorin atoms of $\Delta$ & $10^5$ zeros & B\\
+14.4 & Regularised Thorin computation for a Selberg zeta & $10^4$ eigenvalues & C\\
+15.1 & Comb statistics against the zeros of $\Delta$ & height $10^5$ & A\\
+15.2 & Large deviations on finite isogeny graphs & $N \le 10^5$ & B\\
+15.3 & Kim Sarnak versus Ramanujan through local parabolas & LMFDB Maass forms & B\\
+15.4 & Thorin combs of curves of genus three and four & $q\le13$ & C\\
+16.1 & Certified Patie test and Bernstein gamma interpolation & order 100 & A\\
+16.2 & Transported Thorin densities in the strip & $\tfrac12<\alpha\le1$ & A\\
+16.3 & First passage tables and large deviations for Euler subordinators & $x\le50$, $m\le10^8$ & B\\
+16.4 & Van Dantzig and P\'olya frequency tests across LMFDB & conductor $<10^4$ & B\\
+17.1 & The squarefree error beyond $10^{18}$ & $10^{18}<x\le10^{19}$ & B\\
+17.2 & Oscillations of squarefree ideals & $\Q(i)$, $\Q(\sqrt{-3})$, norm $\le10^{14}$ & C\\
+17.3 & P\'olya kernels of imaginary quadratic fields & $|d|\le10^7$ & B\\
+17.4 & P\'olya kernels of real quadratic fields & $d\le10^5$ & C\\
+18.1 & Minimum on the real axis for real characters & conductor $\le10^3$ & A\\
+18.2 & Hecke characters of the Gaussian field & $k\le5$, height $10^3$ & B\\
+18.3 & Synthetic off line zeros & $\chi_{-4}$, height $10^3$ & C\\
+19.1 & Signs of P\'olya kernels across degrees & degree $\le4$, conductor $\le10^3$ & B\\
+19.2 & Zero counts by the argument principle in ball arithmetic & $T\le200$ & A\\
+19.3 & Window leakage of signed Thorin densities & $T\le35$ & C\\
+20.1 & Even icosahedral representations & one representation, $j\le10^3$, $x\le4$, $p\le10^{10}$ & C\\
+20.2 & Kernel symmetry at level $N$ & conductor $\le10^4$ & C\\
+20.3 & Gamma process tests at scale & degree $\le10$, $|d_K|<10^6$; conductor $\le10^4$ & B\\
+20.4 & Gamma shapes for $\ell$ adic representations & $p\le X=10^9$, $\sigma-1\ge5/\log X$ & C\\
+21.1 & Two prime tables & primes $N\equiv1\bmod12$ below $10^5$, $\ell\le13$ & B\\
+21.2 & Explosion cumulants from Frobenius & the representation of Problem 20.1 & C\\
+21.3 & Signed exit laws and real zeros & real odd $\chi$, conductor $<10^6$ & C\\
+22.1 & Explosion cumulants of elliptic curves & conductor $<10^3$, both root numbers, $p^m\le10^8$ & C\\
+22.2 & Koblitz's conjecture and Eisenstein shapes & $20$ curves, $\ell\le10^{10}$ & B\\
+22.3 & Level raising congruences & level $\le200$, $3\le p\le7$, $q<50$ & C\\
+23.1 & Four faces of elliptic curves & conductor $<100$, $n\le100$ & B\\
+23.2 & Zeros from the heat trace by Post Widder & order $\le10^3$, first $50$ zeros & C\\
+23.3 & Thorin laws in the strip by Talbot inversion & $\tfrac12<\alpha\le2$, $t\le10^4$ & C\\
+24.1 & Colourings at scale & $S_3$, $S_4$, $C_3$; $x\le10^{15}$ & B\\
+24.2 & Mertens constants of symmetric fields & $x^n-x-1$, $3\le n\le7$; $p\le10^{10}$ & C\\
+24.3 & Laws of class shares near $\sigma=1$ & $S_3$, $S_4$; $\sigma-1\ge10^{-5}$ & B\\
+25.1 & Class number one fields & nine fields, $p<10^9$ & B\\
+26.1 & Eigenvalues and geodesics at scale & $10^4$ eigenvalues, $N(P)\le10^9$ & B\\
+27.1 & Tables of the laws $M_f$ & 30 eta products & A\\
+27.2 & Variance reduction and zero location & $t\le30$, $10^9$ draws & B\\
+27.3 & Eigenforms that are not eta products & weight 2, level $\le500$ & C\\
+28.1 & Duke rates at large discriminant & all $|D|\le10^9$, samples to $10^{12}$ & B\\
+28.2 & Reference priors for anisotropic noise & SU(2), USp(4) & B\\
+28.3 & $p^*$ and right Haar intervals for angular models & $5\le n\le200$ & C\\
+28.4 & CM points and Hecke orbits on Shimura curves & $|D|\le10^8$, $p^k\le10^7$ & C\\
+29.1 & The group of $y^2=x^6+x^3+1$ & $p<2^{30}$ & A\\
+29.2 & Likelihood library, classifier and error exponent matrix & 52 groups & A\\
+29.3 & Genus three with an empirical Bayes prior & 410 groups, $p\le2^{26}$ & C\\
+30.1 & Discrepancy at scale & $p<10^{10}$; $10^3$ curves, $10^8$ primes & A\\
+30.2 & Second order Kemeny constants & $N \le 10^6$ & A\\
+\bottomrule
+\end{longtable}
+}
+
+\section{A first year plan}
+
+If we had to choose, we would begin with the following sequence, in which later steps reuse the infrastructure of earlier ones.
+
+\begin{enumerate}
+\item The point counting pipeline (Problem 5.4), validated against the data of Chapter~\ref{ch:05}, and then used for the Brownian bridge test across a thousand curves (Problems 5.1 and 30.1). This tests, as far as numerics can, whether the fluctuations of Frobenius traces are those of independent draws.
+\item The Lang and Trotter constants for $y^2=x^3+x+1$ and two further Serre curves (Problem 5.2), compared with the formula from the Galois image. This is a sharp test of a conjecture that probability motivates but cannot yet prove.
+\item The second order term of the Kemeny constant (Problems 10.1 and 30.2), computed from tables of class numbers through the Eichler Selberg trace formula, checked against exact spectra of supersingular isogeny graphs, and compared with a random multiplicative series model.
+\item The Thorin measure of $\Delta$ to height $10^5$ (Problem 13.1) and the tables of $M_f$ (Problem 27.1), the two computations that put the new representations of Part IV on a firm numerical footing.
+\item Certified Thorin Hankel determinants for every $L$ function in the LMFDB of small conductor (Problem 14.1), computed from central derivatives in interval arithmetic; this is the cheapest systematic test of the Thorin form of the Riemann hypothesis, and it needs no zeros.
+\item The 52 group likelihood library (Problem 29.2), beginning with the curve $y^2=x^6+x^3+1$ (Problem 29.1), whose atom at zero already shows that the library must include disconnected groups.
+\end{enumerate}
+
+\section{Software and data}
+
+Most computations in this book used PARI/GP through its Python interface, with NumPy, SciPy and mpmath for numerics and linear algebra. For the programme we expect to add Sage and Magma for modular forms and isogeny graphs, Sutherland's smalljac and average polynomial time code for genus two and three, the LMFDB as a source of curves and forms with precomputed invariants, and GPU code for point counting and Monte Carlo. Section~\ref{sec:B:scripts} lists the surviving scripts and result files.
+
+\section{Notes}
+
+The idea that computation is the experimental arm of number theory goes back at least to Gauss's tables of primes, and in the modern era to Birch and Swinnerton Dyer's computations on the EDSAC 2 computer in Cambridge that led to their conjecture. The LMFDB is the most systematic expression of this tradition for the Langlands programme. Our emphasis on statistical standards follows the view, implicit throughout this book, that once a conjecture predicts a law, its numerical test is a problem in statistics, and the usual disciplines of statistics (prespecified tests, reference populations, honest reporting of uncertainty) apply.

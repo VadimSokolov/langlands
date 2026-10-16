@@ -1,0 +1,274 @@
+\chapter{Code for the Computations}\label{app:B}
+
+This appendix prints the core routines behind the figures and tables of the book in condensed form, and then lists the scripts and result files that accompany the source. The computations use PARI/GP \cite{pari2023} through its Python interface cypari2, with NumPy, SciPy and mpmath. The release that produced the stored results was not recorded, except that \texttt{stage4c.json} names 2.15.4. The values in the comments come from a rerun of all listings in 2026 with PARI/GP 2.17.2 and cypari2 2.2.4, and they agree with the numbers quoted in the chapters; selected listings give the same values under PARI/GP 2.15.4, the series named in the reference. The listings are cumulative: later ones use the names defined by earlier ones, starting from these lines.
+
+{\footnotesize
+\begin{verbatim}
+import math
+import numpy as np
+import mpmath as mp
+import cypari2
+pari = cypari2.Pari()
+pari.allocatemem(2*10**9)       # a PARI stack of two gigabytes
+\end{verbatim}
+}
+
+\section{Frobenius traces}
+
+Naive point counting by Legendre symbols, vectorised over residues, serves for primes up to about $10^5$ and as an independent check on PARI's \texttt{ellap}, which we use for all primes up to $10^7$.
+
+{\footnotesize
+\begin{verbatim}
+def ap_naive(a, b, p):          # y^2 = x^3 + a x + b mod p
+    x = np.arange(p, dtype=np.int64)
+    f = (x*x % p*x + a*x + b) % p
+    sq = np.zeros(p, np.int8); sq[(x*x) % p] = 1
+    leg = np.where(f == 0, 0, np.where(sq[f] == 1, 1, -1))
+    return -int(leg.sum())
+
+def arr(expr):                  # a GP integer vector as a NumPy array
+    t = str(pari(f"Vecsmall({expr})"))
+    return np.array(t[t.index("[")+1:t.rindex("]")].split(","),
+                    dtype=np.int64)
+
+pari("E=ellinit([0,0,0,1,1]); P=primes([3,10^7]);"
+     "V=vector(#P,i,ellap(E,P[i]));")
+P, V = arr("P"), arr("V")
+good = P != 31                  # 31 divides the discriminant -496
+P, V = P[good], V[good]         # 664577 primes
+x = V/np.sqrt(P)                # normalised traces in [-2, 2]
+print([round(float(np.mean(x**k)), 4) for k in (2, 4, 6)])
+# [1.0, 1.9994, 4.9976]: the Catalan numbers 1, 2, 5
+assert all(ap_naive(1, 1, p) == v for p, v in zip(P[:500], V[:500]))
+\end{verbatim}
+}
+
+The even moments in the comment are those of Table~\ref{tab:05moments}. The curve $y^2=x^3-x$ is treated in the same way, with \texttt{[0,0,0,-1,0]} in place of \texttt{[0,0,0,1,1]} and no excluded prime.
+
+For a genus two curve $y^2=f(x)$ over $\mathbb F_p$, with $p$ odd and not dividing the leading coefficient or the discriminant of $f$, the number of points is $\#C(\mathbb F_p)=p+\sum_{x\in\mathbb F_p}\bigl(\tfrac{f(x)}{p}\bigr)+n_\infty$, where $n_\infty$ counts the points at infinity: $n_\infty=1$ if $\deg f$ is odd, and for $\deg f$ even $n_\infty=2$ or $0$ according as the leading coefficient is a square modulo $p$ or not. The trace of Frobenius is $p+1-\#C(\mathbb F_p)$.
+
+{\footnotesize
+\begin{verbatim}
+def ap_genus2(c, p):            # y^2 = f(x), f = c[0] x^d + ... + c[d]
+    x = np.arange(p, dtype=np.int64)
+    v = np.zeros(p, dtype=np.int64)
+    for a in c: v = (v*x + a) % p              # Horner: f(x) mod p
+    sq = np.zeros(p, np.int8); sq[(x*x) % p] = 1
+    chi = np.where(v == 0, 0, np.where(sq[v] == 1, 1, -1))
+    inf = 1 if len(c) % 2 == 0 else (2 if sq[c[0] % p] else 0)
+    return 1 - int(chi.sum()) - inf            # p + 1 - #C(F_p)
+
+print(ap_genus2([1, 0, 0, 0, -1, 1], 101))     # -8: y^2 = x^5 - x + 1
+\end{verbatim}
+}
+
+For $y^2=x^5-x+1$ over $\mathbb F_{101}$ the trace is $-8$, the value behind the characteristic polynomial $T^4+8T^3-16T^2+808T+10201$ of Chapter~\ref{ch:10c}. For the three curves of Chapter~\ref{ch:12} the function reproduces the traces stored in \texttt{stage4c.json} (Section~\ref{sec:B:scripts}) at all good primes below $10^5$.
+
+\section{Supersingular isogeny graphs}\label{sec:B:ssgraph}
+
+The following PARI/GP function builds the $\ell$ isogeny graph on the supersingular $j$ invariants over $\mathbb F_{p^2}$, the graph $G_N(\ell)$ of Chapter~\ref{ch:08} with $N=p$. It takes the least $D\ge3$ such that $-D$ is a fundamental discriminant and $p$ is inert in $\mathbb Q(\sqrt{-D})$, so that every root modulo $p$ of the Hilbert class polynomial of discriminant $-D$ is supersingular, and starts from one of them. It explores the neighbours of a vertex $j$ through the roots of the classical modular polynomial $\Phi_\ell(j,Y)$. For supersingular $j$ all $\ell+1$ roots, counted with multiplicity, lie in $\mathbb F_{p^2}$, so every irreducible factor is linear, the entry $A_{jr}$ of the result is the multiplicity of the root $r$, and every row of $A$ sums to $\ell+1$. The function is saved as \texttt{ss\_graph.gp} in \texttt{code/work/} and in \texttt{hitting/}; that file differs from the listing in the names and declarations of some variables, in the layout of a few statements and in a comment, and gives the same matrices for $\ell\in\{2,3,5,7\}$ and the primes $p\ne\ell$ with $7\le p\le400$, and for ten primes $p\equiv1\bmod12$ between $1000$ and $8000$ with $\ell\in\{2,3\}$.
+
+{\footnotesize
+\begin{verbatim}
+ssgraph(p,l)={
+  my(T=ffinit(p,2,'a), g=ffgen(T,'a), D=3, fa, j0,
+     seen=Map(), stack, edges=List(), n=1, A,
+     P=polmodular(l));
+  while(kronecker(-D,p)!=-1 || !isfundamental(-D), D++);
+  fa=factor(subst(polclass(-D),'x,'y)*g^0);
+  for(i=1,#fa[,1], if(poldegree(fa[i,1])==1,
+     j0=-polcoef(fa[i,1],0)/polcoef(fa[i,1],1); break));
+  mapput(seen,j0,1); stack=List([j0]);
+  while(#stack>0, my(j=stack[#stack]); listpop(stack);
+    fa=factor(subst(subst(P,'x,j),'y,'Y)*g^0);
+    for(i=1,#fa[,1],
+      my(r=-polcoef(fa[i,1],0)/polcoef(fa[i,1],1));
+      if(!mapisdefined(seen,r),
+         n++; mapput(seen,r,n); listput(stack,r));
+      listput(edges,[mapget(seen,j),mapget(seen,r),fa[i,2]])));
+  A=matrix(n,n);
+  for(k=1,#edges, my(e=edges[k]); A[e[1],e[2]]+=e[3]);
+  A
+}
+\end{verbatim}
+}
+
+For $p\equiv1\bmod12$ neither $j=0$ nor $j=1728$ is supersingular, so no vertex has an automorphism other than $\pm1$, and $A$ is the symmetric Brandt matrix of Chapter~\ref{ch:08}, of size $(p-1)/12$. For other $p$ the curves with $j=0$ or $j=1728$ can be supersingular and have extra automorphisms, the matrix is in general not symmetric, and the book does not use it. We ran the function for $\ell=2,3$ at the $207$ primes $p\equiv1\bmod12$ between $1000$ and $8000$: all $414$ matrices are symmetric with these sizes and row sums $\ell+1$, and their Kemeny constants and the largest absolute values of their nontrivial eigenvalues, divided by $2\sqrt\ell$, agree with \texttt{stage2.json}.
+
+\section{Kemeny constants and hitting times}
+
+The function \texttt{graph} turns the output of \texttt{ssgraph} into a NumPy matrix. The function \texttt{kemeny} is the spectral formula $K=\sum_{j\ge2}(1-\lambda_j/d)^{-1}$ of Theorem~\ref{thm:A:kemeny}. The function \texttt{hitting\_times} solves the hitting time equations directly, one target at a time, in $O(n^4)$ operations, and \texttt{hitting\_fast} computes the same matrix in $O(n^3)$ operations from the fundamental matrix, $h(x,y)=n\bigl(Z(y,y)-Z(x,y)\bigr)$ with $Z=(I-P+\Pi)^{-1}-\Pi$, where $\Pi$ has every entry equal to $1/n$.
+
+{\footnotesize
+\begin{verbatim}
+pari('read("ss_graph.gp")')
+
+def graph(p, l):                # adjacency matrix of the l graph at p
+    pari(f"A=ssgraph({p},{l})"); n = int(pari("#A"))
+    return np.array([[int(pari(f"A[{i},{j}]")) for j in range(1, n+1)]
+                     for i in range(1, n+1)], dtype=float)
+
+def kemeny(M):                 # M: adjacency of an (l+1) regular graph
+    d = M.sum(1)[0]
+    ev = np.sort(np.linalg.eigvalsh(M))
+    return np.sum(1/(1 - ev[:-1]/d))
+
+def hitting_times(M):          # H[u,v] = E_u tau_v
+    n = len(M); P = M/M.sum(1)[0]; I = np.eye(n)
+    H = np.zeros((n, n))
+    for v in range(n):
+        idx = [i for i in range(n) if i != v]
+        H[idx, v] = np.linalg.solve((I - P)[np.ix_(idx, idx)],
+                                    np.ones(n - 1))
+    return H                   # H.mean() equals kemeny(M)
+
+def hitting_fast(M):           # the same matrix, O(n^3) operations
+    n = len(M); P = M/M.sum(1)[0]; Pi = np.ones((n, n))/n
+    Z = np.linalg.inv(np.eye(n) - P + Pi) - Pi
+    return n*(np.diag(Z)[None, :] - Z)
+
+M = graph(1009, 2)             # 84 vertices, 3 regular
+print(kemeny(M), hitting_times(M).mean(), hitting_fast(M).mean())
+# all three are 156.766
+\end{verbatim}
+}
+
+Chapter~\ref{ch:08} reports the direct computation at $N=1009$, $2017$ and $4129$.
+
+\section{The extreme value representation}
+
+Let $M^*$ be the maximum of $24$ independent copies of $\max_{n\ge1}E_n/(2\pi n)$, with $E_n$ standard exponential variables, as in Appendix~\ref{app:A} and Chapter~\ref{ch:11}. For real $s>0$, $L(s,\Delta)=\E\,Q(s,2\pi M^*)$, where $Q(s,c)=\Gamma(s,c)/\Gamma(s)$ is the regularised upper incomplete gamma function. The simulation truncates the maximum at $n\le400$, which biases the estimate of $L(6,\Delta)$ by at most $1.2\times10^{-13}$ (Monte Carlo section of Chapter~\ref{ch:11}).
+
+{\footnotesize
+\begin{verbatim}
+from scipy.special import gammaincc        # regularised Q(s,c)
+rng = np.random.default_rng(3); n = np.arange(1, 401)
+Ms = np.concatenate([
+    np.max(rng.exponential(size=(1000, 24, 400))
+           / (2*np.pi*n), axis=(1, 2)) for _ in range(20)])
+q = gammaincc(6, 2*np.pi*Ms)               # Q(6, 2 pi M*), 20000 draws
+print(q.mean(), q.std()/np.sqrt(len(q)))   # 0.7929 and 0.0012
+
+# exact value by quadrature: L(s,Delta) is the integral of
+# Delta(iy) (2 pi y)^s dy/(y Gamma(s)) over y > 0
+def EQ(s):
+    D = lambda y: mp.mpf(float(pari(f"real(eta(I*{y},1)^24)")))
+    g = lambda y: D(y)*(2*mp.pi)**s*y**(s-1)/mp.gamma(s)
+    return mp.quad(g, [0.01, 0.1, 0.3, 1, 3, 12])
+print([mp.nstr(EQ(s), 7) for s in (3, 6, 10)])
+# ['0.3152416', '0.7921228', '0.9798091']
+\end{verbatim}
+}
+
+The values in the last comment are $L(3,\Delta)$, $L(6,\Delta)$ and $L(10,\Delta)$, and the Monte Carlo value $0.7929$ is within one standard error of $L(6,\Delta)$. In the quadrature, PARI's \texttt{eta(z,1)} is the Dedekind eta function itself, whereas \texttt{eta(z)} omits the factor $e^{i\pi z/12}$, and $\Delta(iy)=\eta(iy)^{24}$. The integrand is negligible outside $[0.01,12]$ for the moderate $s$ used here.
+
+\section{Zeros of $L(s,\Delta)$ and the GGC product}
+
+With $\Lambda(s)=(2\pi)^{-s}\Gamma(s)L(s,\Delta)$ and zeros $6\pm i\gamma_k$, the Hadamard product gives $\Lambda(6)/\Lambda(6+\sqrt s)=\prod_k(1+s/\gamma_k^2)^{-1}$ (Chapter~\ref{ch:10}). The listing multiplies over the zeros with $0<\gamma\le400$ and corrects for the others by the tail $\sum_{\gamma>T}\gamma^{-2}\approx(\log(T/2\pi)+1)/(\pi T)$ with $T=400$, which follows from the zero density $\pi^{-1}\log(t/2\pi)$. Here \texttt{lfunlambda} is PARI's completed L function, and only the quotient of its values matters.
+
+{\footnotesize
+\begin{verbatim}
+pari("mf=mfinit([1,12]); L=lfunmf(mf,mfDelta());")
+z = [float(t) for t in pari("lfunzeros(L,400)") if t > 0]
+lam = lambda s: float(pari(f"lfunlambda(L,{s})"))
+T = 400; tail = (math.log(T/(2*math.pi)) + 1)/(math.pi*T)
+def ggc(s):                  # Lambda(6)/Lambda(6+sqrt s)
+    return math.exp(-sum(math.log1p(s/t**2) for t in z)
+                    - s*tail)
+
+print(len(z), ggc(100), lam(6)/lam(16))
+# 404 0.0069741 0.0069732: corrected product and exact quotient
+\end{verbatim}
+}
+
+Without the tail the product is too large by the factor $e^{s\cdot\mathrm{tail}}$, which is $1.51$ at $s=100$ and $5.16$ at $s=400$. With it, the relative error is below $2\times10^{-4}$ on a grid of step $0.05$ in $(0,400]$, the worst value being $1.9\times10^{-4}$ near $s=227$.
+
+\section{Bayes factors for Sato Tate groups}\label{sec:B:bayes}
+
+The function returns the running sum over the primes of the log likelihood ratios of the model $M_{\mathrm{CM}}$ against $M_{\mathrm{ST}}$ of Chapter~\ref{ch:12}, each term clipped to $[-M,M]$. The argument \texttt{zero} marks the primes with $a_p=0$, and \texttt{eps} is the mass $\varepsilon$ that $M_{\mathrm{ST}}$ puts on $0$.
+
+{\footnotesize
+\begin{verbatim}
+def log_bayes(x, zero, eps=1e-3, M=20):    # CM against SU(2)
+    s = np.sqrt(np.clip(4 - x**2, 1e-12, None))
+    l_st = np.where(zero, np.log(eps),
+                    np.log(1 - eps) + np.log(s/(2*np.pi)))
+    l_cm = np.where(zero, np.log(.5), np.log(.5/(np.pi*s)))
+    return np.cumsum(np.clip(l_cm - l_st, -M, M))
+
+m = P < 40000                  # good primes below 40000, curve E_1
+b = log_bayes(x[m], V[m] == 0)
+print(b[49], b[-1]/len(b))     # -15.9 and -0.979 per prime
+\end{verbatim}
+}
+
+Here \texttt{x}, \texttt{P} and \texttt{V} are the arrays of the first listing, for $E_1:y^2=x^3+x+1$. The two numbers are the log Bayes factor after $50$ good primes and the average per prime over the good primes below $40000$. For $E_2:y^2=x^3-x$ the same computation gives $160.4$ and $3.102$. The limiting slopes are $-0.999$ and $3.108$ (Chapter~\ref{ch:12}).
+
+\section{Scripts and results}\label{sec:B:scripts}
+
+The stage scripts behind the numbers of the book, and the JSON files with their results, sit in the folder that holds the source, next to \texttt{book/}; those of Chapters~\ref{ch:scholze}, \ref{ch:recip}, \ref{ch:hit}, \ref{ch:flt}, \ref{ch:lap}, \ref{ch:pd}, \ref{ch:gl1} and \ref{ch:maass} are in the subfolders \texttt{scholze/}, \texttt{recip/}, \texttt{hitting/}, \texttt{flt/}, \texttt{laplace/code/}, \texttt{pd/code/}, \texttt{gl1/code/} and \texttt{maass/code/}. The folder \texttt{code/} holds copies of the stage scripts other than \texttt{stage4c.py}, and of the scripts of Chapters~\ref{ch:recip} and \ref{ch:hit}, in a layout with relative paths, described below, together with scripts kept only there: \texttt{compute.py}, \texttt{etacheck.py}, the scripts of five figures and pilot computations for some of the open problems. Table~\ref{tab:B:scripts} lists the scripts with the chapters that use their results, those kept only in \texttt{code/} last.
+
+{\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{p{1.4in}p{2.95in}p{0.6in}}
+\caption{Computation scripts and the chapters that use them.}\label{tab:B:scripts}\\
+\toprule
+Script & Computes & Chapters\\
+\midrule
+\endfirsthead
+\toprule
+Script & Computes & Chapters\\
+\midrule
+\endhead
+\texttt{stage1.py} & Traces of Frobenius to $10^7$ for $y^2=x^3+x+1$, $y^2=x^3-x$ and the curves 11a1, 37a1, 389a1 and 5077a1, and $\tau(p)$ to $10^6$; Sato Tate discrepancies, also for $200$ random curves to $10^6$; rank bias; Lang Trotter counts & \ref{ch:01}, \ref{ch:02}, \ref{ch:04}, \ref{ch:05}\\
+\texttt{stage2.py}, \texttt{stage2b.py} & Spectra and Kemeny constants of the supersingular $2$ and $3$ isogeny graphs at the $207$ primes $p\equiv1\bmod12$ between $1000$ and $8000$; hitting time matrices at $p=1009$, $2017$ and $4129$ & \ref{ch:07}, \ref{ch:08}\\
+\texttt{stage3.py} & P\'olya kernel of $\Delta$ and its $404$ zeros up to height $400$, the GGC product, the extreme value representation & \ref{ch:10}, \ref{ch:11}\\
+\texttt{stage4.py}, \texttt{stage4b.py} & Traces of three genus two curves to $10^5$; Bayes factors for Sato Tate groups of genus two (superseded by \texttt{stage4c.py}) & \ref{ch:12}\\
+\texttt{stage4c.py} & Traces of the same curves, their trace densities by quadrature, the Kullback Leibler table, posteriors and rates of the chapter & \ref{ch:12}\\
+\texttt{stage5.py} & Thorin measures of eleven L functions, Hankel determinants, passage times on trees and isogeny graphs, the Weil example & \ref{ch:10b}, \ref{ch:10c}\\
+\texttt{stage6.py}, \texttt{stage6b.py} & The van Dantzig test for $\Delta$, its heat trace from zeros and from primes, zeros recovered from primes by a sliding bump, the $2\sin^2$ transport check & \ref{ch:10d}\\
+\texttt{stage7.py}, \texttt{stage7b.py} & The Patie class survey of L functions, simulated first passage times for the zeta subordinator, high precision Patie tests for $\xi$, $\Delta$, $L(s,\chi_{-4})$ and the curve 11a1 & \ref{ch:10d}\\
+\texttt{stage8.py} & Heegner points, Duke's theorem, coverage of right and left Haar priors & \ref{ch:11b}\\
+\texttt{stage9a.py}, \texttt{stage9a2.py} & Selberg's central limit theorem, the Fyodorov Hiary Keating maxima, spacings and pair correlation for $\Delta$ & \ref{ch:09b}\\
+\texttt{stage9b.py} & Maxima of random fields, branching random walk, Harper's model & \ref{ch:09b}\\
+\texttt{stage9c.py} & Cohen Lenstra and Poonen Rains statistics & \ref{ch:06c}\\
+\texttt{stage9d.py} & Katz and Kowalski Sawin statistics for Kloosterman sums & \ref{ch:06b}\\
+\texttt{scholze/\allowbreak signed\_thorin.py}, \texttt{scan\_p2p3.py}, \texttt{offline\_test.py}, \texttt{certify.py} & The signed Thorin density $u_\varepsilon$ of $\zeta$, $L(s,\chi_{12})$ and $L(s,\Delta)$ by Stieltjes inversion and their zeros on the critical line by sign changes; its comparison with the Lorentzian smoothing of these zeros; a toy function with one pair of zeros moved off the line; winding numbers of $\Lambda$ around rectangles & \ref{ch:scholze}\\
+\texttt{recip/data.py}, \texttt{laws.py}, \texttt{second.py}, \texttt{heat.py}, \texttt{recip\_compute.py}, \texttt{recip\_law.py}, \texttt{recip\_gauss.py} & Frobenius classes for $x^3-x-1$ and $x^3+x+1$, the symbols $(\frac7p)$ and $(\frac p7)$, and traces of 11a1 and 37a1 for the primes below $10^7$; Gamma process Laplace transforms, zero probabilities and Euler Kronecker drifts; the discrete Gaussian modulo $c$ and heat flow reciprocity; P\'olya kernel symmetry, the Galois heat trace and Gamma shapes; Frobenius distances, joint laws and conditional means for the primes below $10^6$; Gauss sum reciprocity and its Brownian limit & \ref{ch:recip}\\
+\texttt{hitting/graphs.py}, \texttt{iso\_run.py}, \texttt{snf\_run.py}, \texttt{sandpile.py}, \texttt{test37.py}, \texttt{hitrates.py}, \texttt{other.py}, \texttt{explosion.py}, \texttt{expl\_frob.py}, \texttt{exitcheck.py} & Isogeny walks for $\ell=2,3,5,7$ at $58$ prime levels against $T_\ell$ from modular symbols (Kemeny constants, spanning trees, Kirchhoff indices); exact Kemeny constants and tree counts at the primes $N\equiv1\bmod12$ below $700$; Smith normal forms at ten levels; critical groups at the $48$ primes $N\equiv1\bmod12$ with $37\le N<1300$ and the comparison at $N=37$; Chebotarev hitting rates for $x^3-x-1$; mean explosion times from central derivatives, from zeros, and from Frobenius classes with the conductor and the gamma factor; the signed exit law & \ref{ch:hit}\\
+\texttt{flt/data.py}, \texttt{flt.py}, \texttt{thorin\_ec.py}, \texttt{flt\_eis.py}, \texttt{frey\_like.py} & The primes below $10^7$ and the traces of 11a1 and 37a1 (the same script as \texttt{recip/data.py}); Wilton's congruence for the primes below $3\cdot10^5$, the newforms of level $77$ against 11a1 modulo $3$, dimensions of $S_2(\Gamma_0(N))$ and counts of Hurwitz quaternions; P\'olya kernels of 11a1 and 37a1, and the heat trace of 11a1 from the explicit formula against its zeros, with its integral; Eisenstein shapes, Haar counts in $\GL_2(\mathbb F_p)$, shares and Laplace transforms for 37a1 and 11a1; the shapes of the Frey type curve of $3+5^3=2^7$ & \ref{ch:flt}\\
+\texttt{laplace/\allowbreak code/\allowbreak switch23.py}, \texttt{switch23b.py}, \texttt{zeta\_switch.py}, \texttt{zeta\_tail.py}, \texttt{splines/\allowbreak data.py}, \texttt{checks.py}, \texttt{gg\_mple.py} & Frobenius traces of the representation of $x^3-x-1$ against the $q$ expansion of $\eta(z)\eta(23z)$ at the prime powers below $2\cdot10^5$, and their transported densities at $\alpha=\frac32$; Gaussian means recovering $\Lambda_\rho(n)$, $n\le64$, from the $q$ expansion, and Bromwich inversion of $\Lambda(s,\rho)$, computed as $\zeta_K/\zeta$, on the critical line; the Thorin densities of $\Xi_\zeta$ against Cauchy superpositions over the first $1000$ zeros of $\zeta$, and Talbot and Post Widder inversion of the Thorin law of $\zeta$ at $\alpha=2$; its density on $[0.0005,400]$ with its mass, mean and tail constant; the primes below $10^7$ and the traces of 11a1 and 37a1 (the same script as \texttt{recip/data.py}); Weyl denominators, and the Hecke GGC $H_{67}(2)$ as a Gamma variable times a B spline variable; Good and Gaskins estimates for 11a1 and $y^2=x^3-x$ & \ref{ch:lap}\\
+\texttt{pd/\allowbreak code/\allowbreak data.py}, \texttt{pd1.py}, \texttt{pd2.py}, \texttt{op\_pd.py}, \texttt{op\_pd2.py} & The primes below $10^7$ with the Frobenius classes of $x^3-x-1$ (the same script as \texttt{recip/data.py}); $400000$ uniform random integers below $10^7$, with their largest prime factors, numbers of prime factors and three colourings of the prime factors by Frobenius class; Mertens constants per class, the predicted colourings, the Dirichlet mean check and the Laplace transform of a Frobenius functional at $\sigma=1.01$, from the Euler product over the primes below $10^7$ and the prime number theorem beyond; the constants $b_C$ from $L(1,\chi)$, the probabilities that a class is empty, the share means and the Rankin Selberg colouring; the constants $c_C$ from $\frac{L'}L(1,\chi)$, the constants $K_C$ and the proportions of the sampled integers with no prime factor in a class & \ref{ch:pd}\\
+\texttt{gl1/\allowbreak code/\allowbreak g1.py}, \texttt{g3.py}, \texttt{g4.py}, \texttt{g5.py}, \texttt{sym2test.py} & The Gaussian primes below $10^7$ with their primary generators, the traces of the curve 32a2, the discrepancy and Weyl sums of the Hecke angles and the moments of complex multiplication; Rankin Selberg Laplace transforms of 32a2 over $\Q$ and over $\Q(i)$; Mertens constants modulo $4$, atoms at zero, Landau's constant and a sieve to $10^8$; the zeros of $L(s,\chi_4)$ to height $3000$ with the product check; a check that the symmetric square of 32a2 in PARI has a trivial Euler factor at $2$ & \ref{ch:gl1}\\
+\texttt{maass/\allowbreak code/\allowbreak m1.py} to \texttt{m7.py}, \texttt{lmfdb\_r.py} & The prime geodesics of the modular surface of norm at most $10^6$, from the class numbers and units of the discriminants below $4\cdot10^6$, with their counting function against $\operatorname{li}$; $64$ paths of Brownian motion on the modular surface to time $2\cdot10^4$; the Eichler Selberg trace formula against Hecke matrices for weights up to $40$ and $n\le30$; Serre's vertical Sato Tate law at $p=2$ for the eigenforms of level one and weight up to $400$, with the Eichler Selberg moments of orders $2$ and $4$; the Thorin density of $Z(s+1)/Z(s)$ at $\alpha=2$ with the sine squared check; the error term of the prime geodesic theorem and its periodogram; the first $100$ spectral parameters of level one, copied from the LMFDB & \ref{ch:maass}\\
+\midrule
+\multicolumn{3}{l}{Kept only in \texttt{code/book\_build/} and \texttt{code/book\_figscripts/}}\\
+\midrule
+\texttt{compute.py} & Traces of $y^2=x^3+x+1$ and $y^2=x^3-x$ below $4\times10^4$ by Legendre symbols, supersingular primes and the fraction of $a_p=0$, the Bayes factors of Section~\ref{sec:B:bayes} & \ref{ch:01}, \ref{ch:05}, \ref{ch:12}\\
+\texttt{etacheck.py} & The extreme value representation against PARI at real points for four eta products & \ref{ch:11}\\
+\texttt{ch03\_chebotarev.py} & Frobenius classes of $x^3-x-1$ for the primes below $10^7$, from which \texttt{ch03\_chebfig.py} draws the figure of the chapter & \ref{ch:03}\\
+\texttt{ch06\_figs.py} & The one level densities of the symmetry types; spacings of $400$ Haar unitary matrices of size $200$; a trace check with $4000$ matrices of size $50$, of which the chapter prints a rerun with another seed & \ref{ch:06}\\
+\texttt{ch11\_lvalues.py} & $L(s,f)$ on the real axis for four eta products & \ref{ch:11}\\
+\texttt{ch12\_posterior.py} & Trace densities of the genus two groups by quadrature, posterior paths, the Kullback Leibler table and the rates of the three curves, from the traces written by \texttt{stage4b.py} & \ref{ch:12}\\
+\bottomrule
+\end{longtable}
+}
+
+Each stage script writes the JSON file of its own stage, and random draws use seeded NumPy generators. The later scripts \texttt{stage2b.py}, \texttt{stage4b.py}, \texttt{stage6b.py} and \texttt{stage9a2.py} overwrite the JSON files of stages 2, 4, 6 and 9a, and the table describes these later runs, not the earlier and smaller \texttt{stage2.py} and \texttt{stage4.py}. The Kullback Leibler divergences, posteriors and rates in \texttt{stage4.json} come from histogram densities that alias; \texttt{stage4c.py} evaluates the densities by quadrature, reads no file and reproduces the genus two numbers of Chapter~\ref{ch:12}. The file \texttt{stage6.json} lacks the heat trace computed by \texttt{stage6.py}, a selection of which is in Table~\ref{tab:10dheat}. The file \texttt{stage8.json} has $4000$ replications and a block of normal error checks, under key names that \texttt{stage8.py} does not write. That script runs $2000$ replications on grids too narrow for the P\'olya error law and gives coverages near $0.65$ for $\sigma$; the normal block is computed by \texttt{code/scratch/dbg8.py}, and the coverage block of \texttt{stage8.py}, run with the wider grids of \texttt{dbg8.py} and $4000$ replications, agrees with Table~\ref{tab:11bcoverage} within Monte Carlo error. The file \texttt{stage9a\_var.json} is read by \texttt{stage9a2.py} and written by no saved script.
+
+The figures are drawn by \texttt{figs.py}, \texttt{figs2.py}, \texttt{fig3.py}, \texttt{fig3b.py}, \texttt{fig9.py}, \texttt{fig\_parabola10b.py}, \texttt{stage5fig.py} and \texttt{stage7fig.py} from the JSON files and the arrays written by the stage scripts; by the five figure scripts kept only in \texttt{code/}, of which \texttt{ch12\_posterior.py} also draws \texttt{genus2} in the layout of the book (\texttt{figs2.py} draws another version); for Chapter~\ref{ch:beta}, by \texttt{beta/fig\_beta.py}; and, for Chapters~\ref{ch:recip} to \ref{ch:maass}, by the scripts of \texttt{recip/}, \texttt{hitting/}, \texttt{flt/}, \texttt{laplace/\allowbreak code/}, \texttt{pd/\allowbreak code/}, \texttt{gl1/\allowbreak code/} and \texttt{maass/\allowbreak code/}. Four figures, \texttt{rankbias}, \texttt{langtrotter}, \texttt{sf\_atoms} and \texttt{sf\_thorin\_strip}, are written by no saved script (for the first two \texttt{figs.py} draws plots of the same data, saved as \texttt{/tmp/rb.pdf} and \texttt{/tmp/lt.pdf}, which differ from the figures of the book). The scripts next to \texttt{book/} do not run as they stand: stages 1 to 4 (except \texttt{stage4c.py}) and the figure scripts hardcode the path \texttt{/home/claude/langlands/} of the sandbox where they ran, and several scripts read arrays written by earlier scripts, of which only the JSON results were kept, not the arrays or \texttt{stage6\_coeffs.json}. Their copies in \texttt{code/book\_build/} replace that path by \texttt{../work/} and are run from their own folder, with the files shared between folders in \texttt{code/work/}, which also holds \texttt{ss\_graph.gp}. In the cases we tested (\texttt{stage3.py}, the trace arrays of \texttt{stage4b.py}, \texttt{compute.py}, \texttt{etacheck.py} and the computations of the figure scripts of Chapters~\ref{ch:03}, \ref{ch:06}, \ref{ch:11} and \ref{ch:12}) they reproduce the numbers of the chapters, but not every script runs as it stands: several figure scripts, \texttt{stage5.py} and \texttt{stage8.py} read from their own folder files that other scripts write to \texttt{code/work/}, or the reverse, a few paths into \texttt{/tmp} remain, and \texttt{stage4c.py} is not in the archive.
+
+Chapters~\ref{ch:squarefree} and \ref{ch:beta} came without scripts; their text says how their numbers were computed. The script \texttt{beta/fig\_beta.py}, written for this book, computes and draws the two figures of Chapter~\ref{ch:beta} (mpmath at $20$ digits, matplotlib). The four scripts of Chapter~\ref{ch:scholze}, in \texttt{scholze/}, use mpmath, read no files and run as they stand; all but \texttt{offline\_test.py} take the function, the height and the grid sizes as arguments and print their results as JSON. The script \texttt{signed\_thorin.py} computes the signed density $u_\varepsilon$ on a grid from $\Lambda'/\Lambda$, and the zeros on the critical line, for the three functions at $20$ digits; its outputs are kept as \texttt{zeta\_out.json}, \texttt{chi12\_out.json} and \texttt{delta\_out.json}. The script \texttt{scan\_p2p3.py} compares $u_\varepsilon$ with the Lorentzian smoothing of the located zeros, for $\zeta$ at $\varepsilon=1$ and $\frac12$ and for $L(s,\chi_{12})$ at $\varepsilon=1$, in the files \texttt{s\_zeta\_e1.json}, \texttt{s\_zeta\_e05.json} and \texttt{s\_chi12\_e1.json}, and \texttt{offline\_test.py} prints the minimum of $u_\varepsilon$ at $\varepsilon=2$ and $20$ for a toy function built from the first five zeros of $\zeta$, with the third left on the line or moved off it by $0.3$. The script \texttt{certify.py} counts zeros by unwrapping the phase of $\Lambda$ at sampled points of a rectangle ($400$ per side, fixed in the script) and compares the count with the sign changes of $\Lambda$ on the critical line; its flag \texttt{certified} records only that the two agree. It works at $12$ digits and with no interval arithmetic or bound on the phase steps, so its counts are numerical, not certified; its output was not kept. The grid sizes of the kept outputs were not recorded with them.
+
+The seven computational scripts of Chapter~\ref{ch:recip}, in \texttt{recip/}, use relative paths and run as they stand, \texttt{data.py} first, since \texttt{laws.py} and \texttt{second.py} read the array file \texttt{data.npz} that it writes, which is not kept. The nine figures of the chapter are drawn by \texttt{recip\_figs.py}, \texttt{recip\_gauss\_fig.py}, \texttt{recip\_law\_fig.py}, \texttt{figs.py} and \texttt{fig\_second.py} of that folder; the last two write \texttt{gamma\_process.pdf}, \texttt{zero\_heat.pdf} and \texttt{second\_order.pdf}, which the book prints under the names \texttt{recip\_gammaproc.pdf}, \texttt{recip\_zeroheat.pdf} and \texttt{recip\_drift.pdf}.
+
+The ten computational scripts of Chapter~\ref{ch:hit}, in \texttt{hitting/}, use PARI/GP through cypari2, except \texttt{hitrates.py} and \texttt{exitcheck.py}. Six scripts hardcode paths under \texttt{/home/claude/langlands/}, the sandbox where they ran: \texttt{graphs.py}, \texttt{sandpile.py}, \texttt{test37.py} and \texttt{fig\_graph.py} read \texttt{ss\_graph.gp} there, and \texttt{hitrates.py} and \texttt{expl\_frob.py} read \texttt{newrecip/data.npz}, the array file written by \texttt{recip/data.py}, which \texttt{other.py} looks for in \texttt{../newrecip/}; \texttt{iso\_run.py} and \texttt{snf\_run.py} read \texttt{iso.gp}. Both GP files are kept in \texttt{hitting/}. Of the four figures of the chapter, \texttt{figs.py} draws \texttt{hit\_isogeny}, \texttt{hit\_rates} and \texttt{hit\_exit}, and \texttt{fig\_graph.py}, which also needs networkx, draws \texttt{hit\_graph}. Copies of the scripts of Chapters~\ref{ch:recip} and \ref{ch:hit} are in \texttt{code/ch17\_reciprocity/}, \texttt{code/ch17\_gamma\_process/} and \texttt{code/ch18\_hitting/} (the folder names follow an earlier numbering of the chapters), where \texttt{data.npz} and \texttt{ss\_graph.gp} are read from \texttt{code/work/}.
+
+The five computational scripts of Chapter~\ref{ch:flt}, in \texttt{flt/}, use relative paths and run as they stand, \texttt{data.py} first, since \texttt{thorin\_ec.py}, \texttt{flt\_eis.py} and \texttt{thorin\_fig.py} read the array file \texttt{data.npz} that it writes, which is not kept; all of them except \texttt{flt\_eis.py} use PARI/GP through cypari2. Of the five figures of the chapter, the script \texttt{figs.py}, which also uses cypari2, draws \texttt{flt\_labels} and \texttt{flt\_congruence}; the script \texttt{thorin\_fig.py}, which also reads the file \texttt{thorin\_ec.json}, draws the figures \texttt{flt\_kernels} and \texttt{flt\_thorin} and writes the file \texttt{thorin\_fig.json}; and the script \texttt{fig\_eis.py} draws \texttt{flt\_eisenstein} from the files \texttt{flt\_eis.json} and \texttt{frey\_like.json}.
+
+The computational scripts of Chapter~\ref{ch:lap}, in \texttt{laplace/code/} and its subfolder \texttt{splines/}, use relative paths and run as they stand, \texttt{splines/data.py} (the same script as \texttt{recip/data.py}) first, since \texttt{gg\_mple.py} reads the array file \texttt{data.npz} that it writes, which is not kept. The scripts \texttt{switch23.py} and \texttt{switch23b.py} read no file and use PARI/GP through cypari2. The script \texttt{zeta\_switch.py} uses mpmath and reads the first $1000$ zeros of $\zeta$ from \texttt{zeros1000.json}, which it computes and writes if the file is missing; \texttt{checks.py} uses sympy and cypari2, and \texttt{gg\_mple.py} SciPy and cypari2. Each writes a JSON file named after it, the first two \texttt{switch23\_a.json} and \texttt{switch23\_b.json}, and rerun, they reproduce the stored files to rounding, the Good and Gaskins coefficients to the tolerance of the optimiser. The tail data of Section~\ref{sec:laptail}, stored in \texttt{zeta\_switch.json} as sent, are written by no saved script; \texttt{zeta\_tail.py}, written for this book, recomputes them with mpmath, obtains the mass and the mean by inverting their own transforms instead of by trapezoid sums, and writes \texttt{zeta\_tail.json}. Of the three figures of the chapter, \texttt{figs.py} draws \texttt{lap\_faces} and \texttt{lap\_zeta} from the files of \texttt{switch23.py}, \texttt{switch23b.py}, \texttt{zeta\_switch.py} and \texttt{zeta\_tail.py}, and \texttt{fig\_gg.py} in \texttt{splines/}, which also uses cypari2 and SciPy, draws \texttt{lap\_spline} from those of \texttt{checks.py} and \texttt{gg\_mple.py}; both write into a folder \texttt{figs/} below their own. Both were edited to draw the figures in the style of the book, \texttt{fig\_gg.py} now computing the B spline formula exactly rather than from the samples, and the versions as sent are kept as \texttt{figs.original.py} and \texttt{splines/fig\_gg.original.py}.
+
+The computational scripts of Chapter~\ref{ch:pd}, in \texttt{pd/code/}, use relative paths. The script \texttt{data.py}, the same as \texttt{recip/data.py}, runs first, since \texttt{pd1.py}, \texttt{pd2.py}, \texttt{op\_pd.py} and \texttt{op\_pd2.py} read the array file \texttt{data.npz} that it writes, which is not kept; \texttt{op\_pd2.py} also reads the file \texttt{pd\_samples.npz} written by \texttt{pd1.py}, which is not kept either. The scripts \texttt{data.py}, \texttt{op\_pd.py} and \texttt{op\_pd2.py} use PARI/GP through cypari2, \texttt{op\_pd.py} also mpmath and SciPy, and \texttt{pd1.py} and \texttt{pd2.py} SciPy. The four that read \texttt{data.npz} each write a JSON file named after them, and rerun, they reproduce the stored files to rounding. A few printed numbers come instead from checks made for this book: the share means of Section~\ref{sec:pdprogress} and their deficits, from a finer quadrature of the integrals of \texttt{op\_pd.py}, whose trapezoid sums are about $0.07$ percent too high; the bound $0.066$ of Section~\ref{sec:pdlaw}, the supremum over all $v$, where \texttt{pd1.json} has the maximum $0.056$ over a grid; the value $0.2096$ there, which is exact, where \texttt{pd2.json} has the Monte Carlo value $0.2095$; and the sums over the primes below $10^9$ in Section~\ref{sec:pdprogress} and the deficits of the other fields in Open Problem~\ref{op:pdmertens}. The two figures of the chapter, \texttt{pd\_integers} and \texttt{pd\_dirichlet}, are drawn by \texttt{figs.py} from \texttt{pd1.json}, \texttt{pd2.json} and \texttt{pd\_samples.npz}, into a folder \texttt{figs/} below its own; it was edited to draw them in the style of the book, and the version as sent is kept as \texttt{figs.original.py}.
+
+The scripts of Chapters~\ref{ch:gl1} and \ref{ch:maass}, in \texttt{gl1/code/} and \texttt{maass/code/}, use relative paths, and all but \texttt{g4.py}, \texttt{m2.py}, \texttt{m5.py}, \texttt{m7.py}, the list \texttt{lmfdb\_r.py} and the two figure scripts use PARI/GP through cypari2. They have not been rerun for this book: the JSON files kept with them are those of the runs behind the chapters. In \texttt{gl1/code/}, \texttt{g1.py} runs first, with the bound $10^7$ as its argument, since \texttt{g4.py} and \texttt{figs.py} read the array file \texttt{gl1\_data.npz} that it writes; \texttt{figs.py} also reads \texttt{chi4\_zeros.npy}, written by \texttt{g5.py}, and neither array is kept. The file \texttt{twosquares.json}, counts of the sums of two squares that the chapter does not quote, is written by no saved script. In \texttt{maass/code/}, \texttt{m1.py} runs first, with the bound $10^6$ as its argument, since \texttt{m5.py}, \texttt{m7.py} and \texttt{figs.py} read the geodesics that it writes to \texttt{geodesics.npz}; \texttt{figs.py} also reads \texttt{bm\_traj.npz} from \texttt{m2.py}, \texttt{vertical\_p2.npy} from \texttt{m4.py} and \texttt{m7.npz} from \texttt{m7.py}, of which only the last is kept, writes \texttt{zeta\_terms.json}, and imports the spectral parameters of \texttt{lmfdb\_r.py}, a list copied from the LMFDB. Both figure scripts save the figures into \texttt{../book/figs/}, a path of the layout in which they ran.
+
+The routines above and the stored numbers are the starting point for the programme of Chapter~\ref{ch:14}.

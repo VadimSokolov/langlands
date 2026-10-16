@@ -1,0 +1,19 @@
+{
+ "bump": {
+  "width": 1.0,
+  "max_abs_diff": 4.04121180963557e-14,
+  "max_value": 3.843689571702417
+ },
+ "transport": {
+  "eps": 0.05,
+  "gamma1_sq": 85.05228179608912,
+  "mass_near_first_atom": 0.9828780151930453,
+  "min_U": 2.0287723469116786e-05
+ },
+ "vandantzig": {
+  "density_at_0": 1.2154575693664642,
+  "min_density": 0.00024405331726812664,
+  "total_mass": 0.9999458104471022,
+  "logconcave": true
+ }
+}

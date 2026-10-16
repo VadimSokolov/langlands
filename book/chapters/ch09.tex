@@ -1,0 +1,264 @@
+\chapter{Infinite Divisibility of Euler Products}\label{ch:09}
+
+In his 1938 monograph on limit laws for sums of independent random variables, Khinchine observed that the Riemann zeta function, read along a vertical line to the right of $1$ and divided by its value on the real axis, is the characteristic function of an infinitely divisible law. The proof is one line long: the logarithm of an Euler product is a sum over prime powers, and a sum of exponentials with positive weights is the exponent of a compound Poisson law. This chapter develops two consequences. First, positivity of the weights, which for automorphic $L$ functions is the positivity of Rankin Selberg convolutions, underlies the usual proofs of nonvanishing on the line $\operatorname{Re} s = 1$ and of the classical zero free regions; for the standard $L$ function of a cusp form the weights change sign and the characteristic function property fails. Second, once $p^{-it}$ is replaced by an independent uniform phase, the logarithm of an Euler product becomes a sum of independent random variables, and the theory of Bohr and Jessen describes the values of $\zeta$ to the right of the critical line by the law of that sum. We carry the first picture to $\GL_n$ and the second to $\GL_2$, where the natural random model draws Satake parameters from the Sato Tate measure, and we compute what Sato Tate implies for the law of that model.
+
+\section{Infinitely divisible laws}
+
+A probability law $\mu$ on $\R$ is \emph{infinitely divisible}\index{infinitely divisible law} if for every $n$ it is the $n$ fold convolution power of some probability law $\mu_n$. The class is closed under convolution and weak limits, and it is described completely by the following theorem.
+
+\begin{theorem}[L\'evy Khintchine]\label{thm:ch09lk}
+A function $\varphi:\R\to\C$ is the characteristic function of an infinitely divisible law if and only if $\varphi = e^{\eta}$ with
+\[
+\eta(t) = i a t - \tfrac12 \beta^2 t^2 + \int \bigl(e^{itx} - 1 - itx\,1_{\{|x|<1\}}\bigr)\,\nu(dx)
+\]
+for some $a\in\R$, some $\beta \ge 0$ and some positive measure $\nu$ on $\R\setminus\{0\}$ satisfying $\int \min(1,x^2)\,\nu(dx) < \infty$. The triple $(a,\beta^2,\nu)$ is unique.
+\end{theorem}
+
+The measure $\nu$ is the \emph{L\'evy measure}\index{L\'evy measure} and $\eta$ the L\'evy Khintchine exponent. A finite measure $\nu$ of total mass $M>0$ defines the \emph{compound Poisson law}\index{compound Poisson law}, the law of $\sum_{j=1}^{\mathcal N} X_j$ with $\mathcal N$ Poisson of mean $M$ and $X_1,X_2,\dots$ independent of $\mathcal N$ and of each other, each with law $\nu/M$; its characteristic function is
+\[
+\varphi(t) = \exp\Bigl(\int \bigl(e^{itx}-1\bigr)\,\nu(dx)\Bigr),
+\]
+the case $\beta=0$, $a=\int_{|x|<1}x\,\nu(dx)$ of the theorem. The uniqueness clause is what makes positivity a usable test. Its proof recovers $\nu$ from $\eta$ by Fourier inversion and applies verbatim to finite signed measures, so if $\nu$ is a finite signed measure with a nonzero negative part, then $\exp\int(e^{itx}-1)\,\nu(dx)$ is not the characteristic function of an infinitely divisible law. It may still be the characteristic function of some other law: for $0<r<1$ the two point law with $\Prob(X=1) = r/(1+r) = 1-\Prob(X=0)$ has
+\[
+\E e^{itX} = \exp\Bigl(\sum_{k\ge1}\frac{(-1)^{k+1}r^k}{k}\bigl(e^{ikt}-1\bigr)\Bigr),
+\]
+a signed exponent with alternating weights. Or it may be no characteristic function at all, as for $L(s,\Delta)$ in Proposition~\ref{prop:ch09notcf} below. We refer to Sato's monograph \cite{sato1999} for proofs.
+
+\section{Khinchine's observation and the zeta distribution}
+
+\begin{theorem}[Khinchine \cite{khinchine1938}]\label{thm:ch09khinchine}
+For every $\sigma > 1$ the function $t \mapsto \zeta(\sigma+it)/\zeta(\sigma)$ is the characteristic function of an infinitely divisible law. It is compound Poisson with L\'evy measure
+\[
+\nu_\sigma = \sum_{p}\sum_{k\ge 1} \frac{1}{k\,p^{k\sigma}}\,\delta_{-k\log p},
+\]
+whose total mass is $\log \zeta(\sigma)$.
+\end{theorem}
+
+\begin{proof}
+For $\operatorname{Re} s > 1$ the Euler product $\zeta(s) = \prod_p (1-p^{-s})^{-1}$ converges absolutely, and expanding $-\log(1-p^{-s})$ gives
+\[
+\log \zeta(\sigma+it) = \sum_p \sum_{k\ge 1} \frac{p^{-k\sigma}}{k}\, e^{-itk\log p},
+\]
+with $\sum_{p,k} p^{-k\sigma}/k = \log\zeta(\sigma) < \infty$. Subtracting the value at $t=0$,
+\[
+\frac{\zeta(\sigma+it)}{\zeta(\sigma)} = \exp\Bigl(\sum_{p,k} \frac{1}{k p^{k\sigma}}\bigl(e^{-itk\log p} - 1\bigr)\Bigr)
+= \exp\Bigl(\int \bigl(e^{itx}-1\bigr)\,\nu_\sigma(dx)\Bigr),
+\]
+which is the compound Poisson exponent of the finite positive measure $\nu_\sigma$.
+\end{proof}
+
+The range $\sigma>1$ is sharp. As $\sigma\to1^+$ the mass $\log\zeta(\sigma)$ of $\nu_\sigma$ tends to infinity, and for $\frac12<\sigma\le1$ the function $t\mapsto\zeta(\sigma+it)$ is unbounded: since $\sum_pp^{-\sigma}$ diverges, the limit law of Theorem~\ref{thm:ch09bj} below gives positive mass to every half plane $\{\operatorname{Re}z>R\}$, so $\operatorname{Re}\log\zeta(\sigma+it)$ exceeds $R$ for a positive proportion of $t$. A characteristic function is bounded by $1$.
+
+There is a second, more concrete description. The \emph{zeta distribution}\index{zeta distribution} with parameter $\sigma>1$ is the law of a positive integer $N$ with $\Prob(N=n) = n^{-\sigma}/\zeta(\sigma)$. Then $\E[N^{-it}] = \zeta(\sigma+it)/\zeta(\sigma)$, so the law of Theorem~\ref{thm:ch09khinchine} is the law of $-\log N$. The law of $\log N$ itself has characteristic function $\zeta(\sigma-it)/\zeta(\sigma)$ and Laplace transform $\E N^{-\lambda} = \zeta(\sigma+\lambda)/\zeta(\sigma)$, and its L\'evy measure, the reflection of $\nu_\sigma$, has its atoms at the points $k\log p$; it is the law at time $1$ of the zeta subordinator of Proposition~\ref{prop:10dsublaw}. Unique factorisation turns the Euler product into independence: $N = \prod_p p^{G_p}$ where the exponents $G_p$ are independent and geometric, $\Prob(G_p = k) = (1-p^{-\sigma})p^{-k\sigma}$. A geometric law is itself compound Poisson (Exercise~\ref{ex:ch09geometric}), so $-\log N = -\sum_p G_p \log p$, a sum with almost surely finitely many nonzero terms, is a sum of independent compound Poisson variables. This is the probabilistic content of the theorem.
+
+\section{Euler products as signed L\'evy Khintchine exponents}
+
+Let $\pi$ be a cuspidal automorphic representation of $\GL_n(\A_\Q)$ with unitary central character and let $S$ be a finite set of primes containing the ramified ones. For $p\notin S$ the Satake parameter is a semisimple class $A_p\in\GL_n(\C)$ and the partial $L$ function is $L^S(s,\pi) = \prod_{p\notin S}\det(I - A_p p^{-s})^{-1}$, absolutely convergent for $\operatorname{Re} s > 1$ by Jacquet and Shalika \cite{jacquetshalika1981}. Exactly as for $\zeta$,
+\begin{equation}\label{eq:ch09signed}
+\frac{L^S(\sigma+it,\pi)}{L^S(\sigma,\pi)} = \exp\Bigl(\sum_{p\notin S}\sum_{k\ge 1} \frac{\tr(A_p^k)}{k\,p^{k\sigma}}\bigl(e^{-itk\log p}-1\bigr)\Bigr), \qquad \sigma>1 .
+\end{equation}
+Formally this is a compound Poisson exponent with atoms at $-k\log p$ and weights $\tr(A_p^k)/(k p^{k\sigma})$. The weights are complex in general and real when $\pi$ is self dual, but even then they need not be positive. We call \eqref{eq:ch09signed} a \emph{signed L\'evy Khintchine exponent}\index{signed L\'evy measure}. A simpler example, the law of a random squarefree integer, whose Dirichlet series is $\zeta(s)/\zeta(2s)$, is in Section~\ref{sec:sf:euler}.
+
+For the discriminant form $\Delta$ we use in this chapter the unitary normalisation $L(s,\Delta) = \sum_n\tau(n)n^{-11/2-s}$, with centre $s=\frac12$; Chapter~\ref{ch:10} uses the classical normalisation with centre $6$. Since $\Delta$ has level $1$, every prime is unramified and we may take $S=\emptyset$. Write $\tau(p)/p^{11/2} = 2\cos\theta_p$ with $\theta_p\in[0,\pi]$, by Deligne's theorem \cite{deligne1974}, so that $A_p$ has eigenvalues $e^{\pm i\theta_p}$ and the weights are $2\cos(k\theta_p)/(k p^{k\sigma})$. Already at $p=2$ we have $\tau(2) = -24$ and $2\cos\theta_2 = -0.53033$, a negative first weight.
+
+\begin{proposition}\label{prop:ch09notcf}
+For every $\sigma>1$ we have $\sup_{t\in\R} |L(\sigma+it,\Delta)| > L(\sigma,\Delta) > 0$. In particular $t\mapsto L(\sigma+it,\Delta)/L(\sigma,\Delta)$ is not a characteristic function.
+\end{proposition}
+
+\begin{proof}
+Put $q = p^{-\sigma}$ and $x_p = 2\cos\theta_p$. Writing $p^{-it} = e^{i\phi}$, the modulus of the local factor of $L(\sigma+it,\Delta)$ at $p$ is $f_p(\phi) = |1 - x_p q e^{i\phi} + q^2 e^{2i\phi}|^{-1}$, and $f_p(0) = (1 - x_p q + q^2)^{-1} = |1-e^{i\theta_p}q|^{-2} > 0$, so $L(\sigma,\Delta) = \prod_p f_p(0) > 0$. Since $1 + x_2 q + q^2 < 1 - x_2 q + q^2$ when $x_2 < 0$, we have $f_2(\pi) > f_2(0)$. Fix $\varepsilon>0$ and choose $P$ so large that the modulus of the tail product over $p>P$ lies in $[1-\varepsilon,1+\varepsilon]$ uniformly in $t$, which is possible by absolute convergence. The numbers $\log p$, $p\le P$, are linearly independent over $\Q$, so by Kronecker's theorem the vector $(p^{-it})_{p\le P}$ comes arbitrarily close to $(-1,1,\dots,1)$, the entry $-1$ in the coordinate $p=2$. For such $t$, $|L(\sigma+it,\Delta)| \ge (1-\varepsilon)^2\, f_2(\pi)\prod_{2<p\le P} f_p(0)$, while $L(\sigma,\Delta)\le(1+\varepsilon)f_2(0)\prod_{2<p\le P}f_p(0)$; the first bound exceeds the second once $(1-\varepsilon)^2f_2(\pi)>(1+\varepsilon)f_2(0)$, which holds for small $\varepsilon$. A characteristic function has modulus at most its value $1$ at the origin.
+\end{proof}
+
+The proof uses a single prime $p_0$ with $x_{p_0}<0$, and we now prove that every holomorphic newform $f$ with real Hecke eigenvalues has infinitely many such primes. Write $x_p\in[-2,2]$ for its normalised eigenvalues. If $x_p\ge0$ for all $p$ outside a finite set, then $x_p^2\le2x_p$ there, so $\sum_px_p^2p^{-\sigma}\le2\sum_px_pp^{-\sigma}+O(1) = 2\log L(\sigma,f)+O(1)$ would stay bounded above as $\sigma\to1^+$, since $L(s,f)$ is entire; but $\sum_px_p^2p^{-\sigma} = \log L(\sigma,f\times f)+O(1)$ tends to infinity, because the Rankin Selberg function has a pole at $s=1$ (next section). Hence for no such $f$ and no $\sigma>1$ is $t\mapsto L(\sigma+it,f)/L(\sigma,f)$ a characteristic function. The obstruction is the sign of the Hecke eigenvalues; for $\Delta$ they are negative on a set of primes of density $\frac12$, by the Sato Tate theorem \cite{blght2011}. Positivity has to be manufactured, and the Rankin Selberg convolution manufactures it.
+
+\section{Rankin Selberg positivity}
+
+For $\pi$ as above the Rankin Selberg $L$ function $L(s,\pi\times\tilde\pi)$\index{Rankin Selberg positivity} has, at $p\notin S$, local factor $\det(I - A_p\otimes \tilde A_p\, p^{-s})^{-1}$. Unitarity of $\pi_p$ implies that the multiset of eigenvalues of $\tilde A_p$, which is $\{\alpha^{-1}\}$ with $\alpha$ running over the eigenvalues of $A_p$, coincides with $\{\bar\alpha\}$. Hence $\tr(\tilde A_p^k) = \overline{\tr(A_p^k)}$ and $\tr\bigl((A_p\otimes\tilde A_p)^k\bigr) = |\tr(A_p^k)|^2$. By Jacquet and Shalika \cite{jacquetshalika1981}, $L(s,\pi\times\tilde\pi)$ converges absolutely for $\operatorname{Re} s>1$ and has a simple pole at $s=1$; its meromorphic continuation and functional equation are due to Jacquet, Piatetski Shapiro and Shalika \cite{jpss1983}, Shahidi \cite{shahidi1981} and Moeglin and Waldspurger \cite{moeglinwaldspurger1989}.
+
+\begin{theorem}[Rankin Selberg positivity]\label{thm:ch09rs}
+For $\sigma>1$ the function $t\mapsto L^S(\sigma+it,\pi\times\tilde\pi)/L^S(\sigma,\pi\times\tilde\pi)$ is the characteristic function of a compound Poisson law with L\'evy measure
+\[
+\nu_{\pi,\sigma} = \sum_{p\notin S}\sum_{k\ge1} \frac{|\tr(A_p^k)|^2}{k\,p^{k\sigma}}\,\delta_{-k\log p}.
+\]
+\end{theorem}
+
+\begin{proof}
+By the computation above,
+\[
+\log L^S(\sigma+it,\pi\times\tilde\pi) = \sum_{p\notin S}\sum_{k\ge 1} \frac{|\tr(A_p^k)|^2}{k}\, p^{-k(\sigma+it)}
+\]
+has nonnegative coefficients, and the series converges absolutely for $\sigma>1$, so $\nu_{\pi,\sigma}$ is a finite positive measure of mass $\log L^S(\sigma,\pi\times\tilde\pi)$. Subtracting the value at $t=0$ and exponentiating gives the compound Poisson characteristic function, as in the proof of Theorem~\ref{thm:ch09khinchine}. As there, the reflected law, with characteristic function $L^S(\sigma-it,\pi\times\tilde\pi)/L^S(\sigma,\pi\times\tilde\pi)$, has the same weights at the points $k\log p$.
+\end{proof}
+
+The restriction to $p\notin S$ is a convenience. At a ramified prime the local factor $L(s,\pi_p\times\tilde\pi_p)$ of Jacquet, Piatetski Shapiro and Shalika is still the reciprocal of a polynomial in $p^{-s}$ with constant term $1$, but its roots are not in general the products of the roots of $L(s,\pi_p)$ and $L(s,\tilde\pi_p)$, so the formula $|\tr(A_p^k)|^2$ is not available there. Rudnick and Sarnak computed these factors explicitly \cite{rudnicksarnak1996} (Appendix A.2), and their formula exhibits each coefficient of $\log L(s,\pi_p\times\tilde\pi_p)$ as a sum of nonnegative terms. Hence the complete finite $L$ function $L(s,\pi\times\tilde\pi) = \prod_pL(s,\pi_p\times\tilde\pi_p)$ also has nonnegative logarithmic coefficients, and Theorem~\ref{thm:ch09rs} holds for it, the primes of $S$ adding further nonnegative atoms at the points $-k\log p$. By the simple pole, the mass $\log L^S(\sigma,\pi\times\tilde\pi) = \log\frac1{\sigma-1}+O(1)$ of $\nu_{\pi,\sigma}$ tends to infinity as $\sigma\to1^+$; since every atom lies at or below $-\log2$, the laws of Theorem~\ref{thm:ch09rs} escape to $-\infty$.
+
+For $\Delta$ the weights are $(2\cos k\theta_p)^2/(k p^{k\sigma})$: the trace $2\cos k\theta_p$, which enters the signed exponent of $L(s,\Delta)$ with its sign, enters that of $L(s,\Delta\times\Delta)$ squared. The computation uses nothing but the Satake parameters, so it applies to any isobaric sum $\Pi = \pi_1\boxplus\dots\boxplus\pi_r$ of unitary cuspidal representations. At $p$ outside a finite set the Satake parameter of $\Pi$ is the block diagonal matrix $A_p(\Pi)$ with blocks $A_p(\pi_1),\dots,A_p(\pi_r)$, the partial function $L^S(s,\Pi\times\tilde\Pi) = \prod_{i,j}L^S(s,\pi_i\times\tilde\pi_j)$ has local factor $\det(I-A_p(\Pi)\otimes A_p(\tilde\Pi)\,p^{-s})^{-1}$, and the coefficient of $p^{-ks}$ in its logarithm is $|\tr A_p(\Pi)^k|^2/k\ge0$. The next section exploits this freedom.
+
+\section{Landau's lemma and nonvanishing on the line}
+
+\begin{lemma}[Landau]\label{lem:ch09landau}\index{Landau's lemma}
+Let $F(s) = \sum_n a_n n^{-s}$ with $a_n\ge 0$ have abscissa of convergence $\sigma_c$ finite. Then $F$ has no analytic continuation to any neighbourhood of the real point $s=\sigma_c$.
+\end{lemma}
+
+In probabilistic language $F(\sigma)$ is the Laplace transform of the positive measure $\sum_n a_n\delta_{\log n}$, and the lemma says that such a transform is singular at the real point of its abscissa. For the proof, suppose $F$ continues analytically to a disc about $\sigma_c$. Then the Taylor series of $F$ about a real point $\sigma_0>\sigma_c$ close enough to $\sigma_c$ converges at some real $\sigma_1<\sigma_c$. The derivatives $F^{(j)}(\sigma_0) = \sum_n a_n(-\log n)^j n^{-\sigma_0}$ have sign $(-1)^j$, so every term $F^{(j)}(\sigma_0)(\sigma_1-\sigma_0)^j/j!$ is a series of nonnegative terms, and summing the double series in the other order gives $\sum_n a_n n^{-\sigma_1}<\infty$, which contradicts the definition of $\sigma_c$.
+
+\begin{example}
+Let $\chi$ be a real nonprincipal Dirichlet character. The coefficients of $\zeta(s)L(s,\chi) = \sum_n (\sum_{d\mid n}\chi(d)) n^{-s}$ are nonnegative and at least $1$ at squares. If $L(1,\chi)=0$ then $\zeta(s)L(s,\chi)$ would be entire, so by Landau's lemma the series would converge for all real $s$, which is false at $s=1/2$ because the terms at squares contribute $\sum_m m^{-1}$. Hence $L(1,\chi)\ne 0$.
+\end{example}
+
+For the line $\operatorname{Re} s = 1$ the classical tool is Mertens' inequality $3 + 4\cos\theta + \cos 2\theta = 2(1+\cos\theta)^2 \ge 0$. In the language of Theorem~\ref{thm:ch09khinchine} it becomes an inequality for the L\'evy measure. Write $\psi_\sigma(t) = \int (1-\cos tx)\,\nu_\sigma(dx)$, so that $\log|\zeta(\sigma+it)| = \log\zeta(\sigma) - \psi_\sigma(t)$. Integrating $3+4\cos(tx)+\cos(2tx)\ge 0$ against $\nu_\sigma$ gives
+\begin{equation}\label{eq:ch09mertens}
+4\psi_\sigma(t) + \psi_\sigma(2t) \le 8\log\zeta(\sigma).
+\end{equation}
+
+\begin{theorem}[Hadamard, de la Vallée Poussin]
+$\zeta(1+it)\ne 0$ for real $t\ne 0$.
+\end{theorem}
+
+\begin{proof}
+Suppose $\zeta(1+it)=0$ with $t\ne0$. Then $|\zeta(\sigma+it)|\le C(\sigma-1)$ and $|\zeta(\sigma+2it)|\le C$ for $1<\sigma<2$, and $\log\zeta(\sigma) = \log\frac{1}{\sigma-1} + O(\sigma-1)$. So $\psi_\sigma(t) \ge 2\log\frac1{\sigma-1} - C'$ and $\psi_\sigma(2t) \ge \log\frac{1}{\sigma-1} - C'$, whence the left side of \eqref{eq:ch09mertens} is at least $9\log\frac{1}{\sigma-1} - 5C'$ while the right side is $8\log\frac{1}{\sigma-1} + O(1)$. Let $\sigma\to 1^+$.
+\end{proof}
+
+The Rankin Selberg version replaces the trigonometric inequality by the positivity of $|\tr|^2$ for a well chosen isobaric sum. Its shape is the identity $(1+2\cos\theta)^2 = 3 + 4\cos\theta + 2\cos 2\theta$: the coefficients $3$, $4$ and $2$ count the three groups of factors in the auxiliary function $D$ below.
+
+\begin{proposition}\label{prop:ch09nonvanish}
+Let $\pi$ be a unitary cuspidal automorphic representation of $\GL_n(\A_\Q)$, $n\ge 2$, and let $t\in\R$ with $\pi\otimes|\det|^{2it}\not\cong\tilde\pi$. Then $L(1+it,\pi)\ne 0$.
+\end{proposition}
+
+\begin{proof}
+Put $\pi_t = \pi\otimes|\det|^{it}$, so $L(s,\pi_t) = L(s+it,\pi)$, and consider the isobaric sum $\Pi = 1\boxplus\pi_t\boxplus\tilde\pi_{-t}$, where $\tilde\pi_{-t} = \tilde\pi\otimes|\det|^{-it}$ is the contragredient of $\pi_t$. Then $\tilde\Pi\cong\Pi$, and expanding $\Pi\times\tilde\Pi$ into its nine constituents gives
+\begin{align*}
+D(s) &:= L^S(s,\Pi\times\tilde\Pi)\\
+&\phantom{:}= \zeta^S(s)\,L^S(s,\pi\times\tilde\pi)^2\\
+&\phantom{:=}\quad\times L^S(s+it,\pi)^2\,L^S(s-it,\tilde\pi)^2\\
+&\phantom{:=}\quad\times L^S(s+2it,\pi\times\pi)\,L^S(s-2it,\tilde\pi\times\tilde\pi).
+\end{align*}
+At $p\notin S$ the $k$th power of the Satake parameter of $\Pi$ has trace $c_{p,k} = 1 + 2\operatorname{Re}\bigl(p^{-ikt}\tr A_p^k\bigr)$, a real number, and the coefficient of $p^{-ks}$ in $\log D$ is $c_{p,k}^2/k\ge 0$. Hence $D(\sigma)\ge 1$ for real $\sigma>1$.
+
+Now count orders at $s=1$. Each partial $L$ function is the complete one times finitely many polynomials in the $p^{-s}$, $p\in S$, so its poles are among those of the complete function and its zeros include those of the complete function. The standard $L$ functions $L(s+it,\pi)$ and $L(s-it,\tilde\pi)$ are entire, since $n\ge2$ \cite{godementjacquet1972}. $L(s,\pi\times\tilde\pi)$ has a simple pole at $s=1$, and $L(s,\pi\times\pi')$ for cuspidal $\pi'$ is holomorphic at $s=1$ unless $\pi'\cong\tilde\pi$ \cite{jacquetshalika1981}; by hypothesis $L(s+2it,\pi\times\pi) = L(s,\pi\times\pi_{2t})$ and its conjugate partner are holomorphic at $s=1$. So $D$ has a pole of order at most $3$ at $s=1$. If $L(1+it,\pi)=0$ then $L(1-it,\tilde\pi) = \overline{L(1+it,\pi)} = 0$ as well, and the squared factors contribute a zero of order at least $4$. Thus $D$ is holomorphic at $s=1$ with $D(1)=0$, contradicting $D(\sigma)\ge1$ for $\sigma>1$ and continuity.
+\end{proof}
+
+The hypothesis says exactly that $\pi_t$ is not self dual, and the excluded case is $L(1,\pi_t)\ne0$ for self dual $\pi_t$. There the last two factors of $D$ acquire poles, so $D$ has a pole of order $5$ at $s=1$, while a simple zero of $L(s,\pi_t)$ at $s=1$ contributes a zero of order only $4$: the auxiliary function has no zero to spare, as for a real character in the classical theory.
+
+The full theorem, $L(1+it,\pi)\ne0$ for all $t$ and all unitary cuspidal $\pi$, is due to Jacquet and Shalika \cite{jacquetshalika1976}, and Shahidi \cite{shahidi1981} proved $L(1+it,\pi\times\pi')\ne0$ for Rankin Selberg $L$ functions, both through the theory of Eisenstein series. The positivity proof above follows Section 1 of Sarnak's note \cite{sarnak2004}, which also makes the Eisenstein series proof effective for $\zeta$ alone: $|\zeta(1+it)|\gg(\log|t|)^{-3}$ for $|t|\ge2$, hence a zero free region $\sigma>1-c/(\log|t|)^5$. Quantifying the positivity argument with the Hadamard factorisation of $D$ gives zero free regions of the classical shape $\sigma > 1 - c/\log(\mathfrak q(\pi)(|t|+3))$, with $\mathfrak q(\pi)$ the analytic conductor and $c>0$ depending only on $n$, apart from the possibility of one exceptional real zero when $\pi$ is self dual; see Chapter 5 of Iwaniec and Kowalski \cite{iwanieckowalski2004} for the precise statements. In every positivity proof the input is the same: a Dirichlet series $F$ with nonnegative logarithmic coefficients, for which, as in the proofs of Theorems~\ref{thm:ch09khinchine} and~\ref{thm:ch09rs}, $t\mapsto F(\sigma+it)/F(\sigma)$ is the characteristic function of a compound Poisson law at every $\sigma$ where the series for $\log F$ converges absolutely.
+
+\section{Value distribution in the strip}
+
+To the left of $\operatorname{Re}s=1$ the Euler product diverges and Theorem~\ref{thm:ch09khinchine} fails, but its probabilistic model survives. Let $(X_p)$ be independent random variables uniform on the unit circle and define the random Euler product\index{random Euler product} $\zeta(s,X) = \prod_p(1-X_pp^{-s})^{-1}$ through its logarithm
+\[
+\log\zeta(\sigma,X) = -\sum_p \log\bigl(1 - X_p p^{-\sigma}\bigr).
+\]
+The summands are independent, the terms with $k\ge 2$ in the expansion converge absolutely for $\sigma>1/2$, and the $k=1$ part $\sum_p X_p p^{-\sigma}$ has mean zero and summable variances $p^{-2\sigma}$, so by Kolmogorov's two series theorem (Appendix~\ref{app:A}) the sum converges almost surely for every $\sigma>1/2$. On the side of $\zeta$, for $t$ outside a countable set the horizontal half line from $\sigma+it$ to $+\infty+it$ meets no zero and not the pole, and $\log\zeta(\sigma+it)$ is defined by continuous variation along it.
+
+\begin{theorem}[Bohr and Jessen]\label{thm:ch09bj}\index{Bohr Jessen theorem}
+Fix $\sigma>1/2$. As $T\to\infty$ the law of $\log\zeta(\sigma+it)$, with $t$ uniform on $[0,T]$, converges weakly to the law of $\log\zeta(\sigma,X)$. The limit law has a continuous density on $\C$.
+\end{theorem}
+
+\begin{proof}[Sketch]
+For $\sigma>1$ the map $t\mapsto (p^{-it})_{p\le P}$ equidistributes on the torus $\prod_{p\le P}S^1$ as $t$ ranges over $[0,T]$, by Weyl's criterion and the linear independence of the $\log p$; truncation at $P$ costs $O(\sum_{p>P}p^{-\sigma})$ uniformly. For $1/2<\sigma\le1$ one replaces uniform control by a mean square approximation of $\log\zeta(\sigma+it)$ by short Euler products for most $t$, which follows from Carlson's mean value theorem and zero density estimates. The continuity of the density is part of Bohr and Jessen's theorem; Jessen and Wintner \cite{jessenwintner1935} reproved the theorem with their theory of infinite convolutions and showed that the density has continuous partial derivatives of all orders.
+\end{proof}
+
+The real part of the $k=1$ term has variance $\frac12\sum_p p^{-2\sigma}$, which grows like $\frac12\log\frac{1}{2\sigma-1}$ as $\sigma\to\frac12^+$. This is the random model counterpart of Selberg's central limit theorem \cite{selberg1946}: for $t$ uniform on $[T,2T]$, $\log|\zeta(\frac12+it)|/\sqrt{\frac12\log\log T}$ converges in law to the standard normal, and the two variances match when $\sigma-\frac12$ is of order $1/\log T$. Chapter~\ref{ch:09b} takes up the critical line.
+
+Bagchi \cite{bagchi1981} lifted Theorem~\ref{thm:ch09bj} from values to functions: on the strip $\frac12<\operatorname{Re}s<1$, with $t$ uniform on $[0,T]$, the random holomorphic function $s\mapsto\zeta(s+it)$ converges in law as $T\to\infty$ to $\zeta(s,X)$, for the topology of uniform convergence on compact sets, and the support of the limit is the set of nonvanishing holomorphic functions together with $0$. The support statement is universality\index{universality}.
+
+\begin{theorem}[Voronin, Bagchi]\label{thm:ch09voronin}
+Let $K$ be a compact subset of $\frac12<\operatorname{Re}s<1$ with connected complement, and $f$ continuous and nonvanishing on $K$ and holomorphic in its interior. Then for every $\varepsilon>0$
+\[
+\liminf_{T\to\infty}\frac{1}{T}\,\operatorname{meas}\Bigl\{t\in[0,T]: \max_{s\in K}|\zeta(s+it)-f(s)|<\varepsilon\Bigr\} > 0 ,
+\]
+where $\operatorname{meas}$ is Lebesgue measure.
+\end{theorem}
+
+Voronin \cite{voronin1975} proved this for discs; the general form is Bagchi's. Universality is known for many $L$ functions with Euler products, including those of holomorphic cusp forms, through the same probabilistic route: a limit theorem plus a support computation for a random Euler product.
+
+Large values are a large deviation question for the random model. For fixed $\sigma\in(\frac12,1)$ and $\tau\to\infty$,
+\[
+\Prob\bigl(\operatorname{Re}\log\zeta(\sigma,X)>\tau\bigr) = \exp\Bigl(-c(\sigma)\,\tau^{1/(1-\sigma)}(\log\tau)^{\sigma/(1-\sigma)}\bigl(1+o(1)\bigr)\Bigr)
+\]
+for a constant $c(\sigma)>0$: to reach $\tau$ the phases $X_p$ must align for all primes up to a point of size about $(\tau\log\tau)^{1/(1-\sigma)}$. Lamzouri \cite{lamzouri2011} proved that the distribution of $\log|\zeta(\sigma+it)|$ obeys the same asymptotics uniformly in a range of $\tau$ that grows with $T$, with analogues for Dirichlet $L$ functions in the conductor aspect and for $L$ functions of weight $2$ cusp forms in the level aspect. We state the shape only; constants and ranges are in the cited work.
+
+\section{Random multiplicative functions and random Euler products for \texorpdfstring{$\GL_2$}{GL2}}
+
+Expanding the random Euler product gives a random multiplicative function. Steinhaus' model takes $f(n)$ completely multiplicative with $f(p) = X_p$ uniform on the circle, so that $\sum_n f(n)n^{-s} = \prod_p(1-X_pp^{-s})^{-1}$; Rademacher's model, introduced by Wintner \cite{wintner1944}, takes $f$ supported on squarefree integers with $f(p)=\pm1$ by fair coin tosses. Wintner showed that the partial sums of the Rademacher model are $O(x^{1/2+\varepsilon})$ almost surely for every $\varepsilon>0$, the random analogue of the Riemann hypothesis. Harper \cite{harper2020} showed that in both models $\E|\sum_{n\le x}f(n)| \asymp \sqrt x/(\log\log x)^{1/4}$, better than square root cancellation, and traced the factor $(\log\log x)^{-1/4}$ to critical multiplicative chaos.
+
+For a cusp form the natural model keeps the shape of the Euler factor and randomises the Satake parameter.\index{Sato Tate random model}
+
+\begin{definition}
+Let $(\theta_p)$ be independent with the Sato Tate law $\frac{2}{\pi}\sin^2\theta\,d\theta$ on $[0,\pi]$. The \emph{Sato Tate random Euler product} is
+\[
+L_{\mathrm{rand}}(s) = \prod_p \bigl(1-e^{i\theta_p}p^{-s}\bigr)^{-1}\bigl(1-e^{-i\theta_p}p^{-s}\bigr)^{-1}.
+\]
+\end{definition}
+
+Write $x_p = 2\cos\theta_p$, so $x_p$ has the semicircle law $\ST$ on $[-2,2]$. For $x = 2\cos\theta$ and $k\ge1$ we have $2\cos k\theta = U_k(x/2) - U_{k-2}(x/2)$, with $U_k$ the Chebyshev polynomials of the second kind and $U_{-1} = 0$; the $U_k(x/2)$ are the characters of $\Sym^k$ and are orthonormal in $L^2(\ST)$ (Chapter~\ref{ch:04}). Since $\int U_k(x/2)\,\ST(dx) = \delta_{k0}$ we get
+\begin{equation}\label{eq:ch09moments}
+\E[2\cos k\theta_p] = 0 \ (k=1 \text{ or } k\ge3), \qquad \E[2\cos 2\theta_p] = -1 .
+\end{equation}
+
+\begin{proposition}[this book]\label{prop:ch09martingale}
+For real $\sigma>1/2$ and real $t$ the product $L_{\mathrm{rand}}(\sigma+it)$ converges almost surely and in $L^2$, and
+\[
+\E\bigl[L_{\mathrm{rand}}(\sigma+it)\bigr] = 1,\qquad \E\bigl|L_{\mathrm{rand}}(\sigma+it)\bigr|^2 = \zeta(2\sigma).
+\]
+\end{proposition}
+
+\begin{proof}
+Put $q = p^{-\sigma-it}$. The generating function of the $U_k$ gives
+\[
+F_p = \bigl(1-e^{i\theta_p}q\bigr)^{-1}\bigl(1-e^{-i\theta_p}q\bigr)^{-1} = \sum_{k\ge0}U_k(x_p/2)\,q^k ,
+\]
+a series that converges absolutely since $|U_k(x/2)|\le k+1$ and $|q|<1$. The factors $F_p$ are independent, and by orthonormality $\E[F_p] = 1$ and $\E|F_p|^2 = \sum_k |q|^{2k} = (1-p^{-2\sigma})^{-1}$. The partial products $M_P = \prod_{p\le P}F_p$ therefore form a complex martingale with $\E|M_P|^2 = \prod_{p\le P}(1-p^{-2\sigma})^{-1}\le\zeta(2\sigma)$. A martingale bounded in $L^2$ converges almost surely and in $L^2$, and the limit has mean $1$ and second moment $\zeta(2\sigma)$.
+\end{proof}
+
+The mean one property is a multiplicative chaos normalisation: $L_{\mathrm{rand}}$ is a product of independent mean one factors, and its size is governed by the logarithm. The next theorem identifies the law of the logarithm at the real point as $\sigma\to\frac12^+$.
+
+\begin{theorem}[this book]\label{thm:ch09clt}
+Let $V(\sigma) = \sum_p p^{-2\sigma}$, so $V(\sigma) = \log\frac{1}{2\sigma-1}+O(1)$ as $\sigma\to\frac12^+$. Then
+\[
+\frac{\log L_{\mathrm{rand}}(\sigma) + \frac12 V(\sigma)}{\sqrt{V(\sigma)}} \Longrightarrow N(0,1), \qquad \sigma\to\tfrac12^+ .
+\]
+\end{theorem}
+
+\begin{proof}
+For real $\sigma$, $\log L_{\mathrm{rand}}(\sigma) = \sum_p\sum_k 2\cos(k\theta_p)/(kp^{k\sigma}) = A + B + C$ with $A = \sum_p x_pp^{-\sigma}$, $B = \frac12\sum_p (x_p^2-2)p^{-2\sigma}$ and $C$ the terms with $k\ge3$. By \eqref{eq:ch09moments}, $\E C = 0$, and $\E|C|\le\sum_p\sum_{k\ge3}2p^{-k\sigma}/k$ is bounded uniformly for $\sigma\ge\frac12$. Next $\E B = -\frac12V(\sigma)$ and, since $\E x^4 = 2$ under $\ST$, $\operatorname{Var}(x^2) = 1$ and $\operatorname{Var} B = \frac14\sum_pp^{-4\sigma}$ is bounded. So $B + \frac12V(\sigma)$ and $C$ are $O_{\Prob}(1)$. Finally $A$ is a sum of independent centred variables with $\operatorname{Var}A = V(\sigma)\to\infty$ and summands bounded by $2p^{-\sigma}\le 2\cdot 2^{-1/2}$, so the Lindeberg condition holds and $A/\sqrt{V(\sigma)}\Rightarrow N(0,1)$. Slutsky's lemma completes the proof.
+\end{proof}
+
+Two remarks place this in context. First, the negative drift $-\frac12V$ is forced by the single moment $\E[x_p^2-2]=-1$, which is $\int(U_2(x/2)-U_0(x/2))\,\ST(dx)$; in the Sato Tate average the terms with $k=2$ behave like those of $\log\zeta(2s)^{-1/2}$. Drift and variance match Proposition~\ref{prop:ch09martingale}: if the logarithm were exactly $N(-\frac12V,V)$ then $\E L = 1$ and $\E L^2 = e^V$, and $\zeta(2\sigma) = e^{V(\sigma)+O(1)}$. Second, the Gaussian limit sees $\ST$ only through $\E x_p = 0$, $\E x_p^2 = 1$ and the boundedness of $x_p$: the proof needs no more. The law $\frac12\delta_0+\frac12$ (arcsine) of curves with complex multiplication has the same first two moments, so the same limit, although its fourth moment is $3$ and its higher Weyl averages differ. The distinction between Sato Tate groups lives in those higher averages and at finite $\sigma$, not in the central limit.
+
+Two random models for an individual form must be kept apart. The $t$ aspect model for $L(\sigma+it,\Delta)$ keeps the true $\theta_p$ and replaces the phases $p^{-it}$ by independent uniform $X_p$, as Bohr and Jessen did for $\zeta$. For $\sigma>1$ the equidistribution argument in the proof of Theorem~\ref{thm:ch09bj} shows that the law of $\log L(\sigma+it,\Delta)$ converges to that of the model. For $\frac12<\sigma<1$ the analogous limit theorem for $L(s+it,\Delta)$ itself, in Bagchi's form, is part of the proof of universality for Hecke eigenforms of level $1$ by Laurin\v{c}ikas and Matsumoto \cite{laurincikasmatsumoto2001}. In the $t$ aspect model the first order term $\sum_px_pX_pp^{-\sigma}$ has uncorrelated real and imaginary parts, each of variance $\frac12\sum_px_p^2p^{-2\sigma}$, and the second order term has mean zero because $\E X_p^2 = 0$. The Sato Tate model randomises $\theta_p$ and keeps the phases. At a point $\sigma+it$ with $t\ne0$ fixed, its first order term $\sum_px_pp^{-\sigma-it}$ has real and imaginary parts of variance $\frac12V(\sigma)+O(1)$ and bounded covariance, because $\sum_pp^{-2\sigma-2it} = \log\zeta(2\sigma+2it)+O(1)$ stays bounded as $\sigma\to\frac12^+$, and its drift $-\frac12\sum_pp^{-2\sigma-2it}$ is bounded as well. So the two models agree to first order near the critical line precisely when $\sum_px_p^2p^{-2\sigma}\sim V(\sigma)$, and this holds unconditionally: $\sum_px_p^2p^{-s} = \log L(s,\Delta\times\Delta)+O(1) = \log\frac1{s-1}+O(1)$ as $s\to1^+$, by the simple pole of the Rankin Selberg function. The Sato Tate theorem for $\Delta$ \cite{blght2011} supplies more: every moment of the empirical law of the $x_p$, $p\le y$, tends to the corresponding moment of $\ST$ as $y\to\infty$.
+
+At the real point $t=0$ the Sato Tate model and the true function part company. The Sato Tate drift $-\frac12V(\sigma)$ of Theorem~\ref{thm:ch09clt} is unbounded, and the true second order terms carry the same drift,
+\begin{align*}
+\frac12\sum_p(x_p^2-2)p^{-2\sigma} &= \frac12\log L(2\sigma,\Sym^2\Delta)-\frac12\log\zeta(2\sigma)+O(1)\\
+&= -\frac12V(\sigma)+O(1),
+\end{align*}
+because $x_p^2-2 = U_2(x_p/2)-1$ and $L(s,\Sym^2\Delta)$ is holomorphic and nonzero at $s=1$ \cite{gelbartjacquet1978,jacquetshalika1976}. But $L(\frac12,\Delta)$, which is $L(6,\Delta) = 0.792123$ in the classical normalisation, is not zero. So on the Riemann hypothesis for $L(s,\Delta)$, which makes $\sum_px_pp^{-\sigma}$ converge for $\sigma>\frac12$, the first order sum compensates: $\sum_px_pp^{-\sigma} = \frac12V(\sigma)+O(1)$. This bias towards positive $x_p$ is the Abelian form of the bias $(\frac12-r)\log x$ of Section~\ref{sec:05bias}, with $r=0$, and no model with independent centred $x_p$ reproduces it.
+
+\section{Notes}
+
+The zeta distribution, its infinite divisibility and its history are surveyed by Lin and Hu \cite{linhu2001}, and Sato \cite{sato1999} is our reference for infinitely divisible laws. The prime number theorem was proved independently by Hadamard \cite{hadamard1896} and de la Vallée Poussin \cite{delavalleepoussin1896} in 1896, and the trigonometric inequality is due to Mertens. Landau's lemma is from \cite{landau1905}. The value distribution theory begins with Bohr and Jessen~\cite{bohrjessen1930}. Proposition~\ref{prop:ch09martingale} and Theorem~\ref{thm:ch09clt} are elementary, but we have not found them stated in this form; we record them because they isolate exactly which features of $\ST$ the random model uses. Our extension of Proposition~\ref{prop:ch09notcf} to all holomorphic newforms with real eigenvalues is elementary too; its point is that the Rankin Selberg pole, without the Sato Tate theorem, forces infinitely many negative $x_p$.
+
+\section{Exercises}
+
+\begin{enumerate}
+\item\label{ex:ch09geometric} Show that the geometric law $\Prob(G=k) = (1-q)q^k$ is infinitely divisible, identify its L\'evy measure, and deduce Theorem~\ref{thm:ch09khinchine} from the factorisation $N = \prod_pp^{G_p}$ of a zeta distributed integer.
+\item Prove $3+4\cos\theta+\cos2\theta = 2(1+\cos\theta)^2$ and $(1+2\cos\theta)^2 = 3+4\cos\theta+2\cos2\theta$. Use the second identity and the function $\zeta(s)^3L(s+it,\chi)^2L(s-it,\bar\chi)^2L(s+2it,\chi^2)L(s-2it,\bar\chi^2)$ to show $L(1+it,\chi)\ne0$ for a Dirichlet character $\chi$ and real $t$, unless $\chi^2$ is principal and $t=0$. (That case, for nonprincipal $\chi$, is the example after Lemma~\ref{lem:ch09landau}.)
+\item Prove Landau's lemma in detail, and show that the abscissa of convergence of $\sum_n|\tau(n)|^2n^{-s}$ is $12$, the location of the pole of $L(s,\Delta\times\Delta)$ in the classical normalisation.
+\item Let $\nu$ be a finite measure on $\R$ and put $\psi(t) = \int(1-\cos tx)\,\nu(dx)$. Show that $4\psi(t)+\psi(2t)\le 8\nu(\R)$ and that equality forces $\nu$ to be carried by $\{x: tx\in\pi+2\pi\Z\}$.
+\item In the setting of Proposition~\ref{prop:ch09martingale}, compute $\E|L_{\mathrm{rand}}(\sigma)|^2$ when $\theta_p$ is drawn instead from the law of curves with complex multiplication, $\frac12\delta_{\pi/2}+\frac12\,d\theta/\pi$, and show that it is finite for $\sigma>1/2$ but differs from $\zeta(2\sigma)$. (Hint: for real $\sigma$ and $q=p^{-\sigma}$ the factor $F_p=(1-2q\cos\theta_p+q^2)^{-1}$ is positive. The atom at $\pi/2$ contributes $\frac12(1+q^2)^{-2}$ to $\E F_p^2$, and the uniform part contributes half of $\frac1\pi\int_0^\pi(1-2q\cos\theta+q^2)^{-2}\,d\theta = (1+q^2)/(1-q^2)^3$. The factors now have mean $(1-q^4)^{-1}$, so run the martingale argument on the normalised factors $(1-q^4)F_p$.)
+\end{enumerate}
+
+\section{Open computational problems}
+
+\begin{compproblem}[Value distribution of $\log L(\sigma+it,\Delta)$]
+Objective: compare the empirical law of $\log L(\sigma+it,\Delta)$ in the strip with its two random models. Objects and scale: the five abscissae $\sigma = 0.55,0.6,0.7,0.8,0.9$ and $t$ on a grid of spacing $0.1$ in $[10^3,10^6]$, about $10^7$ evaluations per $\sigma$, using $\tau(n)$ for $n$ up to the approximate functional equation length. Route: PARI/GP \texttt{lfun} with precomputed $\tau(n)$ via the product formula, or a GPU implementation of the approximate functional equation; Monte Carlo of the $t$ aspect model (true $\theta_p$, uniform phases) and of the Sato Tate model, with primes up to $10^8$ in the random products. Deliverable: two dimensional histograms of $\log L$, Kolmogorov and Wasserstein distances to both models as functions of $\sigma$ and $T$, and a plot of the variance of $\operatorname{Re}\log L$ against $\frac12\sum_px_p^2p^{-2\sigma}$. Why it matters: it tests the Bohr Jessen theorem for $\GL_2$ quantitatively and measures how far the Sato Tate model, which forgets the actual $\theta_p$, is from the truth.
+\end{compproblem}
+
+\begin{compproblem}[Large deviation rate functions]
+Objective: estimate $-\log\Prob(\operatorname{Re}\log L>\tau)$ for $\zeta$, for $L(s,\Delta)$, and for $L_{\mathrm{rand}}$, and compare with the predicted shape $c(\sigma)\tau^{1/(1-\sigma)}(\log\tau)^{\sigma/(1-\sigma)}$. Objects and scale: $\sigma\in\{0.6,0.7,0.8\}$, $t\le10^7$ for the $L$ functions, and $10^9$ samples of the random models using importance sampling by exponential tilting of each prime factor. Route: GPU Monte Carlo with tilted phases; saddle point evaluation of the cumulant generating function $\lambda\mapsto\sum_p\log\E|1-X_pp^{-\sigma}|^{-\lambda}$ of $\operatorname{Re}\log\zeta(\sigma,X)$ and of its analogues for the other two models; for the $L$ functions, Odlyzko Sch\"onhage multi evaluation of the Riemann Siegel formula for $\zeta$ and of the approximate functional equation for $L(s,\Delta)$, checked against PARI/GP \texttt{lfun}. Deliverable: rate function plots and fitted constants $c(\sigma)$ with confidence intervals, and the largest $\tau$ at which the empirical $L$ function tail still follows the model. Why it matters: it locates the range in Lamzouri's theorem numerically and shows where arithmetic correlations between primes begin to matter.
+\end{compproblem}
+
+\begin{compproblem}[Testing universality]
+Objective: we ask for the density in Theorem~\ref{thm:ch09voronin} for concrete targets. Objects and scale: $K$ a disc of radius $0.1$ centred at $0.75$, targets $f(s) = e^{a(s-0.75)}$ with $a\in\{0.5,1,2\}$ and $f(s) = L(s,\chi_{-4})$, tolerances $\varepsilon\in\{0.5,0.2,0.1\}$, shifts $t\le10^7$, for $\zeta$ and for $L(s,\Delta)$ in the unitary normalisation. Route: Odlyzko Sch\"onhage style multi evaluation on a fine grid of $K$ and $t$, or on GPU the Riemann Siegel formula for $\zeta$ and the approximate functional equation for $L(s,\Delta)$; for the model, Monte Carlo of random Euler products with primes to $10^7$. Deliverable: table of empirical densities against the probability that the random Euler product lies within $\varepsilon$ of $f$, and the scaling of the density with $\varepsilon$. Why it matters: the universality density is a small ball probability for a random Euler product, and its size as $\varepsilon\to0$ is poorly understood; numerics would suggest its true order.
+\end{compproblem}

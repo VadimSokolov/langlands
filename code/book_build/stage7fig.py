@@ -1,0 +1,25 @@
+import numpy as np, json, math
+import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
+plt.rcParams.update({"font.family":"serif","font.size":9,"axes.spines.top":False,"axes.spines.right":False,"savefig.bbox":"tight"})
+D="../work/figs/"; C={"ink":"#1F3B63","rust":"#9C3D1F","teal":"#1B7F79","gold":"#C99A2E","plum":"#6B3F7A","sky":"#8FB3DE"}
+xs,dens=np.load("vdp_density.npy")
+fig,ax=plt.subplots(figsize=(4.0,2.2))
+x2=np.concatenate([-xs[::-1],xs[1:]]); d2=np.concatenate([dens[::-1],dens[1:]])
+ax.plot(x2,d2,color=C["teal"],lw=1.4); ax.set_xlabel(r"$v$"); ax.set_ylabel("density of $V_\\Delta$")
+plt.savefig(D+"vdp_delta.pdf"); plt.close()
+g,bp,bz=np.load("bump.npy")
+fig,ax=plt.subplots(figsize=(4.4,2.2))
+ax.plot(g,bz,color=C["ink"],lw=1.6,label="from the zeros"); ax.plot(g,bp,"--",color=C["rust"],lw=1.1,label="from the primes")
+ax.set_xlabel(r"$t_0$"); ax.legend(frameon=False,fontsize=7); plt.savefig(D+"zeros_from_primes.pdf"); plt.close()
+zz,U=np.load("transport.npy")
+fig,ax=plt.subplots(figsize=(4.4,2.1))
+ax.plot(zz,U,color=C["plum"],lw=1); ax.set_xlabel(r"$z$"); ax.set_ylabel(r"$U_\varepsilon(z)$"); ax.set_xlim(0,900)
+plt.savefig(D+"sin2_transport.pdf"); plt.close()
+o=json.load(open("stage7b.json"))
+fig,ax=plt.subplots(figsize=(4.4,2.4))
+for (k,c) in zip(["xi","Delta","L(chi_-4)","11a1"],[C["ink"],C["teal"],C["gold"],C["rust"]]):
+    m=np.array(o[k]["mins"]); kk=np.arange(len(m))
+    ax.semilogy(kk[m>0],m[m>0],"o-",ms=2.5,lw=1,color=c,label=k.replace("chi_-4","$\\chi_{-4}$").replace("xi","$\\xi$").replace("Delta","$\\Delta$"))
+    if (m<=0).any(): ax.semilogy(kk[m<=0],np.abs(m[m<=0]),"x",ms=4,color=c)
+ax.set_xlabel(r"order $k$"); ax.set_ylabel(r"$\min_n (-1)^k\Delta^k\delta_n$"); ax.legend(frameon=False,fontsize=7)
+plt.savefig(D+"patie_test.pdf"); plt.close(); print("ok")
