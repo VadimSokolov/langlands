@@ -2,7 +2,7 @@
 
 By Nick Polson and [Vadim Sokolov](https://orcid.org/0000-0002-6618-2965).
 
-[![PDF](https://vsokolov.org/books/icon-pdf.svg)](https://github.com/VadimSokolov/langlands/releases/download/v1.0.0/langlands.pdf "PDF") [![Source on GitHub](https://vsokolov.org/books/icon-github.svg)](https://github.com/VadimSokolov/langlands/tree/v1.0.0 "Source on GitHub") [![DOI 10.5281/zenodo.23419248](https://zenodo.org/badge/DOI/10.5281/zenodo.23419248.svg)](https://doi.org/10.5281/zenodo.23419248)
+[![PDF](https://vsokolov.org/books/icon-pdf.svg)](https://github.com/VadimSokolov/langlands/releases/download/v1.0.0/langlands.pdf "PDF") [![Source on GitHub](https://vsokolov.org/books/icon-github.svg)](https://github.com/VadimSokolov/langlands/tree/v1.0.0 "Source on GitHub") [![DOI 10.5281/zenodo.23419248](https://zenodo.org/badge/DOI/10.5281/zenodo.23419248.svg)](https://doi.org/10.5281/zenodo.23419248) [![Paperback, available at Amazon](https://vsokolov.org/books/available-at-amazon.png)](https://www.amazon.com/dp/B0HN8BVRB5 "Paperback on Amazon")
 
 ## Description
 

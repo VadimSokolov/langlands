@@ -79,6 +79,7 @@ All 178 catalogued results, with statements and status, are in [RESULTS.md](RESU
 - `RESULTS.md` and `summaries/`: the catalog of results and one summary per chapter.
 - `site/`: what the book's web pages are built from: `book.json` with every fact and result, the book page and the page of the results by chapter in Markdown, their head tags and the book's `llms.txt` section.
 - Book page: https://vsokolov.org/books/langlands/
+- Printed edition: https://www.amazon.com/dp/B0HN8BVRB5
 
 ## License
 

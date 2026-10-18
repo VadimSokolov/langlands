@@ -28,7 +28,7 @@ license_code: MIT
 repository: https://github.com/VadimSokolov/langlands   # the public repository; its name is the slug
 site_page: https://vsokolov.org/books/langlands/    # the book page on the website; its PDF link is the GitHub release asset
 language: en
-print_url: ""                    # where to buy the printed book (optional)
+print_url: "https://www.amazon.com/dp/B0HN8BVRB5"                    # where to buy the printed book (optional)
 html_url: ""                     # Quarto books only
 cover_image: pdf/cover.jpg       # front cover image (kdp.py front)
 pdf: pdf/langlands.pdf              # the released PDF; bookrepo.py pdf copies the build here

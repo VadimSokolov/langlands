@@ -96,7 +96,7 @@ for para in blurb.split("\n\n"):
         ax.text(bx, y, line, ha="left", va="top", color="#E8E8EE", fontsize=11, fontdict=serif); y -= 0.235
     y -= 0.2
 ax.text(bx, bleed + 2.55, "Nick Polson is Robert Law Jr. Professor of Econometrics and Statistics at the\nBooth School of Business, University of Chicago. Vadim Sokolov is on the\nfaculty of George Mason University.", ha="left", va="top", color="#B9BED0", fontsize=9.5, fontdict=serif, linespacing=1.5)
-ax.add_patch(plt.Rectangle((bleed + trimw - 2.35, bleed + 0.35), 2.0, 1.2, color="white", lw=0))  # barcode area
+# no box for the barcode: KDP prints its own, on a white background of its own, over whatever is there (lower right of the back cover)
 fig.savefig("cover_wrap.pdf"); fig.savefig("cover_wrap.png", dpi=110)
 # front only
 fig2 = plt.figure(figsize=(trimw, trimh)); a2 = fig2.add_axes([0, 0, 1, 1]); a2.axis("off")
