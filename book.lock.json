@@ -1,15 +1,15 @@
 {
  "edition": "1",
  "pdf": {
-  "bytes": 6376428,
+  "bytes": 6489268,
   "file": "pdf/langlands.pdf",
-  "pages": 661,
+  "pages": 683,
   "parts": [
    {
     "first_page": "i",
     "key": "",
-    "last_page": "xxii",
-    "pages": 22,
+    "last_page": "xxiv",
+    "pages": 24,
     "title": "Front matter"
    },
    {
@@ -197,61 +197,68 @@
    {
     "first_page": "500",
     "key": "27",
-    "last_page": "513",
-    "pages": 14,
-    "title": "Chapter 27. Extreme Values and the L Functions of Eta Products"
+    "last_page": "518",
+    "pages": 19,
+    "title": "Chapter 27. Percolation and the Curve $y^2=x^3+1$"
    },
    {
-    "first_page": "515",
+    "first_page": "519",
     "key": "28",
-    "last_page": "534",
-    "pages": 20,
-    "title": "Chapter 28. Haar Measure and the p* Formula"
-   },
-   {
-    "first_page": "535",
-    "key": "29",
-    "last_page": "546",
-    "pages": 12,
-    "title": "Chapter 29. Bayesian Identification of Sato Tate Groups"
-   },
-   {
-    "first_page": "547",
-    "key": "30",
-    "last_page": "560",
+    "last_page": "532",
     "pages": 14,
-    "title": "Chapter 30. Open Problems"
+    "title": "Chapter 28. Extreme Values and the L Functions of Eta Products"
    },
    {
-    "first_page": "561",
+    "first_page": "534",
+    "key": "29",
+    "last_page": "553",
+    "pages": 20,
+    "title": "Chapter 29. Haar Measure and the p* Formula"
+   },
+   {
+    "first_page": "554",
+    "key": "30",
+    "last_page": "565",
+    "pages": 12,
+    "title": "Chapter 30. Bayesian Identification of Sato Tate Groups"
+   },
+   {
+    "first_page": "566",
     "key": "31",
-    "last_page": "571",
-    "pages": 11,
-    "title": "Chapter 31. A Computational Programme"
+    "last_page": "579",
+    "pages": 14,
+    "title": "Chapter 31. Open Problems"
    },
    {
-    "first_page": "572",
+    "first_page": "580",
+    "key": "32",
+    "last_page": "590",
+    "pages": 11,
+    "title": "Chapter 32. A Computational Programme"
+   },
+   {
+    "first_page": "591",
     "key": "A",
-    "last_page": "588",
+    "last_page": "607",
     "pages": 17,
     "title": "Appendix A. A Probability Toolkit"
    },
    {
-    "first_page": "589",
+    "first_page": "608",
     "key": "B",
-    "last_page": "601",
+    "last_page": "620",
     "pages": 13,
     "title": "Appendix B. Code for the Computations"
    },
    {
-    "first_page": "602",
+    "first_page": "621",
     "key": "",
-    "last_page": "639",
-    "pages": 38,
+    "last_page": "659",
+    "pages": 39,
     "title": "Bibliography"
    }
   ],
-  "sha256": "993b622c65e25fae8bcd755b8e87568a29c25223e35c19dec5f9a04123ac9521"
+  "sha256": "c1160f438097537f4e4a5cf27d8acb0a49eadcd80305ff9f6c0930dcdf9ba1fc"
  },
  "results": {
   "an_arithmetic_product_for_frobenius_functionals": {
@@ -265,14 +272,25 @@
    "verified_fingerprint": "93e5b5abab2b",
    "verified_on": "2026-10-15"
   },
+  "annulus_crossing_probability_is_not_a_positive_laplace_transform": {
+   "environment": "proposition",
+   "file": "book/chapters/ch_percolation.tex",
+   "fingerprint": "c46948ae9690",
+   "label": "perc:prop:annulus",
+   "number": "27.7",
+   "page": "509",
+   "printed": "Proposition 27.7",
+   "verified_fingerprint": "c46948ae9690",
+   "verified_on": "2026-10-17"
+  },
   "bayes_factor_rates_for_complex_multiplication_of_elliptic_curves": {
    "environment": "corollary",
    "file": "book/chapters/ch12.tex",
    "fingerprint": "b50fbaf1164d",
    "label": "thm:12elliptic",
-   "number": "29.3",
-   "page": "538",
-   "printed": "Corollary 29.3",
+   "number": "30.3",
+   "page": "557",
+   "printed": "Corollary 30.3",
    "verified_fingerprint": "b50fbaf1164d",
    "verified_on": "2026-10-15"
   },
@@ -281,9 +299,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "60397c6d6cbe",
    "label": "op:bayes",
-   "number": "30.11",
-   "page": "557",
-   "printed": "Open Problem 30.11",
+   "number": "31.11",
+   "page": "576",
+   "printed": "Open Problem 31.11",
    "verified_fingerprint": "60397c6d6cbe",
    "verified_on": "2026-10-15"
   },
@@ -292,9 +310,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "d58529d6a048",
    "label": "prob:ch11brownian",
-   "number": "27.1",
-   "page": "510",
-   "printed": "Open Problem 27.1",
+   "number": "28.1",
+   "page": "529",
+   "printed": "Open Problem 28.1",
    "verified_fingerprint": "d58529d6a048",
    "verified_on": "2026-10-15"
   },
@@ -380,9 +398,9 @@
    "file": "book/chapters/ch12.tex",
    "fingerprint": "deb42f282c00",
    "label": "thm:12consist",
-   "number": "29.1",
-   "page": "536",
-   "printed": "Theorem 29.1",
+   "number": "30.1",
+   "page": "555",
+   "printed": "Theorem 30.1",
    "verified_fingerprint": "deb42f282c00",
    "verified_on": "2026-10-15"
   },
@@ -408,6 +426,28 @@
    "verified_fingerprint": "90c62beb8cad",
    "verified_on": "2026-10-15"
   },
+  "crossing_threshold_is_not_a_generalized_gamma_convolution": {
+   "environment": "theorem",
+   "file": "book/chapters/ch_percolation.tex",
+   "fingerprint": "8fe062f8b2a2",
+   "label": "perc:thm:notggc",
+   "number": "27.10",
+   "page": "510",
+   "printed": "Theorem 27.10",
+   "verified_fingerprint": "8fe062f8b2a2",
+   "verified_on": "2026-10-17"
+  },
+  "crossing_threshold_self_decomposable_numerically": {
+   "environment": "proposition",
+   "file": "book/chapters/ch_percolation.tex",
+   "fingerprint": "8d4459c02d2e",
+   "label": "perc:prop:sd",
+   "number": "27.11",
+   "page": "511",
+   "printed": "Proposition 27.11",
+   "verified_fingerprint": "8d4459c02d2e",
+   "verified_on": "2026-10-17"
+  },
   "cumulant_criterion_generalized_riemann_hypothesis": {
    "environment": "proposition",
    "file": "book/chapters/ch10b.tex",
@@ -418,6 +458,17 @@
    "printed": "Proposition 14.13",
    "verified_fingerprint": "0918543801a4",
    "verified_on": "2026-10-15"
+  },
+  "cumulants_of_log_crossing_threshold_are_zero_sums": {
+   "environment": "proposition",
+   "file": "book/chapters/ch_percolation.tex",
+   "fingerprint": "1ff69d05bf4f",
+   "label": "perc:prop:cum",
+   "number": "27.12",
+   "page": "512",
+   "printed": "Proposition 27.12",
+   "verified_fingerprint": "1ff69d05bf4f",
+   "verified_on": "2026-10-17"
   },
   "cutoff_for_brownian_motion_on_congruence_covers": {
    "environment": "problem",
@@ -710,9 +761,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "dc9a4330233b",
    "label": "prop:ch11M",
-   "number": "27.1",
-   "page": "500",
-   "printed": "Proposition 27.1",
+   "number": "28.1",
+   "page": "519",
+   "printed": "Proposition 28.1",
    "verified_fingerprint": "dc9a4330233b",
    "verified_on": "2026-10-15"
   },
@@ -853,9 +904,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "0a745133044c",
    "label": "thm:ch11general",
-   "number": "27.7",
-   "page": "506",
-   "printed": "Theorem 27.7",
+   "number": "28.7",
+   "page": "525",
+   "printed": "Theorem 28.7",
    "verified_fingerprint": "0a745133044c",
    "verified_on": "2026-10-15"
   },
@@ -864,9 +915,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "410dad1abfa2",
    "label": "op:ev",
-   "number": "30.9",
-   "page": "555",
-   "printed": "Open Problem 30.9",
+   "number": "31.9",
+   "page": "574",
+   "printed": "Open Problem 31.9",
    "verified_fingerprint": "410dad1abfa2",
    "verified_on": "2026-10-15"
   },
@@ -875,9 +926,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "9b5e9d252f2f",
    "label": "op:rankbias",
-   "number": "30.12",
-   "page": "557",
-   "printed": "Open Problem 30.12",
+   "number": "31.12",
+   "page": "576",
+   "printed": "Open Problem 31.12",
    "verified_fingerprint": "9b5e9d252f2f",
    "verified_on": "2026-10-15"
   },
@@ -1227,9 +1278,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "6ea9eae8c90d",
    "label": "op:inverse",
-   "number": "30.4",
-   "page": "550",
-   "printed": "Open Problem 30.4",
+   "number": "31.4",
+   "page": "569",
+   "printed": "Open Problem 31.4",
    "verified_fingerprint": "6ea9eae8c90d",
    "verified_on": "2026-10-15"
   },
@@ -1315,9 +1366,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "62649f4f2b95",
    "label": "prop:ch11kolmogorov",
-   "number": "27.9",
-   "page": "510",
-   "printed": "Proposition 27.9",
+   "number": "28.9",
+   "page": "529",
+   "printed": "Proposition 28.9",
    "verified_fingerprint": "62649f4f2b95",
    "verified_on": "2026-10-15"
   },
@@ -1326,9 +1377,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "2cd0629f58d2",
    "label": "thm:ch11main",
-   "number": "27.2",
-   "page": "502",
-   "printed": "Theorem 27.2",
+   "number": "28.2",
+   "page": "521",
+   "printed": "Theorem 28.2",
    "verified_fingerprint": "2cd0629f58d2",
    "verified_on": "2026-10-15"
   },
@@ -1337,9 +1388,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "90203bcc9a0d",
    "label": "cor:ch11monotone",
-   "number": "27.4",
-   "page": "503",
-   "printed": "Corollary 27.4",
+   "number": "28.4",
+   "page": "522",
+   "printed": "Corollary 28.4",
    "verified_fingerprint": "90203bcc9a0d",
    "verified_on": "2026-10-15"
   },
@@ -1375,6 +1426,17 @@
    "printed": "Theorem 15.3",
    "verified_fingerprint": "d0c095050c47",
    "verified_on": "2026-10-15"
+  },
+  "log_crossing_threshold_is_not_infinitely_divisible": {
+   "environment": "theorem",
+   "file": "book/chapters/ch_percolation.tex",
+   "fingerprint": "8deac469eb6e",
+   "label": "perc:thm:notid",
+   "number": "27.8",
+   "page": "509",
+   "printed": "Theorem 27.8",
+   "verified_fingerprint": "8deac469eb6e",
+   "verified_on": "2026-10-17"
   },
   "log_derivative_comparison_across_vertical_lines": {
    "environment": "theorem",
@@ -1447,9 +1509,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "3af20a629c84",
    "label": "prop:ch11selfsim",
-   "number": "27.5",
-   "page": "504",
-   "printed": "Proposition 27.5",
+   "number": "28.5",
+   "page": "523",
+   "printed": "Proposition 28.5",
    "verified_fingerprint": "3af20a629c84",
    "verified_on": "2026-10-15"
   },
@@ -1475,6 +1537,28 @@
    "verified_fingerprint": "ba38ce33f5fc",
    "verified_on": "2026-10-15"
   },
+  "percolation_crossing_threshold_and_the_l_function_of_y2_x3_1": {
+   "environment": "theorem",
+   "file": "book/chapters/ch_percolation.tex",
+   "fingerprint": "219288fdbc93",
+   "label": "perc:thm:main",
+   "number": "27.5",
+   "page": "506",
+   "printed": "Theorem 27.5",
+   "verified_fingerprint": "219288fdbc93",
+   "verified_on": "2026-10-17"
+  },
+  "percolation_cumulant_criterion_for_grh_of_y2_x3_1": {
+   "environment": "theorem",
+   "file": "book/chapters/ch_percolation.tex",
+   "fingerprint": "02056172b35f",
+   "label": "perc:thm:crit",
+   "number": "27.13",
+   "page": "515",
+   "printed": "Theorem 27.13",
+   "verified_fingerprint": "02056172b35f",
+   "verified_on": "2026-10-17"
+  },
   "polya_kernel_automorphic_l_function": {
    "environment": "lemma",
    "file": "book/chapters/ch10b.tex",
@@ -1491,9 +1575,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "2e89dae8207f",
    "label": "prop:ch11posterior",
-   "number": "27.6",
-   "page": "505",
-   "printed": "Proposition 27.6",
+   "number": "28.6",
+   "page": "524",
+   "printed": "Proposition 28.6",
    "verified_fingerprint": "2e89dae8207f",
    "verified_on": "2026-10-15"
   },
@@ -1590,9 +1674,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "b6aa6b5e68e3",
    "label": "cor:ch11bounds",
-   "number": "27.3",
-   "page": "503",
-   "printed": "Corollary 27.3",
+   "number": "28.3",
+   "page": "522",
+   "printed": "Corollary 28.3",
    "verified_fingerprint": "b6aa6b5e68e3",
    "verified_on": "2026-10-15"
   },
@@ -1634,9 +1718,9 @@
    "file": "book/chapters/ch11b.tex",
    "fingerprint": "7510b2e8e612",
    "label": "thm:11brefprior",
-   "number": "28.16",
-   "page": "529",
-   "printed": "Proposition 28.16",
+   "number": "29.16",
+   "page": "548",
+   "printed": "Proposition 29.16",
    "verified_fingerprint": "7510b2e8e612",
    "verified_on": "2026-10-15"
   },
@@ -1678,9 +1762,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "2b7d94a070e7",
    "label": "op:disc",
-   "number": "30.3",
-   "page": "549",
-   "printed": "Open Problem 30.3",
+   "number": "31.3",
+   "page": "568",
+   "printed": "Open Problem 31.3",
    "verified_fingerprint": "2b7d94a070e7",
    "verified_on": "2026-10-15"
   },
@@ -1744,9 +1828,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "2d94273efd1a",
    "label": "op:kemeny",
-   "number": "30.10",
-   "page": "556",
-   "printed": "Open Problem 30.10",
+   "number": "31.10",
+   "page": "575",
+   "printed": "Open Problem 31.10",
    "verified_fingerprint": "2d94273efd1a",
    "verified_on": "2026-10-15"
   },
@@ -2041,11 +2125,22 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "42b455bfd55e",
    "label": "op:thorin",
-   "number": "30.8",
-   "page": "554",
-   "printed": "Open Problem 30.8",
+   "number": "31.8",
+   "page": "573",
+   "printed": "Open Problem 31.8",
    "verified_fingerprint": "42b455bfd55e",
    "verified_on": "2026-10-15"
+  },
+  "thorin_representation_of_reciprocal_crossing_threshold_moments": {
+   "environment": "corollary",
+   "file": "book/chapters/ch_percolation.tex",
+   "fingerprint": "18087366e9bf",
+   "label": "perc:cor:recip",
+   "number": "27.6",
+   "page": "507",
+   "printed": "Corollary 27.6",
+   "verified_fingerprint": "18087366e9bf",
+   "verified_on": "2026-10-17"
   },
   "thorin_representation_of_the_geodesic_euler_product": {
    "environment": "theorem",
@@ -2213,10 +2308,17 @@
    "verified_on": "2026-10-15"
   }
  },
- "updated": "2026-10-16",
+ "updated": "2026-10-18",
  "zenodo": {
   "concept_doi": "10.5281/zenodo.23419247",
   "doi": "10.5281/zenodo.23419248",
+  "draft": {
+   "doi": "10.5281/zenodo.23445874",
+   "html": "https://zenodo.org/deposit/23445874",
+   "id": 23445874,
+   "reserved_on": "2026-10-18",
+   "version": "1.1.0"
+  },
   "html": "https://zenodo.org/records/23419248",
   "latest_id": 23419248,
   "tag": "v1.0.0",

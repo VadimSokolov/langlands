@@ -1,6 +1,6 @@
 # Results by chapter <small>On Langlands Conjectures</small>
 
-The results of [On Langlands Conjectures: Probabilistic Methods](https://vsokolov.org/books/langlands/) that are new in the book, that come from the authors' own papers, or that correct one of those papers, as the book states them: 178 entries (130 proved, 5 conditional, 43 open). Results of other authors that the book presents are credited in the [chapter summaries](https://github.com/VadimSokolov/langlands/tree/main/summaries).
+The results of [On Langlands Conjectures: Probabilistic Methods](https://vsokolov.org/books/langlands/) that are new in the book, that come from the authors' own papers, or that correct one of those papers, as the book states them: 186 entries (136 proved, 6 conditional, 44 open). Results of other authors that the book presents are credited in the [chapter summaries](https://github.com/VadimSokolov/langlands/tree/main/summaries).
 
 Status: proved; conditional (proved assuming the named statements, which the book does not prove); open (stated as an open question); counterexample (a proved counterexample); withdrawn (found wrong after release; the entry says what was wrong and which version corrects it).
 
@@ -16,7 +16,7 @@ Status: proved.
 
 Statement. Let $\mathcal{P}$ be the set of primes, $\pi(x)$ the number of primes $p\le x$, and $\mathbb{A}$ the adele ring of $\mathbb{Q}$. A set $S\subset\mathcal{P}$ has density zero if $\#\{p\le x:p\in S\}/\pi(x)\to0$ as $x\to\infty$. A sequence $(x_p)_{p\in\mathcal{P}}$ of real numbers comes from a cuspidal automorphic representation $\pi$ of $\mathrm{GL}_2(\mathbb{A})$ with trivial central character if $x_p=\operatorname{tr}A_p(\pi)$ for all but finitely many primes $p$, where $A_p(\pi)$ is the unitarily normalised Satake parameter of $\pi$ at $p$, and it is automorphic if it comes from some such $\pi$; both notions are unchanged when finitely many terms are changed. A sequence $(x_p)\in[-2,2]^{\mathcal{P}}$ is equidistributed with respect to the Sato Tate law $\mu_{\mathrm{ST}}(dx)=\frac{1}{2\pi}\sqrt{4-x^2}\,dx$ on $[-2,2]$ if $\pi(x)^{-1}\sum_{p\le x}\phi(x_p)\to\int\phi\,d\mu_{\mathrm{ST}}$ as $x\to\infty$ for every continuous function $\phi$ on $[-2,2]$. Let $\mathcal{E}$ be the set of sequences $(x_p)\in[-2,2]^{\mathcal{P}}$ that are equidistributed with respect to $\mu_{\mathrm{ST}}$. (1) $\mathcal{E}$ has the cardinality of the continuum and contains continuum many sequences no two of which agree at all but finitely many primes. The automorphic sequences fall into countably many classes under the relation of agreeing at all but finitely many primes, so all but countably many of those sequences are not automorphic. (2) Let $(x_p)\in[-2,2]^{\mathcal{P}}$ come from $\pi$, and let $(x'_p)\in[-2,2]^{\mathcal{P}}$ differ from $(x_p)$ exactly on an infinite set $S$ of density zero. Then $(x'_p)$ is not automorphic, and $(x'_p)\in\mathcal{E}$ if and only if $(x_p)\in\mathcal{E}$.
 
-Source: [`book/chapters/ch01.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch01.tex), label `prop:01limits`.
+Source: [`book/chapters/ch01.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch01.tex), label `prop:01limits`.
 
 <a id="density_zero_invariant_statistics_cannot_detect_automorphy"></a>
 
@@ -28,7 +28,7 @@ Status: proved.
 
 Statement. Let $\mathcal{P}$ be the set of primes and $\pi(x)$ the number of primes $p\le x$; a set $S\subset\mathcal{P}$ has density zero if $\#\{p\le x:p\in S\}/\pi(x)\to0$ as $x\to\infty$. Call a sequence $(x_p)\in[-2,2]^{\mathcal{P}}$ automorphic if there is a cuspidal automorphic representation $\pi$ of $\mathrm{GL}_2(\mathbb{A})$, where $\mathbb{A}$ is the ring of adeles of $\mathbb{Q}$, with trivial central character such that $x_p=\operatorname{tr}A_p(\pi)$ for all but finitely many primes $p$, where $A_p(\pi)$ is the unitarily normalised Satake parameter of $\pi$ at $p$. Let $\mathcal{E}$ be the set of sequences $(x_p)\in[-2,2]^{\mathcal{P}}$ that are equidistributed with respect to the Sato Tate law, that is, with $\pi(x)^{-1}\sum_{p\le x}\phi(x_p)\to\frac{1}{2\pi}\int_{-2}^{2}\phi(t)\sqrt{4-t^2}\,dt$ as $x\to\infty$ for every continuous function $\phi$ on $[-2,2]$. Let $\Phi$ be any function on $[-2,2]^{\mathcal{P}}$ that is unchanged when a sequence is altered on a set of density zero; for instance any function of the set of weak limit points of the empirical measures $\pi(x)^{-1}\sum_{p\le x}\delta_{x_p}$ as $x\to\infty$, which is unchanged by such alterations. Then for every automorphic $(x_p)\in[-2,2]^{\mathcal{P}}$ there are continuum many sequences in $[-2,2]^{\mathcal{P}}$ that are not automorphic and on which $\Phi$ takes the value it takes on $(x_p)$; if $(x_p)\in\mathcal{E}$, they all lie in $\mathcal{E}$. In particular $\Phi$ cannot characterise automorphy.
 
-Source: [`book/chapters/ch01.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch01.tex), label `cor:01functional`.
+Source: [`book/chapters/ch01.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch01.tex), label `cor:01functional`.
 
 ## Chapter 5. Frobenius Data: Statistics at Scale
 
@@ -42,7 +42,7 @@ Status: open.
 
 Statement. Let $E$ be an elliptic curve over $\mathbb{Q}$ of conductor $N$ without complex multiplication. For a prime $p \nmid N$ put $a_p = p + 1 - \#E(\mathbb{F}_p)$ and $x_p = a_p/\sqrt{p} \in [-2,2]$. Let $p_1 < p_2 < \cdots$ be the primes not dividing $N$, let $F_n$ be the empirical distribution function of $x_{p_1}, \dots, x_{p_n}$, let $F_{\mathrm{ST}}(t) = \int_{-2}^{t} \frac{1}{2\pi}\sqrt{4-u^2}\,du$ be the distribution function of the Sato Tate law on $[-2,2]$, and let $D_n = \sup_{t \in [-2,2]} |F_n(t) - F_{\mathrm{ST}}(t)|$ be the Kolmogorov discrepancy. For $x \ge 2$ let $n = n(x)$ be the number of primes $p \le x$ with $p \nmid N$. Conjecture (open): (a) (a conjecture of Akiyama and Tanigawa) $D_n = O(n^{-1/2+\varepsilon})$ for every $\varepsilon > 0$; (b) $\sqrt{n}\,D_n \to 0$ in logarithmic density, that is, for every $\delta > 0$ the set $S_\delta$ of real $x \ge 2$ with $\sqrt{n}\,D_n > \delta$ has logarithmic density zero, $\frac{1}{\log X}\int_{S_\delta \cap [2,X]} \frac{dx}{x} \to 0$ as $X \to \infty$.
 
-Source: [`book/chapters/ch05.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch05.tex), label `conj:05bridge`.
+Source: [`book/chapters/ch05.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch05.tex), label `conj:05bridge`.
 
 ## Chapter 7. Kloosterman Sums: Vertical Sato Tate and Random Fourier Series
 
@@ -56,7 +56,7 @@ Status: proved.
 
 Statement. Let $p$ be an odd prime, write $e(z)=e^{2\pi iz}$, and for $x\in\mathbb{F}_p^\times$ let $\bar x$ denote its inverse. For $t\in[0,1]$ let $I=\{1,\dots,m\}$ with $m=\lfloor t(p-1)\rfloor$, viewed as a set of residues modulo $p$, let $-I=\{p-x:x\in I\}$, and put $R_I=\sum_{x\in I}e(\bar x/p)$ and $G_I=\sum_{x\in I}e(x/p)$. Let $a$ be uniform in $\mathbb{F}_p^\times$. (1) For $S_p(a,t)=p^{-1/2}\sum_{x\in I}e\bigl((ax+\bar x)/p\bigr)$, \[\mathbb{E}|S_p|^2=\frac{p|I|-|R_I|^2}{p(p-1)},\qquad\mathbb{E}S_p^2=\frac{p\,|I\cap(-I)|-R_I^2}{p(p-1)}.\] (2) For $S'_p(a,t)=p^{-1/2}\sum_{x\in I}e\bigl((x+a\bar x)/p\bigr)$, \[\mathbb{E}|S'_p|^2=\frac{p|I|-|G_I|^2}{p(p-1)},\qquad\mathbb{E}S_p'^2=\frac{p\,|I\cap(-I)|-G_I^2}{p(p-1)}.\] In both cases the mean is $\mathbb{E}S_p=-p^{-1/2}(p-1)^{-1}R_I$, respectively $\mathbb{E}S'_p=-p^{-1/2}(p-1)^{-1}G_I$, which tends to $0$ as $p\to\infty$.
 
-Source: [`book/chapters/ch06b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch06b.tex), label `prop:06bsecond`.
+Source: [`book/chapters/ch06b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch06b.tex), label `prop:06bsecond`.
 
 <a id="kloosterman_paths_variance_deficit"></a>
 
@@ -68,7 +68,7 @@ Status: proved.
 
 Statement. Let $p$ be an odd prime, $e(z)=e^{2\pi iz}$, and $\bar x$ the inverse of $x\in\mathbb{F}_p^\times$. For $t\in[0,1]$ let $S'_p(a,t)=p^{-1/2}\sum_{1\le x\le\lfloor t(p-1)\rfloor}e\bigl((x+a\bar x)/p\bigr)$ with $a$ uniform in $\mathbb{F}_p^\times$, and write $u_+=\max(u,0)$. As $p\to\infty$ the variances of the real and imaginary parts of $S'_p(a,t)$ converge to \[\mathrm{Var}\,\operatorname{Re}S'=\tfrac12\bigl(t+(2t-1)_+\bigr)-\frac{\sin^2(2\pi t)}{4\pi^2},\qquad\mathrm{Var}\,\operatorname{Im}S'=\tfrac12\bigl(t-(2t-1)_+\bigr)-\frac{\sin^4(\pi t)}{\pi^2}.\] At $t=\frac12$ the correction to the real part vanishes, so its limiting variance is $\frac14$, and the imaginary part loses exactly $1/\pi^2$: $\mathrm{Var}\,\operatorname{Im}S'_p(a,\tfrac12)\to\frac14-\frac1{\pi^2}=0.1487$.
 
-Source: [`book/chapters/ch06b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch06b.tex), label `cor:06bdeficit`.
+Source: [`book/chapters/ch06b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch06b.tex), label `cor:06bdeficit`.
 
 <a id="kloosterman_random_fourier_series_covariance_and_symmetry"></a>
 
@@ -80,7 +80,7 @@ Status: proved.
 
 Statement. Let $(\mathrm{ST}_h)_{h\in\mathbb{Z}}$ be independent real random variables, each with the Sato Tate law, the semicircle law on $[-2,2]$ with density $\frac1{2\pi}\sqrt{4-x^2}$. Put $c_0(t)=t$ and $c_h(t)=(e^{2\pi iht}-1)/(2\pi ih)$ for $h\ne0$, and let $K(t)=\sum_{h\in\mathbb{Z}}c_h(t)\,\mathrm{ST}_h$ for $0\le t\le1$, the series being the limit of its symmetric partial sums over $|h|\le H$ as $H\to\infty$. Write $u_+=\max(u,0)$. For $s,t\in[0,1]$, \[\mathbb{E}\,K(s)\overline{K(t)}=\min(s,t),\qquad\mathbb{E}\,K(s)K(t)=(s+t-1)_+.\] Consequently $\mathrm{Var}\,\operatorname{Re}K(t)=\frac12\bigl(t+(2t-1)_+\bigr)$, $\mathrm{Var}\,\operatorname{Im}K(t)=\frac12\bigl(t-(2t-1)_+\bigr)$, and $\operatorname{Re}K(t)$, $\operatorname{Im}K(t)$ are uncorrelated. Moreover, almost surely, \[K(1-t)=K(1)-\overline{K(t)}\qquad(0\le t\le1),\] so $\operatorname{Im}K(1-t)=\operatorname{Im}K(t)$, $K(1)=2\operatorname{Re}K(\tfrac12)=\mathrm{ST}_0$, and $\operatorname{Im}K(0)=\operatorname{Im}K(1)=0$.
 
-Source: [`book/chapters/ch06b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch06b.tex), label `prop:06bcov`.
+Source: [`book/chapters/ch06b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch06b.tex), label `prop:06bcov`.
 
 <a id="kloosterman_random_fourier_series_subgaussian_tail"></a>
 
@@ -92,7 +92,7 @@ Status: proved.
 
 Statement. Let $(\mathrm{ST}_h)_{h\in\mathbb{Z}}$ be independent real random variables, each with the Sato Tate law, the semicircle law on $[-2,2]$ with density $\frac1{2\pi}\sqrt{4-x^2}$, and let $K(t)=t\,\mathrm{ST}_0+\sum_{h\ne0}\frac{e^{2\pi iht}-1}{2\pi ih}\,\mathrm{ST}_h$ for $0\le t\le1$, the series being the limit of its symmetric partial sums. The random variable $\operatorname{Im}K(\tfrac12)=\frac1\pi\sum_{h\ \mathrm{odd}}\mathrm{ST}_h/h$ is unbounded above and below, and for every $M>0$, \[\mathbb{P}\bigl(\operatorname{Im}K(\tfrac12)>M\bigr)\le e^{-2M^2},\] the Chernoff bound of a centred Gaussian variable with the same variance $\frac14$. More generally, every real random variable $X=\sum_h\gamma_h\mathrm{ST}_h$ with $\sum_h\gamma_h^2<\infty$, in particular every real linear combination of the real and imaginary parts of finitely many values of $K$, satisfies $\mathbb{E}e^{\lambda X}\le e^{\lambda^2\mathrm{Var}(X)/2}$ for all real $\lambda$.
 
-Source: [`book/chapters/ch06b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch06b.tex), label `prop:06btail`.
+Source: [`book/chapters/ch06b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch06b.tex), label `prop:06btail`.
 
 ## Chapter 9. Hecke Operators as Random Walks on Trees
 
@@ -106,7 +106,7 @@ Status: proved.
 
 Statement. Let $q\ge2$ be an integer, let $\mathcal{T}_q$ be the $(q+1)$ regular tree with graph distance $d$ and a fixed vertex $o$, let $A$ be its adjacency operator, let $X=q^{-1/2}A$, a bounded self adjoint operator on $\ell^2(\mathcal{T}_q)$, and let $\mu_q$ be the spectral measure of $X$ at $\delta_o$, so that $\langle\delta_o,\phi(X)\delta_o\rangle=\int\phi\,d\mu_q$ for continuous $\phi$. For $n\ge0$ let $A_n$ be the operator $A_nf(v)=\sum_{d(v,w)=n}f(w)$, with $A_0=I$, and put $B_n=q^{-n/2}A_n$. Write $U_n$ for the Chebyshev polynomials of the second kind, $U_n(\cos\theta)=\sin((n+1)\theta)/\sin\theta$, and $\mu_{\mathrm{ST}}(dx)=\sqrt{4-x^2}\,dx/(2\pi)$ for the Sato Tate measure on $[-2,2]$. Then: (1) $B_1=U_1(X/2)$ and $B_n=U_n(X/2)-q^{-1}U_{n-2}(X/2)$ for $n\ge2$. (2) $c_n=\int U_n(x/2)\,d\mu_q(x)$ equals $q^{-n/2}$ for $n$ even and $0$ for $n$ odd. (3) $\mu_q$ is supported on $[-2,2]$ with the Kesten McKay density \[\mu_q(dx)=\frac{q+1}{(q^{1/2}+q^{-1/2})^2-x^2}\cdot\frac{\sqrt{4-x^2}}{2\pi}\,dx .\] (4) If $S$ is simple random walk on $\mathcal{T}_q$ started at $o$, then $\int x^{2m}\,d\mu_q=(q+1)^{2m}q^{-m}\,\mathbb{P}(S_{2m}=o)$ for $m\ge0$. (5) The walk returns to $o$ with probability $1/q$, and the Green function $G(1)=\sum_{n\ge0}\mathbb{P}(S_n=o)$, the expected number of visits to $o$, equals $q/(q-1)$. (6) $\mu_q$ converges weakly to $\mu_{\mathrm{ST}}$ as $q\to\infty$.
 
-Source: [`book/chapters/ch07.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch07.tex), label `thm:07tree`.
+Source: [`book/chapters/ch07.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch07.tex), label `thm:07tree`.
 
 ## Chapter 10. Ihara Zeta Functions, Ramanujan Graphs and Hitting Times
 
@@ -120,7 +120,7 @@ Status: proved.
 
 Statement. Let $q\ge1$ be an integer and let $G$ be a finite connected $(q+1)$ regular graph on $n$ vertices, possibly with loops and multiple edges, with adjacency matrix $A$ (a loop contributing $2$ to the diagonal) and eigenvalues $q+1=\lambda_1\ge\lambda_2\ge\dots\ge\lambda_n$. Its Ihara zeta function is $Z_G(u)=\prod_{\mathfrak p}(1-u^{\nu(\mathfrak p)})^{-1}$, the product over the classes $\mathfrak p$, under cyclic rotation, of primitive closed paths of oriented edges without backtracking and without tail, with $\nu(\mathfrak p)$ the length; by the Ihara Bass determinant formula it is a rational function of $u$, and its poles in $\{\pm1,\pm1/q\}$ are called trivial. $Z_G$ satisfies the graph Riemann hypothesis if every nontrivial pole lies on the circle $|u|=q^{-1/2}$, and $G$ is Ramanujan if every eigenvalue $\lambda$ of $A$ with $|\lambda|\ne q+1$ satisfies $|\lambda|\le2\sqrt q$. Let $P=A/(q+1)$ be the transition matrix of simple random walk on $G$, let $\lambda_*=\max\{|\lambda_j|:|\lambda_j|\ne q+1\}$ (with $\lambda_*=0$ if there is no such eigenvalue), let $\beta=1$ if $G$ is bipartite and $\beta=0$ otherwise, let $\delta_t=\max_{x}\bigl|P^t(x,x)-(1+\beta(-1)^t)/n\bigr|$, and let $\rho_q=2\sqrt q/(q+1)$. Then the following are equivalent: (1) $Z_G$ satisfies the graph Riemann hypothesis; (2) $G$ is Ramanujan; (3) $\limsup_{t\to\infty}\delta_t^{1/t}\le\rho_q$. Moreover $\limsup_t\delta_t^{1/t}=\lambda_*/(q+1)$ exactly, so the return probabilities of a Ramanujan graph approach equilibrium at an exponential rate no slower than the rate $\rho_q$ at which the return probabilities of simple random walk on the $(q+1)$ regular tree tend to zero.
 
-Source: [`book/chapters/ch08.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch08.tex), label `prop:08three`.
+Source: [`book/chapters/ch08.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch08.tex), label `prop:08three`.
 
 <a id="kemeny_constant_supersingular_isogeny_graphs_limit"></a>
 
@@ -132,7 +132,7 @@ Status: proved.
 
 Statement. Let $\ell$ be a prime. For a prime $N\equiv1\pmod{12}$ with $N\ne\ell$, let $G_N(\ell)$ be the supersingular $\ell$ isogeny graph in characteristic $N$, whose vertices are the $h=(N-1)/12$ isomorphism classes of supersingular elliptic curves over $\overline{\mathbb{F}}_N$, each curve having one edge for each of its $\ell+1$ subgroups of order $\ell$, joining it to the quotient curve; dual isogenies pair the edges, so that $G_N(\ell)$ is an undirected $(\ell+1)$ regular graph, possibly with loops and multiple edges. For simple random walk $(X_t)$ on $G_N(\ell)$, whose stationary law $\pi$ is uniform, let $\tau_y=\min\{t\ge0:X_t=y\}$ and let $K_N=\sum_y\pi(y)\,\mathbb{E}_x\tau_y$ be the Kemeny constant, which does not depend on the starting vertex $x$. As $N\to\infty$ through primes $N\equiv1\pmod{12}$, with $\ell$ fixed, \[\frac{K_N}{h}\longrightarrow\frac{\ell}{\ell-1}.\] Equivalently, the mean hitting time of a uniformly random target, from any fixed start or from a uniformly random one, is asymptotic to $\ell h/(\ell-1)$; for $\ell=2$ it is about $2h$.
 
-Source: [`book/chapters/ch08.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch08.tex), label `thm:08kemeny`.
+Source: [`book/chapters/ch08.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch08.tex), label `thm:08kemeny`.
 
 ## Chapter 11. Infinite Divisibility of Euler Products
 
@@ -146,7 +146,7 @@ Status: proved.
 
 Statement. Let $\Delta$ be the discriminant modular form of weight $12$ and level $1$, with Fourier coefficients $\tau(n)$, and let $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-11/2-s}$ be its $L$ function in the unitary normalisation, with centre $s=\tfrac12$. For every $\sigma>1$ we have $\sup_{t\in\mathbb{R}}|L(\sigma+it,\Delta)|>L(\sigma,\Delta)>0$. In particular $t\mapsto L(\sigma+it,\Delta)/L(\sigma,\Delta)$ is not a characteristic function.
 
-Source: [`book/chapters/ch09.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09.tex), label `prop:ch09notcf`.
+Source: [`book/chapters/ch09.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09.tex), label `prop:ch09notcf`.
 
 <a id="sato_tate_random_euler_product_mean_and_second_moment"></a>
 
@@ -158,7 +158,7 @@ Status: proved.
 
 Statement. Let $(\theta_p)$, indexed by the primes $p$, be independent random variables with the Sato Tate law $\frac{2}{\pi}\sin^2\theta\,d\theta$ on $[0,\pi]$, and let $L_{\mathrm{rand}}(s)=\prod_p(1-e^{i\theta_p}p^{-s})^{-1}(1-e^{-i\theta_p}p^{-s})^{-1}$ be the Sato Tate random Euler product. For real $\sigma>1/2$ and real $t$ the product $L_{\mathrm{rand}}(\sigma+it)$, the limit of the partial products over the primes $p\le P$ as $P\to\infty$, converges almost surely and in $L^2$, and \[\mathbb{E}\bigl[L_{\mathrm{rand}}(\sigma+it)\bigr]=1,\qquad\mathbb{E}\bigl|L_{\mathrm{rand}}(\sigma+it)\bigr|^2=\zeta(2\sigma).\]
 
-Source: [`book/chapters/ch09.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09.tex), label `prop:ch09martingale`.
+Source: [`book/chapters/ch09.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09.tex), label `prop:ch09martingale`.
 
 <a id="sato_tate_random_euler_product_central_limit_theorem"></a>
 
@@ -170,7 +170,7 @@ Status: proved.
 
 Statement. Let $(\theta_p)$, indexed by the primes $p$, be independent random variables with the Sato Tate law $\frac{2}{\pi}\sin^2\theta\,d\theta$ on $[0,\pi]$, and let $L_{\mathrm{rand}}(s)=\prod_p(1-e^{i\theta_p}p^{-s})^{-1}(1-e^{-i\theta_p}p^{-s})^{-1}$ be the Sato Tate random Euler product; for real $\sigma>1/2$ every factor is positive and $\log L_{\mathrm{rand}}(\sigma)=\sum_p\sum_{k\ge1}2\cos(k\theta_p)/(kp^{k\sigma})$ converges almost surely. Let $V(\sigma)=\sum_pp^{-2\sigma}$, so that $V(\sigma)=\log\frac{1}{2\sigma-1}+O(1)$ as $\sigma\to\frac12^+$. Then \[\frac{\log L_{\mathrm{rand}}(\sigma)+\frac12V(\sigma)}{\sqrt{V(\sigma)}}\Longrightarrow N(0,1),\qquad\sigma\to\tfrac12^+,\] where $\Longrightarrow$ denotes convergence in law and $N(0,1)$ is the standard normal law.
 
-Source: [`book/chapters/ch09.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09.tex), label `thm:ch09clt`.
+Source: [`book/chapters/ch09.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09.tex), label `thm:ch09clt`.
 
 ## Chapter 12. Log Correlated Fields
 
@@ -184,7 +184,7 @@ Status: proved.
 
 Statement. Let $f$ be a real analytic function on a neighbourhood of a compact interval $[a,b]$, with finitely many zeros $\gamma_1,\dots,\gamma_r$ in $(a,b)$, all simple, and no zero at $a$ or at $b$. Then, as $x\to\infty$, the Lebesgue measure of the set $\{t\in[a,b]:\log|f(t)|<-x\}$ equals $2e^{-x}\sum_{j=1}^r\frac{1}{|f'(\gamma_j)|}+O(e^{-2x})$.
 
-Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex), label `prop:09blefttail`.
+Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex), label `prop:09blefttail`.
 
 <a id="finite_height_variance_conjecture_for_delta"></a>
 
@@ -196,7 +196,7 @@ Status: open.
 
 Statement. Let $\Delta(z)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi iz}$, be the discriminant cusp form of weight $12$ for $\mathrm{SL}_2(\mathbb{Z})$, let $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$, whose critical line is $\operatorname{Re}s=6$, and for each prime $p$ let $\theta_p\in[0,\pi]$ be defined by $\tau(p)=2p^{11/2}\cos\theta_p$. Let $\gamma_{\mathrm E}$ be Euler's constant and put $A_\Delta=\sum_p\bigl(\log(1-\frac1p)+\sum_{m\ge1}\frac{(2\cos m\theta_p)^2}{m^2p^m}\bigr)$ and $V_\Delta(T)=\frac12\bigl(\log\bigl(2\log\frac{T}{2\pi}\bigr)+\gamma_{\mathrm E}+1+A_\Delta\bigr)$. Conjecture: for $t$ uniformly distributed on $[T,2T]$, $\operatorname{Var}\log|L(6+it,\Delta)|=V_\Delta(T)+o(1)$ as $T\to\infty$.
 
-Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex), label `conj:09bvar`.
+Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex), label `conj:09bvar`.
 
 <a id="covariance_of_random_euler_product_field"></a>
 
@@ -208,7 +208,7 @@ Status: proved.
 
 Statement. Let $(U_p)$, indexed by the primes, be independent random variables uniformly distributed on the unit circle, and for $P\ge3$ and real $h$ put $X_P(h)=\operatorname{Re}\sum_{p\le P}U_pp^{-1/2-ih}$. Then $\operatorname{Cov}(X_P(h),X_P(h'))=\frac12\sum_{p\le P}\frac{\cos((h - h')\log p)}{p}=\frac12\log\min\bigl(\log P,\frac{1}{|h - h'|}\bigr)+O(1)$, uniformly in $P$ and in $0<|h - h'|\le1$. The same holds for the field $X^\Delta_P(h)=\operatorname{Re}\sum_{p\le P}\lambda(p)U_pp^{-1/2-ih}$, where $\lambda(p)=\tau(p)/p^{11/2}$ and $\tau(n)$ are the coefficients of the discriminant cusp form $\Delta(z)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi iz}$, with $\lambda(p)^2/p$ in place of $1/p$ in the sum, that is, $\operatorname{Cov}(X^\Delta_P(h),X^\Delta_P(h'))=\frac12\sum_{p\le P}\frac{\lambda(p)^2\cos((h - h')\log p)}{p}=\frac12\log\min\bigl(\log P,\frac{1}{|h - h'|}\bigr)+O(1)$ with the same uniformity.
 
-Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex), label `prop:09bcov`.
+Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex), label `prop:09bcov`.
 
 <a id="tree_brownian_motion_first_moments_with_ballot_constraint"></a>
 
@@ -220,7 +220,7 @@ Status: proved.
 
 Statement. Let $b\ge2$ be an integer and $\sigma>0$, and let $\{B_v(s):0\le s\le n\}$, indexed by the $b^n$ leaves $v$ of the $b$ ary tree of depth $n$, be Brownian motion indexed by the tree: each edge carries an independent Brownian path of duration one and variance $\sigma^2$ per unit time, and $B_v$ is the concatenation of the paths along the edges from the root to $v$. Put $c=\sigma\sqrt{2\log b}$, $\theta=c/\sigma^2=\sqrt{2\log b}/\sigma$ and $x_n=cn - a\log n$ for a constant $a>0$. Fix $y\ge0$. Let $N_n(y)$ be the number of leaves with $B_v(n)\ge x_n+y$, and $Z_n(y)$ the number of leaves with $B_v(n)\in[x_n+y,x_n+y+1]$ and $B_v(s)\le\frac snx_n+y+1$ for all $s\in[0,n]$. As $n\to\infty$, $\mathbb{E}N_n(y)\sim\frac{\sigma}{c\sqrt{2\pi}}\,n^{\theta a-\frac12}e^{-\theta y}$ and $\mathbb{E}Z_n(y)\sim\kappa\,(1+y)\,n^{\theta a-\frac32}e^{-\theta y}$, with $\kappa=2(\theta-1+e^{-\theta})/(\sigma^3\theta^2\sqrt{2\pi})$. In particular the choice $a=\frac1{2\theta}$ makes $\mathbb{E}N_n(y)$ of order one, while $a=\frac3{2\theta}$ makes $\mathbb{E}Z_n(y)\to\kappa(1+y)e^{-\theta y}$, and for that choice $\mathbb{E}N_n(y)$ grows like $n$.
 
-Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex), label `prop:09bballot`.
+Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex), label `prop:09bballot`.
 
 <a id="selberg_clt_for_delta_via_polya_characteristic_function"></a>
 
@@ -232,7 +232,7 @@ Status: conditional on the Riemann hypothesis for L(s, Delta), for the Gaussian 
 
 Statement. Let $\Delta(z)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi iz}$, let $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$ and $\Lambda(s,\Delta)=(2\pi)^{-s}\Gamma(s)L(s,\Delta)$, let $W$ be a random variable with density $\Phi_\Delta(u)=\Delta(ie^u)e^{6u}/\Lambda(6,\Delta)$ on $\mathbb{R}$ (the P\'olya variable of $\Delta$), and let $\varphi_W(t)=\mathbb{E}e^{itW}$. For real $t$, $\log|L(6+it,\Delta)|=\log|\varphi_W(t)|-\log|\Gamma(6+it)|+\log(\Gamma(6)L(6,\Delta))$, and, as $|t|\to\infty$, $\log|L(6+it,\Delta)|=\log|\varphi_W(t)|+\frac\pi2|t|-\frac{11}2\log|t|+C_\Delta+O(1/|t|)$, with $C_\Delta=\log(120\,L(6,\Delta))-\frac12\log2\pi=3.6355$. Consequently, if all zeros of $\Lambda(s,\Delta)$ lie on the line $\operatorname{Re}s=6$ (the Riemann hypothesis for $L(s,\Delta)$), then for $t$ uniformly distributed on $[T,2T]$ the quantity $\bigl(\log|\varphi_W(t)|+\frac\pi2t-\frac{11}2\log t+C_\Delta\bigr)/\sqrt{\frac12\log\log T}$ converges in law to the standard normal distribution as $T\to\infty$.
 
-Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex), label `prop:09bpolya`.
+Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex), label `prop:09bpolya`.
 
 <a id="log_modulus_of_delta_as_thorin_potential"></a>
 
@@ -244,7 +244,7 @@ Status: conditional on the Riemann hypothesis for L(s, Delta).
 
 Statement. Let $\Delta(z)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi iz}$, $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$ and $\Lambda(s,\Delta)=(2\pi)^{-s}\Gamma(s)L(s,\Delta)$; let $W$ have density $\Phi_\Delta(u)=\Delta(ie^u)e^{6u}/\Lambda(6,\Delta)$ on $\mathbb{R}$ and $\varphi_W(t)=\mathbb{E}e^{itW}$. Assume the Riemann hypothesis for $L(s,\Delta)$, so that the zeros of $\Lambda(s,\Delta)$ are $6\pm i\gamma_k$ with $0<\gamma_1\le\gamma_2\le\dots$, listed with multiplicity. Let $\tau_\Delta=\sum_k\delta_{\gamma_k^2}$, and let $Y=\sum_kE_k/\gamma_k^2$ with $E_k$ independent standard exponential variables. For real $t\ne\pm\gamma_k$, $\log|\varphi_W(t)|=\sum_k\log\bigl|1-\frac{t^2}{\gamma_k^2}\bigr|=\int_{(0,\infty)}\log\bigl|1-\frac{t^2}{x}\bigr|\,\tau_\Delta(dx)=-\log|\mathcal{L}_Y(t^2)|$, where $\mathcal{L}_Y(u)=\prod_k(1-u/\gamma_k^2)^{-1}$ is the meromorphic continuation to $\mathbb{C}$ of the moment generating function $\mathbb{E}e^{uY}$, $u<\gamma_1^2$. Moreover, on each interval between consecutive zeros, $t\mapsto\log|\varphi_W(t)|$ is strictly concave.
 
-Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex), label `prop:09bpotential`.
+Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex), label `prop:09bpotential`.
 
 <a id="critical_line_of_delta_through_extreme_value_variable"></a>
 
@@ -256,7 +256,7 @@ Status: proved.
 
 Statement. Let $E_{j,n}$, $1\le j\le24$, $n\ge1$, be independent standard exponential variables and $M^*=\max_{j,n}E_{j,n}/(2\pi n)$, so that the discriminant cusp form $\Delta(z)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi iz}$, satisfies $\Delta(iy)=e^{-2\pi y}\mathbb{P}(M^*\le y)$ for $y>0$. Let $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$ and $\Lambda(s,\Delta)=(2\pi)^{-s}\Gamma(s)L(s,\Delta)$, let $G$ have the gamma law of shape $6$ and unit rate, independent of $M^*$, and write $\mathbb{E}[X;A]=\mathbb{E}[X\,1_A]$ for an event $A$. For real $t$, $\frac{\Gamma(6+it)}{\Gamma(6)}\,L(6+it,\Delta)=\mathbb{E}\bigl[G^{it};\,G\ge2\pi M^*\bigr]$. The finite measure $\nu(B)=\mathbb{P}(\log G\in B,\ G\ge2\pi M^*)$ has total mass $L(6,\Delta)$ and equals $L(6,\Delta)$ times the law of $W+\log2\pi$, where $W$ is the P\'olya variable of $\Delta$, with density $\Delta(ie^u)e^{6u}/\Lambda(6,\Delta)$ on $\mathbb{R}$.
 
-Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex), label `prop:09bmstar`.
+Source: [`book/chapters/ch09b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex), label `prop:09bmstar`.
 
 ## Chapter 13. Pólya Kernels, Generalized Gamma Convolutions and Thorin Measures
 
@@ -270,7 +270,7 @@ Status: proved.
 
 Statement. Let $\Delta(z)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi iz}$, be the discriminant cusp form of weight $12$ for $\mathrm{SL}_2(\mathbb{Z})$, let $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$ and $\Lambda(s,\Delta)=(2\pi)^{-s}\Gamma(s)L(s,\Delta)$, and let $W$ be a random variable with the probability density $\Phi_\Delta(u)=\Delta(ie^u)e^{6u}/\Lambda(6,\Delta)$, $u\in\mathbb{R}$ (the P\'olya kernel of $\Delta$). Then $W$ is symmetric, has moments of all orders and an entire moment generating function, and for all $z\in\mathbb{C}$, $\mathbb{E}[e^{zW}]=\Lambda(6+z,\Delta)/\Lambda(6,\Delta)$. In particular $\mathbb{E}[e^{itW}]=\Lambda(6+it,\Delta)/\Lambda(6,\Delta)$ is real and even, and the Riemann hypothesis for $\Delta$ (all zeros of $\Lambda(s,\Delta)$ lie on the line $\operatorname{Re}s=6$) is equivalent to the statement that the characteristic function of $W$ has only real zeros.
 
-Source: [`book/chapters/ch10.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10.tex), label `thm:ch10kernel`.
+Source: [`book/chapters/ch10.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10.tex), label `thm:ch10kernel`.
 
 <a id="hadamard_product_and_variance_identity_for_delta"></a>
 
@@ -282,7 +282,7 @@ Status: proved.
 
 Statement. Let $\Delta(z)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi iz}$, $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$ and $\Lambda(s,\Delta)=(2\pi)^{-s}\Gamma(s)L(s,\Delta)$, and let $W$ have density $\Delta(ie^u)e^{6u}/\Lambda(6,\Delta)$ on $\mathbb{R}$. Write each zero of $z\mapsto\Lambda(6+z,\Delta)$ as $z=i\gamma$ (no such $z$ is real, since $\Lambda(6+x,\Delta)>0$ for real $x$), and list one representative of each pair $\{\gamma,-\gamma\}$ with $\operatorname{Re}\gamma>0$ as $\gamma_1,\gamma_2,\dots$, with multiplicity and in order of increasing real part. Unconditionally, $\sum_k|\gamma_k|^{-2}<\infty$ and for all $z\in\mathbb{C}$, $\frac{\Lambda(6+z,\Delta)}{\Lambda(6,\Delta)}=\prod_k\bigl(1+\frac{z^2}{\gamma_k^2}\bigr)$. Consequently $\mathbb{E}W=0$ and $\operatorname{Var}W=2\sum_k\gamma_k^{-2}$, where the right side is real because nonreal $\gamma_k$ occur in conjugate pairs.
 
-Source: [`book/chapters/ch10.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10.tex), label `thm:ch10hadamard`.
+Source: [`book/chapters/ch10.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10.tex), label `thm:ch10hadamard`.
 
 <a id="riemann_hypothesis_for_delta_as_ggc_property"></a>
 
@@ -294,7 +294,7 @@ Status: proved.
 
 Statement. Let $\Delta(z)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi iz}$, $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$ and $\Lambda(s,\Delta)=(2\pi)^{-s}\Gamma(s)L(s,\Delta)$. A probability law on $[0,\infty)$ is a generalized gamma convolution (GGC) if it is a weak limit of finite convolutions of gamma laws; equivalently (Thorin) its Laplace transform is $\exp\bigl(-as-\int_{(0,\infty)}\log(1+\frac st)\,\tau(dt)\bigr)$, $s\ge0$, with drift $a\ge0$ and a positive measure $\tau$ on $(0,\infty)$, finite on compact sets, the Thorin measure, satisfying $\int_{(0,1]}|\log t|\,\tau(dt)<\infty$ and $\int_{(1,\infty)}t^{-1}\,\tau(dt)<\infty$. The following are equivalent: (i) all zeros of $\Lambda(s,\Delta)$ lie on the line $\operatorname{Re}s=6$; (ii) the function $s\mapsto\Lambda(6,\Delta)/\Lambda(6+\sqrt s,\Delta)$, $s>0$, is the Laplace transform of a GGC. When they hold, writing the zeros as $6\pm i\gamma_k$ with $\gamma_k>0$, listed with multiplicity, the GGC has drift $0$ and Thorin measure $\sum_k\delta_{\gamma_k^2}$, it is the law of $X=\sum_kE_k/\gamma_k^2$ with $E_k$ independent standard exponential variables, and its L\'evy measure has density $k(x)/x$, where $k(x)=\sum_ke^{-\gamma_k^2x}$, $x>0$, is completely monotone.
 
-Source: [`book/chapters/ch10.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10.tex), label `thm:ch10ggc`.
+Source: [`book/chapters/ch10.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10.tex), label `thm:ch10ggc`.
 
 <a id="grh_for_self_dual_l_functions_as_ggc_property"></a>
 
@@ -306,7 +306,7 @@ Status: proved.
 
 Statement. Let $\pi$ be a self dual cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_\mathbb{Q})$, $n\ge2$, with completed $L$ function $\Lambda(s,\pi)$ in the unitary normalisation, conductor included, so that $\Lambda(s,\pi)$ is entire of order one, real on the real axis, and satisfies $\Lambda(s,\pi)=\varepsilon\Lambda(1-s,\pi)$ with $\varepsilon=\pm1$. A probability law on $[0,\infty)$ is a generalized gamma convolution (GGC) if it is a weak limit of finite convolutions of gamma laws; equivalently its Laplace transform is $\exp\bigl(-as-\int_{(0,\infty)}\log(1+\frac st)\,\tau(dt)\bigr)$, $s\ge0$, with $a\ge0$ and a positive measure $\tau$ on $(0,\infty)$, finite on compact sets, the Thorin measure, satisfying $\int_{(0,1]}|\log t|\,\tau(dt)<\infty$ and $\int_{(1,\infty)}t^{-1}\,\tau(dt)<\infty$. Suppose $\Lambda(\frac12,\pi)\ne0$. Then the generalized Riemann hypothesis for $\pi$ (all zeros of $\Lambda(s,\pi)$ lie on the line $\operatorname{Re}s=\frac12$) holds if and only if $s\mapsto\Lambda(\frac12,\pi)/\Lambda(\frac12+\sqrt s,\pi)$ is the Laplace transform of a GGC, and then its Thorin measure is $\sum_k\delta_{\gamma_k^2}$ over the ordinates $\gamma_k>0$ of the zeros $\frac12\pm i\gamma_k$.
 
-Source: [`book/chapters/ch10.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10.tex), label `thm:ch10general`.
+Source: [`book/chapters/ch10.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10.tex), label `thm:ch10general`.
 
 ## Chapter 14. The Thorin Framework for Automorphic L Functions
 
@@ -320,7 +320,7 @@ Status: proved.
 
 Statement. Let $\pi$ be a cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_\mathbb{Q})$, $n\ge1$, with unitary central character, not a unitary twist $|\cdot|^{iy}$ of the trivial representation of $\mathrm{GL}_1$, and let $\Lambda(s,\pi)=\gamma(s,\pi)L(s,\pi)$ be its completed $L$ function in the unitary normalisation, in which the Dirichlet series $L(s,\pi)=\sum_ma_\pi(m)m^{-s}$ converges absolutely for $\operatorname{Re}s>1$ and $\gamma(s,\pi)=N_\pi^{s/2}\prod_{j=1}^n\Gamma_{\mathbb{R}}(s+\mu_j)$, with $N_\pi$ the conductor, $\Gamma_{\mathbb{R}}(s)=\pi^{-s/2}\Gamma(s/2)$ and archimedean parameters $\mu_j$ with $\operatorname{Re}\mu_j>-\frac12$; $\Lambda(s,\pi)$ is entire of order one and satisfies $\Lambda(s,\pi)=\varepsilon(\pi)\Lambda(1-s,\tilde\pi)$ with $|\varepsilon(\pi)|=1$, $\tilde\pi$ the contragredient. Let $r=\operatorname{ord}_{s=1/2}\Lambda(s,\pi)$, $\Xi_\pi(z)=\Lambda(\frac12+z,\pi)\Lambda(\frac12+z,\tilde\pi)/z^{2r}$ and $F_\pi(s)=\Xi_\pi(\sqrt s)/\Xi_\pi(0)$, and when $\pi\cong\tilde\pi$ let $\Xi^{\mathrm{sd}}_\pi(z)=\Lambda(\frac12+z,\pi)/z^r$. Then (i) $\Xi_\pi$ is entire, even, and $\Xi_\pi(\bar z)=\overline{\Xi_\pi(z)}$, so it is real on $\mathbb{R}$; (ii) for real $x\ne0$, $\Xi_\pi(x)=|\Lambda(\frac12+x,\pi)|^2/x^{2r}\ge0$, $\Xi_\pi(0)>0$, and $\Xi_\pi(x)>0$ for $|x|\ge\frac12$; (iii) $\Xi_\pi$ has order at most one, and every zero $z$ of $\Xi_\pi$ satisfies $|\operatorname{Re}z|<\frac12$; (iv) $F_\pi$ is entire of order at most $\frac12$ with $F_\pi(0)=1$, and if the zeros of $\Xi_\pi$ are listed in pairs $\pm z_k$ with multiplicity and $s_k=z_k^2$, then $F_\pi(s)=\prod_k(1-s/s_k)$ with $\sum_k|s_k|^{-1}<\infty$; (v) if $\pi\cong\tilde\pi$ then $\varepsilon(\pi)=(-1)^r$, and $\Xi^{\mathrm{sd}}_\pi$ is entire, even and real on $\mathbb{R}$ with $\Xi^{\mathrm{sd}}_\pi(0)\ne0$. The same statements hold for $\Xi_\zeta(z)=\xi(\frac12+z)$, where $\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(\frac s2)\zeta(s)$, which is moreover strictly positive on $\mathbb{R}$.
 
-Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex), label `lem:10bcompletion`.
+Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex), label `lem:10bcompletion`.
 
 <a id="thorin_equivalence_even_entire_functions"></a>
 
@@ -332,7 +332,7 @@ Status: proved.
 
 Statement. Let $E$ be an entire function with $E(-z)=E(z)$, $E(\bar z)=\overline{E(z)}$ and $E(0)=1$, of order less than two, whose zeros lie in a strip $|\operatorname{Re}z|\le\sigma_0$. List its zeros as pairs $\pm z_k$ with multiplicity, put $t_k=-z_k^2$ and $F(s)=E(\sqrt s)=\prod_k(1+s/t_k)$. A generalized gamma convolution (GGC) is a probability law on $[0,\infty)$ with Laplace transform $\exp(-as-\int_{(0,\infty)}\log(1+s/t)\,\tau(dt))$, $s\ge0$, with drift $a\ge0$ and Thorin measure $\tau$, a positive measure on $(0,\infty)$ with $\int_{(0,1]}|\log t|\,\tau(dt)<\infty$ and $\int_{(1,\infty)}t^{-1}\,\tau(dt)<\infty$; a Stieltjes function is a function on $(0,\infty)$ of the form $a/s+b+\int_{(0,\infty)}\sigma(dt)/(s+t)$ with $a,b\ge0$ and $\sigma$ a positive measure with $\int\sigma(dt)/(1+t)<\infty$. Then $k(x)=\sum_ke^{-t_kx}$ converges absolutely and locally uniformly on $(0,\infty)$, the sums $S_n=\sum_kt_k^{-n}$, $n\ge1$, converge absolutely and are real, and the following are equivalent. (a) Every zero of $E$ lies on $i\mathbb{R}$; equivalently $t_k\in(0,\infty)$ for all $k$. (b) $1/F$ restricted to $(0,\infty)$ is the Laplace transform of a GGC. (c) $1/F(s)=\mathbb{E}e^{-sX}$ for $s\ge0$, where $X=\sum_kE_k/t_k$ with $E_k$ independent standard exponential variables; that is, $1/F$ is a GGC transform with drift $0$ and Thorin measure $\sum_k\delta_{t_k}$. (d) $k$ is completely monotone on $(0,\infty)$. (e) $F$ has no zero in $(0,\infty)$ and $F'/F$ is a Stieltjes function on $(0,\infty)$. (e') $E$ has no real zero, and $\operatorname{Im}(F'/F)(s)\le0$ at every $s$ with $\operatorname{Im}s>0$ and $F(s)\ne0$. (f) There is a positive measure $\nu$ on $[0,\infty)$ with $S_{j+1}=\int u^j\nu(du)$ for all $j\ge0$; equivalently, the Hankel matrices $(S_{i+j+1})_{i,j=0}^N$ and $(S_{i+j+2})_{i,j=0}^N$ are positive semidefinite for every $N$. When these hold, $\nu=\sum_kt_k^{-1}\delta_{1/t_k}$, the Stieltjes function in (e) is $\sum_k(s+t_k)^{-1}$, and the Bernstein measure of $k$ (the positive measure $\mu$ with $k(x)=\int e^{-tx}\mu(dt)$) is $\sum_k\delta_{t_k}$.
 
-Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex), label `thm:10babstract`.
+Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex), label `thm:10babstract`.
 
 <a id="thorin_criteria_generalized_riemann_hypothesis_automorphic"></a>
 
@@ -344,7 +344,7 @@ Status: proved.
 
 Statement. Let $\pi$ be a cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_\mathbb{Q})$, $n\ge1$, with unitary central character, not a unitary twist $|\cdot|^{iy}$ of the trivial representation of $\mathrm{GL}_1$, with contragredient $\tilde\pi$ and completed $L$ function $\Lambda(s,\pi)=\gamma(s,\pi)L(s,\pi)$ in the unitary normalisation: the Dirichlet series $L(s,\pi)=\sum_ma_\pi(m)m^{-s}$ converges absolutely for $\operatorname{Re}s>1$, $\gamma(s,\pi)=N_\pi^{s/2}\prod_{j=1}^n\Gamma_{\mathbb{R}}(s+\mu_j)$ with $N_\pi$ the conductor, $\Gamma_{\mathbb{R}}(s)=\pi^{-s/2}\Gamma(s/2)$ and archimedean parameters $\mu_j$ with $\operatorname{Re}\mu_j>-\frac12$, and $\Lambda(s,\pi)$ is entire of order one with $\Lambda(s,\pi)=\varepsilon(\pi)\Lambda(1-s,\tilde\pi)$, $|\varepsilon(\pi)|=1$, so that the critical line is $\operatorname{Re}s=\frac12$. Let $r=\operatorname{ord}_{s=1/2}\Lambda(s,\pi)$, $\Xi_\pi(z)=\Lambda(\frac12+z,\pi)\Lambda(\frac12+z,\tilde\pi)/z^{2r}$ and $F_\pi(s)=\Xi_\pi(\sqrt s)/\Xi_\pi(0)$. List the zeros of $\Xi_\pi$ as pairs $\pm z_k$ with multiplicity, write $z_k=i\gamma_k$, call $t_k=-z_k^2=\gamma_k^2$ the Thorin atoms of $\pi$, and put $k_\pi(x)=\sum_ke^{-t_kx}$ and $S_n=\sum_kt_k^{-n}$ for $n\ge1$. A generalized gamma convolution (GGC) is a probability law on $[0,\infty)$ with Laplace transform $\exp(-as-\int_{(0,\infty)}\log(1+s/t)\,\tau(dt))$, $s\ge0$, with drift $a\ge0$ and Thorin measure $\tau$, a positive measure on $(0,\infty)$ with $\int_{(0,1]}|\log t|\,\tau(dt)<\infty$ and $\int_{(1,\infty)}t^{-1}\,\tau(dt)<\infty$; a Stieltjes function is a function on $(0,\infty)$ of the form $a/s+b+\int_{(0,\infty)}\sigma(dt)/(s+t)$ with $a,b\ge0$ and $\sigma$ a positive measure with $\int\sigma(dt)/(1+t)<\infty$. The following are equivalent. (a) The generalized Riemann hypothesis holds for $\pi$, that is, all zeros of $\Lambda(s,\pi)$ lie on $\operatorname{Re}s=\frac12$ (equivalently, it holds for $\tilde\pi$). (b) $s\mapsto1/F_\pi(s)=\Xi_\pi(0)/\Xi_\pi(\sqrt s)$ is the Laplace transform of a GGC. (c) $1/F_\pi$ is the Laplace transform of $\sum_kE_k/\gamma_k^2$, with $E_k$ independent standard exponential variables: a GGC with drift zero and Thorin measure $\sum_k\delta_{\gamma_k^2}$. (d) The L\'evy function $k_\pi(x)=\sum_ke^{xz_k^2}$, which converges for every $x>0$, is completely monotone on $(0,\infty)$. (e) $\Lambda(s,\pi)$ has no real zero other than $\frac12$, and $F_\pi'/F_\pi$ is a Stieltjes function; equivalently (Herglotz criterion) $\Lambda(s,\pi)$ has no real zero other than $\frac12$ and $\operatorname{Im}(F_\pi'/F_\pi)(s)\le0$ whenever $\operatorname{Im}s>0$ and $F_\pi(s)\ne0$. (f) $(S_{j+1})_{j\ge0}$ is a Stieltjes moment sequence; equivalently (Thorin Hankel criterion) all Hankel matrices $(S_{i+j+1})_{i,j=0}^N$ and $(S_{i+j+2})_{i,j=0}^N$ are positive semidefinite. The same holds for the Riemann zeta function with $\Xi_\zeta(z)=\xi(\frac12+z)$, $\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(\frac s2)\zeta(s)$, and, when $\pi\cong\tilde\pi$, with $\Xi^{\mathrm{sd}}_\pi(z)=\Lambda(\frac12+z,\pi)/z^r$ in place of $\Xi_\pi$, in which case every Thorin atom has half the multiplicity.
 
-Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex), label `thm:10bmain`.
+Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex), label `thm:10bmain`.
 
 <a id="polya_kernel_automorphic_l_function"></a>
 
@@ -356,7 +356,7 @@ Status: proved.
 
 Statement. Let $\pi$ be a cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_\mathbb{Q})$, $n\ge1$, with unitary central character, not a unitary twist of the trivial representation of $\mathrm{GL}_1$, with completed $L$ function $\Lambda(s,\pi)$ in the unitary normalisation, contragredient $\tilde\pi$, $r=\operatorname{ord}_{s=1/2}\Lambda(s,\pi)$ and self dual completion $\Xi_\pi(z)=\Lambda(\frac12+z,\pi)\Lambda(\frac12+z,\tilde\pi)/z^{2r}$. There is a real, even, continuous function $\Phi_\pi$ on $\mathbb{R}$ with $\int\Phi_\pi=1$ and constants $c,C>0$ such that $|\Phi_\pi(u)|\le C\exp(-ce^{c|u|})$ and $\Xi_\pi(z)/\Xi_\pi(0)=\int_{-\infty}^\infty\Phi_\pi(u)e^{zu}\,du$ for all $z\in\mathbb{C}$.
 
-Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex), label `lem:10bkernel`.
+Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex), label `lem:10bkernel`.
 
 <a id="cumulant_criterion_generalized_riemann_hypothesis"></a>
 
@@ -368,7 +368,7 @@ Status: proved.
 
 Statement. Let $\pi$ be a cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_\mathbb{Q})$, $n\ge1$, with unitary central character, not a unitary twist of the trivial representation of $\mathrm{GL}_1$, with completed $L$ function $\Lambda(s,\pi)$ in the unitary normalisation, contragredient $\tilde\pi$, $r=\operatorname{ord}_{s=1/2}\Lambda(s,\pi)$ and self dual completion $\Xi_\pi(z)=\Lambda(\frac12+z,\pi)\Lambda(\frac12+z,\tilde\pi)/z^{2r}$. List the zeros of $\Xi_\pi$ as pairs $\pm i\gamma_k$ with multiplicity, let $t_k=\gamma_k^2$ and $S_n=\sum_kt_k^{-n}$, and let $\Phi_\pi$ be the P\'olya kernel of $\pi$, the real even continuous function with $\Xi_\pi(z)/\Xi_\pi(0)=\int\Phi_\pi(u)e^{zu}du$ for all complex $z$. Suppose $\Phi_\pi\ge0$ and let $W_\pi$ be a random variable with density $\Phi_\pi$ (the P\'olya variable of $\pi$). Then the odd cumulants of $W_\pi$ vanish and the even ones are $\kappa_{2n}(W_\pi)/(2n)!=(-1)^{n+1}S_n/n$, $n\ge1$. Consequently the generalized Riemann hypothesis for $\pi$ holds if and only if the sequence $m_j=(-1)^j(j+1)\kappa_{2j+2}(W_\pi)/(2j+2)!$, $j\ge0$, is a Stieltjes moment sequence (the sequence of moments $\int u^j\nu(du)$ of a positive measure $\nu$ on $[0,\infty)$). In particular the generalized Riemann hypothesis for $\pi$ implies $(-1)^{n+1}\kappa_{2n}(W_\pi)>0$ for all $n$.
 
-Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex), label `prop:10bcumulants`.
+Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex), label `prop:10bcumulants`.
 
 <a id="central_order_of_vanishing_as_degenerate_thorin_atom"></a>
 
@@ -380,7 +380,7 @@ Status: conditional on the generalized Riemann hypothesis for L(s, pi), for the 
 
 Statement. Let $\pi$ be a cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_\mathbb{Q})$ with unitary central character, not a unitary twist of the trivial representation of $\mathrm{GL}_1$, with $\pi\cong\tilde\pi$ ($\tilde\pi$ the contragredient), completed $L$ function $\Lambda(s,\pi)$ in the unitary normalisation, $r=\operatorname{ord}_{s=1/2}\Lambda(s,\pi)\ge1$ and $H(z)=\Lambda(\frac12+z,\pi)/z^r$. Unconditionally, $\lim_{s\to0^+}d\log|\Lambda(\frac12+\sqrt s,\pi)|/d\log s=r/2$. Under the generalized Riemann hypothesis for $\pi$, for $s>0$, $H(0)/\Lambda(\frac12+\sqrt s,\pi)=s^{-r/2}\,\mathbb{E}e^{-sX}=\int_0^\infty e^{-sx}(m_r*\mu_X)(dx)$, where $m_r(dx)=x^{r/2-1}dx/\Gamma(r/2)$ on $(0,\infty)$, $X=\sum_kE_k/\gamma_k^2$ is the generalized gamma convolution with drift zero and Thorin measure $\sum_k\delta_{\gamma_k^2}$ built from the zeros $\pm i\gamma_k$ of $H$ listed with multiplicity ($E_k$ independent standard exponential variables), and $\mu_X$ is the law of $X$. The infinite measure $m_r$ is the increasing limit as $\epsilon\downarrow0$ of $\epsilon^{-r/2}$ times the gamma law of shape $r/2$ and rate $\epsilon$, whose Thorin measure is $\frac r2\delta_\epsilon$: a Thorin atom of mass $r/2$ escaping to the origin.
 
-Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex), label `prop:10brank`.
+Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex), label `prop:10brank`.
 
 <a id="gaussian_tilting_polya_kernel_thorin_property"></a>
 
@@ -392,7 +392,7 @@ Status: proved.
 
 Statement. Let $\pi$ be a cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_\mathbb{Q})$, $n\ge1$, with unitary central character, not a unitary twist of the trivial representation of $\mathrm{GL}_1$, with completed $L$ function $\Lambda(s,\pi)$ in the unitary normalisation, self dual completion $\Xi_\pi(z)=\Lambda(\frac12+z,\pi)\Lambda(\frac12+z,\tilde\pi)/z^{2r}$ ($\tilde\pi$ the contragredient, $r$ the order of $\Lambda(s,\pi)$ at $s=\frac12$) and P\'olya kernel $\Phi_\pi$, the real even continuous function with $|\Phi_\pi(u)|\le C\exp(-ce^{c|u|})$ for some $c,C>0$ and $\Xi_\pi(z)/\Xi_\pi(0)=\int\Phi_\pi(u)e^{zu}du$ for all complex $z$. For $\lambda\in\mathbb{R}$ let $H_{\pi,\lambda}(t)=\int_{-\infty}^\infty e^{\lambda u^2}\Phi_\pi(u)e^{itu}\,du$. For $\sigma\ge0$, condition $\Theta_\sigma$ says that every zero $z$ of $\Xi_\pi$ satisfies $|\operatorname{Re}z|\le\sigma$, equivalently that every zero of $\Lambda(s,\pi)$ lies in $|\operatorname{Re}s-\frac12|\le\sigma$; let $P_\sigma=\{x+iy:x\le\sigma^2-y^2/(4\sigma^2)\}$ for $\sigma>0$ and $P_0=(-\infty,0]$. Suppose $\Theta_\sigma$ holds for $\pi$ and let $\lambda\ge0$. (i) (de Bruijn) The zeros of $H_{\pi,\lambda}$ lie in $|\operatorname{Im}t|\le\sigma_\lambda$, where $\sigma_\lambda=(\max(\sigma^2-2\lambda,0))^{1/2}$; Gaussian tilting moves the Thorin atoms (the squares of the zeros of $H_{\pi,\lambda}$) from $-P_\sigma$ into $-P_{\sigma_\lambda}$, and for $\lambda\ge\sigma^2/2$ all zeros of $H_{\pi,\lambda}$ are real. (ii) If $\Phi_\pi\ge0$, let $W_{\pi,\lambda}$ have density proportional to $e^{\lambda u^2}\Phi_\pi(u)$. For every $\lambda\ge\sigma^2/2$ the function $s\mapsto H_{\pi,\lambda}(0)/H_{\pi,\lambda}(i\sqrt s)=1/\mathbb{E}e^{\sqrt sW_{\pi,\lambda}}$ is the Laplace transform of a generalized gamma convolution with drift zero and Thorin measure $\sum_k\delta_{x_k(\lambda)^2}$, where $\pm x_k(\lambda)$ are the real zeros of $H_{\pi,\lambda}$. Unconditionally ($\sigma=\frac12$), $H_{\pi,\lambda}$ has only real zeros for every $\lambda\ge\frac18$, and (ii) holds for these $\lambda$.
 
-Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex), label `thm:10btilting`.
+Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex), label `thm:10btilting`.
 
 <a id="regularised_thorin_equivalence_order_two"></a>
 
@@ -404,7 +404,7 @@ Status: proved.
 
 Statement. Let $E$ be an entire function, even, real on $\mathbb{R}$, with $E(0)=1$, of order at most two, whose zeros $\pm z_k$ (listed with multiplicity) satisfy $\sum_k|z_k|^{-4}<\infty$; let $t_k=-z_k^2$ and $F(s)=E(\sqrt s)$. Then $F(s)=e^{bs}\prod_k(1+s/t_k)e^{-s/t_k}$ for some real $b$, and the following are equivalent: (a) all $t_k>0$; (b) for independent standard exponential variables $E_k$ the series $Y=b+\sum_k(E_k-1)/t_k$, which converges in $L^2$, is real valued and satisfies $1/F(s)=\mathbb{E}e^{-sY}$ for $s\ge0$; (c) $1/F$ agrees on $(0,\infty)$ with a function holomorphic and zero free on $\mathbb{C}\setminus(-\infty,0]$. The law of $Y$ in (b) is infinitely divisible with L\'evy measure $x^{-1}\sum_ke^{-t_kx}dx$ on $(0,\infty)$; when $\sum_kt_k^{-1}=\infty$ its first moment $\int_0^1\sum_ke^{-t_kx}dx$ near the origin is infinite, which is why the centring is needed.
 
-Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex), label `prop:10bregularised`.
+Source: [`book/chapters/ch10b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex), label `prop:10bregularised`.
 
 ## Chapter 15. Local Thorin Structure
 
@@ -418,7 +418,7 @@ Status: proved.
 
 Statement. Let $L>0$ and $x\in\mathbb{R}$, and put $f_x(s)=(2-x)/(2\cosh(L\sqrt s)-x)$ for $s>0$. Then $f_x$ is the Laplace transform of a probability law on $[0,\infty)$ if and only if $-2\le x<2$. In that case, writing $x=2\cos\theta$ with $0<\theta\le\pi$, the law is a generalized gamma convolution with drift $0$ and Thorin measure $\tau_{\theta,L}=\sum_{k\in\mathbb{Z}}\delta_{t_k}$, $t_k=((\theta+2\pi k)/L)^2$, namely the law of $\sum_{k\in\mathbb{Z}}E_k/t_k$ with $E_k$ independent standard exponential variables, with mean $L^2/(2-x)$.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `thm:10clocal`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `thm:10clocal`.
 
 <a id="ramanujan_petersson_local_thorin_criterion"></a>
 
@@ -430,7 +430,7 @@ Status: proved.
 
 Statement. Let $\pi$ be a cuspidal automorphic representation of $\mathrm{GL}_2(\mathbb{A}_\mathbb{Q})$ with trivial central character, in the unitary normalisation, and let $p$ be a prime at which $\pi$ is unramified, with Euler factor $L_p(s)=(1-\alpha p^{-s})^{-1}(1-\beta p^{-s})^{-1}$, $\alpha\beta=1$; unitarity of the local component $\pi_p$ makes the Satake set $\{\alpha,\beta\}$ stable under $z\mapsto\bar z^{-1}$, so either $|\alpha|=1$ or $\alpha$ is real, and in both cases $x_p=\alpha+\beta$ is real. Put $E_p(w)=p^wL_p(w)^{-1}=2\cosh(w\log p)-x_p$ and assume $x_p\ne2$. The Ramanujan Petersson conjecture holds at $p$ (that is, $|\alpha|=|\beta|=1$) if and only if $s\mapsto E_p(0)/E_p(\sqrt s)$ is the Laplace transform of a probability law on $[0,\infty)$, and then this law is a generalized gamma convolution (a law whose Laplace transform is $\exp(-as-\int_{(0,\infty)}\log(1+s/t)\,\tau(dt))$ with drift $a\ge0$ and Thorin measure $\tau\ge0$) with Thorin measure $\tau=\sum_{k\in\mathbb{Z}}\delta_{((\theta_p+2\pi k)/\log p)^2}$, where $x_p=2\cos\theta_p$ with $0<\theta_p\le\pi$.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `cor:10cramanujan`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `cor:10cramanujan`.
 
 <a id="explicit_formula_prime_terms_from_local_thorin_combs"></a>
 
@@ -442,7 +442,7 @@ Status: proved.
 
 Statement. Normalise the discriminant modular form $\Delta$ so that $L(s,\Delta)=\sum_n\tau(n)n^{-11/2-s}$ and $\Lambda(s,\Delta)=(2\pi)^{-s-11/2}\Gamma(s+\frac{11}2)L(s,\Delta)$, with nontrivial zeros $\frac12+i\gamma$ counted with multiplicity, and for a prime $p$ write $\tau(p)p^{-11/2}=2\cos\theta_p$ with $\theta_p\in[0,\pi]$. Let $h$ be even and holomorphic in $|\operatorname{Im}t|<\frac12+\varepsilon$ with $h(t)\ll(1+|t|)^{-1-\delta}$ there, and also a Schwartz function on $\mathbb{R}$, and let $H(x)=\int h(t)e^{-ixt}dt$, so that Weil's explicit formula reads $\sum_\gamma h(\gamma)=\frac1{2\pi}\int_{\mathbb{R}}h(t)\,2\operatorname{Re}[-\log2\pi+\frac{\Gamma'}{\Gamma}(6+it)]\,dt-\frac1\pi\sum_p\sum_{m\ge1}2\cos(m\theta_p)\log p\,p^{-m/2}H(m\log p)$. With $L=\log p$, let $c_p(h)=\sum_{k\in\mathbb{Z}}[h((\theta_p+2\pi k)/L)+h((-\theta_p+2\pi k)/L)]$ be the comb sum of $p$, the sum of $h$ over the ordinates of the local zeros of $w\mapsto2\cosh(wL)-2\cos\theta_p$. Then for every prime $p$ the contribution of $p$ to the prime side of the explicit formula is obtained from the oscillatory part $c_p(h)-\frac L\pi H(0)=\frac{2L}\pi\sum_{m\ge1}\cos(m\theta_p)H(mL)$ of the local comb sum by changing the sign and multiplying the $m$th Fourier coefficient by $p^{-m/2}$.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `prop:10cdictionary`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `prop:10cdictionary`.
 
 <a id="sato_tate_thorin_point_process_intensity"></a>
 
@@ -454,7 +454,7 @@ Status: proved.
 
 Statement. Let $\theta$ have the Sato Tate law $\frac2\pi\sin^2\theta\,d\theta$ on $[0,\pi]$ and let $\epsilon=\pm1$ be an independent fair sign. (1) The configuration $\{\theta,-\theta\}$ on the circle $\mathbb{R}/2\pi\mathbb{Z}$ has intensity $\frac2\pi\sin^2\psi\,d\psi$, and $\epsilon\theta$ has density $\frac1\pi\sin^2\psi$ on $(-\pi,\pi]$. (2) For a prime $p$ whose angle $\theta_p$ has the Sato Tate law, the ordinates $(\pm\theta_p+2\pi\mathbb{Z})/\log p$ of its local Thorin comb (the ordinates of the zeros of $w\mapsto2\cosh(w\log p)-2\cos\theta_p$) form a symmetric point process on $\mathbb{R}$ with intensity $\frac{\log p}\pi(1-\cos(2t\log p))\,dt$. Consequently, if the angles $\theta_p$ are independent with the Sato Tate law and $x_p=2\cos\theta_p$, the Thorin point process of the random Euler product $\Phi_P(s)=\prod_{p\le P}(2-x_p)/(2\cosh(\sqrt s\log p)-x_p)$, whose Thorin measure is $\sum_{p\le P}\sum_{k\in\mathbb{Z}}\delta_{((\theta_p+2\pi k)/\log p)^2}$, has intensity $I_P(t)\,dt$ on the ordinate axis, with $I_P(t)=\frac1\pi\sum_{p\le P}\log p\,(1-\cos(2t\log p))$. (3) $\mathbb{E}[(2-x_p)^{-1}]=1$, so the local law, the generalized gamma convolution with Laplace transform $(2-x_p)/(2\cosh(\sqrt s\log p)-x_p)$ and mean $(\log p)^2/(2-x_p)$, has expected mean $(\log p)^2$.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `prop:10csatotate`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `prop:10csatotate`.
 
 <a id="thorin_criterion_riemann_hypothesis_curves_over_finite_fields"></a>
 
@@ -466,7 +466,7 @@ Status: proved.
 
 Statement. Let $C$ be a smooth projective geometrically connected curve of genus $g\ge1$ over $\mathbb{F}_q$, with zeta function $Z(C,u)=P(u)/((1-u)(1-qu))$, $P(u)=\prod_{j=1}^{2g}(1-\alpha_ju)\in\mathbb{Z}[u]$, $u=q^{-s}$. Pair the roots under $\alpha\mapsto q/\alpha$, put $c_j=(\alpha_j+q/\alpha_j)/\sqrt q$ for $1\le j\le g$, $\Xi_C(z)=q^{gz}P(q^{-1/2-z})=\prod_{j=1}^g(2\cosh(z\log q)-c_j)$ and $F_C(s)=\Xi_C(\sqrt s)/\Xi_C(0)$. Assume $P(q^{-1/2})\ne0$, that is, no $\alpha_j$ equals $\sqrt q$. Then $s\mapsto1/F_C(s)$ is the Laplace transform of a generalized gamma convolution if and only if the Riemann hypothesis holds for $C$, that is, $|\alpha_j|=\sqrt q$ for all $j$, equivalently $c_j=2\cos\theta_j\in[-2,2]$ with $\alpha_j=\sqrt q\,e^{i\theta_j}$. In that case the Thorin measure is the finite superposition of periodic combs $\tau_C=\sum_{j=1}^g\sum_{k\in\mathbb{Z}}\delta_{((\theta_j+2\pi k)/\log q)^2}$, and the law is that of $\sum_j\sum_kE_{j,k}(\log q)^2/(\theta_j+2\pi k)^2$, with $E_{j,k}$ independent standard exponential variables, with mean $(\log q)^2\sum_j(2-c_j)^{-1}$. By Weil's theorem all of this holds unconditionally.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `thm:10ccurve`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `thm:10ccurve`.
 
 <a id="thorin_criterion_ramanujan_graphs"></a>
 
@@ -478,7 +478,7 @@ Status: proved.
 
 Statement. Let $G$ be a finite connected $(q+1)$ regular graph with adjacency eigenvalues $\lambda_j$, put $\Xi_G(z)=\prod_{|\lambda_j|<q+1}(2\cosh(z\log q)-\lambda_j/\sqrt q)$ and $F_G(s)=\Xi_G(\sqrt s)/\Xi_G(0)$, and suppose that no eigenvalue of $G$ equals $2\sqrt q$. Then $G$ is Ramanujan (every eigenvalue $\lambda$ with $|\lambda|\ne q+1$ satisfies $|\lambda|\le2\sqrt q$) if and only if $1/F_G$ is the Laplace transform of a generalized gamma convolution, and then its Thorin measure is $\sum_j\sum_{k\in\mathbb{Z}}\delta_{((\theta_j+2\pi k)/\log q)^2}$ over the nontrivial eigenvalues $\lambda_j=2\sqrt q\cos\theta_j$. For the supersingular $\ell$ isogeny graphs $G_N(\ell)$ (vertices the supersingular elliptic curves over $\overline{\mathbb{F}}_N$ up to isomorphism, one edge for each subgroup of order $\ell$ of a curve), with $N\equiv1\bmod12$ and $\ell\ne N$ primes, both hold unconditionally.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `thm:10cihara`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `thm:10cihara`.
 
 <a id="thorin_structure_hecke_walk_passage_times_tree"></a>
 
@@ -490,7 +490,7 @@ Status: proved.
 
 Statement. Let $q\ge2$ be an integer, $\rho=2\sqrt q/(q+1)$ the Kesten spectral radius, and run continuous time simple random walk on the $(q+1)$ regular tree (the Bruhat Tits tree of $\mathrm{PGL}_2(\mathbb{Q}_q)$ for $q$ prime), jumping at rate $1$ to a uniformly chosen neighbour; this is the Hecke walk with generator $(q+1)^{-1}A-I$, $A$ the adjacency operator. Let $T_n$ be the first time at distance $n$ from the starting vertex. The distance from the start is a birth death process with birth rates $b_0=1$ and $b_k=\frac q{q+1}$, and death rates $d_k=\frac1{q+1}$, for $k\ge1$; let $\lambda_1<\dots<\lambda_n$ be the Thorin atoms of $T_n$, the eigenvalues of minus its generator restricted to $\{0,\dots,n-1\}$ (killed at $n$), so that by Keilson's theorem $T_n$ has the law of $\sum_{j=1}^nE_j/\lambda_j$ with independent standard exponential $E_j$, a generalized gamma convolution with drift zero and Thorin measure $\sum_{j=1}^n\delta_{\lambda_j}$. (1) $\lambda_j=1-\frac{\sqrt q}{q+1}x_j$, where $x_1>\dots>x_n$ are the zeros of the polynomial $U_n(x/2)-q^{-1}U_{n-2}(x/2)$, with $U_k$ the Chebyshev polynomials of the second kind and $U_{-1}=0$, which expresses the normalised sphere operator $q^{-n/2}A_n$ of the tree ($A_n$ summing over the vertices at distance $n$) in terms of $q^{-1/2}A$. All $x_j$ lie in $(-2,2)$, so all rates lie in the Kesten band $(1-\rho,1+\rho)$. (2) $\frac1n\sum_j\delta_{\lambda_j}$ converges weakly to the law of $1-\rho\cos(\pi U)$, $U$ uniform on $(0,1)$: the arcsine law on the Kesten band. (3) $\mathbb{E}T_n=\frac{n(q+1)}{q-1}-\frac{2q(1-q^{-n})}{(q-1)^2}$, and $\mathbb{E}T_n/n\to\frac{q+1}{q-1}=\frac1{\sqrt{1-\rho^2}}=\int_0^1\frac{du}{1-\rho\cos\pi u}$. The escape speed of the walk is $\frac{q-1}{q+1}=\sqrt{1-\rho^2}$. (4) $\operatorname{Var}T_n/n\to(\frac{q+1}{q-1})^3=(1-\rho^2)^{-3/2}$, and $(T_n-\mathbb{E}T_n)/\sqrt{\operatorname{Var}T_n}$ converges in law to a standard normal.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `thm:10ctree`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `thm:10ctree`.
 
 <a id="large_deviations_passage_times_regular_tree"></a>
 
@@ -502,7 +502,7 @@ Status: proved.
 
 Statement. Let $q\ge2$ be an integer, $\rho=2\sqrt q/(q+1)$, and let $T_n$ be the first time at distance $n$ from the start of continuous time simple random walk on the $(q+1)$ regular tree, jumping at rate $1$ to a uniformly chosen neighbour. For $\theta\le1-\rho$, $\lim_{n\to\infty}\frac1n\log\mathbb{E}e^{\theta T_n}=\Lambda(\theta)=-\log\frac{(q+1)(1-\theta+\sqrt{(1-\theta)^2-\rho^2})}{2q}$, and the limit is $+\infty$ for $\theta>1-\rho$. In particular $\Lambda(1-\rho)=\frac12\log q$. The function $\Lambda$ is steep, $\Lambda'(\theta)=((1-\theta)^2-\rho^2)^{-1/2}\to\infty$ as $\theta\uparrow1-\rho$, so $T_n/n$ satisfies a large deviation principle with good rate function $\Lambda^*(y)=y-\sqrt{1+\rho^2y^2}+\log\frac{(q+1)(1+\sqrt{1+\rho^2y^2})}{2qy}$, $y>0$, which vanishes only at $y=\frac{q+1}{q-1}$.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `thm:10cldp`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `thm:10cldp`.
 
 <a id="exponential_hitting_times_ramanujan_graphs"></a>
 
@@ -514,7 +514,7 @@ Status: proved.
 
 Statement. Let $G$ be a connected $(q+1)$ regular graph on a vertex set $V$ of size $h$, not bipartite, with symmetric adjacency matrix $A$ (loops and multiple edges allowed); let $P=(q+1)^{-1}A$ have eigenvalues $1=p_1>p_2\ge\dots\ge p_h>-1$, and run the continuous time walk with generator $P-I$ started from the uniform law $\pi$. For a target $v$ let $\tau_v$ be its hitting time, let $P_v$ be the principal submatrix of $P$ on $V\setminus\{v\}$, with eigenvalues $r_1\ge\dots\ge r_{h-1}$, and let $\mu_j=1-r_j$ be the Dirichlet rates; put $\rho=2\sqrt q/(q+1)$ and let $\tau_2=1/(1-p_2)$ be the relaxation time. If $G$ is Ramanujan, that is $p_2,\dots,p_h\in[-\rho,\rho]$, then $\mu_2,\dots,\mu_{h-1}\in[1-\rho,1+\rho]$, so only the slowest Dirichlet rate $\mu_1\le1-p_2$ can leave the Kesten band. Moreover, for every target $v$, $\sup_{t\ge0}|\mathbb{P}_\pi(\tau_v>t)-e^{-t/\mathbb{E}_\pi\tau_v}|\le\tau_2/\mathbb{E}_\pi\tau_v\le(q+1)h/((\sqrt q-1)^2(h-1)^2)\le2(q+1)/((\sqrt q-1)^2(h-1))$.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `thm:10cexpo`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `thm:10cexpo`.
 
 <a id="exponential_hitting_times_supersingular_isogeny_graphs"></a>
 
@@ -526,7 +526,7 @@ Status: proved.
 
 Statement. Let $N>13$ be a prime with $N\equiv1\bmod12$, so that $h=(N-1)/12\ge2$, let $\ell\ne N$ be prime, and let $G_N(\ell)$ be the supersingular $\ell$ isogeny graph in characteristic $N$ (vertices the $h$ supersingular elliptic curves over $\overline{\mathbb{F}}_N$ up to isomorphism, one edge for each of the $\ell+1$ subgroups of order $\ell$ of a curve, joining it to the quotient curve). For simple random walk in continuous time at rate $1$ on $G_N(\ell)$, started from the uniform law $\pi$, the hitting time $\tau_v$ of every vertex $v$ satisfies $\sup_{t\ge0}|\mathbb{P}_\pi(\tau_v>t)-e^{-t/\mathbb{E}_\pi\tau_v}|\le2(\ell+1)/((\sqrt\ell-1)^2(h-1))$, and all Dirichlet rates but the slowest (the numbers $1-r$, $r$ an eigenvalue of the transition matrix restricted to the vertices other than $v$) lie in the Kesten band $[1-\rho_\ell,1+\rho_\ell]$, $\rho_\ell=2\sqrt\ell/(\ell+1)$.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `cor:10cisogeny`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `cor:10cisogeny`.
 
 <a id="max_infinite_divisibility_eta_extreme_value_law"></a>
 
@@ -538,7 +538,7 @@ Status: proved.
 
 Statement. Let $E_1,E_2,\dots$ be independent standard exponential variables, $M=\max_{n\ge1}E_n/(2\pi n)$, $P(y)=\mathbb{P}(M\le y)=\prod_{n\ge1}(1-e^{-2\pi ny})$ for $y>0$, and $\sigma_{-1}(m)=\sum_{d\mid m}d^{-1}$. (1) $G=-\log P$ satisfies $G(y)=\sum_{m\ge1}\sigma_{-1}(m)e^{-2\pi my}$ for $y>0$; hence $G$ is completely monotone, $G(y)=\int e^{-yu}\nu(du)$ with $\nu=\sum_{m\ge1}\sigma_{-1}(m)\delta_{2\pi m}$, and $M$ is max infinitely divisible. (2) For each $n$, $E_n/(2\pi n)$ has the law of $\max_{k\ge1}\max_{i\le N_k}E_{k,i}/(2\pi nk)$, where the $E_{k,i}$ are standard exponential, $N_k$ is Poisson of mean $1/k$, and all variables are independent. Consequently $M$ has the law of $\max_{m\ge1}\max_{i\le N'_m}E'_{m,i}/(2\pi m)$ with independent standard exponential $E'_{m,i}$ and independent $N'_m$ Poisson of mean $\sigma_{-1}(m)$. (3) For $\operatorname{Re}s>1$, $\int_0^\infty G(y)y^{s-1}dy=\Gamma(s)(2\pi)^{-s}\zeta(s)\zeta(s+1)$; the right side continues meromorphically to $\mathbb{C}$ with poles only at $s=0,\pm1$, and is invariant under $s\mapsto-s$. (4) For $f=\prod_m\eta(m\tau)^{r_m}$ with $r_m\ge0$ and $\sum_mmr_m=24$, let $M_f$ be the maximum, over all $m$, of $r_m$ independent copies of $M/m$, so that $\mathbb{P}(M_f\le y)=\prod_mP(my)^{r_m}$. Then $-\log\mathbb{P}(M_f\le y)=\sum_mr_mG(my)$ is completely monotone with exponent measure $\sum_n(\sum_{m\mid n}r_m\sigma_{-1}(n/m))\delta_{2\pi n}$, and its Mellin transform is $\Gamma(s)(2\pi)^{-s}\zeta(s)\zeta(s+1)\sum_mr_mm^{-s}$.
 
-Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex), label `prop:10cmaxid`.
+Source: [`book/chapters/ch10c.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex), label `prop:10cmaxid`.
 
 ## Chapter 16. Van Dantzig Pairs and Transport
 
@@ -554,7 +554,7 @@ Statement. Let $f$ be a real entire function of order at most one, symmetric abo
 
 Supersedes: Theorem 12 of Polson (2018, version 9 of 2026), arXiv:1804.10043, which also asserts that $X$ is infinitely divisible. That cannot hold when $f$ has zeros: the characteristic function $t\mapsto f(\alpha+it)/f(\alpha)$ of $X$ then vanishes at the real points $\pm\rho_k$, while the characteristic function of an infinitely divisible law has no real zero.
 
-Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex), label `thm:10dduality`.
+Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex), label `thm:10dduality`.
 
 <a id="grh_van_dantzig_wald_lukacs_equivalence"></a>
 
@@ -566,7 +566,7 @@ Status: proved.
 
 Statement. Let $\pi$ be a cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})$, $n \ge 1$, with unitary central character, not a unitary twist of the trivial representation of $\mathrm{GL}_1$, with completed $L$ function $\Lambda(s,\pi)$ in the unitary normalisation and contragredient $\tilde\pi$; put $r = \operatorname{ord}_{s=1/2}\Lambda(s,\pi)$ and $\Xi_\pi(z) = \Lambda(\tfrac12 + z,\pi)\Lambda(\tfrac12 + z,\tilde\pi)/z^{2r}$; or let $\Xi_\pi(z) = \xi(\tfrac12 + z)$ with $\xi(s) = \tfrac12 s(s - 1)\pi^{-s/2}\Gamma(\tfrac s2)\zeta(s)$. List the zeros of $\Xi_\pi$ in pairs $\pm i\gamma_k$ with multiplicity. Suppose the P\'olya kernel $\Phi_\pi$, the even function with $\Xi_\pi(z)/\Xi_\pi(0) = \int_{\mathbb{R}}\Phi_\pi(u)e^{zu}\,du$ for all complex $z$, is nonnegative, so that the P\'olya variable $W_\pi$ with density $\Phi_\pi$ exists (for instance for $\xi$, for the modular discriminant $\Delta$ and for every multiplicative eta product, using the self dual completion $\Lambda(\tfrac12 + z,\pi)/z^r$ in place of $\Xi_\pi$). Let $E_1, E_2, \dots$ be independent standard exponential variables and $L_1, L_2, \dots$ independent standard Laplace variables (density $\tfrac12 e^{-|x|}$), and put $Z_\pi = \sum_k E_k/\gamma_k^2$ and $V_\pi = \sum_k L_k/\gamma_k$ whenever all $\gamma_k$ are real. The following are equivalent. (a) The generalized Riemann hypothesis holds for $\pi$ (the Riemann hypothesis in the case of $\xi$): every $\gamma_k$ is real, that is, all zeros of $\Xi_\pi$ are purely imaginary. (b) $t\mapsto \Xi_\pi(0)/\Xi_\pi(t)$ is the characteristic function of a symmetric P\'olya frequency density (a probability density $g$ with $\det[g(x_i - y_j)]_{i,j \le m} \ge 0$ whenever $x_1 < \dots < x_m$ and $y_1 < \dots < y_m$); equivalently, of a series $\sum_k L_k/c_k$ with real $c_k$ and $\sum_k c_k^{-2} < \infty$. Then $c_k = \gamma_k$, $[\,\Xi_\pi(it)/\Xi_\pi(0),\ \Xi_\pi(0)/\Xi_\pi(t)\,]$ is the van Dantzig pair of $(W_\pi, V_\pi)$, and $V_\pi = \sum_k L_k/\gamma_k$ has the law of $\sqrt{2Z_\pi}\,N$ with $N$ standard normal and independent of $Z_\pi$. (c) There is a generalized gamma convolution $H$ such that $(W_\pi, H)$ is a Wald couple, that is $\mathbb{E}\, e^{sW_\pi}\, \mathbb{E}\, e^{-s^2 H} = 1$ for all $s$ in some interval $[0, s_0)$ with $s_0 > 0$; then $H$ has the law of $Z_\pi$. (d) $t\mapsto \Xi_\pi(it)/\Xi_\pi(0)$ belongs to the Lukacs class: even characteristic functions that are real entire functions with value $1$ at $0$ and locally uniform limits of real polynomials with only real zeros.
 
-Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex), label `thm:10dvdp`.
+Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex), label `thm:10dvdp`.
 
 <a id="sine_squared_transport_lemma"></a>
 
@@ -578,7 +578,7 @@ Status: proved.
 
 Statement. Let $f$ be holomorphic and zero free on $\operatorname{Re}w > \alpha - \eta$ for some $\eta > 0$, positive on $(\alpha,\infty)$, and suppose that for $s \ge 0$ we have $\log f(\alpha + s) - \log f(\alpha) - bs = \int_0^\infty (e^{-sx} - 1 + sx)\,\frac{\nu(dx)}{x}$, where $b = f'(\alpha)/f(\alpha)$ and $\nu$ is a positive measure on $(0,\infty)$ with $\int_0^\infty \min(1,x)\,\nu(dx) < \infty$. Then for $s > 0$, $\frac{f(\alpha)}{f(\alpha + \sqrt{s})} = e^{-b\sqrt{s}}\,\mathbb{E}\, e^{-sH}$, where $H$ is a generalized gamma convolution with drift zero and Thorin density $U(z) = \frac{1}{2\pi\sqrt{z}}\int_0^\infty 2\sin^2\bigl(\frac{x\sqrt{z}}{2}\bigr)\,\nu(dx) = \frac{\operatorname{Re}(f'/f)(\alpha + i\sqrt{z}) - b}{2\pi\sqrt{z}}$. If $b \ge 0$, $e^{-b\sqrt{s}}$ is the Laplace transform of a positive $\tfrac12$ stable law, a generalized gamma convolution with Thorin density $b/(2\pi\sqrt{z})$, and then $f(\alpha)/f(\alpha + \sqrt{s})$ is itself a generalized gamma convolution transform with Thorin density $\operatorname{Re}(f'/f)(\alpha + i\sqrt{z})/(2\pi\sqrt{z})$. The hypothesis with $\nu \ge 0$ holds if and only if $s\mapsto (\log f)''(\alpha + s)$ is completely monotone on $(0,\infty)$ and tends to $0$ at infinity.
 
-Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex), label `lem:10dsin2`.
+Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex), label `lem:10dsin2`.
 
 <a id="shifted_thorin_representation_automorphic"></a>
 
@@ -590,7 +590,7 @@ Status: proved.
 
 Statement. Let $\pi$ be a cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})$ with unitary central character, not a unitary twist of the trivial representation of $\mathrm{GL}_1$, with completed $L$ function $\Lambda(s,\pi)$ in the unitary normalisation, and let $\Xi_\pi(z) = \Lambda(\tfrac12 + z,\pi)\Lambda(\tfrac12 + z,\tilde\pi)/z^{2r}$ with $\tilde\pi$ the contragredient and $r = \operatorname{ord}_{s=1/2}\Lambda(s,\pi)$; or let $\Xi_\pi(z) = \xi(\tfrac12 + z)$ with $\xi$ the Riemann xi function. Let $a > 0$ and put $V_a(z) = \frac{\operatorname{Re}(\Xi_\pi'/\Xi_\pi)(a + i\sqrt{z})}{2\pi\sqrt{z}}$ for $z > 0$. (i) If every zero $z_k$ of $\Xi_\pi$ satisfies $|\operatorname{Re}z_k| < a$, then $V_a \ge 0$ and $\Xi_\pi(a)/\Xi_\pi(a + \sqrt{s}) = \mathbb{E}\, e^{-sH_a}$ for $s > 0$, with $H_a$ a generalized gamma convolution of drift zero and Thorin density $V_a$. (ii) If $\Xi_\pi(a)/\Xi_\pi(a + \sqrt{s})$ is a generalized gamma convolution transform on $(0,\infty)$, every zero satisfies $|\operatorname{Re}z_k| \le a$. (iii) Unconditionally, (i) holds for every $a \ge \tfrac12$, that is for every basepoint $\alpha = \tfrac12 + a \ge 1$ in the variable $s$ of $\Lambda(s,\pi)$ in the unitary normalisation. (iv) The generalized Riemann hypothesis for $\pi$ (the Riemann hypothesis in the case of $\xi$) holds if and only if $V_a \ge 0$ for every $a > 0$, if and only if the conclusion of (i) holds for every $a > 0$. Under the generalized Riemann hypothesis, with the zeros of $\Xi_\pi$ written $\pm i\gamma_k$, $V_a(z)\,dz \to \sum_k \delta_{\gamma_k^2}$ vaguely and $H_a \to Z_\pi = \sum_k E_k/\gamma_k^2$ in law as $a \downarrow 0$, where the $E_k$ are independent standard exponential variables.
 
-Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex), label `thm:10dshift`.
+Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex), label `thm:10dshift`.
 
 <a id="damped_cosine_measure_sine_squared_transport"></a>
 
@@ -602,7 +602,7 @@ Status: conditional on the generalized Riemann hypothesis for L(s, pi).
 
 Statement. Let $\Xi_\pi(z) = \Lambda(\tfrac12 + z,\pi)\Lambda(\tfrac12 + z,\tilde\pi)/z^{2r}$ be the self dual completion of a cuspidal automorphic representation $\pi$ of $\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})$ with unitary central character, not a unitary twist of the trivial representation of $\mathrm{GL}_1$ (with $\tilde\pi$ the contragredient and $r = \operatorname{ord}_{s=1/2}\Lambda(s,\pi)$), or $\Xi_\pi(z) = \xi(\tfrac12 + z)$ with $\xi$ the Riemann xi function. Assume the generalized Riemann hypothesis for $\pi$ (the Riemann hypothesis in the case of $\xi$), so that the zeros of $\Xi_\pi$ are $\pm i\gamma_k$ with $\gamma_k$ real, and let $\epsilon > 0$. With $P_\epsilon(u) = \epsilon/(\epsilon^2 + u^2)$ and $b_\epsilon = (\Xi_\pi'/\Xi_\pi)(\epsilon) = \sum_{\gamma_k > 0} 2P_\epsilon(\gamma_k)$, we have $\frac{\Xi_\pi(\epsilon)}{\Xi_\pi(\epsilon + \sqrt{s})} = e^{-b_\epsilon\sqrt{s}}\exp\Bigl(-\int_0^\infty \log\bigl(1 + \frac{s}{z}\bigr)U_\epsilon(z)\,dz\Bigr)$ with $U_\epsilon(z) = \frac{1}{2\pi\sqrt{z}}\sum_{\gamma_k > 0}\bigl[P_\epsilon(\sqrt{z} - \gamma_k) + P_\epsilon(\sqrt{z} + \gamma_k) - 2P_\epsilon(\gamma_k)\bigr]$, and $U_\epsilon(z) = (2\pi\sqrt{z})^{-1}\int_0^\infty 2\sin^2(x\sqrt{z}/2)\,e^{-\epsilon x}\,(-\mu)(dx)$ is the sine squared transport of the damped cosine measure, where $\mu(dx) = 2\sum_{\gamma_k > 0}\cos(\gamma_k x)\,dx$ is the cosine L\'evy measure of the zeros, the integral being taken term by term in $k$.
 
-Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex), label `prop:10dsmooth`.
+Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex), label `prop:10dsmooth`.
 
 <a id="zeta_subordinator_marginal_law"></a>
 
@@ -614,7 +614,7 @@ Status: proved.
 
 Statement. Fix $\sigma > 1$ and let $X$ be the compound Poisson subordinator with L\'evy measure $\Pi_\sigma = \sum_{n \ge 2}\frac{\Lambda(n)}{n^\sigma \log n}\,\delta_{\log n}$, where $\Lambda$ is the von Mangoldt function, so that $\mathbb{E}\, e^{-\lambda X_t} = \bigl(\zeta(\sigma + \lambda)/\zeta(\sigma)\bigr)^t$ for $\lambda \ge 0$ and $t \ge 0$. Let $d_t(m)$ be the Dirichlet coefficients of $\zeta^t = \exp(t\log\zeta)$, so that $d_t$ is multiplicative with $d_t(p^k) = \binom{t + k - 1}{k}$. For $t > 0$, $X_t$ takes values in $\{\log m : m \ge 1\}$ and $\mathbb{P}(X_t = \log m) = d_t(m)\,m^{-\sigma}/\zeta(\sigma)^t$.
 
-Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex), label `prop:10dsublaw`.
+Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex), label `prop:10dsublaw`.
 
 <a id="zeta_subordinator_first_passage_law"></a>
 
@@ -626,7 +626,7 @@ Status: proved.
 
 Statement. Let $\sigma > 1$, $c > 0$ and $x > 0$. Let $X$ be the compound Poisson subordinator with L\'evy measure $\sum_{n \ge 2}\frac{\Lambda(n)}{n^\sigma\log n}\,\delta_{\log n}$, where $\Lambda$ is the von Mangoldt function, so that $\mathbb{E}\, e^{-\lambda X_t} = (\zeta(\sigma + \lambda)/\zeta(\sigma))^t$, and let $d_t(m)$ be the Dirichlet coefficients of $\zeta^t$. Let $Z_t = t/c - X_t$, with Laplace exponent $\psi(\lambda) = \lambda/c + \log(\zeta(\sigma + \lambda)/\zeta(\sigma))$ and $\Phi$ the right inverse of $\psi$; let $\tau_x = \inf\{t : Z_t > x\}$ and $M_x = e^{X_{\tau_x}} \in \{1, 2, 3, \dots\}$, so that $\tau_x = c(x + \log M_x)$ on $\{\tau_x < \infty\}$. For every integer $m \ge 1$, $\mathbb{P}(M_x = m) = \frac{x}{x + \log m}\cdot\frac{d_t(m)\,m^{-\sigma}}{\zeta(\sigma)^t}$ with $t = c(x + \log m)$, and $\sum_m \mathbb{P}(M_x = m)\,e^{-qc(x + \log m)} = e^{-x\Phi(q)}$ for $q \ge 0$. If $1/c \ge -\zeta'(\sigma)/\zeta(\sigma)$, then $\tau_x < \infty$ almost surely.
 
-Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex), label `thm:10dballot`.
+Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex), label `thm:10dballot`.
 
 <a id="patie_class_hausdorff_test"></a>
 
@@ -638,7 +638,7 @@ Status: proved.
 
 Statement. Let $\Psi(u) = -\kappa + au + \tfrac12\sigma^2u^2 - \int_0^\infty\bigl(1 - e^{-ur} - ur\,\mathrm{1}_{\{r < 1\}}\bigr)\,\Pi(dr)$ be the Laplace exponent of a possibly killed spectrally negative L\'evy process, with $\kappa \ge 0$, $\sigma^2 \ge 0$ and $\int_0^\infty \min(1, r^2)\,\Pi(dr) < \infty$, the process not being the negative of a subordinator, and with $\Psi(\tfrac12) \ge 0$; put $W_\Psi(n + 1) = \Psi(1)\cdots\Psi(n)$ and $J_\Psi(t) = \sum_{n \ge 0}(-1)^n t^{2n}/W_\Psi(n + 1)$. Let $\Xi_\pi$ be the even self dual completion of an automorphic $L$ function (for example $\Xi_\pi(z) = \xi(\tfrac12 + z)$ with $\xi$ the Riemann xi function), with Taylor expansion $\Xi_\pi(z) = \sum_{n \ge 0} a_n z^{2n}$ and all $a_n > 0$, and suppose $\Xi_\pi(it)/\Xi_\pi(0) = J_\Psi(t)$ for some such $\Psi$. Then $\Psi(n) = a_{n-1}/a_n$ for $n \ge 1$, and the sequence $\delta_n = \Psi(n + 2) - 2\Psi(n + 1) + \Psi(n)$ is completely monotone in the sense of Hausdorff: $(-1)^k \Delta^k \delta_n \ge 0$ for all $k \ge 0$ and $n \ge 1$, where $\Delta\delta_n = \delta_{n+1} - \delta_n$.
 
-Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex), label `prop:10dpatietest`.
+Source: [`book/chapters/ch10d.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex), label `prop:10dpatietest`.
 
 ## Chapter 17. Squarefree Integers and Thorin Atoms
 
@@ -652,7 +652,7 @@ Status: proved.
 
 Statement. Let $\kappa$ be the constant in $\sum_{n \le x}\mu(n)^2/n = \frac{6}{\pi^2}(\log x + \kappa) + O(x^{-1/2})$, where $\mu$ is the M\"obius function. Let $\xi(s) = \tfrac12 s(s - 1)\pi^{-s/2}\Gamma(\tfrac s2)\zeta(s)$, let $T$ be the random variable with $\mathbb{E}\, e^{\theta T} = \xi(\tfrac12 + \tfrac{\theta}{2})/\xi(\tfrac12)$ for all $\theta$ (half the P\'olya variable of $\zeta$, which exists because P\'olya's kernel is positive), with density $p$, and let $\mathbb{E}_\theta$ denote expectation under the tilted law $e^{\theta t}p(t)/\mathbb{E}\, e^{\theta T}$. Index the nontrivial zeros of $\zeta$ as $\rho = \tfrac12 + i\gamma_\rho$ and let $\sum_\rho$ run over those with $\operatorname{Re}\gamma_\rho > 0$, with multiplicity. Then $\kappa = 2 + \log 2 - \tfrac12\log\pi - \tfrac12\gamma_{\mathrm{E}} + 2\,\mathbb{E}_1[T] - 4\,\mathbb{E}_3[T] = 2 + \log 2 - \tfrac12\log\pi - \tfrac12\gamma_{\mathrm{E}} + \sum_\rho\Bigl(\frac{4}{1 + 4\gamma_\rho^2} - \frac{24}{9 + 4\gamma_\rho^2}\Bigr)$, where $\gamma_{\mathrm{E}}$ is Euler's constant.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `thm:sf:const`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `thm:sf:const`.
 
 <a id="reciprocal_xi_ggc_riemann_hypothesis"></a>
 
@@ -664,7 +664,7 @@ Status: proved.
 
 Statement. Let $\xi(s) = \tfrac12 s(s - 1)\pi^{-s/2}\Gamma(\tfrac s2)\zeta(s)$ and write the nontrivial zeros of $\zeta$ as $\tfrac12 \pm i\gamma_k$, $k \ge 1$, with $\operatorname{Re}\gamma_k > 0$ and multiplicity. The Riemann hypothesis holds if and only if $u\mapsto \xi(\tfrac12)/\xi(\tfrac12 + \sqrt{u})$ is the Laplace transform of a generalized gamma convolution (a law on $[0,\infty)$ that is a weak limit of finite convolutions of gamma laws). Then $\frac{\xi(\frac12)}{\xi(\frac12 + \sqrt{u})} = \prod_{k \ge 1}\Bigl(1 + \frac{u}{\gamma_k^2}\Bigr)^{-1} = \mathbb{E}\bigl[e^{-uY}\bigr]$ with $Y = \sum_{k \ge 1}E_k/\gamma_k^2$, the $E_k$ being independent standard exponential variables, with drift $0$ and Thorin measure $\sum_k \delta_{\gamma_k^2}$. Moreover $\mathbb{E}[Y] = 2\operatorname{Var}(T)$, where $T$ is the random variable with $\mathbb{E}\, e^{\theta T} = \xi(\tfrac12 + \tfrac{\theta}{2})/\xi(\tfrac12)$, half the P\'olya variable of $\zeta$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `prop:sf:thorin`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `prop:sf:thorin`.
 
 <a id="dedekind_zeta_thorin_ggc_equivalence"></a>
 
@@ -676,7 +676,7 @@ Status: proved.
 
 Statement. Let $K$ be a number field with discriminant $d_K$, $r_1$ real and $r_2$ complex places and Dedekind zeta function $\zeta_K$, and let $\xi_K(s) = s(s - 1)|d_K|^{s/2}\Gamma_{\mathbb{R}}(s)^{r_1}\Gamma_{\mathbb{C}}(s)^{r_2}\zeta_K(s)$ with $\Gamma_{\mathbb{R}}(s) = \pi^{-s/2}\Gamma(\tfrac s2)$ and $\Gamma_{\mathbb{C}}(s) = 2(2\pi)^{-s}\Gamma(s)$. If $\zeta_K(\tfrac12) \ne 0$, then $u\mapsto \xi_K(\tfrac12)/\xi_K(\tfrac12 + \sqrt{u})$ is the Laplace transform of a generalized gamma convolution (a law on $[0,\infty)$ that is a weak limit of finite convolutions of gamma laws) if and only if the Riemann hypothesis holds for $\zeta_K$, and its Thorin measure is then $\sum_k \delta_{\gamma_k^2}$ over the positive ordinates $\gamma_k$ of the zeros of $\zeta_K$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `prop:sf:thorinK`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `prop:sf:thorinK`.
 
 <a id="exponentially_smoothed_squarefree_count_rh"></a>
 
@@ -688,7 +688,7 @@ Status: proved.
 
 Statement. Let $S(x) = \sum_{n \ge 1}\mu(n)^2 e^{-n/x}$, where $\mu$ is the M\"obius function. The Riemann hypothesis holds if and only if $S(x) = 6x/\pi^2 + O_\varepsilon(x^{1/4 + \varepsilon})$ for every $\varepsilon > 0$. Under the Riemann hypothesis with simple zeros, writing the nontrivial zeros of $\zeta$ in the upper half plane as $\rho_k = \tfrac12 + i\gamma_k$ and summing over $\gamma_k < T_\nu$ for a suitable sequence $T_\nu \to \infty$, $S(x) = \frac{6}{\pi^2}x + 1 + 2\operatorname{Re}\sum_k \frac{\Gamma(\rho_k/2)\,\zeta(\rho_k/2)}{2\,\zeta'(\rho_k)}\,x^{\rho_k/2} - \frac{\zeta(-1)}{2\zeta'(-2)}\,\frac{\log x}{x} + O\Bigl(\frac{1}{x}\Bigr)$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `thm:sf:smooth`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `thm:sf:smooth`.
 
 <a id="squarefree_error_mean_square_rh"></a>
 
@@ -700,7 +700,7 @@ Status: proved.
 
 Statement. Let $\Delta(x) = \sum_{n \le x}\mu(n)^2 - 6x/\pi^2$, where $\mu$ is the M\"obius function. The Riemann hypothesis holds if and only if $\int_X^{2X}\Delta(x)^2\,dx \ll_\varepsilon X^{3/2 + \varepsilon}$ for every $\varepsilon > 0$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `thm:sf:meansq`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `thm:sf:meansq`.
 
 <a id="gamma_smoothed_squarefree_count_bound_uniform_in_shape"></a>
 
@@ -712,7 +712,7 @@ Status: conditional on the Riemann hypothesis.
 
 Statement. Let $Q(x) = \sum_{n \le x}\mu(n)^2$ count the squarefree integers up to $x$, and let $G_{n,x}$ have the Gamma($n$) law with mean $x$. Under the Riemann hypothesis, uniformly in $n \ge 1$, $\mathbb{E}\,Q(G_{n,x}) = \frac{6}{\pi^2}x + O_\varepsilon\bigl(x^{1/4 + \varepsilon}n^{1/8 + \varepsilon}\bigr)$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `prop:sf:gamman`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `prop:sf:gamman`.
 
 <a id="gamma2_smoothed_squarefree_error_mertens_representation"></a>
 
@@ -724,7 +724,7 @@ Status: proved.
 
 Statement. Let $Q(x) = \sum_{n \le x}\mu(n)^2$, let $M(t) = \sum_{d \le t}\mu(d)$ be the Mertens function, and for $X > 0$ let $G_X$ have the Gamma(2) density $\lambda^2 t e^{-\lambda t}$ with $\lambda = 2/X$, so that $\mathbb{E}\,G_X = X$. Put $g(\theta) = \frac{2}{\theta} - \frac{1}{e^\theta - 1} - \frac{\theta}{4\sinh^2(\theta/2)}$. The function $f_V(v) = -2g'(v) = \frac{4}{v^2} - \frac{v\cosh(v/2)}{2\sinh^3(v/2)}$, $v > 0$, is a probability density with $\mathbb{P}(V \ge v) = 2g(v)$ and $\mathbb{E}[V^s] = -2\Gamma(s + 2)\zeta(s)$ for $0 < \operatorname{Re}s < 1$, and, with $V$ of density $f_V$, $\mathbb{E}\,Q(G_X) = \frac{6}{\pi^2}X - \frac12\,\mathbb{E}\Bigl[M\bigl(\sqrt{XV/2}\bigr)\Bigr]$. Moreover, with $\gamma_{2,\lambda}(v) = \lambda^2 v e^{-\lambda v}$, $f_V(v) = 2\Bigl(\int_0^\infty \gamma_{2,\lambda}(v)\,d\lambda - \sum_{m \ge 1}\gamma_{2,m}(v)\Bigr)$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `thm:sf:mertens`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `thm:sf:mertens`.
 
 <a id="gamma2_smoothed_squarefree_count_riemann_hypothesis"></a>
 
@@ -736,7 +736,7 @@ Status: proved.
 
 Statement. Let $Q(x) = \sum_{n \le x}\mu(n)^2$, where $\mu$ is the M\"obius function, and let $G_X$ have the Gamma(2) law with mean $X$ (density $\lambda^2 t e^{-\lambda t}$ with $\lambda = 2/X$). (i) Unconditionally $\mathbb{E}\,Q(G_X) = 6X/\pi^2 + o(X^{1/2})$. (ii) The Riemann hypothesis holds if and only if $\mathbb{E}\,Q(G_X) = 6X/\pi^2 + O_\varepsilon(X^{1/4 + \varepsilon})$ for every $\varepsilon > 0$. (iii) Under the Riemann hypothesis with simple zeros, writing the nontrivial zeros of $\zeta$ in the upper half plane as $\rho_k = \tfrac12 + i\gamma_k$ and summing over $\gamma_k < T_\nu$ for a suitable sequence $T_\nu \to \infty$, $\mathbb{E}\,Q(G_X) = \frac{6}{\pi^2}X + 1 + 2\operatorname{Re}\sum_k \Bigl(1 + \frac{\rho_k}{2}\Bigr)\frac{\Gamma(\rho_k/2)\,\zeta(\rho_k/2)}{2\,\zeta'(\rho_k)}\Bigl(\frac{X}{2}\Bigr)^{\rho_k/2} - \frac{\pi^2}{3\zeta(3)\,X} + O\Bigl(\frac{1}{X^2}\Bigr)$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `cor:sf:mertens`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `cor:sf:mertens`.
 
 <a id="gamma_smoothing_mertens_positivity_threshold"></a>
 
@@ -748,7 +748,7 @@ Status: proved.
 
 Statement. For $\nu > 0$ let $g_\nu(\theta) = \frac{\nu}{\theta} - \sum_{m \ge 1}\frac{\Gamma(\nu, m\theta)}{\Gamma(\nu)}$, with $\Gamma(\nu, y)$ the upper incomplete gamma function, and let $f_{V_\nu} = -2g_\nu'$ on $(0,\infty)$; these satisfy, for a random variable $G$ with the Gamma($\nu$) law of rate $\lambda$, $\mathbb{E}\,Q(G) = \frac{6}{\pi^2}\mathbb{E}\,G - \frac12\int_0^\infty M\bigl(\sqrt{v/\lambda}\bigr)f_{V_\nu}(v)\,dv$, where $Q(x) = \sum_{n \le x}\mu(n)^2$ counts the squarefree integers up to $x$ and $M(t) = \sum_{d \le t}\mu(d)$ is the Mertens function. Then $f_{V_\nu} \ge 0$ if and only if $0 < \nu \le 2$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `thm:sf:threshold`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `thm:sf:threshold`.
 
 <a id="squarefree_ideal_constant_number_fields"></a>
 
@@ -760,7 +760,7 @@ Status: proved.
 
 Statement. Let $K$ be a number field with discriminant $d_K$, $r_1$ real and $r_2$ complex places, Dedekind zeta function $\zeta_K$ with residue $c_K$ at $s = 1$, and Euler Kronecker constant $\gamma_K$, defined by $\zeta_K(s) = c_K/(s - 1) + c_K\gamma_K + O(s - 1)$. Let $\kappa_K = \gamma_K - 2\zeta_K'(2)/\zeta_K(2)$, the constant in $\sum_{N(\mathfrak a) \le x}\mu^2(\mathfrak a)/N(\mathfrak a) = \frac{c_K}{\zeta_K(2)}(\log x + \kappa_K) + o(1)$, where $\mathfrak a$ runs over the nonzero ideals of the ring of integers and $\mu^2(\mathfrak a)$ is $1$ for squarefree ideals and $0$ otherwise. With the zeros of $\zeta_K$ in the critical strip written $\tfrac12 + i\gamma_\rho$ and summed over all of them with multiplicity, $\kappa_K = A_K + \sum_\rho\Bigl(\frac{2}{1 + 4\gamma_\rho^2} - \frac{12}{9 + 4\gamma_\rho^2}\Bigr)$, where $A_K = 2 + \tfrac12\log|d_K| + r_1\bigl(\log 2 - \tfrac12\log\pi - \tfrac12\gamma_{\mathrm{E}}\bigr) + r_2\bigl(2 - \gamma_{\mathrm{E}} - \log 2\pi\bigr)$ and $\gamma_{\mathrm{E}}$ is Euler's constant.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `thm:sf:constK`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `thm:sf:constK`.
 
 <a id="xi_off_critical_line_brownian_subordination"></a>
 
@@ -772,7 +772,7 @@ Status: proved.
 
 Statement. Let $\xi(s) = \tfrac12 s(s - 1)\pi^{-s/2}\Gamma(\tfrac s2)\zeta(s)$, let $\beta^* = \sup\{\operatorname{Re}\rho : \zeta(\rho) = 0,\ 0 < \operatorname{Re}\rho < 1\}$, and for $\sigma \ge \tfrac12$ let $\varphi_\sigma(u) = \xi(\sigma)/\xi(\sigma + \sqrt{u})$ for $u \in \mathbb{C}\setminus(-\infty, 0]$, with the principal root. For $\sigma \ge \beta^*$, $\varphi_\sigma(u) = \mathbb{E}[e^{-uY_\sigma}]$ with $Y_\sigma = \sum_{\rho = \beta + it_\rho,\ t_\rho > 0}\Bigl(\frac{E_\rho}{c_\rho} + T_\rho\Bigr)$ and $c_\rho = (\sigma - \beta)^2 + t_\rho^2$, the sum running over the nontrivial zeros $\rho = \beta + it_\rho$ of $\zeta$ with $t_\rho > 0$, counted with multiplicity, where the $E_\rho$ are independent standard exponential variables and, given $E_\rho$, $T_\rho$ is the first passage time of an independent standard Brownian motion to the level $\sqrt{2}(\sigma - \beta)E_\rho/c_\rho$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `cor:sf:sub`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `cor:sf:sub`.
 
 <a id="imaginary_quadratic_polya_kernel_positivity"></a>
 
@@ -784,7 +784,7 @@ Status: proved.
 
 Statement. Let $K$ be an imaginary quadratic field of discriminant $d$, let $\chi_d$ be its Kronecker character, $a_n = \sum_{m \mid n}\chi_d(m)$ the number of ideals of norm $n$, $\lambda_n = 2\pi n/\sqrt{|d|}$, $F(k) = k(k - 2)e^{-k}$, $\Lambda_K(s) = (\sqrt{|d|}/2\pi)^s\Gamma(s)\zeta_K(s)$ and $\xi_K(s) = 2s(s - 1)\Lambda_K(s)$. Let $H_K(x) = \sum_{n \ge 1}a_n F(\lambda_n x)$ and $\Phi_K(v) = e^{v/2}H_K(e^v)$. Then $\Phi_K$ is even, decays doubly exponentially, and $\xi_K(\tfrac12 + iz) = 2\int_{\mathbb{R}}\Phi_K(v)e^{izv}\,dv$. If $|d| < \pi^2$, that is $d \in \{-3, -4, -7, -8\}$, then $\Phi_K > 0$; consequently $\xi_K(\tfrac12 + w)/\xi_K(\tfrac12)$ is the moment generating function of a probability density, and $\zeta_K(\tfrac12) < 0$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `thm:sf:kernel`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `thm:sf:kernel`.
 
 <a id="imaginary_quadratic_polya_kernel_sign_change"></a>
 
@@ -796,7 +796,7 @@ Status: proved.
 
 Statement. Let $K$ be an imaginary quadratic field of discriminant $d$, let $a_n$ be the number of ideals of $K$ of norm $n$, $F(k) = k(k - 2)e^{-k}$, and let $\Phi_K(v) = e^{v/2}\sum_{n \ge 1}a_n F\bigl(2\pi n e^v/\sqrt{|d|}\bigr)$ be the P\'olya kernel of $K$, for which $\xi_K(\tfrac12 + iz) = 2\int_{\mathbb{R}}\Phi_K(v)e^{izv}\,dv$ with $\xi_K(s) = 2s(s - 1)(\sqrt{|d|}/2\pi)^s\Gamma(s)\zeta_K(s)$. If $2$ and $3$ are both inert in $K$, then $\Phi_K$ takes negative values. This holds for infinitely many fields, among them $d = -19, -43, -67, -163$.
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `thm:sf:inert`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `thm:sf:inert`.
 
 <a id="density_of_positive_imaginary_quadratic_polya_kernels"></a>
 
@@ -808,7 +808,7 @@ Status: open.
 
 Statement. For an imaginary quadratic field $K$ of discriminant $d$, let $a_n$ be the number of ideals of $K$ of norm $n$, $F(k) = k(k - 2)e^{-k}$, and $\Phi_K(v) = e^{v/2}\sum_{n \ge 1}a_n F\bigl(2\pi n e^v/\sqrt{|d|}\bigr)$, the P\'olya kernel of $K$. Does the set of negative fundamental discriminants $d$ with $\Phi_K > 0$ have positive lower density? Is there a finite set of splitting conditions on small primes under which $\Phi_K > 0$ for every $d$ that satisfies them, a positive counterpart of the theorem that $\Phi_K$ takes negative values whenever $2$ and $3$ are both inert in $K$?
 
-Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex), label `op:sfdensity`.
+Source: [`book/chapters/ch_squarefree.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex), label `op:sfdensity`.
 
 ## Chapter 18. Dirichlet Beta and the Gaussian Field
 
@@ -822,7 +822,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$ the Dirichlet beta function, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$ its completed function and $c_\alpha=\Lambda'(\alpha)/\Lambda(\alpha)$. For $\alpha>1$ and $\operatorname{Re}s\ge0$, \[\log\frac{\Lambda(\alpha+s)}{\Lambda(\alpha)}-c_\alpha s=\int_0^\infty\bigl(e^{-sx}-1+sx\bigr)e^{-\alpha x}\,\frac{\mu_\beta(dx)}{x},\] with the signed measure \[\mu_\beta(dx)=\frac{dx}{2\sinh x}+\sum_{n\ge2}\chi_{-4}(n)\,\Lambda(n)\,\delta_{\log n}(dx),\] where $\Lambda(n)$ in the sum is the von Mangoldt function and $\delta_{\log n}$ is the unit mass at $\log n$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:thm:levy`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:thm:levy`.
 
 <a id="signed_sine_squared_lemma"></a>
 
@@ -834,7 +834,7 @@ Status: proved.
 
 Statement. Let $f$ be analytic and nonvanishing near $[\alpha,\infty)$, let $c=f'(\alpha)/f(\alpha)$, and suppose that for $s\ge0$ \[\log\frac{f(\alpha+s)}{f(\alpha)}-cs=\int_0^\infty\bigl(e^{-sx}-1+sx\bigr)\,m(dx)\] for a signed measure $m$ with $\int\min(x,x^2)\,|m|(dx)<\infty$. Put \[T(y)=\frac{1}{2\pi\sqrt y}\Bigl[c+\int_0^\infty2\sin^2\Bigl(\frac{x\sqrt y}{2}\Bigr)x\,m(dx)\Bigr],\qquad y>0.\] Then for every $v>0$, \[\frac{f(\alpha)}{f(\alpha+\sqrt v)}=\exp\Bigl(-\int_0^\infty\log\Bigl(1+\frac vy\Bigr)T(y)\,dy\Bigr).\] The map $m\mapsto T$ is linear and positivity preserving, and $c\ge0$ contributes the positive stable part $c/(2\pi\sqrt y)$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:lem:2sin2`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:lem:2sin2`.
 
 <a id="dirichlet_beta_thorin_density"></a>
 
@@ -846,7 +846,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$, $c_\alpha=\Lambda'(\alpha)/\Lambda(\alpha)$, $\psi$ the digamma function, and $\mu_\beta(dx)=dx/(2\sinh x)+\sum_{n\ge2}\chi_{-4}(n)\Lambda(n)\delta_{\log n}(dx)$, where $\Lambda(n)$ in sums over integers $n$ is the von Mangoldt function and $\delta_{\log n}$ is the unit mass at $\log n$. For $\alpha>1$ and $v>0$, \[\frac{\Lambda(\alpha)}{\Lambda(\alpha+\sqrt v)}=\exp\Bigl(-\int_0^\infty\log\Bigl(1+\frac vy\Bigr)T_\alpha(y)\,dy\Bigr),\] where \[T_\alpha(y)=\frac{1}{2\pi\sqrt y}\Bigl[c_\alpha+\int_0^\infty2\sin^2\Bigl(\frac{x\sqrt y}{2}\Bigr)e^{-\alpha x}\mu_\beta(dx)\Bigr]=\frac{c_\alpha+G_\alpha(\sqrt y)+P_\alpha(\sqrt y)}{2\pi\sqrt y}=\frac{1}{2\pi\sqrt y}\operatorname{Re}\frac{\Lambda'}{\Lambda}\bigl(\alpha+i\sqrt y\bigr),\] with the archimedean and prime parts $G_\alpha(t)=\frac12\bigl[\operatorname{Re}\psi\bigl(\frac{\alpha+1+it}{2}\bigr)-\psi\bigl(\frac{\alpha+1}{2}\bigr)\bigr]\ge0$ and $P_\alpha(t)=\sum_{n\ge2}\chi_{-4}(n)\Lambda(n)n^{-\alpha}\bigl(1-\cos(t\log n)\bigr)$. Equivalently, \[\log\frac{\Lambda(\alpha+\sqrt v)}{\Lambda(\alpha)}=\frac1\pi\int_0^\infty\log\Bigl(1+\frac{v}{t^2}\Bigr)\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+it)\,dt.\]
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:thm:thorin`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:thm:thorin`.
 
 <a id="dirichlet_beta_ggc_basepoints_at_least_one"></a>
 
@@ -858,7 +858,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$, and $T_\alpha(y)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$ for $y>0$. A generalized gamma convolution (GGC) is a law on $[0,\infty)$ with Laplace transform $\exp\bigl(-av-\int_{(0,\infty)}\log(1+v/t)\,\tau(dt)\bigr)$, with drift $a\ge0$ and a positive measure $\tau$, its Thorin measure. For every $\alpha\ge1$ there is a GGC random variable $H^\beta_\alpha\ge0$, with drift zero and Thorin density $T_\alpha>0$, such that \[\frac{\Lambda(\alpha)}{\Lambda(\alpha+\sqrt v)}=\mathbb{E}\bigl[e^{-vH^\beta_\alpha}\bigr],\qquad v>0.\] In particular $\frac{\sqrt\pi}{2}\big/\Lambda(1+\sqrt v)$ is a GGC Laplace transform.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:thm:uncond`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:thm:uncond`.
 
 <a id="dirichlet_beta_termwise_thorin_threshold"></a>
 
@@ -870,7 +870,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$, $T_\alpha(y)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$ for $y>0$, $\psi$ the digamma function, \[A_\alpha(t)=\tfrac12\log\frac4\pi+\tfrac12\operatorname{Re}\psi\Bigl(\frac{\alpha+1+it}{2}\Bigr),\qquad S(\alpha)=\sum_{n\text{ odd}}\Lambda(n)n^{-\alpha}=-\frac{\zeta'}{\zeta}(\alpha)-\frac{\log2}{2^\alpha-1},\] with $\Lambda(n)$ the von Mangoldt function, so that $\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+it)=A_\alpha(t)+\operatorname{Re}\frac{\beta'}{\beta}(\alpha+it)$ and $\bigl|\frac{\beta'}{\beta}(\alpha+it)\bigr|\le S(\alpha)$ for $\alpha>1$. Then $A_\alpha(t)$ increases in $t$, $A_\alpha(0)$ increases in $\alpha$, and $S(\alpha)$ decreases. Let $\alpha_c$ be the root of $A_\alpha(0)=S(\alpha)$, numerically $\alpha_c=2.28231064$. For $\alpha\ge\alpha_c$ the bound $A_\alpha(t)-S(\alpha)$ proves $T_\alpha(t^2)>0$ for all $t>0$; for $1<\alpha<\alpha_c$ it fails near $t=0$, although $T_\alpha>0$ for every $\alpha\ge1$ by the unconditional generalized gamma convolution property.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:prop:crude`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:prop:crude`.
 
 <a id="dirichlet_beta_grh_as_thorin_positivity"></a>
 
@@ -882,7 +882,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$, and $T_\alpha(y)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$ for $y>0$. A generalized gamma convolution (GGC) is a law on $[0,\infty)$ with Laplace transform $\exp\bigl(-av-\int_{(0,\infty)}\log(1+v/t)\,\tau(dt)\bigr)$, with $a\ge0$ and a positive measure $\tau$, its Thorin measure. The following are equivalent. (i) The generalized Riemann hypothesis for $\beta$, that every zero of $\Lambda$ lies on $\operatorname{Re}s=\frac12$. (ii) For every $\alpha>\frac12$, $v\mapsto\Lambda(\alpha)/\Lambda(\alpha+\sqrt v)$ is the Laplace transform of a GGC. (iii) $\operatorname{Re}(\Lambda'/\Lambda)(s)>0$ for $\operatorname{Re}s>\frac12$. In this case the Thorin measures $T_\alpha(y)\,dy$ converge vaguely on $(0,\infty)$, as $\alpha\downarrow\frac12$, to $\sum_{\gamma>0}\delta_{\gamma^2}$, the sum over the positive ordinates $\gamma$ of the zeros of $\Lambda$ counted with multiplicity, which is the Thorin measure of $\Lambda(\frac12)/\Lambda(\frac12+\sqrt v)$. The equivalence of (i) and (iii) is the criterion of Hinkkanen (1997) and Lagarias (1999) for $\chi_{-4}$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:thm:grh`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:thm:grh`.
 
 <a id="gaussian_field_thorin_domination"></a>
 
@@ -894,7 +894,7 @@ Status: proved.
 
 Statement. Let $K=\mathbb{Q}(i)$ with Dedekind zeta function $\zeta_K$, $\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(\frac s2)\zeta(s)$, $\xi_K(s)=\frac12s(s-1)\pi^{-s}\Gamma(s)\zeta_K(s)$, $\chi_{-4}$ the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$ and $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$, so that $\Lambda=2\sqrt\pi\,\xi_K/\xi$. For $f\in\{\Lambda,\xi_K,\xi\}$ the function $T^f_\alpha(y)=\operatorname{Re}\frac{f'}{f}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$, $y>0$, is the Thorin density of $f(\alpha)/f(\alpha+\sqrt v)$ whenever this function is the Laplace transform of a generalized gamma convolution; write $T^\beta_\alpha$, $T^K_\alpha$, $T^\xi_\alpha$ for $f=\Lambda,\xi_K,\xi$. Then $T^\beta_\alpha=T^K_\alpha-T^\xi_\alpha$. For $\alpha\ge1$ all three densities are positive and there are independent random variables $H^\xi_\alpha$ and $H^\beta_\alpha$, whose laws are generalized gamma convolutions (GGC) with Laplace transforms $\xi(\alpha)/\xi(\alpha+\sqrt v)$ and $\Lambda(\alpha)/\Lambda(\alpha+\sqrt v)$, with $H^K_\alpha\overset{d}{=}H^\xi_\alpha+H^\beta_\alpha$, where $H^K_\alpha$ is the GGC variable with Laplace transform $\xi_K(\alpha)/\xi_K(\alpha+\sqrt v)$. The generalized Riemann hypothesis for $\beta$ holds if and only if $T^K_\alpha\ge T^\xi_\alpha$ for every $\alpha>\frac12$; if Thorin's condition holds for $\xi$ (that $\xi(\frac12)/\xi(\frac12+\sqrt v)$ is the Laplace transform of a GGC), this says that $H^\xi_\alpha$ is a GGC factor of $H^K_\alpha$ for every $\alpha>\frac12$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:thm:dom`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:thm:dom`.
 
 <a id="dirichlet_beta_kronecker_sharpness"></a>
 
@@ -906,7 +906,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$, $T_\alpha(y)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$ for $y>0$, $A_\alpha(t)=\frac12\log\frac4\pi+\frac12\operatorname{Re}\psi\bigl(\frac{\alpha+1+it}{2}\bigr)$ with $\psi$ the digamma function, and $S(\alpha)=\sum_{n\text{ odd}}\Lambda(n)n^{-\alpha}=-\frac{\zeta'}{\zeta}(\alpha)-\frac{\log2}{2^\alpha-1}$ with $\Lambda(n)$ the von Mangoldt function. For $\alpha>1$ and every $T>0$, \[\inf_{t\ge T}\operatorname{Re}\frac{\beta'}{\beta}(\alpha+it)=-S(\alpha).\] Hence a bound on the prime part that uses only $|\chi_{-4}(p)|$ proves $T_\alpha(t^2)>0$ exactly for $t>t_0(\alpha)$, where $A_\alpha(t_0)=S(\alpha)$ (and $t_0=0$ for $\alpha\ge\alpha_c$, where $\alpha_c=2.28231064$ is the root of $A_\alpha(0)=S(\alpha)$), and $\log t_0(\alpha)=2/(\alpha-1)+O(1)$ as $\alpha\downarrow1$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:prop:kron`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:prop:kron`.
 
 <a id="dirichlet_beta_thorin_positivity_near_real_axis"></a>
 
@@ -918,7 +918,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$, $c_\alpha=\Lambda'(\alpha)/\Lambda(\alpha)$ and $T_\alpha(y)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$ for $y>0$. For every $\alpha>\frac12$, unconditionally, $c_\alpha>0$, and hence $T_\alpha(y)\sim c_\alpha/(2\pi\sqrt y)>0$ as $y\downarrow0$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:thm:realaxis`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:thm:realaxis`.
 
 <a id="dirichlet_beta_negative_thorin_windows"></a>
 
@@ -930,7 +930,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$, $T_\alpha(y)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$ for $y>0$, and $H_0=2.5\times10^{7}$ the height to which the generalized Riemann hypothesis for $\beta$ has been verified (Platt 2016, by a rigorous computation). For every $\alpha>\frac12$, $T_\alpha(y)>0$ for $0<\sqrt y<H_0-\frac12$. If the generalized Riemann hypothesis for $\beta$ fails, the set where $T_\alpha<0$ lies in windows of half width less than $\frac12$ in $\sqrt y$, centred at ordinates of zeros with real part exceeding $\alpha$, all above $H_0-\frac12$. The same holds for $\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(\frac s2)\zeta(s)$ below the height $3\times10^{12}$ to which the Riemann hypothesis has been verified (Platt and Trudgian 2021).
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:cor:height`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:cor:height`.
 
 <a id="zero_pair_comparison_lemma_sharp_constant"></a>
 
@@ -942,7 +942,7 @@ Status: proved.
 
 Statement. For $a>0$, $0\le B<\frac12$ and real $u$ let \[Q_B(a,u)=\frac{a-B}{(a-B)^2+u^2}+\frac{a+B}{(a+B)^2+u^2},\] the contribution of a pair of zeros $\frac12\pm B+i\gamma$ of a completed $L$ function $\Lambda$ to $\operatorname{Re}\frac{\Lambda'}{\Lambda}(\frac12+a+it)$, where $u=t-\gamma$. If $|u|\ge(1+\sqrt2)B$, then $a\mapsto Q_B(a,u)/a$ is nonincreasing on $a>0$. The constant $1+\sqrt2$ is sharp.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:lem:comp`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:lem:comp`.
 
 <a id="log_derivative_comparison_across_vertical_lines"></a>
 
@@ -954,7 +954,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$ and $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$. Fix $t$, and suppose every zero $\frac12+B+i\gamma$ of $\Lambda$ with $B>0$ satisfies $|t-\gamma|\ge(1+\sqrt2)B$. Then \[\alpha\mapsto\frac{1}{\alpha-\frac12}\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+it)\quad\text{is nonincreasing on }\alpha>\tfrac12.\] The hypothesis holds for every $t$ under the generalized Riemann hypothesis for $\beta$, and unconditionally when $t$ is at distance at least $(1+\sqrt2)/2=1.2071$ from every off line ordinate, in particular for $|t|\le H_0-1.2071$, where $H_0=2.5\times10^{7}$ is the height to which the generalized Riemann hypothesis for $\beta$ has been verified (Platt 2016, by a rigorous computation). The same holds for $\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(\frac s2)\zeta(s)$ and for every completed $L$ function of a real primitive Dirichlet character.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:thm:comp`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:thm:comp`.
 
 <a id="dirichlet_beta_explicit_log_derivative_lower_bound"></a>
 
@@ -966,7 +966,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$, $T_\alpha(y)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$ for $y>0$, $A_\alpha(t)=\frac12\log\frac4\pi+\frac12\operatorname{Re}\psi\bigl(\frac{\alpha+1+it}{2}\bigr)$ with $\psi$ the digamma function, and $S(\alpha)=-\frac{\zeta'}{\zeta}(\alpha)-\frac{\log2}{2^\alpha-1}$. Fix $t$ and suppose every zero $\frac12+B+i\gamma$ of $\Lambda$ with $B>0$ satisfies $|t-\gamma|\ge(1+\sqrt2)B$. Then for $\delta>0$ and $\frac12<\alpha\le1+\delta$, \[2\pi t\,T_\alpha(t^2)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+it)\ge\frac{\alpha-\frac12}{\frac12+\delta}\Bigl(A_{1+\delta}(t)-S(1+\delta)\Bigr),\] and the right side is $\frac{\alpha-\frac12}{1+2\delta}\log t+O(1)$ as $t\to\infty$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:cor:lower`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:cor:lower`.
 
 <a id="dirichlet_beta_minimum_on_real_axis"></a>
 
@@ -978,7 +978,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$ the Dirichlet beta function, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$ its completed function, $c_\alpha=\Lambda'(\alpha)/\Lambda(\alpha)$, $V=(\log\Lambda)''(\frac12)=0.156030$, $T_\alpha(y)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$ for $y>0$, and $H_0=2.5\times10^{7}$ the height to which the generalized Riemann hypothesis for $\beta$ has been verified (Platt 2016, by a rigorous computation). (i) For every $\alpha>\frac12$, unconditionally, $0<c_\alpha\le(\alpha-\frac12)V$. (ii) For $\frac12<\alpha\le3.15$, unconditionally, $\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+it)>c_\alpha$ for $0<|t|\le H_0-1.2071$. (iii) The generalized Riemann hypothesis for $\beta$ holds if and only if, for every $\alpha\in(\frac12,1]$, the minimum over $t\in\mathbb{R}$ of $\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+it)$ is $c_\alpha$, attained only at $t=0$; equivalently, $T_\alpha(y)>c_\alpha/(2\pi\sqrt y)$ for all $y>0$, so the Thorin density dominates its own stable part, that is, the density $\bigl(\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)-c_\alpha\bigr)/(2\pi\sqrt y)$ that remains when the stable part $c_\alpha/(2\pi\sqrt y)$ is removed is positive. For the completed $L$ function $\Lambda(s,\chi)$ alone with $\chi$ a complex character the analogue can fail (Polson, Riemann, Thorin, van Dantzig pairs, Wald couples and Hadamard factorisation, Remark 31).
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:thm:minall`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:thm:minall`.
 
 <a id="dirichlet_beta_thorin_measure_is_argument"></a>
 
@@ -990,7 +990,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$ and $T_\alpha(y)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$ for $y>0$. Let $\alpha>\frac12$ with $\Lambda$ zero free on $\operatorname{Re}s=\alpha$, and let $\tau_\alpha(dy)=T_\alpha(y)\,dy$, the Thorin measure of $\Lambda(\alpha)/\Lambda(\alpha+\sqrt v)$ when every zero of $\Lambda$ has real part less than $\alpha$, and a signed measure in general. Then \[\tau_\alpha\bigl((0,t^2]\bigr)=\frac1\pi\arg\Lambda(\alpha+it),\] the argument being continuous along $[\alpha,\alpha+it]$ and zero at $\alpha$. As $t\to\infty$, \[\tau_\alpha\bigl((0,t^2]\bigr)=\frac{t}{2\pi}\log\frac{2t}{\pi e}+\frac\alpha4+\frac1\pi\arg\beta(\alpha+it)+O(t^{-1}),\] and under the generalized Riemann hypothesis for $\beta$, $\tau_\alpha((0,t^2])\to N(t)$ as $\alpha\downarrow\frac12$, where $N(t)$ counts the zeros with ordinate $0<\gamma\le t$, with half weight at an ordinate.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:thm:arg`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:thm:arg`.
 
 <a id="dirichlet_beta_grh_as_monotone_argument"></a>
 
@@ -1002,7 +1002,7 @@ Status: proved.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$ and $T_\alpha(y)=\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$ for $y>0$. The generalized Riemann hypothesis for $\beta$ holds if and only if $t\mapsto\arg\Lambda(\alpha+it)$ is nondecreasing on every line $\operatorname{Re}s=\alpha>\frac12$ on which $\Lambda$ has no zero. The argument decreases exactly where $T_\alpha$ is negative, and that set is contained in a union of intervals of half width less than $\frac12$ centred at ordinates of zeros with real part exceeding $\alpha$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:cor:argmono`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:cor:argmono`.
 
 <a id="eta_cube_kernel_not_completely_monotone"></a>
 
@@ -1014,7 +1014,7 @@ Status: proved.
 
 Statement. Let $\eta$ be the Dedekind eta function and $\Phi_\beta(u)=e^{3u/2}\eta(ie^{2u})^3$, the even, strictly positive kernel with $\Lambda(\frac12+w)=\sqrt\pi\int_{-\infty}^{\infty}e^{wu}\Phi_\beta(u)\,du$ for $w\in\mathbb{C}$, where $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)$ is the completed Dirichlet beta function, $\beta(s)=\sum_{n\ge1}\chi_{-4}(n)n^{-s}$ with $\chi_{-4}$ the nontrivial character modulo $4$. Neither $\Phi_\beta(u)/u$ on $u>0$ nor $\eta(ix)^3$ on $x>0$ is completely monotone; in particular $\Phi_\beta1_{\{u>0\}}$ is not a positive mixture of $\Gamma(2)$ densities.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:prop:nocm`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:prop:nocm`.
 
 <a id="real_characters_thorin_domination_and_comparison"></a>
 
@@ -1026,7 +1026,7 @@ Status: proved.
 
 Statement. Let $\chi$ be a real primitive Dirichlet character of conductor $q$ and parity $\mathfrak a\in\{0,1\}$, $\chi(-1)=(-1)^{\mathfrak a}$, with quadratic field $K$ of discriminant $d_K$ and Dedekind zeta function $\zeta_K$; let $\Lambda_\chi(s)=(q/\pi)^{s/2}\Gamma\bigl(\frac{s+\mathfrak a}{2}\bigr)L(s,\chi)$, $\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(\frac s2)\zeta(s)$, and $\xi_K(s)=\frac12s(s-1)|d_K|^{s/2}(2\pi)^{-s}\Gamma(s)\zeta_K(s)$ for imaginary $K$, $\xi_K(s)=\frac12s(s-1)|d_K|^{s/2}\pi^{-s}\Gamma(\frac s2)^2\zeta_K(s)$ for real $K$. For $f\in\{\Lambda_\chi,\xi_K,\xi\}$ let $T^f_\alpha(y)=\operatorname{Re}\frac{f'}{f}(\alpha+i\sqrt y)\big/(2\pi\sqrt y)$, $y>0$. Then $T^{\Lambda_\chi}_\alpha=T^{\xi_K}_\alpha-T^{\xi}_\alpha$; the reciprocal $\Lambda_\chi(\alpha)/\Lambda_\chi(\alpha+\sqrt v)$ is the Laplace transform of a generalized gamma convolution for $\alpha\ge1$; the generalized Riemann hypothesis for $\chi$ is equivalent to $T^{\xi_K}_\alpha\ge T^{\xi}_\alpha$ for every $\alpha>\frac12$; for $\alpha>\frac12$ and real $t$, $T^{\Lambda_\chi}_\alpha(t^2)>0$ unless some zero $b+i\gamma$ of $\Lambda_\chi$ with $b>\alpha$ satisfies $|t-\gamma|^2<(b-\frac12)^2-(\alpha-\frac12)^2<\frac14$; $\alpha\mapsto(\alpha-\frac12)^{-1}\operatorname{Re}\frac{\Lambda_\chi'}{\Lambda_\chi}(\alpha+it)$ is nonincreasing on $\alpha>\frac12$ whenever every zero $\frac12+B+i\gamma$ of $\Lambda_\chi$ with $B>0$ satisfies $|t-\gamma|\ge(1+\sqrt2)B$; and, when the theta kernel of $\chi$ is positive, $c_\alpha=\Lambda_\chi'(\alpha)/\Lambda_\chi(\alpha)>0$ for every $\alpha>\frac12$, and hence $T^{\Lambda_\chi}_\alpha(y)\sim c_\alpha/(2\pi\sqrt y)>0$ as $y\downarrow0$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `beta:thm:realchar`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `beta:thm:realchar`.
 
 <a id="gaussian_field_thorin_coupling_below_one"></a>
 
@@ -1038,7 +1038,7 @@ Status: open.
 
 Statement. Let $K=\mathbb{Q}(i)$ with Dedekind zeta function $\zeta_K$, $\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(\frac s2)\zeta(s)$, $\xi_K(s)=\frac12s(s-1)\pi^{-s}\Gamma(s)\zeta_K(s)$, $\chi_{-4}$ the nontrivial Dirichlet character modulo $4$ and $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\sum_{n\ge1}\chi_{-4}(n)n^{-s}$. For $\alpha\ge1$ there are independent random variables $H^\xi_\alpha$ and $H^\beta_\alpha$, with generalized gamma convolution laws and Laplace transforms $\xi(\alpha)/\xi(\alpha+\sqrt v)$ and $\Lambda(\alpha)/\Lambda(\alpha+\sqrt v)$, whose sum has the law of the variable $H^K_\alpha$ with Laplace transform $\xi_K(\alpha)/\xi_K(\alpha+\sqrt v)$. Construct this coupling $H^K_\alpha\overset{d}{=}H^\xi_\alpha+H^\beta_\alpha$ from the Gaussian primes in a form that could survive below $\alpha=1$. Since bounds that use only the sizes of the prime atoms are sharp, by Kronecker's theorem, the construction must use the phases $\chi_{-4}(p)p^{-it}$, not only the sizes of the atoms. A first computation is the smallest margin of $\operatorname{Re}\xi_K'/\xi_K-\operatorname{Re}\xi'/\xi$ on lines $\frac12<\alpha<1$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `op:betacoupling`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `op:betacoupling`.
 
 <a id="dirichlet_beta_negative_window_argument_bound"></a>
 
@@ -1050,7 +1050,7 @@ Status: open.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$ and $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\sum_{n\ge1}\chi_{-4}(n)n^{-s}$ the completed Dirichlet beta function. A pair of zeros $\frac12\pm B+i\gamma$ with $\frac12+B>\alpha>\frac12$ can make $\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+it)$, the derivative of $t\mapsto\arg\Lambda(\alpha+it)$, negative only in the window $|t-\gamma|^2<B^2-(\alpha-\frac12)^2$. Find a lower bound for the decrease of $\arg\Lambda(\alpha+it)$ across this window caused by the pair, in terms of $B$, $\alpha$ and the local density of zeros, that a mean value estimate for $\operatorname{Re}\Lambda'/\Lambda$ over intervals of length one could contradict.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `op:betawindows`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `op:betawindows`.
 
 <a id="dirichlet_beta_minimum_on_all_lines"></a>
 
@@ -1062,7 +1062,7 @@ Status: open.
 
 Statement. Let $\chi_{-4}$ be the nontrivial Dirichlet character modulo $4$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\sum_{n\ge1}\chi_{-4}(n)n^{-s}$ the completed Dirichlet beta function, and $H_0=2.5\times10^{7}$ the height to which its generalized Riemann hypothesis has been verified (Platt 2016, by a rigorous computation). It is proved that for $\frac12<\alpha\le3.15$ and $0<|t|\le H_0-1.2071$ one has $\operatorname{Re}\frac{\Lambda'}{\Lambda}(\alpha+it)>\frac{\Lambda'}{\Lambda}(\alpha)$, so that the minimum over these $t$ is at $t=0$. Extend this to every $\alpha>\frac12$ at these heights, either by optimising as a function of $\alpha$ the line $\operatorname{Re}s=1+\delta$ with which the comparison across vertical lines is made or by a direct argument for large $\alpha$, where the prime part is small, and to every height for $\alpha\ge1$. Numerically the minimum over $t\in[0,40]$ is at $t=0$ for $\alpha=1.5,2,3,3.15$ and $5$. For the completed Riemann zeta function the statement at every height is Lagarias's theorem under the Riemann hypothesis, and unconditionally it is known for $\alpha\ge1$ (Garunkštis).
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `op:betalines`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `op:betalines`.
 
 <a id="eta_reciprocal_side_positivity"></a>
 
@@ -1074,7 +1074,7 @@ Status: open.
 
 Statement. Let $\eta$ be the Dedekind eta function, $q=e^{-2\pi x}$, $\Lambda(s)=(4/\pi)^{s/2}\Gamma\bigl(\frac{s+1}{2}\bigr)\beta(s)=\frac{\sqrt\pi}{2}\int_0^\infty x^{(s-1)/2}\eta(ix)^3\,dx$ the completed Dirichlet beta function, where $\beta(s)=\sum_{n\ge0}(-1)^n(2n+1)^{-s}$, and $\Lambda_{12}(s)=(12/\pi)^{s/2}\Gamma(\frac s2)L(s,\chi_{12})=\int_0^\infty x^{s/2-1}\eta(ix)\,dx$, with $\chi_{12}$ the real even primitive character modulo $12$. The functions $e^{-\pi x/4}/\eta(ix)^3=\prod_{m\ge1}(1-q^m)^{-3}$ and $e^{-\pi x/12}/\eta(ix)=\prod_{m\ge1}(1-q^m)^{-1}$ are completely monotone, with representing measures at the points $2\pi n$, $n\ge0$, whose weights are the coefficients of $\prod_m(1-q^m)^{-3}$ and $\prod_m(1-q^m)^{-1}$ as power series in $q$. Decide whether this positivity passes, through incomplete Mellin transforms, to a positive representation on the reciprocal side of $\Lambda$ or of $\Lambda_{12}$.
 
-Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex), label `op:betarecip`.
+Source: [`book/chapters/ch_beta.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex), label `op:betarecip`.
 
 ## Chapter 19. Signed Thorin Measures
 
@@ -1088,7 +1088,7 @@ Status: proved.
 
 Statement. Let $\pi$ be a self dual cuspidal automorphic representation of $\mathrm{GL}_n$ over $\mathbb{Q}$, or $\zeta$, or the discriminant modular form $\Delta$, with completed $L$ function $\Lambda(s,\pi)$ (conductor factor included), entire of order one and symmetric about its centre $c$ ($c=\frac12$ in the unitary normalisation, $c=6$ for $\Delta$ in the classical one), every zero $c+\delta+i\gamma$ having $|\delta|<\frac12$, and suppose $\Lambda(c,\pi)\ne0$. Let $G_\pi(s)=\Lambda(c+\sqrt s,\pi)/\Lambda(c,\pi)$, so that $\frac{G_\pi'}{G_\pi}(s)=\sum_k\frac{1}{s+t_k}=\frac{1}{2\sqrt s}\frac{\Lambda'}{\Lambda}(c+\sqrt s,\pi)$, where the zeros of $z\mapsto\Lambda(c+z,\pi)$ are listed in pairs $\pm i\gamma_k$ with multiplicity and $t_k=\gamma_k^2$, and for $\varepsilon>0$ and real $z$ let $u_\varepsilon(z)=-\frac1\pi\operatorname{Im}\frac{G_\pi'}{G_\pi}(-z+i\varepsilon)$. (i) A zero $c+i\gamma$, $\gamma>0$, of multiplicity $m$ contributes to $u_\varepsilon$ the Lorentzian $\frac m\pi\,\varepsilon/((z-\gamma^2)^2+\varepsilon^2)$, of mass $m$ and height $m/(\pi\varepsilon)$, centred at $\gamma^2$. (ii) A zero $c+\delta+i\gamma$ with $\gamma>0$ and $\delta\ne0$, together with its reflection $c-\delta+i\gamma$, contributes \[\frac1\pi\,\frac{B+\varepsilon}{(z-A)^2+(B+\varepsilon)^2}-\frac1\pi\,\frac{B-\varepsilon}{(z-A)^2+(B-\varepsilon)^2},\qquad A=\gamma^2-\delta^2,\quad B=2\gamma|\delta|.\] For $\varepsilon<B$ this is negative exactly on $|z-A|<(B^2-\varepsilon^2)^{1/2}$ and equals $-2\varepsilon/(\pi(B^2-\varepsilon^2))$ at $z=A$; its integral over $z$ is $0$, and its absolute value is at most $2\varepsilon/(\pi(B-\varepsilon)^2)$. (iii) A real zero $c\pm\beta$, $0<\beta<\frac12$, contributes a Lorentzian centred at $-\beta^2$, positive at every $z$. (iv) If $\Lambda(\sigma,\pi)\ne0$ for every real $\sigma$, then $u_\varepsilon(z)\ge0$ for all real $z$ and all $\varepsilon>0$ (away from the poles of $G_\pi'/G_\pi$) if and only if every zero lies on the line $\operatorname{Re}s=c$. If moreover no zero has ordinate in $(0,\frac12]$, the same holds with $z$ restricted to $(0,\infty)$.
 
-Source: [`book/chapters/ch_scholze.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_scholze.tex), label `prop:scholzelobe`.
+Source: [`book/chapters/ch_scholze.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_scholze.tex), label `prop:scholzelobe`.
 
 <a id="positive_polya_kernels_characterisation"></a>
 
@@ -1100,7 +1100,7 @@ Status: open.
 
 Statement. For a self dual $L$ function with completed function $\Lambda(s,\pi)$, centre $c$ and root number $+1$, let $r$ be the order of $\Lambda(s,\pi)$ at $s=c$; the Pólya kernel is the function $\Phi$ on $\mathbb{R}$ such that $\Lambda(c+z,\pi)/z^r$ is a positive multiple of $\int_{-\infty}^{\infty}\Phi(u)e^{zu}\,du$ (for example Pólya's kernel for $\zeta$, $e^{u/2}\eta(ie^{2u})$ for the real even character modulo $12$, with $\eta$ the Dedekind eta function, and $\Delta(ie^u)e^{6u}$ for the discriminant modular form $\Delta$). Characterise the self dual $L$ functions with root number $+1$ whose Pólya kernel is positive; for a form of level one, positivity fails as soon as the form has a zero of odd order on the imaginary axis. Is positivity, at fixed degree, decided by finitely many coefficients and the conductor?
 
-Source: [`book/chapters/ch_scholze.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_scholze.tex), label `op:scholzekernel`.
+Source: [`book/chapters/ch_scholze.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_scholze.tex), label `op:scholzekernel`.
 
 <a id="negative_lobe_masking"></a>
 
@@ -1112,7 +1112,7 @@ Status: open.
 
 Statement. Let $\Lambda(s,\pi)$ be the completed $L$ function of a self dual automorphic representation $\pi$, with centre $c$ and $\Lambda(c,\pi)\ne0$, let $G_\pi(s)=\Lambda(c+\sqrt s,\pi)/\Lambda(c,\pi)$, and for $\varepsilon>0$ and real $z$ let $u_\varepsilon(z)=-\frac1\pi\operatorname{Im}\frac{G_\pi'}{G_\pi}(-z+i\varepsilon)$, the signed Thorin density. A zero $c+\delta+i\gamma$ with $\gamma>0$ and $\delta\ne0$, with its reflection $c-\delta+i\gamma$, contributes to $u_\varepsilon$, when $\varepsilon<B$, a negative lobe of depth $2\varepsilon/(\pi(B^2-\varepsilon^2))$ at $z=A$, where $A=\gamma^2-\delta^2$ and $B=2\gamma|\delta|$, and a zero on the line with squared ordinate $A$ can mask it. Find conditions on the zeros near height $\gamma$ under which $u_\varepsilon\ge0$ at one $\varepsilon$ excludes a zero $c+\delta+i\gamma$ with $2\gamma|\delta|>\varepsilon$; equivalently, compare the depth $2\varepsilon/(\pi(B^2-\varepsilon^2))$ of the lobe of an off line pair with the contribution of the neighbouring atoms near $z=A$.
 
-Source: [`book/chapters/ch_scholze.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_scholze.tex), label `op:scholzelobe`.
+Source: [`book/chapters/ch_scholze.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_scholze.tex), label `op:scholzelobe`.
 
 ## Chapter 20. Reciprocity through the Swap
 
@@ -1126,7 +1126,7 @@ Status: proved.
 
 Statement. Fix a finite set $S$ of primes and, for $\sigma>1$, let $\mathbb{P}_\sigma$ be the probability measure on the prime powers $p^m$ with $p\notin S$ and $m\ge1$ given by $\mathbb{P}_\sigma(\{p^m\}) = p^{-m\sigma}/(mZ_\sigma)$, where $Z_\sigma = \sum_{p\notin S,\,m\ge1}p^{-m\sigma}/m$, with expectation $\mathbb{E}_\sigma$. An Artin representation $\rho$ unramified outside $S$ defines the random variable $a_\rho(p^m) = \operatorname{tr}\rho(\operatorname{Frob}_p^m)$, and a unitary cuspidal automorphic representation $\pi$ of $\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})$ unramified outside $S$, with Satake parameters $\alpha_{1,p},\dots,\alpha_{n,p}$ at $p$, defines $a_\pi(p^m) = \sum_{i=1}^n\alpha_{i,p}^m$. Call $\rho$ and $\pi$ reciprocal in law if $\mathbb{E}_\sigma|a_\rho - a_\pi|^2\to0$ as $\sigma\downarrow1$. Let $\rho,\rho'$ be Artin representations and $\pi,\pi'$ unitary cuspidal automorphic representations, all unramified outside $S$. (i) If $\rho$ and $\pi$ correspond in the sense of Langlands reciprocity, that is $L(s,\rho_p) = L(s,\pi_p)$ for every place $p$, they are reciprocal in law. (ii) If $\rho$ is reciprocal in law with $\pi$ and with $\pi'$, then $\pi\cong\pi'$. If $\rho$ and $\rho'$ are both reciprocal in law with $\pi$, then $\rho\cong\rho'$. (iii) If $\rho$ is reciprocal in law with a cuspidal $\pi$, then $\rho$ is irreducible. (iv) If $\rho$ is reciprocal in law with $\pi$, then for every $\epsilon>0$ the primes with $|a_\rho(p) - a_\pi(p)|>\epsilon$ have Dirichlet density zero. (v) If $\rho$ is automorphic, corresponding to $\pi_0$ in the sense of Langlands reciprocity, then $\rho$ is reciprocal in law with $\pi$ only for $\pi\cong\pi_0$.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `cor:reciplaw`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `cor:reciplaw`.
 
 <a id="congruences_see_exactly_the_abelian_part"></a>
 
@@ -1138,7 +1138,7 @@ Status: proved.
 
 Statement. Let $\rho$ be an irreducible Artin representation and $N\ge1$, and let $S$ be a finite set of primes containing the primes dividing $N$ and those at which $\rho$ ramifies. For $\sigma>1$ let $\mathbb{P}_\sigma$ be the probability measure on the prime powers $p^m$ with $p\notin S$ and $m\ge1$ given by $\mathbb{P}_\sigma(\{p^m\}) = p^{-m\sigma}/(mZ_\sigma)$, where $Z_\sigma = \sum_{p\notin S,\,m\ge1}p^{-m\sigma}/m$, with expectation $\mathbb{E}_\sigma$; let $a_\rho(p^m) = \operatorname{tr}\rho(\operatorname{Frob}_p^m)$, and let $\mathcal{F}_N$ be the sigma algebra generated by the residue of $p^m$ modulo $N$. For every residue $r$ prime to $N$, $\lim_{\sigma\downarrow1}\mathbb{E}_\sigma\bigl[a_\rho\bigm|p^m\equiv r\bmod N\bigr]$ equals $\rho(r)$ if $\rho$ is inflated from $A_N = \operatorname{Gal}(\mathbb{Q}(\zeta_N)/\mathbb{Q})\cong(\mathbb{Z}/N\mathbb{Z})^\times$, where $\rho(r)$ is $\rho$ evaluated at the element $\zeta\mapsto\zeta^r$ of $A_N$, and equals $0$ otherwise; the first case occurs only when $\dim\rho = 1$, and in it $a_\rho$ is itself $\mathcal{F}_N$ measurable. In particular the Kronecker Weber theorem is equivalent to the statement that every one dimensional Artin representation is $\mathcal{F}_N$ measurable for some $N$, and no irreducible Artin representation of dimension at least two has a nonzero limiting conditional mean given any congruence.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `prop:recipcongruence`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `prop:recipcongruence`.
 
 <a id="frobenius_labelled_factorisation_gamma_process_limit"></a>
 
@@ -1150,7 +1150,7 @@ Status: proved.
 
 Statement. Let $Y$ be a compact metric space, $S$ a finite set of primes, and $(\theta_p)_{p\notin S}$ points of $Y$ equidistributed with respect to a Borel probability measure $\mu$ on $Y$, in the sense that $\pi(t)^{-1}\sum_{p\le t,\,p\notin S}f(\theta_p)\to\int f\,d\mu$ as $t\to\infty$ for every continuous $f$ on $Y$, where $\pi(t)$ is the number of primes up to $t$. For $\sigma>1$ let $N_\sigma = \prod_pp^{e_p}$ be a zeta distributed random integer, $\mathbb{P}(N_\sigma = n) = n^{-\sigma}/\zeta(\sigma)$ for $n\ge1$, and define the random measure $\Xi_\sigma = \sum_{p\notin S}(\sigma - 1)e_p\log p\;\delta_{\theta_p}$ on $Y$ and the marked point process $\mathcal{M}_\sigma = \sum_{p\notin S,\,e_p\ge1}\delta_{((\sigma - 1)e_p\log p,\;\theta_p)}$. Let $\Gamma_\mu$ be the Gamma random measure with shape measure $\mu$, which takes independent values on disjoint Borel sets with $\Gamma_\mu(B)\sim\mathrm{Gamma}(\mu(B),1)$, the gamma law of shape $\mu(B)$ and rate $1$. As $\sigma\downarrow1$: (i) $\mathcal{M}_\sigma$ converges in law, vaguely on $(0,\infty)\times Y$, to the Poisson process with intensity $x^{-1}e^{-x}dx\otimes\mu$, so the rescaled sizes $(\sigma - 1)e_p\log p$ of the prime factors of $N_\sigma$ are asymptotically the jumps of a standard Gamma subordinator on $[0,1]$, and their labels $\theta_p$ are asymptotically independent of the sizes and independent of one another, with law $\mu$; (ii) $\Xi_\sigma$ converges in law to $\Gamma_\mu$, that is, for every continuous $\lambda\ge0$ on $Y$, $\mathbb{E}\exp\bigl(-\int_Y\lambda\,d\Xi_\sigma\bigr)\to\exp\bigl(-\int_Y\log(1 + \lambda)\,d\mu\bigr)$.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `thm:recipgammaproc`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `thm:recipgammaproc`.
 
 <a id="chebotarev_gamma_process_and_arithmetic_arcsine_law"></a>
 
@@ -1162,7 +1162,7 @@ Status: proved.
 
 Statement. Let $K/\mathbb{Q}$ be a finite Galois extension with group $G$, unramified outside a finite set $S$ of primes. For $\sigma>1$ let $N_\sigma = \prod_pp^{e_p}$ be a zeta distributed random integer, $\mathbb{P}(N_\sigma = n) = n^{-\sigma}/\zeta(\sigma)$, and for a conjugacy class $C$ of $G$ let $L_C(\sigma) = (\sigma - 1)\sum_{p\notin S,\,\operatorname{Frob}_p\in C}e_p\log p$, the rescaled part of $\log N_\sigma$ carried by primes with Frobenius in $C$. As $\sigma\downarrow1$: (i) the $L_C(\sigma)$, $C$ running over the conjugacy classes of $G$, are independent for every $\sigma$, and $L_C(\sigma)$ converges in law to $\mathrm{Gamma}(|C|/|G|,1)$, the gamma law of shape $|C|/|G|$ and rate $1$; (ii) the shares $L_C/\sum_{C'}L_{C'}$ have a Dirichlet limit law with parameters $(|C|/|G|)_C$, independent of the total, which is standard exponential; (iii) for a quadratic character $\chi$, the share of $\log N_\sigma$ carried by the primes with $\chi(p) = -1$ converges in law to the arcsine law $\pi^{-1}(u(1 - u))^{-1/2}\,du$ on $(0,1)$.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `cor:recipchebgamma`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `cor:recipchebgamma`.
 
 <a id="frobenius_functionals_converge_to_generalized_gamma_convolutions"></a>
 
@@ -1174,7 +1174,7 @@ Status: proved.
 
 Statement. Let $Y$ be a compact metric space, $S$ a finite set of primes, and $(\theta_p)_{p\notin S}$ points of $Y$ equidistributed with respect to a Borel probability measure $\mu$ on $Y$, that is $\pi(t)^{-1}\sum_{p\le t,\,p\notin S}f(\theta_p)\to\int f\,d\mu$ as $t\to\infty$ for every continuous $f$ on $Y$, where $\pi(t)$ is the number of primes up to $t$, and for $\sigma>1$ let $N_\sigma = \prod_pp^{e_p}$ be a zeta distributed random integer, $\mathbb{P}(N_\sigma = n) = n^{-\sigma}/\zeta(\sigma)$. A generalized gamma convolution (GGC) is a law on $[0,\infty)$ with Laplace transform $\exp\bigl(-a\lambda - \int_{(0,\infty)}\log(1 + \lambda/t)\,\tau(dt)\bigr)$, $\lambda\ge0$, where $a\ge0$ is the drift and $\tau$ the Thorin measure; its Thorin mass is $\tau((0,\infty))$. Let $Q\ge0$ be continuous on $Y$. Then $\Xi_\sigma(Q) = (\sigma - 1)\sum_{p\notin S}e_p\log p\;Q(\theta_p)$ converges in law, as $\sigma\downarrow1$, to a GGC with drift zero and Thorin measure $\tau_Q$, the image of $\mu$ restricted to $\{Q>0\}$ under $\theta\mapsto1/Q(\theta)$. Its mean is $\int Q\,d\mu$ and its Thorin mass is $\mu(Q>0)$. Moreover, if $\{Q>0\}$ is a $\mu$ continuity set, $\log\mathbb{P}\bigl(\Xi_\sigma(Q) = 0\bigr) = -\mu(Q>0)\log\frac{1}{\sigma - 1} + o\bigl(\log\frac{1}{\sigma - 1}\bigr)$.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `thm:recipggcfun`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `thm:recipggcfun`.
 
 <a id="thorin_criteria_for_reciprocity"></a>
 
@@ -1186,7 +1186,7 @@ Status: proved.
 
 Statement. For $\sigma>1$ let $N_\sigma = \prod_pp^{e_p}$ be a zeta distributed random integer, $\mathbb{P}(N_\sigma = n) = n^{-\sigma}/\zeta(\sigma)$, and for a nonnegative function $Q(p)$ of the Frobenius data at $p$ put $\Xi_\sigma(Q) = (\sigma - 1)\sum_{p\notin S}e_p\log p\;Q(p)$. A generalized gamma convolution (GGC) is a law on $[0,\infty)$ with Laplace transform $\exp\bigl(-a\lambda - \int_{(0,\infty)}\log(1 + \lambda/t)\,\tau(dt)\bigr)$, with drift $a\ge0$, Thorin measure $\tau$ and Thorin mass $\tau((0,\infty))$. In each case below, $S$ is a finite set of primes containing those at which the data are ramified (in (b) those ramified in $K(\zeta_N)$, in (c) $2$ and $q$, in (d) the primes of bad reduction of $E$ and $E'$), and $\Xi_\sigma(Q)$ converges in law as $\sigma\downarrow1$ to the GGC with drift zero and Thorin measure $\tau_Q$, the image under $1/Q$ of the limiting law of the Frobenius data restricted to $\{Q>0\}$. (a) Artin representations. Let $\rho,\rho'$ be Artin representations unramified outside $S$, with fields $K,K'$ (the fixed fields of their kernels), put $H = \operatorname{Gal}(KK'/\mathbb{Q})$ and let $Q = |\chi_\rho - \chi_{\rho'}|^2$ on the conjugacy classes of $H$, evaluated at $\operatorname{Frob}_p$. Then $\tau_Q$ is the image of Haar probability measure on $\{\chi_\rho\ne\chi_{\rho'}\}\subset H$ under $1/|\chi_\rho - \chi_{\rho'}|^2$. The limit law has mean $\|\chi_\rho - \chi_{\rho'}\|^2_{L^2(H)}$, which is $2$ for nonisomorphic irreducible $\rho,\rho'$, and $\tau_Q = 0$ if and only if $\rho\cong\rho'$. (b) Abelian reciprocity. Let $\psi$ be a character of finite order of $\operatorname{Gal}(\overline{\mathbb{Q}}/\mathbb{Q})$, $K$ its field, $\chi$ a Dirichlet character modulo $N$, and $Q = |\psi(\operatorname{Frob}_p) - \chi(p)|^2$. If $\psi\ne\chi$ as characters of $\operatorname{Gal}(K(\zeta_N)/\mathbb{Q})$ and $\psi\bar\chi$ has order $d$, then $\tau_Q = \frac{1}{d}\sum_{j=1}^{d - 1}\delta_{1/(4\sin^2(\pi j/d))}$, and the limit law has mean $2$ and Thorin mass $1 - \frac{1}{d}$; otherwise $\tau_Q = 0$. The Kronecker Weber theorem is equivalent to the statement that for every $\psi$ there are $N$ and $\chi$ with $\tau_Q = 0$. (c) Quadratic reciprocity. Let $q\equiv3\bmod4$ be prime. For $Q = \bigl|\left(\frac{q}{p}\right) - \left(\frac{p}{q}\right)\bigr|^2$ the limit law is the gamma law of shape $\frac12$ and rate $\frac14$, that is $2\chi^2_1$, with Thorin measure $\frac12\delta_{1/4}$; for $Q = \bigl|\left(\frac{q}{p}\right) - \left(\frac{p}{q}\right)\left(\frac{-1}{p}\right)\bigr|^2$ the limit is $\delta_0$. For $q\equiv1\bmod4$ the first $Q$ already gives $\delta_0$. (d) Elliptic curves. Let $E,E'$ be elliptic curves over $\mathbb{Q}$ without complex multiplication and not geometrically isogenous, with normalised traces $x_p = a_p(E)/\sqrt p$ and $x'_p = a_p(E')/\sqrt p$, and $Q = (x_p - x'_p)^2$. Then $\tau_Q$ is the law of $1/(X - X')^2$ for independent $X,X'$ with the Sato Tate law $\frac{1}{2\pi}\sqrt{4 - x^2}\,dx$ on $[-2,2]$, so the Thorin mass is $1$ and the limit law has mean $2$. If instead $E'$ is isogenous to $E$, then $Q = 0$ for all good $p$ and the limit is $\delta_0$.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `thm:recipthorin`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `thm:recipthorin`.
 
 <a id="zero_two_law_for_frobenius_discrepancy_subordinators"></a>
 
@@ -1198,7 +1198,7 @@ Status: proved.
 
 Statement. Let $S$ be a finite set of primes containing those at which the data below ramify. For two Frobenius variables $a,b$, each either $a_\rho(p^m) = \operatorname{tr}\rho(\operatorname{Frob}_p^m)$ for an Artin representation $\rho$ or $a_\pi(p^m) = \sum_i\alpha_{i,p}^m$ for a unitary cuspidal automorphic representation $\pi$ with Satake parameters $\alpha_{i,p}$ at $p$, put $Q_m(p) = |a(p^m) - b(p^m)|^2$, let $D_Q(s) = \sum_{k\ge1}d_Q(k)k^{-s}$ be the Dirichlet series with $\log D_Q(s) = \sum_{p\notin S,\,m\ge1}Q_m(p)m^{-1}p^{-ms}$, and for $\sigma>1$ let $X_\sigma = \log N_{Q,\sigma}$, where $N_{Q,\sigma}$ is the random integer with $\mathbb{P}(N_{Q,\sigma} = k)\propto d_Q(k)k^{-\sigma}$ (the discrepancy subordinator). Write $\mathrm{Gamma}(\alpha)$ for the gamma law of shape $\alpha$ and rate $1$, with $\mathrm{Gamma}(0) = \delta_0$. (a) For Artin representations $\rho,\rho'$ with $a = \operatorname{tr}\rho$ and $b = \operatorname{tr}\rho'$, $(\sigma - 1)X_\sigma$ converges in law as $\sigma\downarrow1$ to $\mathrm{Gamma}(\|\chi_\rho - \chi_{\rho'}\|^2)$, the norm being that of $L^2$ of Haar probability measure on the Galois group of the compositum of their fields; this is a generalized gamma convolution with Thorin measure $\|\chi_\rho - \chi_{\rho'}\|^2\delta_1$ and integer shape, and for irreducible $\rho,\rho'$ the shape is $0$ or $2$. (b) For unitary cuspidal automorphic representations $\pi,\pi'$ of $\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})$ and $\mathrm{GL}_{n'}(\mathbb{A}_{\mathbb{Q}})$ with $a = a_\pi$ and $b = a_{\pi'}$, the limit is $\delta_0$ if $\pi\cong\pi'$ and $\mathrm{Gamma}(2)$ otherwise.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `thm:recipzerotwo`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `thm:recipzerotwo`.
 
 <a id="mixed_zero_two_law_conjecture"></a>
 
@@ -1210,7 +1210,7 @@ Status: open.
 
 Statement. Let $\rho$ be an irreducible Artin representation of dimension $n$ and $\pi$ a unitary cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})$, both unramified outside a finite set $S$ of primes, with $a(p^m) = \operatorname{tr}\rho(\operatorname{Frob}_p^m)$ and $b(p^m) = a_\pi(p^m) = \sum_i\alpha_{i,p}^m$, the $\alpha_{i,p}$ being the Satake parameters of $\pi$ at $p$. Put $Q_m(p) = |a(p^m) - b(p^m)|^2$, let $D_Q(s) = \sum_{k\ge1}d_Q(k)k^{-s}$ be the Dirichlet series with $\log D_Q(s) = \sum_{p\notin S,\,m\ge1}Q_m(p)m^{-1}p^{-ms}$, and for $\sigma>1$ let $X_\sigma = \log N_{Q,\sigma}$, where $\mathbb{P}(N_{Q,\sigma} = k)\propto d_Q(k)k^{-\sigma}$. Conjecture: $(\sigma - 1)X_\sigma$ converges in law as $\sigma\downarrow1$ to $\delta_0$ or to $\mathrm{Gamma}(2)$, the gamma law of shape $2$ and rate $1$, and to $\delta_0$ exactly when $L(s,\rho_p) = L(s,\pi_p)$ for almost all $p$.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `conj:recipmixed`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `conj:recipmixed`.
 
 <a id="mixed_zero_two_law_known_cases_and_moment_bounds"></a>
 
@@ -1222,7 +1222,7 @@ Status: proved.
 
 Statement. Let $\rho$ be an irreducible Artin representation of dimension $n$ and $\pi$ a unitary cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})$, both unramified outside a finite set $S$ of primes, with $a(p^m) = \operatorname{tr}\rho(\operatorname{Frob}_p^m)$ and $b(p^m) = a_\pi(p^m) = \sum_i\alpha_{i,p}^m$ ($\alpha_{i,p}$ the Satake parameters of $\pi$ at $p$). Put $Q_m(p) = |a(p^m) - b(p^m)|^2$, let $D_Q(s) = \sum_{k\ge1}d_Q(k)k^{-s}$ with $\log D_Q(s) = \sum_{p\notin S,\,m\ge1}Q_m(p)m^{-1}p^{-ms}$, and for $\sigma>1$ let $X_\sigma = \log N_{Q,\sigma}$ with $\mathbb{P}(N_{Q,\sigma} = k)\propto d_Q(k)k^{-\sigma}$. The mixed zero two law for $\rho$ and $\pi$ is the statement that $(\sigma - 1)X_\sigma$ converges in law as $\sigma\downarrow1$ to $\delta_0$ or to $\mathrm{Gamma}(2)$ (shape $2$, rate $1$), and to $\delta_0$ exactly when $L(s,\rho_p) = L(s,\pi_p)$ for almost all $p$. (i) If $\rho$ is automorphic, the mixed zero two law holds for $\rho$ and every $\pi$; hence it holds for $n = 1$, for odd two dimensional $\rho$, and for two dimensional $\rho$ with solvable image. (ii) Unconditionally, $\limsup_{\sigma\downarrow1}\mathbb{E}[(\sigma - 1)X_\sigma]\le4$ and $\mathbb{E}[((\sigma - 1)X_\sigma)^2]$ stays bounded, so under the mixed zero two law $\mathbb{E}[(\sigma - 1)X_\sigma]$ tends to $0$ or $2$. (iii) If the limit is $\delta_0$, then $\rho$ and $\pi$ are reciprocal in law, that is $\mathbb{E}_\sigma|a_\rho - a_\pi|^2\to0$ as $\sigma\downarrow1$ under the probability measure $\mathbb{P}_\sigma(\{p^m\})\propto p^{-m\sigma}/m$ on the prime powers $p^m$ with $p\notin S$; so $\pi$ is unique up to isomorphism and, for every $\epsilon>0$, $|a_\rho(p) - a_\pi(p)|\le\epsilon$ outside a set of primes of Dirichlet density zero.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `prop:recipmixed`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `prop:recipmixed`.
 
 <a id="euler_kronecker_drift_of_chebotarev_gamma_limit"></a>
 
@@ -1234,7 +1234,7 @@ Status: proved.
 
 Statement. Let $K/\mathbb{Q}$ be a finite Galois extension with group $G$, unramified outside a finite set $S$ of primes, let $C$ be a conjugacy class of $G$ and $\mu(C) = |C|/|G|$. For $\sigma>1$ let $N_\sigma = \prod_pp^{e_p}$ be a zeta distributed random integer, $\mathbb{P}(N_\sigma = n) = n^{-\sigma}/\zeta(\sigma)$, and let $L_C(\sigma) = (\sigma - 1)\sum_{p\notin S,\,\operatorname{Frob}_p\in C}e_p\log p$. For a character $\chi$ of $G$ put $\gamma^S(\chi) = \lim_{s\to1}\bigl(\frac{(L^S)'}{L^S}(s,\chi) + \frac{\delta_{\chi=1}}{s - 1}\bigr)$, where the Artin $L$ function $L^S(s,\chi)$ omits the Euler factors at $S$, and let $\gamma_K^S = \lim_{s\to1}\bigl(\frac{(\zeta_K^S)'}{\zeta_K^S}(s) + \frac{1}{s - 1}\bigr)$ be the Euler Kronecker constant of $K$ in Ihara's sense, computed for the Dedekind zeta function $\zeta_K^S$ with the Euler factors above $S$ removed. Then, uniformly for $\lambda$ in compact subsets of $[0,\infty)$, as $\sigma\downarrow1$, $\log\mathbb{E}e^{-\lambda L_C(\sigma)} = -\mu(C)\log(1 + \lambda) + \kappa_C\,\lambda\,(\sigma - 1) + O((\sigma - 1)^2)$ with $\kappa_C = \mu(C)\sum_\chi\overline{\chi(C)}\,\gamma^S(\chi) - \sum_{p\notin S}\sum_{m\ge2}\bigl[\mathsf{1}_C(\operatorname{Frob}_p) - \mathsf{1}_C(\operatorname{Frob}_p^m)\bigr](\log p)\,p^{-m}$, the first sum running over the irreducible characters of $G$. In particular $\mathbb{E}L_C(\sigma) = \mu(C) - \kappa_C(\sigma - 1) + O((\sigma - 1)^2)$, so to first order the Gamma limit is shifted by the deterministic amount $-\kappa_C(\sigma - 1)$. For the class of primes that split completely, $\kappa_{\{1\}} = \frac{\gamma_K^S}{|G|} + \sum_{p\notin S,\,\operatorname{Frob}_p\ne1}\;\sum_{m\ge2,\,\operatorname{Frob}_p^m = 1}(\log p)\,p^{-m}$, the Euler Kronecker constant of $K$ with the Euler factors above $S$ removed, divided by the degree, plus a nonnegative prime power term. For a class function $Q\ge0$ with value $Q_C$ on $C$ and $\Xi_\sigma(Q) = \sum_CQ_C\,L_C(\sigma)$, independence of the $L_C(\sigma)$ gives $\log\mathbb{E}e^{-\lambda\Xi_\sigma(Q)} = -\sum_C\mu(C)\log(1 + \lambda Q_C) + \kappa_Q\lambda(\sigma - 1) + O((\sigma - 1)^2)$ with $\kappa_Q = \sum_CQ_C\,\kappa_C$.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `thm:recipdrift`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `thm:recipdrift`.
 
 <a id="hecke_criterion_as_polya_kernel_symmetry"></a>
 
@@ -1246,7 +1246,7 @@ Status: proved.
 
 Statement. Let $k\ge1$ and $N\ge1$ be integers, $f(z) = \sum_{n\ge1}a_ne^{2\pi inz}$ with $a_n = O(n^{(k - 1)/2 + \epsilon})$, $\Lambda(s) = (\sqrt N/2\pi)^s\Gamma(s)\sum_{n\ge1}a_nn^{-s}$, and $\Phi_f(u) = f(ie^u/\sqrt N)\,e^{ku/2}$, the Pólya kernel of the coefficient sequence, so that $\Lambda(\frac k2 + t) = \int_{\mathbb{R}}\Phi_f(u)e^{tu}\,du$ for $\operatorname{Re}t$ large. For $\varepsilon\in\{\pm1\}$ the following are equivalent. (i) $\Phi_f(-u) = \varepsilon\,\Phi_f(u)$ for all real $u$. (ii) $f(-1/(Nz)) = \varepsilon\,i^{-k}N^{k/2}z^kf(z)$ for all $z$ in the upper half plane. (iii) $\Lambda$ extends to an entire function, bounded in vertical strips, with $\Lambda(k - s) = \varepsilon\Lambda(s)$. For $N = 1$, $k$ even and $\varepsilon = (-1)^{k/2}$ these are equivalent to the statement that $f$ is a cusp form of weight $k$ for $\mathrm{SL}_2(\mathbb{Z})$.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `prop:recipsym`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `prop:recipsym`.
 
 <a id="gamma_shape_detects_irreducibility"></a>
 
@@ -1258,7 +1258,7 @@ Status: proved.
 
 Statement. Let $\rho$ be an Artin representation, $S$ the set of primes at which it ramifies, and $D^S(s) = L^S(s,\rho\otimes\check\rho) = \prod_{p\notin S}\det\bigl(1 - (\rho\otimes\check\rho)(\operatorname{Frob}_p)p^{-s}\bigr)^{-1}$, so that $\log D^S(s) = \sum_{p\notin S}\sum_{j\ge1}|\operatorname{tr}\rho(\operatorname{Frob}_p^j)|^2j^{-1}p^{-js}$ has nonnegative coefficients. For $\sigma>1$ let $X_\sigma$ be the compound Poisson random variable with $\mathbb{E}e^{-\lambda X_\sigma} = D^S(\sigma + \lambda)/D^S(\sigma)$ for $\lambda\ge0$, whose Lévy measure is $\sum_{p\notin S,\,j\ge1}|\operatorname{tr}\rho(\operatorname{Frob}_p^j)|^2j^{-1}p^{-j\sigma}\delta_{j\log p}$. Let $m = \langle\rho,\rho\rangle$, the sum of the squares of the multiplicities of the irreducible constituents of $\rho$. As $\sigma\downarrow1$, $(\sigma - 1)X_\sigma$ converges in law to the Gamma law with shape $m$ and scale $1$. In particular $\rho$ is irreducible if and only if the limit is the standard exponential law.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `thm:recipgamma`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `thm:recipgamma`.
 
 <a id="galois_heat_trace_complete_monotonicity_criterion"></a>
 
@@ -1270,7 +1270,7 @@ Status: proved.
 
 Statement. Let $\rho$ be a self dual Galois representation (an Artin representation, or a geometric $\ell$ adic representation, pure of some weight, made complex through a fixed isomorphism $\overline{\mathbb{Q}}_\ell\cong\mathbb{C}$), in the unitary normalisation, with conductor $N_\rho$, gamma factor $\gamma(s,\rho)$ and completed $L$ function $\Lambda(s,\rho) = N_\rho^{s/2}\gamma(s,\rho)L(s,\rho)$, and let $\Lambda_\rho(n)$ be the coefficients of $-L'/L(s,\rho)$, so that $\Lambda_\rho(p^m) = \operatorname{tr}\rho(\operatorname{Frob}_p^m)\log p$ at unramified $p$. For $x>0$ the Galois heat trace is $\mathcal{W}_\rho(x) = \frac{1}{4\pi}\int_{\mathbb{R}}e^{-xt^2}\bigl(\log N_\rho + 2\operatorname{Re}\frac{\gamma'}{\gamma}(\tfrac12 + it,\rho)\bigr)\,dt - \frac{1}{2\pi}\sum_{n\ge2}\frac{\Lambda_\rho(n)}{\sqrt n}\sqrt{\frac{\pi}{x}}\,e^{-(\log n)^2/(4x)}$. Suppose that $\Lambda(s,\rho)$ has meromorphic continuation of finite order with $\Lambda(s,\rho) = \pm\Lambda(1 - s,\rho)$, and write its zeros and poles as $\frac12\pm i\gamma$. Then (i) $\mathcal{W}_\rho(x) = \frac12\sum_{\text{zeros}}e^{-x\gamma^2} - \frac12\sum_{\text{poles}}e^{-x\gamma^2}$, with multiplicity, the sums absolutely convergent for $x>0$; (ii) $\mathcal{W}_\rho$ is completely monotone on $(0,\infty)$ if and only if $\Lambda(s,\rho)$ is entire and all its zeros lie on $\operatorname{Re}s = \frac12$. In particular, for an Artin representation with real character and no trivial constituent (a trivial constituent of multiplicity $r$ adds the pole term $-re^{x/4}$), Artin's conjecture together with GRH for $L(s,\rho)$ is equivalent to the complete monotonicity of a function computed from Frobenius traces.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `thm:recipcm`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `thm:recipcm`.
 
 <a id="galois_heat_trace_sees_every_prime"></a>
 
@@ -1282,7 +1282,7 @@ Status: proved.
 
 Statement. For self dual Galois data $\rho$ with conductor $N_\rho$, gamma factor $\gamma(s,\rho)$, completed $L$ function $\Lambda(s,\rho) = N_\rho^{s/2}\gamma(s,\rho)L(s,\rho)$ and $\Lambda_\rho(n)$ the coefficients of $-L'/L(s,\rho)$, let $\mathcal{W}_\rho(x) = \frac{1}{4\pi}\int_{\mathbb{R}}e^{-xt^2}\bigl(\log N_\rho + 2\operatorname{Re}\frac{\gamma'}{\gamma}(\tfrac12 + it,\rho)\bigr)\,dt - \frac{1}{2\pi}\sum_{n\ge2}\frac{\Lambda_\rho(n)}{\sqrt n}\sqrt{\frac{\pi}{x}}\,e^{-(\log n)^2/(4x)}$, $x>0$, be its Galois heat trace. Let $\rho$ be self dual with $\Lambda(s,\rho)$ meromorphic of finite order, $\Lambda(s,\rho) = \pm\Lambda(1 - s,\rho)$, entire and with all its zeros on $\operatorname{Re}s = \frac12$ (equivalently, $\mathcal{W}_\rho$ completely monotone). Let $\rho'$ be self dual Galois data with the same conductor and the same gamma factor, whose local factors differ from those of $\rho$ at a nonempty set $P$ of primes with $\sum_{p\in P}p^{-1/2}\log p<\infty$, and suppose that the Satake parameters of $\rho$ and $\rho'$ have absolute value at most $1$. Then $\mathcal{W}_{\rho'}$ is not completely monotone. In particular, if $\Lambda(s,\rho')$ has meromorphic continuation of finite order with $\Lambda(s,\rho') = \pm\Lambda(1 - s,\rho')$, it has a pole or a zero off the critical line.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `prop:reciprigid`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `prop:reciprigid`.
 
 <a id="euler_half_line_thorin_criterion"></a>
 
@@ -1294,7 +1294,7 @@ Status: proved.
 
 Statement. Let $\rho$ be a self dual Galois representation with conductor $N_\rho$, gamma factor $\gamma(s,\rho)$ and completion $\Lambda(s,\rho) = N_\rho^{s/2}\gamma(s,\rho)L(s,\rho)$ in the unitary normalisation, defined for $\operatorname{Re}s>1$ by its Euler product, and let $s_0>\frac14$. A generalized gamma convolution (GGC) is a law on $[0,\infty)$ with Laplace transform $\exp\bigl(-a\lambda - \int_{(0,\infty)}\log(1 + \lambda/t)\,\tau(dt)\bigr)$, with drift $a\ge0$ and Thorin measure $\tau$. Suppose that for $s>\frac14$, $\frac{\Lambda(\frac12 + \sqrt{s_0},\rho)}{\Lambda(\frac12 + \sqrt s,\rho)} = C\,\mathbb{E}e^{-sH}$ for a constant $C>0$ and a GGC $H$ whose Thorin measure is $\sum_kc_k\delta_{u_k}$ with positive integers $c_k$ and $u_k>0$. Then $\Lambda(s,\rho)$ extends to an entire function of finite order, $\Lambda(s,\rho) = \Lambda(1 - s,\rho)$, every zero lies on $\operatorname{Re}s = \frac12$, and $\Lambda$ is bounded in vertical strips. Conversely, if $\Lambda(s,\rho)$ is entire of order one with this functional equation, $\Lambda(\frac12,\rho)\ne0$ and all zeros $\frac12\pm i\gamma_k$ on the critical line, then the hypothesis holds with $u_k = \gamma_k^2$.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `thm:recipeuler`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `thm:recipeuler`.
 
 <a id="thorin_converse_theorem_level_one"></a>
 
@@ -1306,7 +1306,7 @@ Status: proved.
 
 Statement. Let $k\equiv0\bmod4$ and let $(a_p)$ be the Frobenius traces of a self dual Galois representation of conductor $1$ with gamma factor $\Gamma_{\mathbb{C}}(s + \frac{k - 1}{2})$, where $\Gamma_{\mathbb{C}}(s) = \Gamma_{\mathbb{R}}(s)\Gamma_{\mathbb{R}}(s + 1) = 2(2\pi)^{-s}\Gamma(s)$, satisfying the Ramanujan bound, with $a_n$ the Dirichlet coefficients of its $L$ function in the unitary normalisation and $\Lambda(s)$ its completion. If, for some $s_0>\frac14$, the normalised Euler product $\Lambda(\frac12 + \sqrt{s_0})/\Lambda(\frac12 + \sqrt s)$, $s>\frac14$, is a constant times the Laplace transform of a generalized gamma convolution (a law on $[0,\infty)$ with Laplace transform $\exp\bigl(-a\lambda - \int_{(0,\infty)}\log(1 + \lambda/t)\,\tau(dt)\bigr)$, $a\ge0$) whose Thorin measure $\tau$ is a sum of point masses with positive integer weights, then $\sum_{n\ge1}a_nn^{(k - 1)/2}e^{2\pi inz}$ is a cusp form of weight $k$ for $\mathrm{SL}_2(\mathbb{Z})$, and it satisfies GRH.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `cor:recipconverse`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `cor:recipconverse`.
 
 <a id="rankin_selberg_square_ggc_family"></a>
 
@@ -1318,7 +1318,7 @@ Status: proved.
 
 Statement. Let $\rho$ be an Artin representation, $S$ the set of primes at which it ramifies, and $F(s) = \Lambda^S(s,\rho\otimes\check\rho)$ the completion, with conductor and gamma factor, of $L^S(s,\rho\otimes\check\rho) = \prod_{p\notin S}\det\bigl(1 - (\rho\otimes\check\rho)(\operatorname{Frob}_p)p^{-s}\bigr)^{-1}$. For every $\alpha>1$ there is a generalized gamma convolution $H_\alpha$ (a law on $[0,\infty)$ with Laplace transform $\exp\bigl(-a\lambda - \int_{(0,\infty)}\log(1 + \lambda/t)\,\tau(dt)\bigr)$, $a\ge0$, $\tau$ its Thorin measure) with $\frac{F(\alpha)}{F(\alpha + \sqrt s)} = e^{-b_\alpha\sqrt s}\,\mathbb{E}e^{-sH_\alpha}$ for $s>0$, $b_\alpha = \frac{F'(\alpha)}{F(\alpha)}$, whose Thorin density is the $2\sin^2$ transport $\nu\mapsto U(z) = \frac{1}{2\pi\sqrt z}\int_0^\infty2\sin^2\bigl(\frac{x\sqrt z}{2}\bigr)\,\nu(dx)$ of the measure $\nu = \sum_{p\notin S,\,m\ge1}|\operatorname{tr}\rho(\operatorname{Frob}_p^m)|^2(\log p)\,p^{-m\alpha}\delta_{m\log p}$ ($x$ times the Lévy measure of the Rankin Selberg subordinator at $\alpha$) together with the gamma factor contribution. It is computed from Frobenius traces alone.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `prop:recipfamily`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `prop:recipfamily`.
 
 <a id="thorin_converse_theorem_for_twists_problem"></a>
 
@@ -1330,7 +1330,7 @@ Status: open.
 
 Statement. For a self dual Galois representation $\rho$ with completed $L$ function $\Lambda(s,\rho)$, the Euler half line criterion of this chapter says that if, for some $s_0>\frac14$ and all $s>\frac14$, the ratio $\Lambda(\frac12 + \sqrt{s_0},\rho)/\Lambda(\frac12 + \sqrt s,\rho)$ is a positive constant times the Laplace transform of a generalized gamma convolution whose Thorin measure is $\sum_kc_k\delta_{u_k}$ with positive integers $c_k$ and $u_k>0$, then $\Lambda(s,\rho)$ is entire of finite order, satisfies $\Lambda(s,\rho) = \Lambda(1 - s,\rho)$, has all its zeros on $\operatorname{Re}s = \frac12$ and is bounded in vertical strips. Formulate and prove a version of this criterion for twists $\rho\times\pi'$ that are not self dual, strong enough to combine with the converse theorem of Cogdell and Piatetski Shapiro. The obstacle is that the self dual completion $\Xi_\rho$, built from $\Lambda(\frac12 + z,\rho)\Lambda(\frac12 + z,\check\rho)$, controls the product of two $L$ functions, whereas converse theorems need each one.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `op:recipgln`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `op:recipgln`.
 
 <a id="descending_the_base_point_problem"></a>
 
@@ -1342,7 +1342,7 @@ Status: open.
 
 Statement. Let $\rho$ be an automorphic Artin representation, let $F_0(s)$ be the complete Rankin Selberg function $\Lambda(s,\rho\otimes\check\rho)$, with all Euler factors included and its poles at $s = 0$ and $s = 1$ removed, and for $\alpha\in(\frac12,1]$ let $V_{\alpha - 1/2}(z) = \operatorname{Re}(F_0'/F_0)(\alpha + i\sqrt z)/(2\pi\sqrt z)$ for $z>0$ and $b_\alpha = F_0'(\alpha)/F_0(\alpha)$. Positivity of the transported Thorin densities $V_{\alpha - 1/2}$, with the drift kept inside, for every $\alpha\in(\frac12,1]$ is GRH for $L(s,\rho\otimes\check\rho)$. Decide whether the densities $V_{\alpha - 1/2} - b_\alpha/(2\pi\sqrt z)$, with the drift split off, also stay nonnegative there (for the Riemann xi function this holds under the Riemann hypothesis and is proved unconditionally for $\alpha\ge1$ and, for $\frac12<\alpha<1$, below height $3\times10^{12}$), and identify the obstruction to positivity below $\alpha = 1$ in terms of Frobenius data alone. Which features of the Lévy measure $\sum_{p\notin S,\,m\ge1}|\operatorname{tr}\rho(\operatorname{Frob}_p^m)|^2m^{-1}p^{-m\alpha}\delta_{m\log p}$ of the Rankin Selberg subordinator at $\alpha>1$, with $S$ the ramified primes, control the sign of the transported density at $\alpha<1$?
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `op:recipdescent`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `op:recipdescent`.
 
 <a id="signed_thorin_measures_artin_conjecture_problem"></a>
 
@@ -1354,7 +1354,7 @@ Status: open.
 
 Statement. Let $\rho$ be an Artin representation with real character, no trivial constituent, root number $1$ and $\Lambda(\frac12,\rho)$ finite and nonzero, where $\Lambda(s,\rho)$ is its completed $L$ function. Brauer's theorem and Hadamard factorisation give, for a fixed $s_0>\frac14$, $\Lambda(\frac12 + \sqrt{s_0},\rho)/\Lambda(\frac12 + \sqrt s,\rho) = C\prod_k(1 + s/u_k)^{-c_k}$ with nonzero integers $c_k$ and complex $u_k = \gamma_k^2$, where $\frac12\pm i\gamma_k$ run over the zeros and poles, $c_k<0$ exactly at poles, and $u_k\notin(0,\infty)$ exactly at zeros and poles off the critical line; Artin's conjecture for $\rho$ is the statement that every $c_k$ is positive. Find a property of the signed Lévy measure of $\log\Lambda(s,\rho)$ on the Euler half line $\operatorname{Re}s>1$, that is of Frobenius data, which forces every $c_k$ to be positive without forcing the $u_k$ to be real, so that holomorphy is separated from GRH.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `op:recipsigned`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `op:recipsigned`.
 
 <a id="fejer_summation_for_primes_problem"></a>
 
@@ -1366,7 +1366,7 @@ Status: open.
 
 Statement. For a self dual Galois representation $\rho$ with conductor $N_\rho$, gamma factor $\gamma(s,\rho)$ and $\Lambda_\rho(n)$ the coefficients of $-L'/L(s,\rho)$, the Galois heat trace is $\mathcal{W}_\rho(x) = \frac{1}{4\pi}\int_{\mathbb{R}}e^{-xt^2}\bigl(\log N_\rho + 2\operatorname{Re}\frac{\gamma'}{\gamma}(\tfrac12 + it,\rho)\bigr)\,dt - \frac{1}{2\pi}\sum_{n\ge2}\frac{\Lambda_\rho(n)}{\sqrt n}\sqrt{\frac{\pi}{x}}\,e^{-(\log n)^2/(4x)}$ for $x>0$; when $\Lambda(s,\rho)$ has meromorphic continuation of finite order and a functional equation, it is completely monotone if and only if $\Lambda(s,\rho)$ is entire with all zeros on the critical line. For the circle, the winding number terms $\sqrt{\pi/x}\,e^{-\pi^2n^2/x}$ summed with the Fejér weights $1 - |n|/N$ form the Laplace transform of the positive density $F_N(\sqrt z)z^{-1/2}$, with $F_N$ Fejér's kernel. Find positive weights $w_N(n)\le1$ with $w_N(n)\to1$ such that the prime side of $\mathcal{W}_\rho$, with $\Lambda_\rho(n)$ replaced by $w_N(n)\Lambda_\rho(n)$ and the archimedean term adjusted accordingly, is the Laplace transform of a positive measure, and such that positivity for each $N$ follows from Frobenius data alone, as Fejér positivity does for the circle; otherwise $w_N\equiv1$ works whenever holomorphy and GRH hold. By the complete monotonicity criterion this would prove holomorphy and GRH for $L(s,\rho)$; the problem is to see what positivity of this kind forces on Frobenius data.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `op:recipfejer`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `op:recipfejer`.
 
 <a id="reciprocity_in_law_versus_reciprocity_problem"></a>
 
@@ -1378,7 +1378,7 @@ Status: open.
 
 Statement. Let $\rho$ be an irreducible Artin representation of dimension $n$ and $\pi$ a cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})$, unramified outside a finite set $S$ of primes, with $a_\rho(p^m) = \operatorname{tr}\rho(\operatorname{Frob}_p^m)$ and $a_\pi(p^m)$ the $m$th power sum of the Satake parameters of $\pi$ at $p$, and call them reciprocal in law if $\mathbb{E}_\sigma|a_\rho - a_\pi|^2\to0$ as $\sigma\downarrow1$ under the probability measure $\mathbb{P}_\sigma(\{p^m\})\propto p^{-m\sigma}/m$ on the prime powers $p^m$ with $p\notin S$. Show that if $\rho$ is reciprocal in law with $\pi$, then $a_\rho(p) = a_\pi(p)$ for all but finitely many $p$. This holds whenever $\rho$ is known to be automorphic; for $n = 2$, where this leaves the even icosahedral $\rho$, it would follow from a refinement of Ramakrishnan's theorem to the case in which one member is Galois and the agreement is only approximate (within every $\epsilon>0$ outside a set of primes of Dirichlet density zero); in general it is a strong multiplicity one statement across the two sides.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `op:reciplaw`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `op:reciplaw`.
 
 <a id="mixed_zero_two_law_problem"></a>
 
@@ -1390,7 +1390,7 @@ Status: open.
 
 Statement. Let $\rho$ be an irreducible Artin representation of dimension $n$ and $\pi$ a unitary cuspidal automorphic representation of $\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})$, unramified outside a finite set $S$ of primes, with $a(p^m) = \operatorname{tr}\rho(\operatorname{Frob}_p^m)$ and $b(p^m) = \sum_i\alpha_{i,p}^m$ ($\alpha_{i,p}$ the Satake parameters of $\pi$ at $p$), $Q_m(p) = |a(p^m) - b(p^m)|^2$, $D_Q(s) = \sum_{k\ge1}d_Q(k)k^{-s}$ with $\log D_Q(s) = \sum_{p\notin S,\,m\ge1}Q_m(p)m^{-1}p^{-ms}$, and $X_\sigma = \log N_{Q,\sigma}$ with $\mathbb{P}(N_{Q,\sigma} = k)\propto d_Q(k)k^{-\sigma}$ for $\sigma>1$. The mixed zero two law conjecture states that $(\sigma - 1)X_\sigma$ converges in law as $\sigma\downarrow1$ to $\delta_0$ or to the gamma law of shape $2$ and rate $1$, and to $\delta_0$ exactly when $L(s,\rho_p) = L(s,\pi_p)$ for almost all $p$. Show that meromorphy of $L(s,\rho\times\tilde\pi)$ near $\operatorname{Re}s = 1$, with at most a simple pole at $s = 1$ and no zeros on the line, gives the dichotomy of the conjecture by the argument that proves the zero two law for two Artin or two cuspidal representations, and reduces the rest of the conjecture to a form of the problem of reciprocity in law versus reciprocity (whether reciprocity in law forces $a(p) = b(p)$ for all but finitely many $p$), and prove the conjecture for one even icosahedral Artin representation.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `op:recipmixed`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `op:recipmixed`.
 
 <a id="joint_marked_processes_problem"></a>
 
@@ -1402,7 +1402,7 @@ Status: open.
 
 Statement. Let $\rho$ be an Artin representation and $\pi$ a cuspidal automorphic representation of the same dimension $n$, unramified outside a finite set $S$ of primes, with $a_\rho(p) = \operatorname{tr}\rho(\operatorname{Frob}_p)$ and $a_\pi(p)$ the sum of the Satake parameters of $\pi$ at $p$. For $\sigma>1$ let $N_\sigma = \prod_pp^{e_p}$ be a zeta distributed random integer, $\mathbb{P}(N_\sigma = k) = k^{-\sigma}/\zeta(\sigma)$, and let $\mathcal{M}_\sigma = \sum_{p\notin S,\,e_p\ge1}\delta_{((\sigma - 1)e_p\log p,\;\theta_p)}$ be the marked point process of its rescaled prime factors, labelled by $\theta_p$, the Frobenius data of $\rho$ and of $\pi$ at $p$ taken together; for labels equidistributed with respect to a law $\mu$ it converges in law to the Poisson process with intensity $x^{-1}e^{-x}dx\otimes\mu$. Show that the joint limit of these marked processes exists for $\rho$ and $\pi$; it is not determined by the two marginal limits. Is the joint label law either supported on $\{a_\rho = a_\pi\}$, or such that the Thorin measure of $|a_\rho - a_\pi|^2$ has mass bounded below by a constant depending only on $n$?
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `op:recipjoint`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `op:recipjoint`.
 
 <a id="signs_of_euler_kronecker_drifts_problem"></a>
 
@@ -1414,7 +1414,7 @@ Status: open.
 
 Statement. Let $K/\mathbb{Q}$ be a finite Galois extension with group $G$, unramified outside a finite set $S$ of primes, and for $\sigma>1$ let $N_\sigma = \prod_pp^{e_p}$ be a zeta distributed random integer, $\mathbb{P}(N_\sigma = n) = n^{-\sigma}/\zeta(\sigma)$. For a conjugacy class $C$ let $L_C(\sigma) = (\sigma - 1)\sum_{p\notin S,\,\operatorname{Frob}_p\in C}e_p\log p$ and let $\kappa_C$ be its Euler Kronecker drift, defined by $\log\mathbb{E}e^{-\lambda L_C(\sigma)} = -\frac{|C|}{|G|}\log(1 + \lambda) + \kappa_C\lambda(\sigma - 1) + O((\sigma - 1)^2)$, so that $\mathbb{E}L_C(\sigma) = \frac{|C|}{|G|} - \kappa_C(\sigma - 1) + O((\sigma - 1)^2)$; for the class of the identity, $\kappa_{\{1\}}$ is $\gamma_K^S/|G|$ plus a nonnegative prime power term, where $\gamma_K^S$ is Ihara's Euler Kronecker constant of $K$ with the Euler factors above $S$ removed. When does the split class approach its Gamma limit from above, that is $\kappa_{\{1\}}<0$? This requires $\gamma_K^S<0$. Characterise such fields, and relate the signs of the $\kappa_C$ to the bias between Frobenius classes of the primes, as measured in the book for the splitting field of $x^3 - x - 1$, and to Chebotarev races.
 
-Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex), label `op:recipdrift`.
+Source: [`book/chapters/ch_recip.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex), label `op:recipdrift`.
 
 ## Chapter 21. Hitting Times and Reciprocity
 
@@ -1428,7 +1428,7 @@ Status: proved.
 
 Statement. Let $N$ be a prime and $\ell\ne N$ a prime. Let $E_1,\dots,E_h$ be the supersingular elliptic curves over $\overline{\mathbb{F}}_N$ up to isomorphism, let the Brandt matrix $B(\ell)$ have entries $B(\ell)_{ij}$ equal to the number of cyclic subgroups $C\subset E_i$ of order $\ell$ with $E_i/C\cong E_j$, and let the isogeny walk be the Markov chain on $\{E_1,\dots,E_h\}$ with transition matrix $P=B(\ell)/(\ell+1)$. Let $f$ run over the $g=\dim S_2(\Gamma_0(N))$ normalised Hecke eigenforms of weight two and level $N$, and let $a_\ell(f)$ be the eigenvalue of the Hecke operator $T_\ell$ on $f$. Then Kemeny's constant of the isogeny walk, $K_N(\ell)=\sum_y\pi(y)\,\mathbb{E}_x\tau_y$, where $\pi$ is the stationary law of $P$ and $\tau_y$ is the first time $t\ge0$ at which the walk is at $E_y$ (the expected hitting time of a target drawn from $\pi$, which does not depend on the starting curve $E_x$ and equals $\sum_{j\ge2}(1 - \mu_j)^{-1}$, where $1=\mu_1,\mu_2,\dots,\mu_h$ are the eigenvalues of $P$), is \[ K_N(\ell)=\sum_f\frac{\ell+1}{\ell+1 - a_\ell(f)}. \] In particular, if every newform of level $N$ has rational coefficients, \[ K_N(\ell)=(\ell+1)\sum_{E}\frac{1}{|E(\mathbb{F}_\ell)|}, \] the sum over the isogeny classes of elliptic curves $E$ over $\mathbb{Q}$ of conductor $N$, which correspond to the newforms with rational coefficients by Eichler and Shimura and the modularity of semistable elliptic curves (Wiles; Taylor and Wiles). In general the contribution of a Galois orbit of forms, attached to an abelian variety $A_f$ with coefficient field $K_f$, is $(\ell+1)\operatorname{Tr}_{K_f/\mathbb{Q}}\bigl(1/(\ell+1 - a_\ell(f))\bigr)$.
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `thm:hitkemeny`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `thm:hitkemeny`.
 
 <a id="sandpile_group_and_modular_jacobian_isomorphism_criterion"></a>
 
@@ -1440,7 +1440,7 @@ Status: proved.
 
 Statement. Let $N\equiv 1\bmod 12$ and $\ell\ne N$ be primes and $h=(N - 1)/12$. Let $G_N(\ell)$ be the supersingular $\ell$ isogeny graph, the $(\ell+1)$ regular multigraph on the $h$ supersingular elliptic curves $E_1,\dots,E_h$ over $\overline{\mathbb{F}}_N$ whose adjacency matrix is the Brandt matrix $B(\ell)$, with $B(\ell)_{ij}$ the number of cyclic subgroups $C\subset E_i$ of order $\ell$ with $E_i/C\cong E_j$. Let $X=\mathbb{Z}^h$ be the divisors on the supersingular curves, $X^0$ those of degree zero and $L=(\ell+1)I - B(\ell)$ the Laplacian, so that the critical group (sandpile group) of $G_N(\ell)$ is $X^0/L(X)$. Let $\mathbb{T}$ be the ring generated by the Hecke operators $T_m$, $N\nmid m$, on $S_2(\Gamma_0(N))$, which acts on the Jacobian $J_0(N)$ of $X_0(N)$ and, through the Brandt matrices, on $X^0$, and for a prime $r$ put $\mathbb{T}_r=\mathbb{T}\otimes\mathbb{Z}_r$. Let $r\ne\ell$ be a prime that divides neither $hN$ nor the discriminant of $\mathbb{T}$. Then the $r$ part of the critical group of $G_N(\ell)$ is isomorphic to $\mathbb{T}_r/(\ell+1 - T_\ell)\mathbb{T}_r$ (this first statement is due to Munier and Shnidman). It is isomorphic to the $r$ part of $J_0(N)(\mathbb{F}_\ell)$ if and only if Frobenius at $\ell$ acts nontrivially on $J_0(N)[\lambda]$ for every maximal ideal $\lambda$ of $\mathbb{T}$ above $r$; otherwise the two are not isomorphic even as groups.
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `prop:hitsandpile`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `prop:hitsandpile`.
 
 <a id="kirchhoff_index_and_commute_times_of_supersingular_isogeny_graphs"></a>
 
@@ -1452,7 +1452,7 @@ Status: proved.
 
 Statement. Let $N\equiv 1\bmod 12$ and $\ell\ne N$ be primes and $h=(N - 1)/12$. Let $G_N(\ell)$ be the supersingular $\ell$ isogeny graph, the $(\ell+1)$ regular multigraph on the $h$ supersingular elliptic curves $E_1,\dots,E_h$ over $\overline{\mathbb{F}}_N$ whose adjacency matrix is the Brandt matrix $B(\ell)$, with $B(\ell)_{ij}$ the number of cyclic subgroups $C\subset E_i$ of order $\ell$ with $E_i/C\cong E_j$, and let $K_N(\ell)$ be Kemeny's constant of the random walk with transition matrix $B(\ell)/(\ell+1)$. Let $f$ run over the normalised Hecke eigenforms of $S_2(\Gamma_0(N))$, with $T_\ell$ eigenvalues $a_\ell(f)$, and let $R(x,y)$ be the effective resistance between vertices of $G_N(\ell)$ with unit conductance on each edge. Then \[ \sum_{\{x,y\}}R(x,y)=h\sum_f\frac{1}{\ell+1 - a_\ell(f)}=\frac{h\,K_N(\ell)}{\ell+1}, \] the sum over unordered pairs of vertices, and the commute time $\kappa(x,y)=\mathbb{E}_x\tau_y+\mathbb{E}_y\tau_x=h(\ell+1)R(x,y)$, where $\tau_y$ is the hitting time of $y$ by the walk, has mean $2hK_N(\ell)/(h - 1)$ over unordered pairs of distinct vertices.
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `thm:hitresist`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `thm:hitresist`.
 
 <a id="hasse_weil_bounds_for_kemeny_constants_and_spanning_trees"></a>
 
@@ -1464,7 +1464,7 @@ Status: proved.
 
 Statement. Let $N$ be a prime, $\ell\ne N$ a prime and $g$ the genus of $X_0(N)$, the dimension of $S_2(\Gamma_0(N))$. Let $K_N(\ell)$ be Kemeny's constant of the isogeny walk, the Markov chain on the supersingular elliptic curves $E_1,\dots,E_h$ over $\overline{\mathbb{F}}_N$ (up to isomorphism) with transition matrix $B(\ell)/(\ell+1)$, where the Brandt matrix entry $B(\ell)_{ij}$ is the number of cyclic subgroups $C\subset E_i$ of order $\ell$ with $E_i/C\cong E_j$. Then \[ \frac{g(\ell+1)}{(\sqrt\ell+1)^2}\le K_N(\ell)\le\frac{g(\ell+1)}{(\sqrt\ell - 1)^2}, \] and for $N\equiv 1\bmod 12$, with $h=(N - 1)/12$ and $\tau(G_N(\ell))$ the number of spanning trees of the supersingular $\ell$ isogeny graph $G_N(\ell)$, the multigraph on these curves with adjacency matrix $B(\ell)$, \[ (\sqrt\ell - 1)^{2g}\le h\,\tau(G_N(\ell))\le(\sqrt\ell+1)^{2g}. \]
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `cor:hithasse`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `cor:hithasse`.
 
 <a id="tree_entropy_as_asymptotic_class_number_of_modular_jacobians"></a>
 
@@ -1476,7 +1476,7 @@ Status: proved.
 
 Statement. Fix a prime $\ell$. For a prime $N$ let $J_0(N)$ be the Jacobian of the modular curve $X_0(N)$ and $g$ its genus. As $N\to\infty$ through primes, \[ \frac1g\log|J_0(N)(\mathbb{F}_\ell)|\longrightarrow\log\frac{\ell^\ell}{(\ell^2 - 1)^{(\ell - 1)/2}}. \] The limit is the spanning tree entropy of the $(\ell+1)$ regular tree, so for $N\equiv 1\bmod 12$ also $h^{-1}\log\tau(G_N(\ell))$ converges to it, where $h=(N - 1)/12$ and $\tau(G_N(\ell))$ is the number of spanning trees of the supersingular $\ell$ isogeny graph, the $(\ell+1)$ regular multigraph on the $h$ supersingular elliptic curves over $\overline{\mathbb{F}}_N$ whose adjacency matrix is the Brandt matrix $B(\ell)$.
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `thm:hitentropy`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `thm:hitentropy`.
 
 <a id="chebotarev_densities_as_hitting_rates_of_largest_prime_factors"></a>
 
@@ -1488,7 +1488,7 @@ Status: proved.
 
 Statement. Let $Y$ be a compact metric space, $S$ a finite set of primes, and $(\theta_p)_{p\notin S}$ points of $Y$ (labels, such as Frobenius classes or Satake parameters) equidistributed with respect to a Borel probability measure $\mu$ on $Y$, that is $\pi(t)^{-1}\sum_{p\le t,\,p\notin S}f(\theta_p)\to\int f\,d\mu$ for every continuous $f$. For $\sigma>1$ let $N_\sigma$ be a zeta distributed random integer, $\mathbb{P}(N_\sigma=n)=n^{-\sigma}/\zeta(\sigma)$, and let $e_p$ be the exponent of $p$ in $N_\sigma$. For a Borel set $B\subset Y$ let $P_B^+$ be the largest prime factor $p\notin S$ of $N_\sigma$ with $\theta_p\in B$, and $V_B=(\sigma - 1)\log P_B^+$ ($V_B=0$ if there is none); write $E_1(v)=\int_v^\infty e^{-x}x^{-1}\,dx$. Let $B$ be a $\mu$ continuity set, that is $\mu(\partial B)=0$. As $\sigma\downarrow1$: (i) $\mathbb{P}(V_B\le v)\to\exp(-\mu(B)E_1(v))$ for every $v>0$; if $\mu(B)>0$, equivalently, $E_1(V_B)$ converges in law to the exponential law with rate $\mu(B)$, and if $\mu(B)=0$, then $V_B\to0$ in probability; (ii) the label of the largest prime factor of $N_\sigma$ outside $S$ lies in $B$ with probability tending to $\mu(B)$, and the labels of the $k$ largest prime factors are asymptotically independent with law $\mu$, independent of their sizes; (iii) for two continuous functions $a$ and $b$ on $Y$, for example the characters of two Artin representations as functions on the conjugacy classes of a finite Galois group, whose discrepancy set $D=\{a\ne b\}$ is a $\mu$ continuity set, (i) holds for $B=D$, and $\mu(D)$ is the mass of the Thorin measure $\tau_Q$ of the generalized gamma convolution that is the limit in law of $\Xi_\sigma(Q)=(\sigma - 1)\sum_{p\notin S}e_p\log p\,Q(\theta_p)$ for $Q=|a - b|^2$, namely the image of $\mu$ restricted to $\{Q>0\}$ under $\theta\mapsto1/Q(\theta)$; in particular $V_D\to0$ in probability if and only if $\tau_Q=0$.
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `thm:hitrate`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `thm:hitrate`.
 
 <a id="explosion_time_criterion_for_zeros_on_the_critical_line"></a>
 
@@ -1500,7 +1500,7 @@ Status: proved.
 
 Statement. Let $\Lambda(s)$ be entire of order at most one with $\Lambda(s)=\Lambda(1 - s)$ and $\Lambda(\tfrac12)\ne0$, and write its zeros as $\tfrac12\pm i\gamma_k$, with multiplicity. A generalized gamma convolution (GGC) is a nonnegative random variable $T$ with $\mathbb{E}e^{-sT}=\exp\bigl(-as - \int_{(0,\infty)}\log(1+s/t)\,\tau(dt)\bigr)$ for a drift $a\ge0$ and a Thorin measure $\tau$; a pure birth process on $\{0,1,2,\dots\}$ started at $0$ with rates $u_1\le u_2\le\dots$ (repetitions allowed) and $\sum_k1/u_k<\infty$ explodes at the time $T=\sum_k\mathcal{E}_k/u_k$, with $\mathcal{E}_k$ independent standard exponential variables. The following are equivalent. (i) Every $\gamma_k$ is real. (ii) There is a GGC $T$ with $\mathbb{E}e^{-sT}=\Lambda(\tfrac12)/\Lambda(\tfrac12+\sqrt s)$ for all $s>\tfrac14$. (iii) $\Lambda(\tfrac12)/\Lambda(\tfrac12+\sqrt s)$, $s>\tfrac14$, is the Laplace transform of the explosion time of a pure birth process. In that case the birth rates are the $\gamma_k^2$, $T$ is infinitely divisible with L\'evy density $\mathcal{W}(x)/x$, where $\mathcal{W}(x)=\sum_{\gamma_k>0}e^{-x\gamma_k^2}$ is the heat trace, and the cumulants of $T$ are \[ \kappa_m(T)=(m - 1)!\sum_k\gamma_k^{-2m}=\int_0^\infty x^{m-1}\mathcal{W}(x)\,dx,\qquad \mathbb{E}T=\sum_k\frac{1}{\gamma_k^2}=\frac12\,\frac{\Lambda''}{\Lambda}\Bigl(\frac12\Bigr). \]
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `thm:hitexplosion`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `thm:hitexplosion`.
 
 <a id="thorin_converse_theorem_at_level_one_as_explosion"></a>
 
@@ -1512,7 +1512,7 @@ Status: proved.
 
 Statement. Let $k\equiv 0\bmod 4$ and let $(a_p)$ be the Frobenius traces of a self dual Galois representation of conductor $1$ with the gamma factor $\Gamma_{\mathbb{C}}(s+\tfrac{k - 1}{2})$, where $\Gamma_{\mathbb{C}}(s)=2(2\pi)^{-s}\Gamma(s)$, satisfying the Ramanujan bound, with Dirichlet coefficients $a_n$, and let $\Lambda$ be its completion, defined on $\operatorname{Re}s>1$ by the Euler product. If for some constant $c>0$ the function $c/\Lambda(\tfrac12+\sqrt s)$, $s>\tfrac14$, is the Laplace transform of the explosion time $T$ of a pure birth process, that is of a sum $T=\sum_k\mathcal{E}_k/u_k$ of independent standard exponential variables $\mathcal{E}_k$ with rates $u_k>0$ and $\sum_k1/u_k<\infty$, then $f=\sum_na_nn^{(k-1)/2}q^n$, $q=e^{2\pi iz}$, is a cusp form of weight $k$ for $\mathrm{SL}_2(\mathbb{Z})$ satisfying the generalized Riemann hypothesis, and $c=\Lambda(\tfrac12)\ne0$. Conversely, if $f$ is such a cusp form satisfying the generalized Riemann hypothesis with $\Lambda(\tfrac12)\ne0$, this holds with $c=\Lambda(\tfrac12)$. If moreover the P\'olya kernel $\Phi_f(u)=f(ie^u)e^{ku/2}$ is nonnegative, as for $\Delta$ (but not for one of the two eigenforms of weight $24$), then the P\'olya variable $W_f$, whose density is proportional to $\Phi_f$, and $T$ form a Wald couple: $\mathbb{E}e^{tW_f}\,\mathbb{E}e^{-t^2T}=1$ for all real $t$.
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `cor:hitconverse`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `cor:hitconverse`.
 
 <a id="functional_equation_of_odd_dirichlet_l_functions_from_signed_brownian_exit"></a>
 
@@ -1524,7 +1524,7 @@ Status: proved.
 
 Statement. Let $q\ge3$, let $B$ be standard Brownian motion started at $r\in(0,q)$, so that $\mathbb{E}(B_t - r)^2=t$, let $\tau$ be its exit time from $(0,q)$, and let $f_r^0(t)$ and $f_r^q(t)$ be the densities of $\tau$ on the events of exit at $0$ and at $q$. Let $\chi$ be an odd primitive Dirichlet character modulo $q$ and $g(\chi)=\sum_r\chi(r)e^{2\pi ir/q}$ its Gauss sum. For every $t>0$, \[ \sum_{r=1}^{q-1}\chi(r)\bigl(f_r^0(t) - f_r^q(t)\bigr)=\frac{2}{\sqrt{2\pi t^3}}\sum_{m\ge1}\chi(m)\,m\,e^{-m^2/(2t)}=-\frac{4\pi i\,g(\chi)}{q^2}\sum_{j\ge1}\bar\chi(j)\,j\,e^{-2\pi^2j^2t/q^2}. \] Consequently $\vartheta_\chi(x)=\sum_{n\ge1}\chi(n)\,n\,e^{-\pi n^2x/q}$ satisfies \[ \vartheta_\chi(1/x)=\frac{g(\chi)}{i\sqrt q}\,x^{3/2}\,\vartheta_{\bar\chi}(x), \] and $\Lambda(s,\chi)=(q/\pi)^{(s+1)/2}\Gamma(\tfrac{s+1}{2})L(s,\chi)$ satisfies $\Lambda(s,\chi)=\frac{g(\chi)}{i\sqrt q}\Lambda(1 - s,\bar\chi)$.
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `thm:hitexit`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `thm:hitexit`.
 
 <a id="limiting_law_of_sandpile_groups_of_isogeny_graphs_in_the_level_aspect"></a>
 
@@ -1536,7 +1536,7 @@ Status: open.
 
 Statement. Fix a prime $\ell$ and let $N\to\infty$ through primes $N\equiv 1\bmod 12$, with $h=(N - 1)/12$. Let $G_N(\ell)$ be the supersingular $\ell$ isogeny graph, the $(\ell+1)$ regular multigraph on the $h$ supersingular elliptic curves over $\overline{\mathbb{F}}_N$ whose adjacency matrix is the Brandt matrix $B(\ell)$, with Laplacian $L=(\ell+1)I - B(\ell)$ and critical group $X^0/L(X)$, where $X=\mathbb{Z}^h$ and $X^0$ is its sublattice of degree zero; let $\mathbb{T}$ be the ring generated by the Hecke operators $T_m$, $N\nmid m$, on $S_2(\Gamma_0(N))$, $\mathbb{T}_r=\mathbb{T}\otimes\mathbb{Z}_r$, and $C_N$ the cuspidal subgroup of the Jacobian $J_0(N)$ of $X_0(N)$. Find the limiting law of the $r$ part of the critical group of $G_N(\ell)$, a question Munier and Shnidman raise. For $r\ne\ell$ prime to $hN$ and to the discriminant of $\mathbb{T}$ this $r$ part is $\mathbb{T}_r/(\ell+1 - T_\ell)\mathbb{T}_r$, so it is governed by the valuations of $\ell+1 - a_\ell(f)$ at the primes above $r$ of the Hecke fields, and, as Munier and Shnidman note, it needs an $r$ adic analogue of Serre's vertical equidistribution of the Hecke eigenvalues $a_\ell(f)$. For the primes $r$ dividing $h$ or the discriminant of $\mathbb{T}$, describe the critical group, and decide when the class of $L\delta_E$, where $\delta_E\in X$ is the divisor of a vertex $E$, corresponds to the cuspidal subgroup $C_N$. Extend the comparison between the critical group and $J_0(N)(\mathbb{F}_\ell)$ to $\ell=2$ and to levels $N\not\equiv 1\bmod 12$, where the graph is weighted by automorphisms.
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `op:hitsandpile`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `op:hitsandpile`.
 
 <a id="vertex_hitting_times_of_isogeny_walks_and_gross_formula"></a>
 
@@ -1548,7 +1548,7 @@ Status: open.
 
 Statement. Let $N\equiv 1\bmod 12$ and $\ell\ne N$ be primes, and consider the simple random walk on the supersingular $\ell$ isogeny graph in characteristic $N$, the $(\ell+1)$ regular multigraph on the supersingular elliptic curves $E_y$ over $\overline{\mathbb{F}}_N$ whose adjacency matrix is the Brandt matrix $B(\ell)$, with stationary law $\pi$ and hitting times $\tau_y$; let $\phi_f$ be the quaternionic forms attached to the newforms $f$ of level $N$ by the Jacquet Langlands correspondence, common eigenvectors of the Brandt matrices orthonormal in $L^2(\pi)$. Let $D<0$ be a fundamental discriminant with $N$ inert in $\mathbb{Q}(\sqrt D)$, and let $e_D=\sum_yc_y[E_y]$ be the divisor of Gross's formula, whose coefficient $c_y$ counts the curves with complex multiplication by the ring of integers of $\mathbb{Q}(\sqrt D)$ that reduce to $E_y$. The mean of hitting times between the reductions of these curves satisfies \[ \sum_{x,y}c_xc_y\mathbb{E}_x\tau_y=(\deg e_D)\sum_yc_y\mathbb{E}_\pi\tau_y-(\ell+1)\sum_f\frac{\bigl|\sum_yc_y\phi_f(y)\bigr|^2}{\ell+1 - a_\ell(f)}, \] where $\deg e_D=\sum_yc_y$, $a_\ell(f)$ is the eigenvalue of the Hecke operator $T_\ell$ on $f$ and $\mathbb{E}_\pi$ is the expectation for the walk started from $\pi$, and Gross's formula turns the last sum into a combination, with positive coefficients that do not depend on $\ell$, of the values $L(f,1)L(f\otimes\chi_D,1)/(\ell+1 - a_\ell(f))$ over the newforms $f$ of level $N$, where $\chi_D$ is the quadratic character of $\mathbb{Q}(\sqrt D)$. For fixed $N$ and $\ell$, find the distribution of this combination over $D$, a question about the central values of the quadratic twists of the newforms of level $N$. Find also the law of the hitting time of the support of $e_D$ from stationarity, and decide which arithmetic quantities it computes: its Laplace transform involves the values $\phi_f(x)\overline{\phi_f(y)}$ at pairs of points of the support, not only the linear forms $\sum_yc_y\phi_f(y)$ of Gross's formula.
 
-Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex), label `op:hitgross`.
+Source: [`book/chapters/ch_hitting.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex), label `op:hitgross`.
 
 ## Chapter 22. Fermat's Last Theorem and Thorin Measures
 
@@ -1562,7 +1562,7 @@ Status: proved.
 
 Statement. Let $E/\mathbb{Q}$ be an elliptic curve of conductor $N$ and $p$ a prime. Let $G_{E,p}\subset\mathrm{GL}_2(\mathbb{F}_p)$ be the image of the mod $p$ Galois representation $\bar\rho_{E,p}$, with Haar probability measure $\mu_{G_{E,p}}$, and let the Eisenstein Thorin shape be $c(E,p)=\mu_{G_{E,p}}\{g\in G_{E,p}:\det(1 - g)\ne0\}$. Let the Eisenstein discrepancy be $Q_{E,p}(\ell)=\mathsf{1}\{p\nmid|E(\mathbb{F}_\ell)|\}$ for primes $\ell\nmid pN$. For $\sigma>1$ let $N_\sigma$ be a zeta distributed random integer, $\mathbb{P}(N_\sigma=n)=n^{-\sigma}/\zeta(\sigma)$, with $e_\ell$ the exponent of the prime $\ell$ in $N_\sigma$, and let $\Xi_\sigma(Q_{E,p})=(\sigma - 1)\sum_{\ell\nmid pN}e_\ell\log\ell\,Q_{E,p}(\ell)$. Then, as $\sigma\downarrow1$, $\Xi_\sigma(Q_{E,p})$ converges in law to the Gamma law with shape $c(E,p)$ and scale $1$. Its Thorin measure is $c(E,p)\,\delta_1$, and $c(E,p)$ is the rate at which the prime factors of $N_\sigma$ hit the primes $\ell$ with $p\nmid|E(\mathbb{F}_\ell)|$: if $P^+$ is the largest prime factor $\ell\nmid pN$ of $N_\sigma$ with $p\nmid|E(\mathbb{F}_\ell)|$ and $V=(\sigma - 1)\log P^+$ ($V=0$ if there is none), then $\mathbb{P}(V\le v)\to\exp(-c(E,p)E_1(v))$ for every $v>0$, where $E_1(v)=\int_v^\infty e^{-x}x^{-1}\,dx$.
 
-Source: [`book/chapters/ch_flt.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_flt.tex), label `prop:flteisgamma`.
+Source: [`book/chapters/ch_flt.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_flt.tex), label `prop:flteisgamma`.
 
 <a id="fermat_last_theorem_restated_as_two_thorin_statements"></a>
 
@@ -1574,7 +1574,7 @@ Status: proved.
 
 Statement. Assume the following theorems, which are used and not reproved: the modularity of semistable elliptic curves over $\mathbb{Q}$ (Wiles; Taylor and Wiles), Ribet's level lowering theorem for weight two newforms with trivial character (Ribet), and Mazur's torsion theorem (Mazur), which through an argument of Serre gives the positivity in (i) below. Let $p\ge5$ be prime, suppose $a^p+b^p=c^p$ with $abc\ne0$, normalised so that $\gcd(a,b,c)=1$, $a\equiv -1\bmod 4$ and $b$ is even, and let $E$ be its Frey curve $y^2=x(x - a^p)(x+b^p)$. Say that two systems of mod $p$ Frobenius traces have zero discrepancy Thorin mass when the set of primes at which they differ has Dirichlet density zero, equivalently when the functional $(\sigma - 1)\sum_\ell e_\ell\log\ell\,\mathsf{1}\{\ell\text{ in that set}\}$ of a zeta distributed random integer, with $e_\ell$ the exponent of $\ell$, converges to $0$ as $\sigma\downarrow1$. Then the mod $p$ representation $\bar\rho_{E,p}$ would have zero discrepancy Thorin mass against some weight two Hecke eigensystem of level $2$. But (i) against the Eisenstein system $a_\ell=\ell+1$ the discrepancy is the Gamma law of shape $c(E,p)>0$, where $c(E,p)$ is the Haar measure of the set of elements without eigenvalue $1$ in the image of $\bar\rho_{E,p}$ in $\mathrm{GL}_2(\mathbb{F}_p)$; and (ii) there is no cuspidal system, because the Hecke Thorin measure of level $2$, the Thorin measure $\sum_f\delta_{\ell+1 - a_\ell(f)}$ over the normalised eigenforms $f$ of $S_2(\Gamma_0(2))$, is empty. Hence there is no such solution.
 
-Source: [`book/chapters/ch_flt.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_flt.tex), label `thm:flttwo`.
+Source: [`book/chapters/ch_flt.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_flt.tex), label `thm:flttwo`.
 
 <a id="hasse_weil_bound_from_hitting_times"></a>
 
@@ -1586,7 +1586,7 @@ Status: open.
 
 Statement. Give a probabilistic proof of the bound $|a_\ell(f)|\le2\sqrt\ell$ of Eichler and Shimura with Weil for the Hecke eigenvalues $a_\ell(f)$, $\ell\ne N$ prime, of the weight two newforms $f$ of prime level $N$, for instance through hitting times or a heat kernel on the supersingular $\ell$ isogeny graph in characteristic $N$. The positivity of the Thorin atoms $\ell+1 - a_\ell(f)$ of the Hecke generalized gamma convolution $H_N(\ell)$, whose Thorin measure is $\sum_f\delta_{\ell+1 - a_\ell(f)}$, needs only $a_\ell(f)<\ell+1$, which the Perron Frobenius theorem gives; the bound itself gives the Hasse Weil bounds on the Kemeny constants and spanning tree counts of the isogeny graphs. Compare the Ramanujan Petersson conjecture for Maass forms, where no geometric proof is available.
 
-Source: [`book/chapters/ch_flt.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_flt.tex), label `op:flthasse`.
+Source: [`book/chapters/ch_flt.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_flt.tex), label `op:flthasse`.
 
 <a id="taylor_wiles_patching_as_a_gamma_process"></a>
 
@@ -1598,7 +1598,7 @@ Status: open.
 
 Statement. The Taylor Wiles method chooses, for each $n$, finite sets of auxiliary primes $q\equiv 1\bmod p^n$ at which $\bar\rho(\operatorname{Frob}_q)$ has distinct eigenvalues, where $\bar\rho$ is the residual mod $p$ Galois representation; by Chebotarev's theorem and the hitting rate theorem for the largest prime factors of a zeta distributed random integer $N_\sigma$, $\mathbb{P}(N_\sigma=n)=n^{-\sigma}/\zeta(\sigma)$, such primes occur among the large prime factors of $N_\sigma$ at a positive rate. Is there a formulation of the patching argument in which the auxiliary sets are the atoms of the Gamma process (the Poisson limit, as $\sigma\downarrow1$, of the rescaled sizes $(\sigma - 1)\log q$ of the prime factors $q$ of $N_\sigma$ together with their Frobenius labels) in a fixed Chebotarev class, and the patched objects are limits in law as $\sigma\downarrow1$?
 
-Source: [`book/chapters/ch_flt.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_flt.tex), label `op:fltpatch`.
+Source: [`book/chapters/ch_flt.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_flt.tex), label `op:fltpatch`.
 
 <a id="probabilistic_mazur_theorem_for_eisenstein_shapes"></a>
 
@@ -1610,7 +1610,7 @@ Status: open.
 
 Statement. For an elliptic curve $E/\mathbb{Q}$ and a prime $p$ let the Eisenstein Thorin shape $c(E,p)$ be the Haar measure of the set of elements without eigenvalue $1$ in the image of the mod $p$ Galois representation of $E$ in $\mathrm{GL}_2(\mathbb{F}_p)$, equivalently the density of the primes $\ell$ with $p\nmid|E(\mathbb{F}_\ell)|$. Serre's argument from Mazur's torsion theorem gives $c(E,p)>0$ for $p\ge5$ and every curve with $E[2]\subset E(\mathbb{Q})$. One rational point of order $2$ is not enough: the semistable curve $y^2+xy=x^3 - 45x+81$ of conductor $66$ has torsion $\mathbb{Z}/10$, so $c(E,5)=0$. Is there a proof of this positivity through the Gamma law of the Eisenstein discrepancy, the limit law with shape $c(E,p)$ of the functional $(\sigma - 1)\sum_\ell e_\ell\log\ell\,\mathsf{1}\{p\nmid|E(\mathbb{F}_\ell)|\}$ of a zeta distributed random integer with exponents $e_\ell$, and the supersingular isogeny walks? Such a proof must use an input special to $\mathbb{Q}$: over some quadratic fields there are curves with torsion $\mathbb{Z}/2\times\mathbb{Z}/10$, whose analogue of the Eisenstein shape at $5$, over the primes of the field, vanishes.
 
-Source: [`book/chapters/ch_flt.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_flt.tex), label `op:fltmazur`.
+Source: [`book/chapters/ch_flt.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_flt.tex), label `op:fltmazur`.
 
 ## Chapter 23. Inverse Laplace Transforms
 
@@ -1624,7 +1624,7 @@ Status: proved.
 
 Statement. Let $\nu=\sum_jc_j\delta_{x_j}$ be a discrete signed measure with distinct atoms $x_j>0$ and $\sum_j|c_j|<\infty$, and let $g(r)=\int(1-\cos rx)\,\nu(dx)$. For $R>0$ and a function $h$ on $[0,\infty)$ write $\mathcal{G}_R[h]=\int_0^\infty h(r)e^{-r^2/(2R^2)}\,dr\big/\int_0^\infty e^{-r^2/(2R^2)}\,dr$. Then for every $k$ \[ \mathcal{G}_R\bigl[g(r)\cos(rx_k)\bigr]=\sum_jc_j\Bigl[e^{-x_k^2R^2/2}-\tfrac12e^{-(x_j-x_k)^2R^2/2}-\tfrac12e^{-(x_j+x_k)^2R^2/2}\Bigr], \] so that, with $\delta_k=\min\bigl(x_k,\inf_{j\ne k}|x_j-x_k|\bigr)$ assumed positive, \[ \Bigl|c_k+2\mathcal{G}_R\bigl[g(r)\cos(rx_k)\bigr]\Bigr|\le2\Bigl(\sum_j|c_j|\Bigr)e^{-\delta_k^2R^2/2}. \] In particular $c_k=-2\lim_{R\to\infty}\mathcal{G}_R[g(r)\cos(rx_k)]$, the same limit holds for the plain Bohr mean, that is $c_k=-2\lim_{R\to\infty}\frac1R\int_0^Rg(r)\cos(rx_k)\,dr$, and the map $\nu\mapsto g$ is injective.
 
-Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex), label `thm:lapbohr`.
+Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex), label `thm:lapbohr`.
 
 <a id="frobenius_traces_from_the_transported_density"></a>
 
@@ -1636,7 +1636,7 @@ Status: proved.
 
 Statement. Let $L(s)=\sum_na_nn^{-s}$ have an Euler product with $-L'/L(s)=\sum_n\Lambda_L(n)n^{-s}$ absolutely convergent for $\operatorname{Re}s>1$, as for Artin L functions and, by the Rankin Selberg method of Jacquet and Shalika and the Cauchy Schwarz inequality, for cuspidal automorphic ones. For $\alpha>1$ let \[ g_\alpha(r)=\sum_{n\ge2}\frac{\Lambda_L(n)}{n^\alpha}\bigl(1-\cos(r\log n)\bigr) \] be the transported density, which equals $\operatorname{Re}\frac{L'}{L}(\alpha+ir)-\frac{L'}{L}(\alpha)$ when the $\Lambda_L(n)$ are real, and for $R>0$ let $\mathcal{G}_R[h]=\int_0^\infty h(r)e^{-r^2/(2R^2)}\,dr\big/\int_0^\infty e^{-r^2/(2R^2)}\,dr$. Then for $n\ge2$ \[ \Lambda_L(n)=-2n^\alpha\lim_{R\to\infty}\mathcal{G}_R\bigl[g_\alpha(r)\cos(r\log n)\bigr], \] and the error at a finite $R$ is at most \[ 2n^\alpha\Bigl(\sum_m|\Lambda_L(m)|m^{-\alpha}\Bigr)e^{-\delta_n^2R^2/2},\qquad\delta_n=\log(1+1/n). \] If $L=L(s,\rho)$ for an Artin representation $\rho$ unramified at $p$, then $\Lambda_L=\Lambda_\rho$ and $\operatorname{tr}\rho(\operatorname{Frob}_p^m)=\Lambda_\rho(p^m)/\log p$, so, since two such Euler products whose transported densities agree on an interval of $r$ have the same coefficients, the transported density on any interval of $r$ determines every Frobenius trace.
 
-Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex), label `cor:lapfrob`.
+Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex), label `cor:lapfrob`.
 
 <a id="zeros_plus_cauchy_noise_at_a_shifted_basepoint"></a>
 
@@ -1648,7 +1648,7 @@ Status: proved.
 
 Statement. Let $\pi$ be self dual, and let $\Xi^{\mathrm{sd}}_\pi(w)$ be the completed L function $\Lambda(\tfrac12+w,\pi)$ divided by the power of $w$ that removes any zero at $w=0$; for the Riemann zeta function use $\Xi_\zeta(w)=\xi(\tfrac12+w)$ in its place. This function is even and entire of order at most one; its zeros $z=\beta+i\gamma$, counted with multiplicity, form a multiset $\mathcal{Z}$ closed under $z\mapsto-z$ and $z\mapsto\bar z$, and $|\beta|<\tfrac12$. Let $C$ be a standard Cauchy variable, with density $1/(\pi(1+x^2))$. Let $a>|\beta|$ for every $z=\beta+i\gamma$ in $\mathcal{Z}$; this holds unconditionally for $a\ge\tfrac12$. Let $H_a$ be the generalized gamma convolution with $\mathbb{E}e^{-sH_a}=\Xi^{\mathrm{sd}}_\pi(a)/\Xi^{\mathrm{sd}}_\pi(a+\sqrt s)$ and $V_a$ its Thorin density. In the variable $r>0$, the square root of the Thorin variable, the Thorin measure of $H_a$ is \[ V_a(r^2)\,2r\,dr=\frac12\sum_{z\in\mathcal{Z}}\mathrm{Law}\bigl(|\gamma+(a-\beta)C|\bigr)(dr),\qquad r>0. \] Under the generalized Riemann hypothesis this is $\sum_{\gamma>0}\mathrm{Law}(|\gamma+aC|)$ for every $a>0$, a superposition of folded Cauchy laws centred at the ordinates with common scale $a$. For $b>0$, $V_{a+b}$ is obtained from $V_a$ by adding independent Cauchy noise of scale $b$ before folding, and, for $a>\tfrac12$, this is multiplication by $e^{-bx}$ of the whole Lévy measure of $\log\Xi^{\mathrm{sd}}_\pi$ at basepoint $a$, archimedean and polynomial factors included.
 
-Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex), label `thm:lapcauchy`.
+Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex), label `thm:lapcauchy`.
 
 <a id="sato_tate_law_minimises_the_good_gaskins_roughness"></a>
 
@@ -1660,7 +1660,7 @@ Status: proved.
 
 Statement. Let $G$ be a compact connected simply connected Lie group, such as $\mathrm{SU}(2)$ or $\mathrm{USp}(2n)$, with alcove $\mathcal{A}$, positive roots $\alpha$ and half sum of the positive roots $\rho_G$, the Lie algebra of a maximal torus carrying the invariant inner product in which, for $\mathrm{SU}(2)$ and $\mathrm{USp}(2n)$, the eigenvalue angles are orthonormal coordinates. Let $f_G=c|\Delta_G|^2$ on $\mathcal{A}$, with $\Delta_G=\prod_{\alpha>0}(e^{i\alpha/2}-e^{-i\alpha/2})$ and $c$ a normalising constant, be the Sato Tate law, the image of Haar measure on conjugacy classes. Among densities $f$ on $\mathcal{A}$ such that $\sqrt f$ vanishes on the boundary $\partial\mathcal{A}$ and $\int_{\mathcal{A}}|\nabla\sqrt f|^2<\infty$, the Good and Gaskins roughness $\int_{\mathcal{A}}|\nabla\sqrt f|^2$, one quarter of the trace of the Fisher information for location, is at least $|\rho_G|^2$, with equality exactly for the Sato Tate law $f_G$. For $G=\mathrm{SU}(2)$, with $\theta\in[0,\pi]$ and $\sqrt f=\sqrt{2/\pi}\sum_jb_j\sin j\theta$, $\sum_jb_j^2=1$, \[ \int_0^\pi\bigl((\sqrt f)'\bigr)^2d\theta=\sum_jj^2b_j^2,\qquad \frac{\sin j\theta}{\sin\theta}=\operatorname{tr}\operatorname{Sym}^{j-1}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}, \] so the roughness is the Laplace eigenvalue energy $\sum_\lambda|\lambda+\rho_G|^2b_\lambda^2$, which is $|\rho_G|^2$ plus the Casimir energy, in the basis of symmetric power characters, and the Sato Tate law is $b=e_1$. Given angles $\theta_1,\dots,\theta_n$, put $\hat m_j=\frac1n\sum_{i=1}^n\operatorname{tr}\operatorname{Sym}^{j-1}(\theta_i)$, the trace being that of the matrix above at $\theta=\theta_i$. Near the Sato Tate law, the maximiser of $\frac1n\sum_i\log f(\theta_i)-\omega\int_0^\pi\bigl((\sqrt f)'\bigr)^2d\theta$ over $\sqrt f=\sqrt{2/\pi}\sum_{j\le J}b_j\sin j\theta$ satisfies \[ b_j=\frac{\hat m_j}{2+\omega(j^2-1)}+O\Bigl(\max_{2\le l\le2J-1}\hat m_l^2\Bigr),\qquad 2\le j\le J. \]
 
-Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex), label `thm:lapgg`.
+Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex), label `thm:lapgg`.
 
 <a id="stable_recovery_of_frobenius_from_a_window"></a>
 
@@ -1672,7 +1672,7 @@ Status: open.
 
 Statement. Let $L$ have an Euler product with $-L'/L(s)=\sum_n\Lambda_L(n)n^{-s}$ absolutely convergent for $\operatorname{Re}s>1$, and for $\alpha>1$ let $g_\alpha(r)=\sum_{n\ge2}\Lambda_L(n)n^{-\alpha}\bigl(1-\cos(r\log n)\bigr)$ be its transported density. The restriction of $g_\alpha$ to any interval $[0,r_0)$ determines every $\Lambda_L(n)$, but only through analytic continuation, which is unstable. Suppose $g_\alpha$ is known on $[0,r_1]$ to within $\eta$. The Gaussian means $-2n^\alpha\mathcal{G}_R[g_\alpha(r)\cos(r\log n)]$, with $\mathcal{G}_R[h]=\int_0^\infty h(r)e^{-r^2/(2R^2)}\,dr\big/\int_0^\infty e^{-r^2/(2R^2)}\,dr$ truncated at $r_1$, recover $\Lambda_L(n)$ to within $\varepsilon$ once $\eta$ is of order $\varepsilon n^{-\alpha}$ and $r_1$ of order $n\log(n^\alpha/\varepsilon)$. Is an interval of length of order $n$, the reciprocal of the gap $\log(1+1/n)$ between the frequencies $\log n$ and $\log(n+1)$, necessary for every stable method, as Ingham's inequality for nonharmonic Fourier series suggests? A positive answer would be an uncertainty principle for the Galois face, comparable with the bounds in effective Chebotarev theorems.
 
-Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex), label `op:lapwindow`.
+Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex), label `op:lapwindow`.
 
 <a id="good_gaskins_penalised_likelihood_for_thorin_densities"></a>
 
@@ -1684,7 +1684,7 @@ Status: open.
 
 Statement. The inversions of the transported density and of the Thorin law of an L function are exact but need exact input. Treat the ordinates $0<\gamma_1\le\dots\le\gamma_K$ of its zeros as a sample from the normalised counting measure of the zeros, or the transported density $g_\alpha(r)=\sum_{n\ge2}\Lambda_L(n)n^{-\alpha}\bigl(1-\cos(r\log n)\bigr)$, $\alpha>1$, on a grid as noisy data; define the penalised likelihood of Good and Gaskins for the square root of the Thorin density $U_\alpha(z)=g_\alpha(\sqrt z)/(2\pi\sqrt z)$, or for the density of the Thorin variable $H$ with $\mathbb{E}e^{-sH}=e^{b\sqrt s}L(\alpha)/L(\alpha+\sqrt s)$, $b=\frac{L'}{L}(\alpha)$; identify its maximiser, as de Montricher, Tapia and Thompson did for the classical penalised likelihood; and compare its error with that of the Gaussian mean inversion of the transported density on the same input.
 
-Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex), label `op:lapgg`.
+Source: [`book/chapters/ch_laplace.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex), label `op:lapgg`.
 
 ## Chapter 24. Random Integers and the Poisson Dirichlet Law
 
@@ -1698,7 +1698,7 @@ Status: proved.
 
 Statement. Let $Y$ be a compact metric space, $\mu$ a probability measure on $Y$, and $(\theta_p)$ labels in $Y$ attached to the primes and equidistributed with respect to $\mu$ outside a finite set $S$ of primes (for Frobenius classes in a finite Galois group, $\mu$ is the image of Haar measure on the set of conjugacy classes and Chebotarev's theorem supplies the hypothesis). For $\sigma>1$ let $N_\sigma$ be the zeta random integer, $\mathbb{P}(N_\sigma=n)=n^{-\sigma}/\zeta(\sigma)$, with prime exponents $e_p$, let $\Xi_\sigma=\sum_{p\notin S}(\sigma-1)e_p\log p\,\delta_{\theta_p}$ be its labelled factorisation, and let $A_\sigma$ be the event that $N_\sigma$ has no prime factor outside $S$. The Dirichlet process with base measure $\mu$ is the random probability measure $\Gamma_\mu/\Gamma_\mu(Y)$, with $\Gamma_\mu$ the Gamma random measure with shape measure $\mu$. As $\sigma\downarrow1$: (i) the normalised labelled factorisation $\mathcal{P}_\sigma=\Xi_\sigma/\Xi_\sigma(Y)$, set equal to $\mu$ on $A_\sigma$, converges in law, as a random probability measure on $Y$ with the weak topology, to the Dirichlet process $P$ with base measure $\mu$, and jointly with it the total mass $\Xi_\sigma(Y)=(\sigma-1)\sum_{p\notin S}e_p\log p$ converges to a standard exponential variable $E$ independent of $P$; (ii) for every continuous $Q\ge0$ on $Y$ the Frobenius functional $\Xi_\sigma(Q)$ converges in law to $E\int_YQ\,dP$, a standard exponential variable times a Dirichlet mean, and for $\lambda\ge0$ \[ \mathbb{E}\exp\Bigl(-\lambda\,E\int_YQ\,dP\Bigr)=\mathbb{E}\Bigl(1+\lambda\int_YQ\,dP\Bigr)^{-1}=\exp\Bigl(-\int_Y\log(1+\lambda Q)\,d\mu\Bigr); \] (iii) for a partition of $Y$ into $\mu$ continuity sets $B_1,\dots,B_k$ with $\mu(B_i)>0$, the shares $\mathcal{P}_\sigma(B_i)$ converge jointly in law to the Dirichlet law with parameters $\mu(B_1),\dots,\mu(B_k)$, so that each share $\mathcal{P}_\sigma(B)$ converges to a Beta variable with parameters $(\mu(B),1-\mu(B))$, of mean $\mu(B)$.
 
-Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex), label `thm:pddirichlet`.
+Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex), label `thm:pddirichlet`.
 
 <a id="dirichlet_process_limit_of_the_zeta_power_random_integer"></a>
 
@@ -1710,7 +1710,7 @@ Status: proved.
 
 Statement. Fix $\vartheta>0$, let $\mu$ be a probability measure on a compact metric space $Y$ and $(\theta_p)$ labels in $Y$ equidistributed with respect to $\mu$ outside a finite set $S$ of primes, and let $d_\vartheta(n)$ be the Dirichlet coefficients of $\zeta(s)^\vartheta$, multiplicative with $d_\vartheta(p^k)=\binom{\vartheta+k-1}{k}$. For $\sigma>1$ let the random integer $N_\sigma^{(\vartheta)}$ have the law $d_\vartheta(n)n^{-\sigma}/\zeta(\sigma)^\vartheta$, with prime exponents $e_p$, and let $\Xi^{(\vartheta)}_\sigma=\sum_{p\notin S}(\sigma-1)e_p\log p\,\delta_{\theta_p}$ be its labelled factorisation. Then the prime exponents are independent negative binomial variables, $\mathbb{P}(e_p=k)=\binom{\vartheta+k-1}{k}(1-p^{-\sigma})^\vartheta p^{-k\sigma}$, and as $\sigma\downarrow1$: (i) the marked process $\sum_{p\notin S,\,e_p\ge1}\delta_{((\sigma-1)e_p\log p,\,\theta_p)}$ converges in law, vaguely on $(0,\infty)\times Y$, to the Poisson process with intensity $\vartheta x^{-1}e^{-x}dx\otimes\mu$; (ii) the labelled factorisation $\Xi^{(\vartheta)}_\sigma$ converges in law to the Gamma random measure $\Gamma_{\vartheta\mu}$ with shape measure $\vartheta\mu$, its total mass, which is $(\sigma-1)\log N^{(\vartheta)}_\sigma$ up to the primes in $S$, to a Gamma variable with shape $\vartheta$, and the normalised factorisation to the Dirichlet process $\Gamma_{\vartheta\mu}/\Gamma_{\vartheta\mu}(Y)$ with base measure $\vartheta\mu$; (iii) the ranked normalised sizes of the prime factors converge to the Poisson Dirichlet law $\mathrm{PD}(\vartheta)$, and for every continuous $Q\ge0$ on $Y$ the functional $\Xi^{(\vartheta)}_\sigma(Q)$ converges to a generalized gamma convolution with Thorin measure $\vartheta$ times the image of $\mu$ restricted to $\{Q>0\}$ under $1/Q$.
 
-Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex), label `thm:pdtheta`.
+Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex), label `thm:pdtheta`.
 
 <a id="size_biased_prime_factor_frobenius_class_expansion"></a>
 
@@ -1722,7 +1722,7 @@ Status: proved.
 
 Statement. Let $K/\mathbb{Q}$ be a finite Galois extension with group $G$, let $C\subset G$ be a conjugacy class with $\delta(C)=|C|/|G|$, write $p\in C$ when the Frobenius class of the unramified prime $p$ is $C$, and leave the ramified primes out of every class. Let $n$ be uniform on $\{2,\dots,x\}$ with prime factorisation $n=\prod_pp^{e_p}$, and call a prime factor $p$ of $n$ chosen with probability $e_p\log p/\log n$ a size biased prime factor. By the prime number theorem for $K$ in the form $\pi_C(t)=\delta(C)\operatorname{li}(t)+O\bigl(t\exp(-a_K\sqrt{\log t})\bigr)$ of Lagarias and Odlyzko, with $\pi_C(t)$ the number of primes $p\le t$ in $C$ and $a_K>0$ a constant depending on $K$, the limit $c_C=\lim_{t\to\infty}\bigl(\sum_{p\le t,\,p\in C}\frac{\log p}{p}-\delta(C)\log t\bigr)$ exists. Let $\kappa_C=-c_C-\sum_{p\in C}\frac{\log p}{p(p-1)}$, which by the Abelian theorem is the Euler Kronecker drift of the class $C$ for the set of ramified primes, so that $\sum_C\bigl(\gamma_{\mathrm{E}}\delta(C)-\kappa_C\bigr)=-\sum_{p\text{ ramified}}\frac{\log p}{p-1}$, with $\gamma_{\mathrm{E}}$ Euler's constant. Then, as $x\to\infty$, the size biased prime factor lies in $C$ with probability \[ \delta(C)+\frac{\gamma_{\mathrm{E}}\delta(C)-\kappa_C}{\log x-1}+O\bigl((\log x)^{-2}\bigr). \]
 
-Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex), label `thm:pdmertens`.
+Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex), label `thm:pdmertens`.
 
 <a id="independence_of_class_and_share_of_a_size_biased_prime_factor"></a>
 
@@ -1734,7 +1734,7 @@ Status: proved.
 
 Statement. Let $K/\mathbb{Q}$ be a finite Galois extension with group $G$, and for a conjugacy class $C$ of $G$ let $\delta(C)=|C|/|G|$. Let $n$ be uniform on $\{2,\dots,x\}$ with prime factorisation $n=\prod_pp^{e_p}$, let $p^*$ be a size biased prime factor of $n$, chosen with probability $e_p\log p/\log n$, and let $F^*=e_{p^*}\log p^*/\log n$ be its share. As $x\to\infty$, $p^*$ is unramified with probability tending to $1$, and the pair $(F^*,\text{Frobenius class of }p^*)$ converges in law to the product of the uniform law on $(0,1)$ and the law $C\mapsto\delta(C)$ on the conjugacy classes. The same holds for the zeta random integer $N_\sigma$, $\mathbb{P}(N_\sigma=n)=n^{-\sigma}/\zeta(\sigma)$, as $\sigma\downarrow1$, for a finite set $S$ of primes containing the ramified ones: off the event $A_\sigma$ that $N_\sigma$ has no prime factor outside $S$, pick $p^*$ among the prime factors of $N_\sigma$ outside $S$, with probability proportional to $e_p\log p$, $e_p$ now the exponent of $p$ in $N_\sigma$, and take its share relative to their part $\sum_{p\notin S}e_p\log p$ of $\log N_\sigma$.
 
-Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex), label `thm:pdsizebiased`.
+Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex), label `thm:pdsizebiased`.
 
 <a id="empty_chebotarev_class_and_lower_bound_for_the_rate"></a>
 
@@ -1746,7 +1746,7 @@ Status: proved.
 
 Statement. Let $K/\mathbb{Q}$ be a finite Galois extension with nontrivial group $G$, $S$ the set of ramified primes, $C$ a conjugacy class with $\delta(C)=|C|/|G|$, and $\delta_{\min}=\min_C\delta(C)$. For $\sigma>1$ let $N_\sigma$ be the zeta random integer, $\mathbb{P}(N_\sigma=n)=n^{-\sigma}/\zeta(\sigma)$, with prime exponents $e_p$; let $L_C(\sigma)=(\sigma-1)\sum_{p\notin S,\,\mathrm{Frob}_p\in C}e_p\log p$ be the mass of the class $C$; let $A_\sigma$ be the event that $N_\sigma$ has no prime factor outside $S$; and let $\mathcal{P}_\sigma(C)$ be the share of $C$, equal to $L_C(\sigma)/\sum_{C'}L_{C'}(\sigma)$ off $A_\sigma$ and to $\delta(C)$ on $A_\sigma$. Let $P_C(s)=\sum_{p\notin S,\,\mathrm{Frob}_p\in C}\sum_{m\ge1}p^{-ms}/m$; the function $h_C(s)=P_C(s)-\delta(C)\log\frac1{s-1}$ is real analytic near $s=1$, and $h_C(1)=b_C-\gamma_{\mathrm{E}}\delta(C)+\sum_{p\notin S,\,\mathrm{Frob}_p\in C}\sum_{m\ge2}\frac{p^{-m}}{m}$, where $b_C=\lim_{t\to\infty}\bigl(\sum_{p\le t,\,p\notin S,\,\mathrm{Frob}_p\in C}\frac1p-\delta(C)\log\log t\bigr)$ and $\gamma_{\mathrm{E}}$ is Euler's constant. (i) $\mathbb{P}(L_C(\sigma)=0)=e^{-P_C(\sigma)}=e^{-h_C(1)}(\sigma-1)^{\delta(C)}\bigl(1+O(\sigma-1)\bigr)$. (ii) The Kolmogorov distance between the law of $\mathcal{P}_\sigma(C)$ and its limit $\mathrm{Beta}(\delta(C),1-\delta(C))$ is at least \[ \mathbb{P}(L_C(\sigma)=0)-\mathbb{P}(A_\sigma)=e^{-h_C(1)}(\sigma-1)^{\delta(C)}\bigl(1+o(1)\bigr), \] hence at least of order $(\sigma-1)^{\delta_{\min}}$ for the smallest class.
 
-Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex), label `thm:pdrate`.
+Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex), label `thm:pdrate`.
 
 <a id="ewens_parameters_are_pole_orders"></a>
 
@@ -1758,7 +1758,7 @@ Status: proved.
 
 Statement. Let $D(s)=\sum_na(n)n^{-s}=\exp\bigl(\sum_p\sum_{m\ge1}w_m(p)p^{-ms}/m\bigr)$ be an Euler product with $w_m(p)\ge0$ bounded, and suppose the labels $(\theta_p)$ are equidistributed with respect to a probability measure $\mu$ on a compact metric space $Y$ and $w_1(p)=w(\theta_p)$ outside a finite set $S$ of primes, for a continuous $w\ge0$ on $Y$ with $\int w\,d\mu>0$. For $\sigma>1$ let $N^D_\sigma$ have the law $a(n)n^{-\sigma}/D(\sigma)$, with prime exponents $e_p$. Then the prime exponents of $N^D_\sigma$ are independent, $e_p=\sum_mmM(p^m)$ with independent Poisson variables $M(p^m)$ of means $w_m(p)p^{-m\sigma}/m$, and as $\sigma\downarrow1$ the labelled factorisation $\sum_{p\notin S}(\sigma-1)e_p\log p\,\delta_{\theta_p}$ converges in law to the Gamma random measure with shape measure $w\mu$, the normalised factorisation to the Dirichlet process with base measure $w\mu$, and the ranked normalised sizes of the prime factors to the Poisson Dirichlet law $\mathrm{PD}(\vartheta)$ with \[ \vartheta=\int_Yw\,d\mu=\lim_{s\downarrow1}\frac{\log D(s)}{\log\frac1{s-1}}, \] the order of the pole of $D$ at $s=1$ when $D$ continues meromorphically. In particular, for $D=L(s,\rho\otimes\check\rho)$ with $\rho$ an Artin representation, $w=|\chi_\rho|^2$ and $\vartheta=\langle\rho,\rho\rangle$, the shape of the Gamma limit of the Rankin Selberg random integer; and for $D=\zeta_K$ with $K/\mathbb{Q}$ of degree $n$ and Galois closure of group $G$ acting on the $n$ embeddings, $w(g)$ is the number of fixed points of $g$ and $\vartheta=1$ by Burnside's lemma.
 
-Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex), label `thm:pdewens`.
+Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex), label `thm:pdewens`.
 
 <a id="upper_bound_for_the_rate_of_chebotarev_shares"></a>
 
@@ -1770,7 +1770,7 @@ Status: open.
 
 Statement. Let $K/\mathbb{Q}$ be a finite Galois extension with nontrivial group $G$ and set of ramified primes $S$, let $C$ run over the conjugacy classes, with $\delta(C)=|C|/|G|$ and $\delta_{\min}=\min_C\delta(C)$, and for the zeta random integer $N_\sigma$, $\mathbb{P}(N_\sigma=n)=n^{-\sigma}/\zeta(\sigma)$, with prime exponents $e_p$, let $\mathcal{P}_\sigma(C)$ be the share of the class $C$, the proportion of $\sum_{p\notin S}e_p\log p$ carried by the primes with Frobenius in $C$ (set to $\delta(C)$ when $N_\sigma$ has no prime factor outside $S$). As $\sigma\downarrow1$ the vector of shares converges to the Dirichlet law with parameters $\delta(C)$, and in the Kolmogorov distance of the shares the limit is approached no faster than $(\sigma-1)^{\delta_{\min}}$. Prove the matching upper bound: that the Kolmogorov distance between the law of $\mathcal{P}_\sigma(C)$ and $\mathrm{Beta}(\delta(C),1-\delta(C))$ is $O\bigl((\sigma-1)^{\delta(C)}\bigr)$, and that, for the Euclidean distance between share vectors, the Wasserstein distance between the laws of $(\mathcal{P}_\sigma(C))_C$ and of its Dirichlet limit is $O\bigl((\sigma-1)\log\frac1{\sigma-1}\bigr)$, the order at which the means converge.
 
-Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex), label `op:pdrate`.
+Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex), label `op:pdrate`.
 
 <a id="signs_of_the_mertens_deficits"></a>
 
@@ -1782,7 +1782,7 @@ Status: open.
 
 Statement. For a finite Galois extension $K/\mathbb{Q}$ with group $G$ and set of ramified primes $S$, the Mertens constants per class $b_C=\lim_{t\to\infty}\bigl(\sum_{p\le t,\,p\notin S,\,\mathrm{Frob}_p\in C}\frac1p-\delta(C)\log\log t\bigr)$ and $c_C=\lim_{t\to\infty}\bigl(\sum_{p\le t,\,p\notin S,\,\mathrm{Frob}_p\in C}\frac{\log p}{p}-\delta(C)\log t\bigr)$, with $\delta(C)=|C|/|G|$, are expressed through the values $L(1,\chi)$ and $\frac{L'}{L}(1,\chi)$ of the Artin L functions of the irreducible characters $\chi$ of $G$. For the splitting field of a polynomial of degree $n$ with group $S_n$, the deficit of the identity class, which governs the share of that class among the distinct unramified prime factors of a uniform random integer, is $b_{\{1\}}-\delta(\{1\})B'=\lim_{t\to\infty}\sum_{p\le t,\,p\notin S}\bigl(\mathsf{1}_{\{1\}}(\mathrm{Frob}_p)-\delta(\{1\})\bigr)/p$, where $B'=B-\sum_{p\in S}1/p$ and $B$ is the Mertens constant; it is negative for $x^3-x-1$, whose smallest completely split prime is $59$. A prime $p<n$ splits completely only if it divides the index of $\mathbb{Z}[\alpha]$, with $\alpha$ a root of the polynomial, and this happens: in Dedekind's field of $x^3-x^2-2x-8$ the prime $2$ splits completely and adds $\frac5{12}$ to the sum. Read from the primes below $10^7$, the deficit is positive for Dedekind's field and for $x^3-x+15$, in which $3$ and $5$ split completely, so both signs occur already with group $S_3$. Determine the distribution of the sign of the deficit over the fields with group $S_n$ ordered by discriminant, and its sign along a family such as $x^n-x-1$. This is the analogue, for the weights $1/p$, of the problem of the signs of the Euler Kronecker drifts.
 
-Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex), label `op:pdmertens`.
+Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex), label `op:pdmertens`.
 
 <a id="an_arithmetic_product_for_frobenius_functionals"></a>
 
@@ -1794,7 +1794,7 @@ Status: open.
 
 Statement. For a finite Galois extension with labels $\theta_p$ the Frobenius classes, equidistributed with respect to the image $\mu$ of Haar measure, and the zeta random integer $N_\sigma$, $\mathbb{P}(N_\sigma=n)=n^{-\sigma}/\zeta(\sigma)$, with prime exponents $e_p$, the Frobenius functional of a function $Q\ge0$ on the classes is $\Xi_\sigma(Q)=(\sigma-1)\sum_{p}e_p\log p\,Q(\theta_p)$, the sum over the unramified primes; as $\sigma\downarrow1$ it converges to a generalized gamma convolution with Thorin measure the image of $\mu$ restricted to $\{Q>0\}$ under $1/Q$. By Bondesson the product of two independent generalized gamma convolution variables is a generalized gamma convolution, so the product of independent copies of the limits of $\Xi_\sigma(Q_1)$ and $\Xi_\sigma(Q_2)$ is one, with a Thorin measure $\tau_{Q_1,Q_2}$. Multiplying Dirichlet series realises the additive closure, the Frobenius functional of the product of two independent random integers being the sum of two independent ones, and tensor products, as in Rankin Selberg convolution, give the functional of $Q_1Q_2$. Find the arithmetic operation, if any, that realises the multiplicative closure, a representation or an L function whose Frobenius functional has Thorin measure $\tau_{Q_1,Q_2}$; and compute $\tau_{Q_1,Q_2}$ for $Q_1=Q_2=\operatorname{tr}^2$, the squared trace of the two dimensional irreducible representation of $S_3$. For a finite group the Thorin measure of a limiting Frobenius functional is finitely supported and that of such a product is not, so the operation, if any, leads to an infinite label space, such as a Sato Tate group.
 
-Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex), label `op:pdproduct`.
+Source: [`book/chapters/ch_pd.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex), label `op:pdproduct`.
 
 ## Chapter 25. Degree One
 
@@ -1808,7 +1808,7 @@ Status: proved.
 
 Statement. Let $E/\mathbb{Q}$ be an elliptic curve of conductor $N_E$, $\rho$ its normalised $\ell$ adic representation, $K$ an imaginary quadratic field of discriminant $d_K$ and $\chi_K$ its quadratic character. For $\sigma > 1$ let $X_\sigma$ be the Rankin Selberg subordinator of $\rho$ over $\mathbb{Q}$, the nonnegative random variable with Laplace transform $\mathbb{E}e^{-\lambda X_\sigma} = D^S(\sigma+\lambda)/D^S(\sigma)$, $\lambda \ge 0$, where $D^S(s) = L^S(s,\rho\otimes\check\rho)$ is the Rankin Selberg L function with the Euler factors at the primes dividing $N_E d_K$ removed, and let $X^K_\sigma$ be the same subordinator built over $K$, with Laplace transform $D^S_K(\sigma+\lambda)/D^S_K(\sigma)$, where $D^S_K(s) = L^S_K(s,\rho|_K\otimes\check\rho|_K)$ is the Euler product over the primes of $K$ not dividing $N_E d_K$ attached to the restriction of $\rho$ to $\mathrm{Gal}(\overline{\mathbb{Q}}/K)$. (i) $D^S_K(s) = D^S(s)\,L^S(s,\rho\otimes\check\rho\otimes\chi_K)$, the partial products being over the primes not dividing $N_E d_K$. (ii) If $E$ has complex multiplication by $K$ then $D^S_K(s) = D^S(s)^2$ exactly, so that $X^K_\sigma$ has the law of the sum of two independent copies of $X_\sigma$ for every $\sigma > 1$, and $(\sigma-1)X^K_\sigma$ converges in law as $\sigma \downarrow 1$ to the Gamma law of shape $2$ and scale $1$. (iii) If $E$ has no complex multiplication by $K$ then $(\sigma-1)X^K_\sigma$ converges in law as $\sigma \downarrow 1$ to the standard exponential law, the Gamma shape being $1$.
 
-Source: [`book/chapters/ch_gl1.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_gl1.tex), label `thm:gl1cmshape`.
+Source: [`book/chapters/ch_gl1.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_gl1.tex), label `thm:gl1cmshape`.
 
 <a id="thorin_form_of_grh_for_real_dirichlet_characters"></a>
 
@@ -1820,7 +1820,7 @@ Status: proved.
 
 Statement. Let $\chi$ be a primitive real Dirichlet character modulo $q \ge 3$ and $\kappa \in \{0,1\}$ its parity, so that $\Lambda(s,\chi) = (q/\pi)^{s/2}\Gamma(\frac{s+\kappa}{2})L(s,\chi)$ satisfies $\Lambda(s,\chi) = \Lambda(1-s,\chi)$. Put $\Xi_\chi(w) = \Lambda(\frac12+w,\chi)$, an even entire function of order one, and write its zeros, with multiplicity, as the pairs $\pm i\gamma_k$, one $\gamma_k$ taken from each pair (only $\gamma_k^2$ enters below). Suppose $L(\frac12,\chi) \ne 0$. Then $\Xi_\chi(\sqrt\lambda)/\Xi_\chi(0) = \prod_k(1+\lambda/\gamma_k^2)$ for $\lambda \ge 0$, the product converging absolutely, and the generalized Riemann hypothesis for $L(s,\chi)$ holds if and only if $\lambda \mapsto \Xi_\chi(0)/\Xi_\chi(\sqrt\lambda)$ is the Laplace transform of a generalized gamma convolution, in which case the Thorin measure is $\sum_k\delta_{\gamma_k^2}$ and the generalized gamma convolution is $\sum_k E_k/\gamma_k^2$ with $E_k$ independent standard exponential random variables. Moreover, without assuming the generalized Riemann hypothesis, for every $a \ge \frac12$ (basepoint $\frac12+a \ge 1$) the function $V_a(z) = \operatorname{Re}(\Xi_\chi'/\Xi_\chi)(a+i\sqrt z)/(2\pi\sqrt z)$, $z > 0$, is nonnegative and $\Xi_\chi(a)/\Xi_\chi(a+\sqrt\lambda) = \mathbb{E}e^{-\lambda H_a}$ for $\lambda > 0$, where $H_a$ is a generalized gamma convolution with drift zero and Thorin density $V_a$.
 
-Source: [`book/chapters/ch_gl1.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_gl1.tex), label `thm:gl1thorin`.
+Source: [`book/chapters/ch_gl1.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_gl1.tex), label `thm:gl1thorin`.
 
 <a id="hecke_angle_discrepancy_limit_law"></a>
 
@@ -1832,7 +1832,7 @@ Status: open.
 
 Statement. For a prime $p \equiv 1 \pmod 4$ write $p = \pi\bar\pi$ with $\pi$ a primary Gaussian prime ($\pi \equiv 1$ modulo $2+2i$) and let $\theta_p = |\arg\pi| \in [0,\pi]$; by Hecke's theorem the angles $4\theta_p$ are equidistributed modulo $2\pi$. Let $\pi_1(x)$ be the number of primes $p \le x$ with $p \equiv 1 \pmod 4$ and $D(x)$ the discrepancy of the angles $4\theta_p$, $p \le x$, from the uniform law. Determine whether $\sqrt{\pi_1(x)}\,D(x)$ has a limit law as $x \to \infty$ (the Kolmogorov law would be the Brownian bridge prediction, as for the discrepancy of Sato Tate angles), or whether the arithmetic of the Hecke L functions $L(s,\lambda_k)$, $\lambda_k((\alpha)) = (\alpha/|\alpha|)^{4k}$, forces a different law; and the same question for the imaginary quadratic fields of class number one.
 
-Source: [`book/chapters/ch_gl1.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_gl1.tex), label `op:gl1disc`.
+Source: [`book/chapters/ch_gl1.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_gl1.tex), label `op:gl1disc`.
 
 <a id="euler_kronecker_constants_of_hecke_characters"></a>
 
@@ -1844,7 +1844,7 @@ Status: open.
 
 Statement. Let $N_\sigma$ be the zeta distributed random integer, $\mathbb{P}(N_\sigma = n) = n^{-\sigma}/\zeta(\sigma)$, and colour each prime factor $p \equiv 1 \pmod 4$ by its Hecke angle $4\theta_p$ on the circle, where $\theta_p = |\arg\pi|$ for a primary Gaussian prime $\pi$ dividing $p$; as $\sigma \downarrow 1$ the labelled factorisation converges to a Dirichlet process whose base measure is $\frac12$ times the uniform probability on the circle. The rate of convergence of this Dirichlet process is governed, for the means, by the constants $(L'/L)(1,\lambda_k)$ of the Hecke L functions of the characters $\lambda_k((\alpha)) = (\alpha/|\alpha|)^{4k}$ of $\mathbb{Q}(i)$, in the same way that the drift of the Frobenius Gamma process of a finite Galois extension is governed by Euler Kronecker constants. Compute these constants for $\mathbb{Q}(i)$ and $k \le 20$, determine the sign pattern of the deficits of the arcs (the differences between the mean shares of the arcs and their limiting values), and find the analogue for the circle, where no arc is a finite union of classes, of the theorem giving the atoms at zero and a lower bound for the rate of convergence of the shares of the classes.
 
-Source: [`book/chapters/ch_gl1.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_gl1.tex), label `op:gl1rate`.
+Source: [`book/chapters/ch_gl1.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_gl1.tex), label `op:gl1rate`.
 
 <a id="effective_gamma_shape_test_for_complex_multiplication"></a>
 
@@ -1856,7 +1856,7 @@ Status: open.
 
 Statement. Let $E/\mathbb{Q}$ be an elliptic curve of conductor $N_E$ with normalised $\ell$ adic representation $\rho$, $K$ an imaginary quadratic field of discriminant $d_K$ with quadratic character $\chi_K$, and $X^K_\sigma$ the Rankin Selberg subordinator of $\rho$ over $K$, the nonnegative random variable with Laplace transform $D^S_K(\sigma+\lambda)/D^S_K(\sigma)$, where $D^S_K(s) = L^S_K(s,\rho|_K\otimes\check\rho|_K)$ is the Rankin Selberg Euler product over the primes of $K$ not dividing $N_E d_K$ attached to the restriction $\rho|_K$ of $\rho$ to $\mathrm{Gal}(\overline{\mathbb{Q}}/K)$, so that as $\sigma \downarrow 1$ the law of $(\sigma-1)X^K_\sigma$ tends to the Gamma law of shape $2$ if $E$ has complex multiplication by $K$ and of shape $1$ otherwise. By Faltings' theorem finitely many $a_p$ determine $\rho$ up to isomorphism, so finitely many primes decide whether $\rho\otimes\chi_K \cong \rho$. Find an explicit bound, in terms of $N_E$ and $d_K$, on the primes needed so that the empirical Laplace transform of $(\sigma-1)X^K_\sigma$ at a suitable $\sigma$ separates shape $1$ from shape $2$ with a proof, and compare with the bound from the effective Chebotarev theorem.
 
-Source: [`book/chapters/ch_gl1.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_gl1.tex), label `op:gl1cm`.
+Source: [`book/chapters/ch_gl1.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_gl1.tex), label `op:gl1cm`.
 
 ## Chapter 26. Maass Forms and Brownian Motion
 
@@ -1870,7 +1870,7 @@ Status: proved.
 
 Statement. Let $u$ be a Hecke Maass eigenform with Hecke eigenvalue $\lambda(p)$ at the prime $p$, and $L_p(s,u) = (1-\lambda(p)p^{-s}+p^{-2s})^{-1}$ its Euler factor at $p$. The function $s \mapsto \frac{2-\lambda(p)}{p^{\sqrt s}+p^{-\sqrt s}-\lambda(p)} = (2-\lambda(p))\,p^{-\sqrt s}L_p(\sqrt s,u)$, $s > 0$, is the Laplace transform of a probability law on $[0,\infty)$ if and only if $-2 \le \lambda(p) < 2$, in which case, writing $\lambda(p) = 2\cos\theta_p$ with $0 < \theta_p \le \pi$, the law is the generalized gamma convolution with drift zero and Thorin measure (Thorin comb) $\sum_{k\in\mathbb{Z}}\delta_{t_k}$, $t_k = ((\theta_p+2\pi k)/\log p)^2$. In particular the Ramanujan conjecture $|\lambda(p)| \le 2$ at $p$ (with $\lambda(p) \ne 2$) holds if and only if the local factor of $u$ at $p$ is a generalized gamma convolution transform in the variable $\sqrt s$.
 
-Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex), label `cor:msramanujan`.
+Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex), label `cor:msramanujan`.
 
 <a id="selberg_eigenvalue_conjecture_as_complete_monotonicity"></a>
 
@@ -1882,7 +1882,7 @@ Status: proved.
 
 Statement. Let $\Gamma$ be a congruence subgroup of $\mathrm{SL}_2(\mathbb{Z})$, let $\lambda_j = \frac14+r_j^2$, $j \ge 1$, be the Laplace eigenvalues of the Maass cusp forms on $\Gamma\backslash\mathbb{H}$, and let $\Theta_\Gamma(t) = \sum_{j\ge1}e^{-t\lambda_j}$ be their heat trace. (i) $e^{t/4}\Theta_\Gamma(t) = \sum_j e^{-tr_j^2}$ is completely monotone on $(0,\infty)$ if and only if $\lambda_j \ge \frac14$ for every $j$, that is if and only if Selberg's eigenvalue conjecture holds for $\Gamma$; in that case its Bernstein measure is $\sum_j\delta_{r_j^2}$. (ii) Unconditionally, $e^{t(\frac14-(7/64)^2)}\Theta_\Gamma(t)$ is completely monotone on $(0,\infty)$. (iii) For $\Gamma = \mathrm{SL}_2(\mathbb{Z})$ the equivalent conditions of (i) hold, and $\sum_j e^{-tr_j^2} \sim \frac{1}{12t}$ as $t \to 0$. (iv) The measure $\sum_j\delta_{r_j^2}$ is not a Thorin measure, since $\sum_j r_j^{-2} = \infty$. Part (i) is an equivalence and does not prove Selberg's eigenvalue conjecture, which is open in general; part (ii) rests on the bound $\lambda_j \ge \frac14-(\frac{7}{64})^2$ of Kim and Sarnak, valid for every congruence subgroup, and part (iii) on the fact that every cuspidal eigenvalue of $\mathrm{SL}_2(\mathbb{Z})$ exceeds $\frac14$.
 
-Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex), label `thm:mscm`.
+Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex), label `thm:mscm`.
 
 <a id="thorin_representation_of_the_geodesic_euler_product"></a>
 
@@ -1894,7 +1894,7 @@ Status: proved.
 
 Statement. Let $\Gamma\backslash\mathbb{H}$ be a compact hyperbolic surface, with primitive closed geodesics $P$ of length $\ell(P)$ and norm $N(P) = e^{\ell(P)}$, Selberg zeta function $Z(s) = \prod_P\prod_{k\ge0}(1-N(P)^{-(s+k)})$, and $R(s) = Z(s+1)/Z(s) = \prod_P(1-N(P)^{-s})^{-1}$ for $\operatorname{Re}s > 1$. Let $\alpha > 1$. Then for $\lambda > 0$, $R(\alpha)/R(\alpha+\sqrt\lambda) = e^{-b\sqrt\lambda}\,\mathbb{E}e^{-\lambda H}$ with $b = (R'/R)(\alpha) = -\sum_P\sum_{k\ge1}\ell(P)N(P)^{-k\alpha}$, where $H$ is a generalized gamma convolution with drift zero and Thorin density $U(z) = \frac{1}{2\pi\sqrt z}\sum_P\sum_{k\ge1}\ell(P)N(P)^{-k\alpha}\,2\sin^2\bigl(\frac{k\ell(P)\sqrt z}{2}\bigr) \ge 0$, equal to $(\operatorname{Re}(R'/R)(\alpha+i\sqrt z)-b)/(2\pi\sqrt z)$. The same holds for the modular surface $\mathrm{SL}_2(\mathbb{Z})\backslash\mathbb{H}$, and for the Dedekind zeta function of any number field and the Rankin Selberg L function $L(s,\pi\times\tilde\pi)$ of an automorphic representation $\pi$ and its contragredient $\tilde\pi$, whose logarithmic coefficients are nonnegative, with the primes of the field or the Rankin Selberg coefficients in place of the geodesics.
 
-Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex), label `thm:msthorin`.
+Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex), label `thm:msthorin`.
 
 <a id="random_geodesic_integers_are_poisson_dirichlet"></a>
 
@@ -1906,7 +1906,7 @@ Status: proved.
 
 Statement. Let the geodesic integers $\mathfrak n$ be the elements of the free abelian monoid generated by the primitive closed geodesics $P$ of a compact hyperbolic surface or of the modular surface, with the multiplicative norm $N(\mathfrak n)$ extending $N(P) = e^{\ell(P)}$, $\ell(P)$ the length, and let $R(\sigma) = \sum_{\mathfrak n}N(\mathfrak n)^{-\sigma} = Z(\sigma+1)/Z(\sigma)$ for $\sigma > 1$, $Z$ the Selberg zeta function. Let $\mathfrak n_\sigma$ be the random geodesic integer with $\mathbb{P}(\mathfrak n_\sigma = \mathfrak n) = N(\mathfrak n)^{-\sigma}/R(\sigma)$. Its exponents $e_P$ are independent geometric variables with $\mathbb{P}(e_P \ge k) = N(P)^{-k\sigma}$, and as $\sigma \downarrow 1$ the point process of the rescaled sizes $(\sigma-1)e_P\ell(P)$ converges to the Poisson process with intensity $x^{-1}e^{-x}\,dx$, the Gamma process; the ranked normalised sizes $e_P\ell(P)/\log N(\mathfrak n_\sigma)$ converge in law to the Poisson Dirichlet law $\mathrm{PD}(1)$; the normalised size of the largest primitive geodesic factor has Dickman's law in the limit; and the number of distinct primitive factors is asymptotically normal with mean and variance $\log\frac{1}{\sigma-1}$.
 
-Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex), label `thm:mspd`.
+Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex), label `thm:mspd`.
 
 <a id="thorin_representation_of_the_geodesic_euler_product_at_the_centre"></a>
 
@@ -1918,7 +1918,7 @@ Status: open.
 
 Statement. Let $R(s) = Z(s+1)/Z(s)$ for a compact hyperbolic surface with Selberg zeta function $Z$, and $R^*(s) = (s-1)R(s)$. Determine for which $a \in (0,\frac12)$ the function $\lambda \mapsto R^*(\frac12+a)/R^*(\frac12+a+\sqrt\lambda)$ is, after removal of a drift factor $e^{|b|\sqrt\lambda}$ for a suitable real constant $b$, the Laplace transform of a generalized gamma convolution, and compute its Thorin density numerically for the Bolza surface or for a Hurwitz surface of small genus, where the spectrum and the geodesics are both available. The question is whether the logarithmic divergences coming from the Laplace spectrum, whose spectral parameters $r_j$ (eigenvalues $\frac14+r_j^2$) satisfy $\sum_j r_j^{-2} = \infty$, cancel into a positive density.
 
-Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex), label `op:mscentre`.
+Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex), label `op:mscentre`.
 
 <a id="chebotarev_theorem_for_closed_geodesics"></a>
 
@@ -1930,7 +1930,7 @@ Status: open.
 
 Statement. Order the primitive closed geodesics $P$ of the modular surface $\mathrm{SL}_2(\mathbb{Z})\backslash\mathbb{H}$ by norm $N(P) = e^{\ell(P)}$, $\ell(P)$ the length (they correspond to the narrow classes of primitive binary quadratic forms of positive nonsquare discriminant $d$), and colour each by the residue of its discriminant $d$ modulo $q$, or by whether $d$ is fundamental. Determine the densities of the colours, prove the Dirichlet process limit as $\sigma \downarrow 1$, with that base measure, of the labelled factorisation of the random geodesic integer $\mathfrak n_\sigma$, where the geodesic integers $\mathfrak n$ are the finite products of primitive geodesics with the multiplicative norm $N(\mathfrak n)$, $R(\sigma) = \sum_{\mathfrak n}N(\mathfrak n)^{-\sigma}$ for $\sigma > 1$, and $\mathbb{P}(\mathfrak n_\sigma = \mathfrak n) = N(\mathfrak n)^{-\sigma}/R(\sigma)$, and identify the analogue of the values $L(1,\chi)$ in the Mertens constants.
 
-Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex), label `op:mschebotarev`.
+Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex), label `op:mschebotarev`.
 
 <a id="even_icosahedral_representations_and_maass_forms_of_eigenvalue_one_quarter"></a>
 
@@ -1942,7 +1942,7 @@ Status: open.
 
 Statement. Let $\rho$ be an even icosahedral two dimensional Artin representation of conductor $N$ (even meaning $\det\rho(c) = 1$ for complex conjugation $c$) with $\rho(c) = I$ and trivial determinant, so that $\rho$ is self dual, the case in which its heat trace is computed with the gamma factor of a Maass form. Compute from its Frobenius traces the Galois heat trace $\mathcal{W}^+_\rho(x)$, $x > 0$, the explicit formula expression built from $N$, the gamma factor $\Gamma_\mathbb{R}(s)^2$ of a Maass form of eigenvalue $\frac14$ ($\Gamma_\mathbb{R}(s) = \pi^{-s/2}\Gamma(s/2)$) and the traces $\operatorname{tr}\rho(\mathrm{Frob}_p)$, which equals half the sum of $e^{-x\gamma^2}$ over the zeros $\frac12+i\gamma$ of the completed L function $\Lambda(s,\rho)$ when $\Lambda(s,\rho)$ is entire, and which is completely monotone if and only if $\Lambda(s,\rho)$ is entire and all its zeros lie on $\operatorname{Re}s = \frac12$; test its complete monotonicity numerically; and search by Hejhal's algorithm for a Maass form of eigenvalue $\frac14$ on $\Gamma_0(N)$ whose Hecke eigenvalues are $\operatorname{tr}\rho(\mathrm{Frob}_p)$. A single such form would be the first even icosahedral instance of reciprocity; the computation is within reach for the smallest conductors.
 
-Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex), label `op:mseven`.
+Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex), label `op:mseven`.
 
 <a id="cutoff_for_brownian_motion_on_congruence_covers"></a>
 
@@ -1954,248 +1954,346 @@ Status: open.
 
 Statement. Let $X(N) = \Gamma(N)\backslash\mathbb{H}$ be the principal congruence cover of level $N$ of the modular surface, whose area grows like $N^3$ while its first nonzero Laplace eigenvalue $\lambda_1$ stays bounded below by $\frac{975}{4096} = \frac14-(\frac{7}{64})^2$, the bound of Kim and Sarnak. Determine whether Brownian motion on $X(N)$ started at a fixed point exhibits cutoff in total variation at a time of order $\log N$, as random walks on expander graphs do, and how the cusps, whose number grows with $N$, affect the profile.
 
-Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex), label `op:mscutoff`.
+Source: [`book/chapters/ch_maass.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex), label `op:mscutoff`.
 
-## Chapter 27. Extreme Values and the L Functions of Eta Products
+## Chapter 27. Percolation and the Curve y^2 = x^3 + 1
+
+<a id="percolation_crossing_threshold_and_the_l_function_of_y2_x3_1"></a>
+
+### The Mellin transform of the percolation crossing threshold is the normalised completed L function of y^2 = x^3 + 1
+
+Theorem 27.5, page 506 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+
+Status: proved.
+
+Statement. Let $E$ be the elliptic curve $y^2 = x^3+1$, of conductor $N = 36$, with $L(E,s) = \sum_{n\ge1}a_nn^{-s}$ (continued analytically to all $s\in\mathbb{C}$), where $\eta(6\tau)^4 = \sum_{n\ge1}a_ne^{2\pi in\tau}$ is the newform of weight $2$ and level $36$ attached to $E$ and $\eta(\tau) = e^{\pi i\tau/12}\prod_{n\ge1}(1-e^{2\pi in\tau})$ is the Dedekind eta function, and with completed function $\Lambda(E,s) = (\sqrt N/(2\pi))^s\,\Gamma(s)\,L(E,s) = (3/\pi)^s\,\Gamma(s)\,L(E,s)$. For a rectangle of aspect ratio $r$ (width over height) let $\pi_h(r) = \frac{\Gamma(2/3)}{\Gamma(1/3)^2}\int_0^{\lambda(ir)}t^{-2/3}(1-t)^{-2/3}\,dt$ be Cardy's formula for the probability of an open left to right crossing in critical percolation in the scaling limit (a theorem of Smirnov for site percolation on the triangular lattice, and a universality hypothesis for other models), where $\lambda(\tau) = \theta_2(q)^4/\theta_3(q)^4$ with $q = e^{i\pi\tau}$, $\theta_2(q) = \sum_{n\in\mathbb{Z}}q^{(n+1/2)^2}$ and $\theta_3(q) = \sum_{n\in\mathbb{Z}}q^{n^2}$. Let $T = \sup\{r > 0 : [0,r]\times[0,1]\text{ has a horizontal open crossing}\}$ be the crossing threshold, the random variable with $\mathbb{P}(T > r) = \pi_h(r)$, which by Kleban and Zagier's formula $d\pi_h/dr = -\kappa\,\eta(ir)^4$ has density $f_T(t) = \kappa\,\eta(it)^4$ on $(0,\infty)$, with $\kappa = 2^{4/3}\pi\,\Gamma(\tfrac23)/\Gamma(\tfrac13)^2 \approx 1.4936684$. Then: (1) $\mathbb{E}[T^{s-1}] = \kappa\,\Lambda(E,s)$ for all $s\in\mathbb{C}$, the integral converging absolutely; (2) $\kappa = 1/\Lambda(E,1)$, equivalently $L(E,1) = \frac{\Gamma(1/3)^2}{3\cdot2^{4/3}\,\Gamma(2/3)} \approx 0.7010911$; (3) $T \overset{d}{=} 1/T$, and this is equivalent to the functional equation $\Lambda(E,s) = \Lambda(E,2-s)$ with root number $+1$; (4) the characteristic function of $\log T$ is $\Xi_E(t) = \Lambda(E,1+it)/\Lambda(E,1)$, so the Riemann hypothesis for $E$ is the statement that the characteristic function of the log crossing threshold has only real zeros.
+
+Source: [`book/chapters/ch_percolation.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex), label `perc:thm:main`.
+
+<a id="thorin_representation_of_reciprocal_crossing_threshold_moments"></a>
+
+### Thorin representation of the reciprocal moments of the crossing threshold under the Riemann hypothesis for y^2 = x^3 + 1
+
+Corollary 27.6, page 507 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+
+Status: conditional on the Riemann hypothesis for L(E, s), where E is the elliptic curve y^2 = x^3 + 1.
+
+Statement. Let $E$ be the elliptic curve $y^2 = x^3+1$ of conductor $36$, with completed L function $\Lambda(E,s) = (3/\pi)^s\,\Gamma(s)\,L(E,s)$, where $L(E,s)$ is the Hasse Weil L function of $E$, and let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\infty)$ with density $\kappa\,\eta(it)^4$, where $\eta(\tau) = e^{\pi i\tau/12}\prod_{n\ge1}(1-e^{2\pi in\tau})$ is the Dedekind eta function and $\kappa = 2^{4/3}\pi\,\Gamma(\tfrac23)/\Gamma(\tfrac13)^2$, so that $\mathbb{E}[T^{s-1}] = \Lambda(E,s)/\Lambda(E,1)$ for all complex $s$. Let $\Xi_E(t) = \Lambda(E,1+it)/\Lambda(E,1)$, an even entire function of order one with $\Xi_E(0) = 1$ and Hadamard product $\Xi_E(t) = \prod_k(1-t^2/\rho_k^2)$ over its zeros $\rho_k$ with positive real part, listed with multiplicity. Assume the Riemann hypothesis for $E$, so that $\rho_k = \gamma_k > 0$. Then for real $y$, \[\frac{1}{\mathbb{E}[T^y]} = \frac{\Lambda(E,1)}{\Lambda(E,1+y)} = \frac{1}{\Xi_E(iy)} = \prod_k\frac{1}{1+y^2/\gamma_k^2} = \mathbb{E}\,e^{iyW},\qquad W = \sum_k\frac{\varepsilon_k}{\gamma_k},\] with $\varepsilon_k$ independent standard Laplace variables (density $\tfrac12e^{-|x|}$ on $\mathbb{R}$). $W$ is a symmetric extended generalized gamma convolution with Thorin measure $\sum_k\delta_{\gamma_k}$ on each half line.
+
+Source: [`book/chapters/ch_percolation.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex), label `perc:cor:recip`.
+
+<a id="annulus_crossing_probability_is_not_a_positive_laplace_transform"></a>
+
+### Cardy's annulus crossing probability is not the Laplace transform of a positive measure
+
+Proposition 27.7, page 509 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+
+Status: proved.
+
+Statement. For an annulus with radii $r < R$ and modulus $L = \log(R/r)$, let $p_B(L)$ be the probability of an open crossing (an open path joining the two boundary circles) in critical percolation in the scaling limit, given by Cardy's formula, proved by Sun, Xu and Zhuang in 2024, \[p_B = \sqrt{\tfrac32}\,\frac{\eta(6\tau)\,\eta(\tfrac32\tau)}{\eta(2\tau)\,\eta(3\tau)},\qquad\tau = \frac{iL}{2\pi},\] where $\eta(\tau) = e^{\pi i\tau/12}\prod_{n\ge1}(1-e^{2\pi in\tau})$ is the Dedekind eta function, so that, with $\sigma(m)$ the sum of the divisors of $m$, \[\log p_B(L) = \tfrac12\log\tfrac32-\frac{5L}{48}-\sum_{m\ge1}\frac{\sigma(m)}{m}\Bigl(e^{-\frac32mL}+e^{-6mL}-e^{-2mL}-e^{-3mL}\Bigr),\] which has the shape of a Lévy Khintchine exponent in $L$ with drift $5/48$ and a spectral measure on the points $\tfrac32m$, $2m$, $3m$, $6m$, $m\ge1$, weighted by divisor sums with weights of both signs. Then $p_B$ is not the Laplace transform of a positive measure on $[0,\infty)$; the signed measure in this expansion cannot be replaced by a positive one.
+
+Source: [`book/chapters/ch_percolation.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex), label `perc:prop:annulus`.
+
+<a id="log_crossing_threshold_is_not_infinitely_divisible"></a>
+
+### The log crossing threshold is not infinitely divisible
+
+Theorem 27.8, page 509 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+
+Status: proved.
+
+Statement. Let $E$ be the elliptic curve $y^2 = x^3+1$ of conductor $36$, with completed L function $\Lambda(E,s) = (3/\pi)^s\,\Gamma(s)\,L(E,s)$, where $L(E,s)$ is the Hasse Weil L function of $E$, and let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\infty)$ with density $\kappa\,\eta(it)^4$, where $\eta(\tau) = e^{\pi i\tau/12}\prod_{n\ge1}(1-e^{2\pi in\tau})$ is the Dedekind eta function and $\kappa = 2^{4/3}\pi\,\Gamma(\tfrac23)/\Gamma(\tfrac13)^2$; the characteristic function of $\log T$ is $\mathbb{E}\,e^{it\log T} = \Lambda(E,1+it)/\Lambda(E,1)$. Then $\log T$ is not infinitely divisible; in particular it is not an extended generalized gamma convolution.
+
+Source: [`book/chapters/ch_percolation.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex), label `perc:thm:notid`.
+
+<a id="crossing_threshold_is_not_a_generalized_gamma_convolution"></a>
+
+### The percolation crossing threshold is not a generalized gamma convolution
+
+Theorem 27.10, page 510 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+
+Status: proved.
+
+Statement. Let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\infty)$ with density $f_T(t) = \kappa\,\eta(it)^4$, where $\eta(\tau) = e^{\pi i\tau/12}\prod_{n\ge1}(1-e^{2\pi in\tau})$ is the Dedekind eta function and $\kappa = 2^{4/3}\pi\,\Gamma(\tfrac23)/\Gamma(\tfrac13)^2$. Then $T$ is not a generalized gamma convolution. Consequently its density $\kappa\,\eta(it)^4$ is not hyperbolically completely monotone.
+
+Source: [`book/chapters/ch_percolation.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex), label `perc:thm:notggc`.
+
+<a id="crossing_threshold_self_decomposable_numerically"></a>
+
+### Numerical self decomposability of the percolation crossing threshold
+
+Proposition 27.11, page 511 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+
+Status: open.
+
+Statement. Let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\infty)$ with density $\kappa\,\eta(it)^4$, where $\eta(\tau) = e^{\pi i\tau/12}\prod_{n\ge1}(1-e^{2\pi in\tau})$ is the Dedekind eta function and $\kappa = 2^{4/3}\pi\,\Gamma(\tfrac23)/\Gamma(\tfrac13)^2$. Its Laplace transform $\varphi(s) = \mathbb{E}\,e^{-sT}$ extends to a meromorphic function on $\mathbb{C}$ with simple poles at $s = -\pi n/3$ for each $n$ with $a_n\ne0$, where $\eta(6\tau)^4 = \sum_{n\ge1}a_ne^{2\pi in\tau}$ is the newform of the elliptic curve $y^2 = x^3+1$. Define $m$ by $-\varphi'(s)/\varphi(s) = \int_0^\infty e^{-sx}m(x)\,dx$, formally $m(x) = \sum_{a_n\ne0}e^{-\pi nx/3}-\sum_{\varphi(z)=0}e^{zx}$; $T$ is infinitely divisible exactly when $m\ge0$, its Lévy measure then being $m(x)\,dx/x$, and self decomposable exactly when $m$ is in addition nonincreasing. Numerically (Laplace inversion by de Hoog's method at 40 digits), on a grid of 39 points in $[0.02,5.9]$, $m(x)$ is positive (minimum $0.0021$) and strictly decreasing, and $m(x)e^{\pi x/3}\to1$ (to $10^{-8}$ by $x = 3$), reflecting the leading pole at $n = 1$. To working precision, therefore, $T$ is infinitely divisible and self decomposable. It is not a generalized gamma convolution because $m$ is not completely monotone: the zeros of $\varphi$ enter with negative weight. The positivity and monotonicity of $m$ are numerical observations on a finite grid, not a proof; the chapter poses a proof as an open computational problem.
+
+Source: [`book/chapters/ch_percolation.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex), label `perc:prop:sd`.
+
+<a id="cumulants_of_log_crossing_threshold_are_zero_sums"></a>
+
+### Even cumulants of the log crossing threshold are zero sums of the L function of y^2 = x^3 + 1
+
+Proposition 27.12, page 512 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+
+Status: proved.
+
+Statement. Let $E$ be the elliptic curve $y^2 = x^3+1$ of conductor $36$, with completed L function $\Lambda(E,s) = (3/\pi)^s\,\Gamma(s)\,L(E,s)$, where $L(E,s)$ is the Hasse Weil L function of $E$, and let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\infty)$ with $\mathbb{E}[T^{s-1}] = \Lambda(E,s)/\Lambda(E,1)$ for all complex $s$ (its density is proportional to $\eta(it)^4$, $\eta$ the Dedekind eta function). Let $X = \log T$, with cumulant generating function $K_X(y) = \log\mathbb{E}\,e^{yX} = \log\bigl(\Lambda(E,1+y)/\Lambda(E,1)\bigr)$ and characteristic function $\Xi_E(t) = \Lambda(E,1+it)/\Lambda(E,1) = \prod_\rho(1-t^2/\rho^2)$, the product over the zeros $\rho$ of $\Xi_E$ with $\operatorname{Re}\rho > 0$, listed with multiplicity. Let $Z_m = \sum_\rho\rho^{-2m}$, the sum over the zeros of $\Xi_E$ with $\operatorname{Re}\rho > 0$; there are none on the imaginary axis, since $\Xi_E(iy) = \mathbb{E}\,e^{-yX} > 0$. Then, unconditionally, the odd cumulants of $X$ vanish and \[\kappa_{2m}(X) = (-1)^{m+1}\,\frac{(2m)!}{m}\,Z_m,\qquad m\ge1,\] where $\kappa_j$ denotes the cumulant of order $j$. The candidate reciprocal law $W$, with characteristic function $\varphi_W(y) = e^{-K_X(y)} = 1/\mathbb{E}[T^y]$ (a probability law under the Riemann hypothesis for $E$), has cumulants (defined by $\log\varphi_W(y) = \sum_j\kappa_j(W)(iy)^j/j!$, which makes sense whether or not $W$ exists) $\kappa_{2m}(W) = (-1)^{m+1}\kappa_{2m}(X)$; in particular $\mathrm{Var}(W) = \mathrm{Var}(\log T) = 2Z_1$. Under the Riemann hypothesis for $E$, when the zeros are $\rho = \gamma_k > 0$ with $\gamma_1$ the smallest, $Z_m = \sum_k\gamma_k^{-2m} > 0$ for every $m$ and $Z_m^{-1/(2m)}$ increases to $\gamma_1$.
+
+Source: [`book/chapters/ch_percolation.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex), label `perc:prop:cum`.
+
+<a id="percolation_cumulant_criterion_for_grh_of_y2_x3_1"></a>
+
+### A criterion for the Riemann hypothesis of y^2 = x^3 + 1 in percolation cumulants
+
+Theorem 27.13, page 515 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+
+Status: proved.
+
+Statement. Let $E$ be the elliptic curve $y^2 = x^3+1$ of conductor $36$, with completed L function $\Lambda(E,s) = (3/\pi)^s\,\Gamma(s)\,L(E,s)$, where $L(E,s)$ is the Hasse Weil L function of $E$, and let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\infty)$ with $\mathbb{E}[T^{s-1}] = \Lambda(E,s)/\Lambda(E,1)$ for all complex $s$ (its density is proportional to $\eta(it)^4$, $\eta$ the Dedekind eta function). Let $X = \log T$ and $K_X(y) = \log\mathbb{E}\,e^{yX} = \log\bigl(\Lambda(E,1+y)/\Lambda(E,1)\bigr)$; let $\rho$ run over the zeros, listed with multiplicity, of $\Xi_E(t) = \Lambda(E,1+it)/\Lambda(E,1)$ with $\operatorname{Re}\rho > 0$, so that $K_X(y) = \sum_\rho\log(1+y^2/\rho^2)$; let $Z_m = \sum_\rho\rho^{-2m} = (-1)^{m+1}\frac{m\,\kappa_{2m}(\log T)}{(2m)!}$, where $\kappa_{2m}$ denotes the cumulant of order $2m$; and let \[G(u) = \frac{K_X'(\sqrt u)}{2\sqrt u} = \sum_\rho\frac{1}{u+\rho^2} = \sum_{m\ge1}(-u)^{m-1}Z_m.\] The $2\sin^2$ lemma (for a symmetric law $W$ with Lévy density $k(|x|)/|x|$, where $k(x) = \int_0^\infty e^{-xt}\,U(dt)$, one has $-\log\mathbb{E}\,e^{iyW} = \int_{\mathbb{R}}2\sin^2(\frac{xy}{2})\frac{k(|x|)}{|x|}\,dx = \int_0^\infty\log(1+\frac{y^2}{t^2})\,U(dt)$), applied to $K_X$, identifies the candidate Thorin measure as $\sum_\rho\delta_\rho$. The following are equivalent. (1) The Riemann hypothesis holds for $L(E,s)$. (2) $y\mapsto1/\mathbb{E}[T^y]$ is the characteristic function of a symmetric extended generalized gamma convolution; that is, the Thorin measure produced by the $2\sin^2$ lemma is positive. (3) $G$ is a Stieltjes function (a function $a+\int_{[0,\infty)}\frac{\mu(dt)}{u+t}$ with $a\ge0$ and $\mu$ a positive measure). (4) For every $n$ the Hankel matrix $H_n = [Z_{i+j+1}]_{i,j=0}^{n-1}$, built from the even cumulants of $\log T$, is positive semidefinite.
+
+Source: [`book/chapters/ch_percolation.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex), label `perc:thm:crit`.
+
+## Chapter 28. Extreme Values and the L Functions of Eta Products
 
 <a id="eta_product_as_distribution_function_of_exponential_maximum"></a>
 
 ### Product formula of the Dedekind eta function as the distribution function of a maximum of exponential clocks
 
-Proposition 27.1, page 500 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Proposition 28.1, page 519 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Let $E_1,E_2,\ldots$ be independent standard exponential variables, let $M=\max_{n\ge1}E_n/(2\pi n)$, and let $P(y)=\prod_{n\ge1}(1-e^{-2\pi ny})$ for $y>0$, so that the Dedekind eta function $\eta(\tau)=q^{1/24}\prod_{n\ge1}(1-q^n)$, $q=e^{2\pi i\tau}$, satisfies $\eta(iy)=e^{-\pi y/12}P(y)$. The variable $M$ is almost surely finite and positive, and $\mathbb{P}(M\le y)=P(y)$ for $y>0$. The function $P$ is continuous and strictly increasing, and $1-P(y)\sim e^{-2\pi y}$ as $y\to\infty$, while $P(y)\sim y^{-1/2}e^{-\pi/(12y)}$ as $y\to0$. The density of $M$ is $\frac{2\pi}{24}\bigl(1-E_2(iy)\bigr)P(y)$, where $E_2(\tau)=1-24\sum_{N\ge1}\sigma(N)q^N$, with $\sigma(N)$ the sum of the divisors of $N$, is the quasimodular Eisenstein series of weight two.
 
-Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex), label `prop:ch11M`.
+Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex), label `prop:ch11M`.
 
 <a id="l_function_of_ramanujan_delta_as_extreme_value_expectation"></a>
 
 ### Extreme value representation of the L function of Ramanujan's Delta
 
-Theorem 27.2, page 502 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Theorem 28.2, page 521 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Let $E_{j,n}$ ($1\le j\le24$, $n\ge1$) be independent standard exponential variables and $M^*=\max_{j\le24,\,n\ge1}E_{j,n}/(2\pi n)$, so that $\mathbb{P}(M^*\le y)=\prod_{n\ge1}(1-e^{-2\pi ny})^{24}$ for $y>0$. For complex $s$ and $c>0$ let $Q(s,c)=\Gamma(s,c)/\Gamma(s)=\Gamma(s)^{-1}\int_c^\infty t^{s-1}e^{-t}\,dt$ be the regularised upper incomplete gamma function, which is entire in $s$ and vanishes at $s=0,-1,-2,\ldots$. Let $\Delta(\tau)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi i\tau}$, be Ramanujan's cusp form of weight $12$, and $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$ its $L$ function, continued to an entire function. For every complex $s$, $L(s,\Delta)=\mathbb{E}\bigl[Q(s,2\pi M^*)\bigr]$. For real $s>0$, equivalently, $L(s,\Delta)=\mathbb{P}(G_s\ge2\pi M^*)$, where $G_s$ has the gamma law of shape $s$ and unit rate and is independent of $M^*$.
 
-Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex), label `thm:ch11main`.
+Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex), label `thm:ch11main`.
 
 <a id="real_l_values_of_ramanujan_delta_lie_in_unit_interval"></a>
 
 ### L values of Ramanujan's Delta at positive real points lie strictly between 0 and 1
 
-Corollary 27.3, page 503 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Corollary 28.3, page 522 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Let $\Delta(\tau)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi i\tau}$, be Ramanujan's cusp form of weight $12$, and $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$ its $L$ function, continued to an entire function. For real $s>0$, $0<L(s,\Delta)<1$.
 
-Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex), label `cor:ch11bounds`.
+Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex), label `cor:ch11bounds`.
 
 <a id="l_function_of_ramanujan_delta_increases_to_one"></a>
 
 ### Strict monotonicity of the L function of Ramanujan's Delta on the positive real axis
 
-Corollary 27.4, page 503 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Corollary 28.4, page 522 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Let $\Delta(\tau)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi i\tau}$, be Ramanujan's cusp form of weight $12$, and $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$ its $L$ function, continued to an entire function. On $s>0$, $L(s,\Delta)$ is strictly increasing, and $L(s,\Delta)\uparrow1$ as $s\to\infty$.
 
-Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex), label `cor:ch11monotone`.
+Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex), label `cor:ch11monotone`.
 
 <a id="modularity_of_delta_as_self_similarity_of_extreme_value_law"></a>
 
 ### Modularity of Ramanujan's Delta as self similarity of an extreme value law
 
-Proposition 27.5, page 504 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Proposition 28.5, page 523 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Let $E_{j,n}$ ($1\le j\le24$, $n\ge1$) be independent standard exponential variables, $M^*=\max_{j\le24,\,n\ge1}E_{j,n}/(2\pi n)$, and $F(y)=\mathbb{P}(M^*\le y)=\prod_{n\ge1}(1-e^{-2\pi ny})^{24}$ for $y>0$, so that Ramanujan's cusp form $\Delta(\tau)=q\prod_{n\ge1}(1-q^n)^{24}$, $q=e^{2\pi i\tau}$, satisfies $\Delta(iy)=e^{-2\pi y}F(y)$. For all $y>0$, $F(y)=y^{-12}e^{2\pi(y-1/y)}F(1/y)$. Consequently $F(y)\sim y^{-12}e^{-2\pi/y}$ as $y\to0$, and $1-F(y)\sim24e^{-2\pi y}$ as $y\to\infty$.
 
-Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex), label `prop:ch11selfsim`.
+Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex), label `prop:ch11selfsim`.
 
 <a id="polya_kernel_of_delta_as_posterior_law"></a>
 
 ### Pólya kernel of Ramanujan's Delta as a Bayesian posterior
 
-Proposition 27.6, page 505 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Proposition 28.6, page 524 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Let $E_{j,n}$ ($1\le j\le24$, $n\ge1$) be independent standard exponential variables and $M^*=\max_{j\le24,\,n\ge1}E_{j,n}/(2\pi n)$, let $G_6$ have the gamma law of shape $6$ and unit rate, independent of $M^*$, and let $W=\log(G_6/2\pi)$. Let $\Delta(\tau)=q\prod_{n\ge1}(1-q^n)^{24}$, $q=e^{2\pi i\tau}$, be Ramanujan's cusp form of weight $12$, let $\Lambda(s,\Delta)=(2\pi)^{-s}\Gamma(s)L(s,\Delta)=\int_0^\infty\Delta(iy)y^{s-1}\,dy$ be its completed $L$ function, and let $\Phi_\Delta(u)=\Delta(ie^u)e^{6u}/\Lambda(6,\Delta)$, $u\in\mathbb{R}$, be its P\'olya kernel. Conditionally on $\{G_6\ge2\pi M^*\}$, $W$ has density $\Phi_\Delta$, and for every complex $z$, $\Lambda(6+z,\Delta)/\Lambda(6,\Delta)=\mathbb{E}\bigl[e^{zW}\bigm|G_6\ge2\pi M^*\bigr]$.
 
-Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex), label `prop:ch11posterior`.
+Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex), label `prop:ch11posterior`.
 
 <a id="extreme_value_representation_of_eta_product_l_functions"></a>
 
 ### Extreme value representation of L functions of eta products
 
-Theorem 27.7, page 506 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Theorem 28.7, page 525 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Let $\eta(\tau)=q^{1/24}\prod_{n\ge1}(1-q^n)$, $q=e^{2\pi i\tau}$, be the Dedekind eta function, and let $f(\tau)=\prod_m\eta(m\tau)^{r_m}=q\prod_m\prod_{n\ge1}(1-q^{mn})^{r_m}=\sum_{n\ge1}a_nq^n$, where the product runs over positive integers $m$, the $r_m\ge0$ are integers and $\sum_mm\,r_m=24$; let $L(s,f)=\sum_{n\ge1}a_nn^{-s}$, which converges absolutely in a right half plane. Let $E_{m,j,n}$ ($m$ with $r_m>0$, $1\le j\le r_m$, $n\ge1$) be independent standard exponential variables and $M_f=\max_m\max_{j\le r_m}\max_{n\ge1}E_{m,j,n}/(2\pi mn)$, whose distribution function is $F_f(y)=\mathbb{P}(M_f\le y)=\prod_mP(my)^{r_m}$ with $P(y)=\prod_{n\ge1}(1-e^{-2\pi ny})$, and for $c>0$ let $Q(s,c)=\Gamma(s)^{-1}\int_c^\infty t^{s-1}e^{-t}\,dt$ be the regularised upper incomplete gamma function, entire in $s$ and zero at $s=0,-1,-2,\ldots$. Then $f(iy)=e^{-2\pi y}F_f(y)$ for $y>0$, $L(s,f)$ continues to an entire function, and for every complex $s$, $L(s,f)=\mathbb{E}\bigl[Q(s,2\pi M_f)\bigr]$. For real $s>0$, $L(s,f)=\mathbb{P}(G_s\ge2\pi M_f)$, where $G_s$ has the gamma law of shape $s$ and unit rate and is independent of $M_f$; in particular $0<L(s,f)<1$, and $L(s,f)$ increases strictly to $1$ as $s\to\infty$.
 
-Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex), label `thm:ch11general`.
+Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex), label `thm:ch11general`.
 
 <a id="kolmogorov_distribution_as_maximum_of_exponentials"></a>
 
 ### Squared Kolmogorov variable as a maximum of exponentials and an identity in law with the eta extreme value
 
-Proposition 27.9, page 510 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Proposition 28.9, page 529 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Let $K=\sup_{t\le1}|b_t|$ for a standard Brownian bridge $b$, so that $\mathbb{P}(K\le x)=\sum_{n\in\mathbb{Z}}(-1)^ne^{-2n^2x^2}$ (Kolmogorov's law). Then $K^2$ has the law of the maximum of independent exponential variables, one of rate $2j$ for each even $j\ge2$ and two of rate $2j$ for each odd $j\ge1$. Moreover, let $M=\max_{n\ge1}E_n/(2\pi n)$ with $E_1,E_2,\ldots$ independent standard exponential variables, so that $\mathbb{P}(M\le y)=\prod_{n\ge1}(1-e^{-2\pi ny})$, and let $M_1,M_2,M_3$ be independent copies of $M$, with $K$ independent of $M_3$. Then $\max(M_1,M_2)\overset{d}{=}\max\bigl(K^2/\pi,\,M_3/2\bigr)$.
 
-Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex), label `prop:ch11kolmogorov`.
+Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex), label `prop:ch11kolmogorov`.
 
 <a id="brownian_functional_with_eta_extreme_value_law"></a>
 
 ### Brownian or Bessel functional with the extreme value law behind the Dedekind eta function
 
-Open Problem 27.1, page 510 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Open Problem 28.1, page 529 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: open.
 
 Statement. Let $M=\max_{n\ge1}E_n/(2\pi n)$ with $E_1,E_2,\ldots$ independent standard exponential variables, so that $\mathbb{P}(M\le y)=\prod_{n\ge1}(1-e^{-2\pi ny})$ for $y>0$, and let $M^*$ be the maximum of $24$ independent copies of $M$. Find a natural Brownian or Bessel functional with the law of $M$, or of $M^*$, or show that none exists among first passage and last exit times of one dimensional diffusions.
 
-Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex), label `prob:ch11brownian`.
+Source: [`book/chapters/ch11.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex), label `prob:ch11brownian`.
 
-## Chapter 28. Haar Measure and the p* Formula
+## Chapter 29. Haar Measure and the p* Formula
 
 <a id="reference_prior_for_conjugacy_classes_is_torus_haar_measure"></a>
 
 ### Reference prior for a conjugacy class of a compact Lie group observed through class function noise
 
-Proposition 28.16, page 529 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Proposition 29.16, page 548 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Let $K$ be a compact, connected and simple Lie group with Haar probability measure $dh$, let $T$ be a maximal torus with Haar probability measure $dt$, $W$ the Weyl group and $T^+$ a Weyl chamber, and let $\varphi\ge0$ be a smooth class function on $K$ with $\int\varphi\,dh=1$. Observe $Y_1,\dots,Y_n$ independent with density $p(y\mid M)=\varphi(M^{-1}y)$ with respect to $dh$, that is $Y=M\varepsilon$ with $\varepsilon$ of density $\varphi$, where $M=\eta t\eta^{-1}$ with class parameter $t\in T^+$ and nuisance parameter $u=\eta T\in K/T$. Suppose the Fisher information of this model at $M=e$ is finite and nonsingular. Then: (i) the Fisher metric is $c\,n$ times a fixed bi invariant Riemannian metric on $K$, for a constant $c=c(\varphi)>0$; Jeffreys' prior for $M$ is Haar measure, and its image on conjugacy classes has the Weyl density $|W|^{-1}\prod_{\alpha}|e^{i\alpha(t)}-1|$ (product over all roots $\alpha$) with respect to $dt$, that is, it is the Sato Tate measure of $K$; (ii) the reference prior of the two group algorithm of Berger and Bernardo, ordered as (class, conjugator), namely $\pi(u\mid t)\propto|I_{22}(t,u)|^{1/2}$ and $\pi(t)\propto\exp\bigl\{\int\pi(u\mid t)\log|I_{11\cdot2}(t,u)|^{1/2}\,du\bigr\}$, where $I=\bigl(\begin{smallmatrix}I_{11}&I_{12}\\I_{21}&I_{22}\end{smallmatrix}\bigr)$ is the Fisher information matrix in the coordinates $(t,u)$ and $I_{11\cdot2}=I_{11}-I_{12}I_{22}^{-1}I_{21}$, is the product of the $K$ invariant probability measure on $K/T$ and the uniform (Haar) measure $dt$ on the Weyl chamber, and its image on classes is the image of Haar measure on $T$. For $K=\mathrm{SU}(2)$ the reference prior for the angle $\theta\in[0,\pi]$ is $d\theta/\pi$, so $x=2\cos\theta$ has the arcsine law, against the Sato Tate prior $\frac{2}{\pi}\sin^2\theta\,d\theta$; for $K=\mathrm{USp}(4)$ it is uniform on $0\le\theta_2\le\theta_1\le\pi$, against the density proportional to $(\cos\theta_1-\cos\theta_2)^2\sin^2\theta_1\sin^2\theta_2$ given by the Weyl integration formula.
 
-Source: [`book/chapters/ch11b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11b.tex), label `thm:11brefprior`.
+Source: [`book/chapters/ch11b.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11b.tex), label `thm:11brefprior`.
 
-## Chapter 29. Bayesian Identification of Sato Tate Groups
+## Chapter 30. Bayesian Identification of Sato Tate Groups
 
 <a id="consistency_of_bayes_factors_under_equidistribution"></a>
 
 ### Consistency of Bayes factors under equidistribution
 
-Theorem 29.1, page 536 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Theorem 30.1, page 555 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Fix a compact set $K\subset\mathbb{R}$, a finite set $D\subset K$, and let $\nu$ be Lebesgue measure on $K$ plus counting measure on $D$. Let the candidate laws $P_0,P_1$ and the true law $\mu_0$ be probability measures on $K$ with $\nu$ densities $f_0,f_1,m$, so that their atoms lie in $D$. Write $h=\log(f_1/f_0)$, with values in $[-\infty,\infty]$; for a clipping level $M>0$ write $h_M=\max(-M,\min(M,h))$; and for a deterministic sequence $(x_k)$ in $K$ define the clipped log Bayes factor $\log B_n^M=\sum_{k\le n}h_M(x_k)$. Call $(x_k)$ equidistributed for $\mu_0$ relative to $D$ if $n^{-1}\#\{k\le n:x_k=a\}\to\mu_0(\{a\})$ for each $a\in D$ and $n^{-1}\sum_{k\le n,\,x_k\notin D}\delta_{x_k}$ converges weakly to the restriction of $\mu_0$ to $K\setminus D$. Suppose that $(x_k)$ is equidistributed for $\mu_0$ relative to $D$, that $h$ is finite on $D$, that on $K\setminus D$ the function $h$ agrees almost everywhere with a continuous map $\tilde h:K\to[-\infty,\infty]$, through which $h$ is evaluated off $D$, and that $\mathrm{KL}(\mu_0\|P_0)<\infty$, where $\mathrm{KL}$ denotes the Kullback Leibler divergence. Then for every $M>0$, $\lim_{n\to\infty}n^{-1}\log B_n^M=\int h_M\,d\mu_0$, and as $M\to\infty$ the right side tends to $\int h\,d\mu_0=\mathrm{KL}(\mu_0\|P_0)-\mathrm{KL}(\mu_0\|P_1)\in[-\infty,\infty)$. In particular, if $\mu_0=P_0$ the double limit is $-\mathrm{KL}(P_0\|P_1)$.
 
-Source: [`book/chapters/ch12.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch12.tex), label `thm:12consist`.
+Source: [`book/chapters/ch12.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch12.tex), label `thm:12consist`.
 
 <a id="bayes_factor_rates_for_complex_multiplication_of_elliptic_curves"></a>
 
 ### Bayes factor rates for detecting complex multiplication of elliptic curves
 
-Corollary 29.3, page 538 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Corollary 30.3, page 557 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: proved.
 
 Statement. Let $E/\mathbb{Q}$ be an elliptic curve and $0<\varepsilon<\frac12$, and let $x_p=a_p/\sqrt p\in[-2,2]$ be its normalised Frobenius traces at the primes $p$ of good reduction, $p_1<p_2<\cdots$. Compare the models $M_{\mathrm{ST}}$, under which $x_p\sim(1-\varepsilon)\mu_{\mathrm{ST}}+\varepsilon\delta_0$, and $M_{\mathrm{CM}}$, under which $x_p\sim\frac12\delta_0+\frac12\,\mathrm{arcsine}$, where the Sato Tate law $\mu_{\mathrm{ST}}$ has density $(2\pi)^{-1}\sqrt{4-x^2}$ and the arcsine law has density $(\pi\sqrt{4-x^2})^{-1}$ on $[-2,2]$. With densities taken with respect to Lebesgue measure on $[-2,2]$ plus counting measure at $0$, the log likelihood ratio of $M_{\mathrm{CM}}$ to $M_{\mathrm{ST}}$ is $h(x)=-\log(1-\varepsilon)-\log(4-x^2)$ for $x\neq0$ and $h(0)=\log\frac1{2\varepsilon}$; for $M>0$ let $h_M=\max(-M,\min(M,h))$ and $\log B_n^M=\sum_{k\le n}h_M(x_{p_k})$. If $E$ has no complex multiplication, $\lim_{M\to\infty}\lim_{n\to\infty}n^{-1}\log B_n^M=-1-\log(1-\varepsilon)$. If $E$ has complex multiplication, the limit is $\frac12\log\frac1{2\varepsilon}-\frac12\log(1-\varepsilon)>0$.
 
-Source: [`book/chapters/ch12.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch12.tex), label `thm:12elliptic`.
+Source: [`book/chapters/ch12.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch12.tex), label `thm:12elliptic`.
 
-## Chapter 30. Open Problems
+## Chapter 31. Open Problems
 
 <a id="sato_tate_discrepancy_brownian_bridge_in_families"></a>
 
 ### Brownian bridge limit of the Sato Tate empirical process in families of elliptic curves
 
-Open Problem 30.3, page 549 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Open Problem 31.3, page 568 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: open.
 
 Statement. (Part (b) of the problem; part (a), the bound $D_n=O(n^{-1/2+\delta})$ for every $\delta>0$ for a single curve, is the conjecture of Akiyama and Tanigawa.) For an elliptic curve $E/\mathbb{Q}$ without complex multiplication let $p_1<p_2<\cdots$ be its primes of good reduction, $x_p=a_p(E)/\sqrt p\in[-2,2]$ with $a_p(E)=p+1-\#E(\mathbb{F}_p)$, $F_n$ the empirical distribution function of $x_{p_1},\dots,x_{p_n}$, $F_{\mathrm{ST}}$ the distribution function of the Sato Tate law $\mu_{\mathrm{ST}}(dx)=(2\pi)^{-1}\sqrt{4-x^2}\,dx$ on $[-2,2]$, and $D_n=\sup_x|F_n(x)-F_{\mathrm{ST}}(x)|$. Question: let $E$ be chosen uniformly among the curves without complex multiplication of conductor at most $X$, and let $n=\lfloor X^c\rfloor$ with $c>0$ fixed. For which $c$ does $\sqrt n\,(F_n-F_{\mathrm{ST}})\circ F_{\mathrm{ST}}^{-1}$ converge in law to a Brownian bridge as $X\to\infty$, and $\sqrt n\,D_n$ to the Kolmogorov law?
 
-Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex), label `op:disc`.
+Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex), label `op:disc`.
 
 <a id="inverse_problem_for_automorphy_from_twisted_prime_sums"></a>
 
 ### Inverse problem for automorphy from twisted sums over primes
 
-Open Problem 30.4, page 550 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Open Problem 31.4, page 569 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: open.
 
 Statement. Question: is there a criterion, stated through quantitative properties of the twisted sums $\sum_{p\le x}x_p\chi(p)\log p$ at the square root scale (rates in the law of large numbers, mean squares on the logarithmic scale, large deviation rates), uniform over Dirichlet characters $\chi$ of growing conductor, that decides whether a sequence $(x_p)$ in $[-2,2]$ indexed by the primes is close to the normalised Hecke eigenvalues $x_p(f)=a_p(f)/p^{(k-1)/2}$ of a holomorphic newform $f$ of weight $k$ with trivial nebentypus, in the sense that $\sum_{p\le x}(x_p-x_p(f))\chi(p)\log p=o(\sqrt x)$ for every $\chi$?
 
-Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex), label `op:inverse`.
+Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex), label `op:inverse`.
 
 <a id="thorin_form_of_hilberts_eighth_problem_for_ramanujan_delta"></a>
 
 ### Hilbert's eighth problem for GL2 in Thorin form
 
-Open Problem 30.8, page 554 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Open Problem 31.8, page 573 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: open.
 
 Statement. Let $\Delta(z)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi iz}$, be Ramanujan's cusp form of weight $12$ for $\mathrm{SL}_2(\mathbb{Z})$, with $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$, and let $\Lambda(s,\Delta)=(2\pi)^{-s}\Gamma(s)L(s,\Delta)$. Write the zeros of $\Lambda(s,\Delta)$ as $6\pm i\gamma_k$ with $\operatorname{Re}\gamma_k>0$, and let $k_\Delta(x)=\sum_k e^{-\gamma_k^2x}$ for $x>0$. Prove by a probabilistic argument that $k_\Delta$ is completely monotone on $(0,\infty)$.
 
-Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex), label `op:thorin`.
+Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex), label `op:thorin`.
 
 <a id="extreme_value_representation_zeros_and_other_newforms"></a>
 
 ### Extreme value representation for locating zeros and for other newforms
 
-Open Problem 30.9, page 555 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Open Problem 31.9, page 574 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: open.
 
 Statement. Let $\Delta(z)=q\prod_{n\ge1}(1-q^n)^{24}=\sum_{n\ge1}\tau(n)q^n$, $q=e^{2\pi iz}$, be Ramanujan's cusp form of weight $12$ for $\mathrm{SL}_2(\mathbb{Z})$, with $L$ function $L(s,\Delta)=\sum_{n\ge1}\tau(n)n^{-s}$. Let $M^*$ be the maximum of $24$ independent copies of $M=\max_{n\ge1}E_n/(2\pi n)$, with $E_n$ independent standard exponential variables, so that $L(s,\Delta)=\mathbb{E}\,Q(s,2\pi M^*)$ for every complex $s$, where $Q(s,c)=\Gamma(s,c)/\Gamma(s)$ is the regularised upper incomplete gamma function. (a) Question: can properties of the law of $M^*$, such as the self similarity $F(y)=y^{-12}e^{2\pi(y-1/y)}F(1/y)$ of its distribution function $F$ given by modularity, be used to locate or count the zeros of $L(s,\Delta)$? (b) Question: for which newforms $f$ is there a random variable $M_f$, the maximum of countably many independent variables with distribution functions of the form $(1-e^{-cy})^{\kappa}$ with $c,\kappa>0$, such that $f(iy)=e^{-2\pi y}\,\mathbb{P}(M_f\le y)$ for all $y>0$?
 
-Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex), label `op:ev`.
+Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex), label `op:ev`.
 
 <a id="second_order_kemeny_constants_of_supersingular_isogeny_graphs"></a>
 
 ### Second order term of Kemeny constants of supersingular 2 isogeny graphs
 
-Open Problem 30.10, page 556 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Open Problem 31.10, page 575 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: open.
 
 Statement. For primes $N\equiv1\bmod12$ let $K_N$ be the Kemeny constant of simple random walk on the supersingular $2$ isogeny graph in characteristic $N$, which is $3$ regular on $h=(N-1)/12$ vertices; thus $K_N=\sum_{j=2}^{h}(1-\lambda_j/3)^{-1}$, where $\lambda_2,\dots,\lambda_h$ are the eigenvalues of its adjacency matrix other than the eigenvalue $3$, and $K_N/h\to2$ as $N\to\infty$ through these primes. Question: does the empirical distribution of $K_N-2h$ over the primes $N\le Y$ with $N\equiv1\bmod12$ converge as $Y\to\infty$, and is $K_N-2h$ bounded?
 
-Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex), label `op:kemeny`.
+Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex), label `op:kemeny`.
 
 <a id="bayesian_identification_of_sato_tate_groups_for_abelian_surfaces"></a>
 
 ### Bayesian identification of Sato Tate groups for abelian surfaces and effective bounds
 
-Open Problem 30.11, page 557 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Open Problem 31.11, page 576 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: open.
 
 Statement. The book's consistency theorem for Bayesian identification states the following. Let $K\subset\mathbb{R}$ be compact, $D\subset K$ finite, and $\nu$ Lebesgue measure on $K$ plus counting measure on $D$; let candidate laws $P_0$, $P_1$ and a true law $\mu_0$ have $\nu$ densities $f_0$, $f_1$, $m$, let $h=\log(f_1/f_0)$, with values in $[-\infty,\infty]$, and for a clipping level $M>0$ let $h_M=\max(-M,\min(M,h))$ and $\log B_n^M=\sum_{k\le n}h_M(x_k)$ for a sequence $(x_k)$ in $K$. Suppose that $(x_k)$ is equidistributed for $\mu_0$ relative to $D$, meaning that $n^{-1}\#\{k\le n:x_k=a\}\to\mu_0(\{a\})$ for each $a\in D$ and that $n^{-1}\sum_{k\le n,\,x_k\notin D}\delta_{x_k}$ converges weakly to the restriction of $\mu_0$ to $K\setminus D$; that $h$ is finite on $D$; that on $K\setminus D$ it agrees almost everywhere with a continuous map $K\to[-\infty,\infty]$ through which it is evaluated there; and that the Kullback Leibler divergence $\mathrm{KL}(\mu_0\|P_0)$ is finite. Then for every $M$, $\lim_{n\to\infty}n^{-1}\log B_n^M=\int h_M\,d\mu_0$, and as $M\to\infty$ this tends to $\int h\,d\mu_0=\mathrm{KL}(\mu_0\|P_0)-\mathrm{KL}(\mu_0\|P_1)\in[-\infty,\infty)$. Problem: (a) extend this theorem to the $52$ Sato Tate groups of abelian surfaces, whose laws of the normalised coefficients $(a_1,a_2)$ of the characteristic polynomials of Frobenius can have atoms and components on lower dimensional sets, and to motives of higher rank; (b) make it effective, by bounding the number of primes after which the log Bayes factor favours the true group against every other candidate, polynomially in the logarithm of the conductor and without assuming the Riemann hypothesis.
 
-Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex), label `op:bayes`.
+Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex), label `op:bayes`.
 
 <a id="family_limit_law_of_the_rank_bias_of_elliptic_curves"></a>
 
 ### Family limit law of the rank bias of elliptic curves
 
-Open Problem 30.12, page 557 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
+Open Problem 31.12, page 576 of Polson and Sokolov (2026), *On Langlands Conjectures: Probabilistic Methods*, edition 1. New in this book.
 
 Status: open.
 
 Statement. Let $E/\mathbb{Q}$ have conductor $N_E$ and analytic rank $r_E$, let $a_p=p+1-\#E(\mathbb{F}_p)$ and $S_E(x)=\sum_{p\le x,\,p\nmid N_E}a_p\log p/p$, and assume the Riemann hypothesis for $L(s,E)$. Then $S_E(x)-(\tfrac12-r_E)\log x$, with $\log x$ uniform on $[0,Y]$ and $Y\to\infty$, converges in law to a distribution $\mu_E$ with mean $C_E$; let $Z_E$ have the law $\mu_E$ shifted to mean zero. Question: as $E$ runs through the curves of conductor at most $X$ and analytic rank $r\in\{0,1\}$, does the law of $Z_E/\log N_E$ converge as $X\to\infty$, and is the limit the one predicted by the low lying zeros of the corresponding orthogonal family?
 
-Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex), label `op:rankbias`.
+Source: [`book/chapters/ch13.tex`](https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex), label `op:rankbias`.
 
 ***
 
 <small>License: Text, figures and PDF: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Code: [MIT](https://opensource.org/license/mit).</small>
 
-<small>This page is generated from the book's repository ([main](https://github.com/VadimSokolov/langlands/tree/main)). The numbers and pages are those of the PDF, [version 1.0.0](https://github.com/VadimSokolov/langlands/releases/tag/v1.0.0).</small>
+<small>This page is generated from the book's repository ([main](https://github.com/VadimSokolov/langlands/tree/main)). The numbers and pages are those of the PDF, [version 1.1.0](https://github.com/VadimSokolov/langlands/releases/tag/v1.1.0).</small>
 
 <!-- Generated by bookrepo.py from book.yaml and results.yaml. Edit those files, not this one. -->

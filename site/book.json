@@ -23,10 +23,10 @@
  "credit_names": "Polson and Sokolov",
  "year": "2026",
  "edition": "1",
- "version": "1.0.0",
- "date_released": "2026-10-16",
+ "version": "1.1.0",
+ "date_released": "2026-10-18",
  "publisher": "Independently published",
- "doi": "10.5281/zenodo.23419248",
+ "doi": "10.5281/zenodo.23445874",
  "concept_doi": "10.5281/zenodo.23419247",
  "language": "en",
  "keywords": [
@@ -41,10 +41,11 @@
   "supersingular isogeny graphs",
   "random matrix theory",
   "Poisson Dirichlet law",
+  "critical percolation",
   "Bayesian inference"
  ],
  "short_description": "What probability can and cannot contribute to the Langlands programme: Sato Tate laws, random walks on trees and isogeny graphs, Thorin measures and generalized gamma convolutions as reformulations of the Riemann hypothesis, and Bayesian identification of Sato Tate groups, with code and data.",
- "description": "This monograph asks what probability can contribute to the Langlands programme, and answers on two sides. The first is a limitation, proved in the opening chapter: no argument that sees only the limiting distribution of Frobenius data can detect automorphy, because equidistribution is a consequence of functoriality, not a route to it. The second is what probability does supply: consequences of the conjectures, calibration against data, and probabilistic reformulations.\n\nThe book covers Weyl's criterion and the Sato Tate law, random matrix models of the zeros of L functions, Kloosterman sums, random class groups and Selmer groups, Hecke operators as random walks on Bruhat Tits trees, hitting times on supersingular isogeny graphs, log correlated fields, and Bayesian inference for Sato Tate groups. At its centre is the Thorin framework: for a cuspidal automorphic representation of GL(n) over the rationals, the generalized Riemann hypothesis is equivalent to the statement that the reciprocal of an even completion of its L function is the Laplace transform of a generalized gamma convolution. Later chapters turn the same devices on reciprocity, Fermat's last theorem, inverse Laplace transforms, random integers and the Poisson Dirichlet law, Hecke characters and Maass forms. These are reformulations: no new case of reciprocity and no Riemann hypothesis is proved.\n\nResults new to the book include the limit of the normalised Kemeny constants of supersingular isogeny graphs, the Thorin criteria for the generalized Riemann hypothesis and for the Ramanujan conjecture, the Thorin structure of Hecke passage times, an extreme value representation of the L functions of multiplicative eta products, the Gamma process limit of the Frobenius labelled factorisation of a random integer, and a consistency theorem for the Bayesian identification of Sato Tate groups. Open computational problems close every chapter, and the scripts and data behind the numbers are in the repository.",
+ "description": "This monograph asks what probability can contribute to the Langlands programme, and answers on two sides. The first is a limitation, proved in the opening chapter: no argument that sees only the limiting distribution of Frobenius data can detect automorphy, because equidistribution is a consequence of functoriality, not a route to it. The second is what probability does supply: consequences of the conjectures, calibration against data, and probabilistic reformulations.\n\nThe book covers Weyl's criterion and the Sato Tate law, random matrix models of the zeros of L functions, Kloosterman sums, random class groups and Selmer groups, Hecke operators as random walks on Bruhat Tits trees, hitting times on supersingular isogeny graphs, log correlated fields, and Bayesian inference for Sato Tate groups. At its centre is the Thorin framework: for a cuspidal automorphic representation of GL(n) over the rationals, the generalized Riemann hypothesis is equivalent to the statement that the reciprocal of an even completion of its L function is the Laplace transform of a generalized gamma convolution. Later chapters turn the same devices on reciprocity, Fermat's last theorem, inverse Laplace transforms, random integers and the Poisson Dirichlet law, Hecke characters, Maass forms, and the crossing probabilities of critical percolation, whose threshold law has, up to normalisation, the completed L function of an elliptic curve as its Mellin transform. These are reformulations: no new case of reciprocity and no Riemann hypothesis is proved.\n\nResults new to the book include the limit of the normalised Kemeny constants of supersingular isogeny graphs, the Thorin criteria for the generalized Riemann hypothesis and for the Ramanujan conjecture, the Thorin structure of Hecke passage times, an extreme value representation of the L functions of multiplicative eta products, the Gamma process limit of the Frobenius labelled factorisation of a random integer, and a consistency theorem for the Bayesian identification of Sato Tate groups. Open computational problems close every chapter, and the scripts and data behind the numbers are in the repository.",
  "license_text": {
   "id": "CC-BY-4.0",
   "name": "CC BY 4.0",
@@ -56,21 +57,19 @@
   "url": "https://opensource.org/license/mit"
  },
  "release": {
-  "tag": "v1.0.0",
-  "url": "https://github.com/VadimSokolov/langlands/releases/tag/v1.0.0"
+  "tag": "v1.1.0",
+  "url": "https://github.com/VadimSokolov/langlands/releases/tag/v1.1.0"
  },
  "links": {
   "page": "https://vsokolov.org/books/langlands/",
   "page_markdown": "https://vsokolov.org/books/langlands/index.html.md",
   "results": "https://vsokolov.org/books/langlands/results.html",
   "results_markdown": "https://vsokolov.org/books/langlands/results.html.md",
-  "pdf": "https://github.com/VadimSokolov/langlands/releases/download/v1.0.0/langlands.pdf",
+  "pdf": "https://github.com/VadimSokolov/langlands/releases/download/v1.1.0/langlands.pdf",
   "repository": "https://github.com/VadimSokolov/langlands",
-  "source": "https://github.com/VadimSokolov/langlands/tree/v1.0.0",
-  "doi": "https://doi.org/10.5281/zenodo.23419248",
+  "source": "https://github.com/VadimSokolov/langlands/tree/v1.1.0",
+  "doi": "https://doi.org/10.5281/zenodo.23445874",
   "concept_doi": "https://doi.org/10.5281/zenodo.23419247",
-  "zenodo": "https://zenodo.org/records/23419248",
-  "doi_badge": "https://zenodo.org/badge/DOI/10.5281/zenodo.23419248.svg",
   "print": "https://www.amazon.com/dp/B0HN8BVRB5",
   "amazon_badge": "https://vsokolov.org/books/available-at-amazon.png",
   "icon_pdf": "https://vsokolov.org/books/icon-pdf.svg",
@@ -78,16 +77,16 @@
   "cover": "https://vsokolov.org/books/langlands/cover.jpg"
  },
  "citation": {
-  "text": "Polson and Sokolov (2026), On Langlands Conjectures: Probabilistic Methods, edition 1, https://doi.org/10.5281/zenodo.23419248.",
-  "bibtex": "@book{polsonsokolov2026langlands,\n  author = {Polson, Nick and Sokolov, Vadim},\n  title = {{On Langlands Conjectures: Probabilistic Methods}},\n  year = {2026},\n  publisher = {Independently published},\n  doi = {10.5281/zenodo.23419248},\n  url = {https://vsokolov.org/books/langlands/}\n}",
+  "text": "Polson and Sokolov (2026), On Langlands Conjectures: Probabilistic Methods, edition 1, https://doi.org/10.5281/zenodo.23445874.",
+  "bibtex": "@book{polsonsokolov2026langlands,\n  author = {Polson, Nick and Sokolov, Vadim},\n  title = {{On Langlands Conjectures: Probabilistic Methods}},\n  year = {2026},\n  publisher = {Independently published},\n  doi = {10.5281/zenodo.23445874},\n  url = {https://vsokolov.org/books/langlands/}\n}",
   "bibkey": "polsonsokolov2026langlands",
   "example": "Polson and Sokolov (2026), Proposition 1.5"
  },
  "pdf": {
   "file": "langlands.pdf",
-  "pages": 661,
-  "bytes": 6376428,
-  "sha256": "993b622c65e25fae8bcd755b8e87568a29c25223e35c19dec5f9a04123ac9521"
+  "pages": 683,
+  "bytes": 6489268,
+  "sha256": "c1160f438097537f4e4a5cf27d8acb0a49eadcd80305ff9f6c0930dcdf9ba1fc"
  },
  "bundle": {
   "page": "site/index.md",
@@ -99,7 +98,7 @@
  "serve": [
   {
    "path": "cover.jpg",
-   "url": "https://raw.githubusercontent.com/VadimSokolov/langlands/v1.0.0/pdf/cover.jpg"
+   "url": "https://raw.githubusercontent.com/VadimSokolov/langlands/v1.1.0/pdf/cover.jpg"
   }
  ],
  "chapters": [
@@ -391,57 +390,68 @@
   },
   {
    "key": "27",
-   "title": "Extreme Values and the L Functions of Eta Products",
-   "stem": "27_extreme_values_and_the_l_functions_of_eta_products",
-   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/27_extreme_values_and_the_l_functions_of_eta_products.md",
+   "title": "Percolation and the Curve y^2 = x^3 + 1",
+   "stem": "27_percolation_and_the_curve",
+   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/27_percolation_and_the_curve.md",
    "first_page": "500",
-   "last_page": "513",
-   "pages": 14,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/27_extreme_values_and_the_l_functions_of_eta_products.md",
-   "summary": "On the imaginary axis the product in the Dedekind eta function is the distribution function of a maximum of independent exponential clocks. A Mellin transform argument then gives the extreme value representation, new in this book: the L function of Ramanujan's Delta function, and of every eta product ∏ η(mτ)^(r_m) with nonnegative integer r_m and Σ m r_m = 24 (among them the thirty multiplicative eta products), is entire and equals at every complex point the expectation of a regularised incomplete gamma function at such a maximum. For real positive s it is the probability that an independent gamma variable beats the maximum, so these L values lie strictly between 0 and 1 and increase to 1, and the central L value of the elliptic curve 11a, an Artin L value, Catalan's constant and π/4 become probabilities. Modularity becomes self similarity of the law, the Pólya kernel of Delta a Bayesian posterior, and Jacobi's triple product a link to the Kolmogorov distribution; a Monte Carlo estimator follows. The Riemann hypothesis for Delta is restated only as a reformulation, and the representation does not locate zeros.\n\n#### From the literature\n\n- Gumbel limits for maxima (Fisher and Tippett 1928, Gnedenko 1943); Rényi's representation (Rényi 1953).\n- Entire continuation of L(s, Delta) and its incomplete gamma expansion (Hecke 1936); the weight one eta product of level 23 as an Artin L function (Hecke 1937).\n- Multiplicative eta products (Dummit, Kisilevsky and McKay 1985) and multiplicative eta quotients (Martin 1996).\n- The newform of 11a (Eichler 1954, Shimura 1971), the Birch and Swinnerton Dyer formula (Birch and Swinnerton Dyer 1965), and rank zero from analytic rank zero (Kolyvagin 1988, Gross and Zagier 1986).\n- Riemann's xi as a moment of a Brownian excursion functional (Biane, Pitman and Yor 2001); zeros off the line without an Euler product (Davenport and Heilbronn 1936); real zero criteria (Pólya 1926, de Bruijn 1950, Newman 1976).\n- Kolmogorov's law (Kolmogorov 1933); diffusion passage times as sums of exponentials (Kent 1980).\n\n#### New results\n\nThe Notes claim the representation and its consequences as the authors' own.\n\n- [Product formula of the Dedekind eta function as the distribution function of a maximum of exponential clocks](https://vsokolov.org/books/langlands/results.html#eta_product_as_distribution_function_of_exponential_maximum) (Proposition 27.1, page 500; proved): The infinite product in the Dedekind eta function, read on the imaginary axis, is the distribution function of the maximum of independent exponential clocks with rates proportional to the positive integers, with explicit tails and a density given by the weight two Eisenstein series. New in this book.\n- [Extreme value representation of the L function of Ramanujan's Delta](https://vsokolov.org/books/langlands/results.html#l_function_of_ramanujan_delta_as_extreme_value_expectation) (Theorem 27.2, page 502; proved): At every complex point the L function of Ramanujan's Delta function equals the expectation of a regularised incomplete gamma function evaluated at a maximum of independent exponential clocks, and at positive real points it is the probability that an independent gamma variable beats that maximum. New in this book.\n- [L values of Ramanujan's Delta at positive real points lie strictly between 0 and 1](https://vsokolov.org/books/langlands/results.html#real_l_values_of_ramanujan_delta_lie_in_unit_interval) (Corollary 27.3, page 503; proved): Every value of the L function of Ramanujan's Delta function at a positive real point lies strictly between zero and one, being the probability of an event that has positive probability together with its complement. New in this book.\n- [Strict monotonicity of the L function of Ramanujan's Delta on the positive real axis](https://vsokolov.org/books/langlands/results.html#l_function_of_ramanujan_delta_increases_to_one) (Corollary 27.4, page 503; proved): On the positive real axis the L function of Ramanujan's Delta function increases strictly and tends to one, proved by a coupling of gamma variables. New in this book.\n- [Modularity of Ramanujan's Delta as self similarity of an extreme value law](https://vsokolov.org/books/langlands/results.html#modularity_of_delta_as_self_similarity_of_extreme_value_law) (Proposition 27.5, page 504; proved): The modular transformation of Ramanujan's Delta function becomes an exact self similarity of the law of the maximum of exponential clocks behind it, which exchanges the two tails of that law. New in this book.\n- [Pólya kernel of Ramanujan's Delta as a Bayesian posterior](https://vsokolov.org/books/langlands/results.html#polya_kernel_of_delta_as_posterior_law) (Proposition 27.6, page 505; proved): The Pólya kernel of Ramanujan's Delta function is the law of the logarithm of a gamma variable of shape six and rate two pi, conditioned to exceed the maximum of exponential clocks behind Delta, so its moment generating function is a ratio of completed L values. New in this book.\n- [Extreme value representation of L functions of eta products](https://vsokolov.org/books/langlands/results.html#extreme_value_representation_of_eta_product_l_functions) (Theorem 27.7, page 506; proved): For every eta product, that is every product of the functions eta(m tau) raised to nonnegative integer powers r_m with the sum of m r_m equal to 24 (the thirty multiplicative eta products among them), the L function is entire and equals at every complex point the expectation of a regularised incomplete gamma function evaluated at an explicit maximum of exponential clocks, so its values at positive real points are probabilities strictly between zero and one that increase strictly to one. New in this book.\n- [Squared Kolmogorov variable as a maximum of exponentials and an identity in law with the eta extreme value](https://vsokolov.org/books/langlands/results.html#kolmogorov_distribution_as_maximum_of_exponentials) (Proposition 27.9, page 510; proved): The square of the largest absolute value of a Brownian bridge, whose law is Kolmogorov's, is in law a maximum of independent exponential variables, and Jacobi's triple product becomes an identity in law linking it to the extreme value law behind the Dedekind eta function. New in this book.\n- [Brownian or Bessel functional with the extreme value law behind the Dedekind eta function](https://vsokolov.org/books/langlands/results.html#brownian_functional_with_eta_extreme_value_law) (Open Problem 27.1, page 510; open): Asks for a natural Brownian or Bessel functional whose law is the extreme value law behind the Dedekind eta function or Ramanujan's Delta function, or a proof that no first passage or last exit time of a one dimensional diffusion has it. New in this book.\n\n#### Key terms\n\nDedekind eta function, eta product, multiplicative eta products, eta quotient, Ramanujan Delta function, tau function, extreme value representation, maximum of exponentials, Gumbel law, regularised incomplete gamma function, Mellin transform, modular self similarity, Pólya kernel, Polya kernel, Eisenstein series E2, elliptic curve 11a, Artin L function, Catalan's constant, Kolmogorov distribution, Jacobi triple product, Monte Carlo L function"
+   "last_page": "518",
+   "pages": 19,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/27_percolation_and_the_curve.md",
+   "summary": "Can one random variable join Langlands' critical percolation work to his reciprocity programme? Cardy's formula is the Beta(1/3, 1/3) distribution function evaluated at the modular lambda function, and the log odds of that law is an extended generalized gamma convolution (GGC) with Thorin atoms at n + 1/3. The crossing threshold T, the aspect ratio at which a critical rectangle stops being crossed in the scaling limit, has density proportional to η(it)^4 and a Mellin transform equal to the normalised completed L function of the elliptic curve y^2 = x^3 + 1 of conductor 36: the equality in law of T and 1/T is equivalent to the functional equation, and the Riemann hypothesis for the curve says that the characteristic function of log T has only real zeros. The chapter proves that log T is not infinitely divisible and T is not a GGC, and that the Riemann hypothesis for the curve is equivalent to Hankel positivity of zero sums read off the cumulants of log T; a Prony step recovers the low zeros numerically. These are reformulations: no new case of reciprocity and no Riemann hypothesis is proved, and the infinite divisibility and self decomposability of T rest on numerics only.\n\n#### From the literature\n\n- Universality and conformal invariance of crossing probabilities (Langlands, Pichet, Pouliot and Saint Aubin 1992; Langlands, Pouliot and Saint Aubin 1994).\n- Cardy's formula (Cardy 1992), proved for site percolation on the triangular lattice (Smirnov 2001).\n- The derivative of Cardy's formula in the aspect ratio is a multiple of η(ir)^4, linked to a modular parametrisation of the curve y^2 = x^3 + 1 (Kleban and Zagier 2003).\n- Eta quotient formulas for annulus crossings (Cardy 2002 and 2006), proved by Sun, Xu and Zhuang (2024); Dubédat (2004) derived a differential equation for the crossing probability from SLE6.\n- The law with Mellin transform 2ξ(s) (Biane, Pitman and Yor 2001); infinitely many zeros on the critical line for L functions of cusp forms (Hafner 1983; Rezvyakova 2010 for Hecke congruence groups).\n- Generalized gamma convolutions and their extension (Thorin 1978; Bondesson 1992).\n\n#### New results\n\nNone of the catalogued results proves a case of the Riemann hypothesis.\n\n- [The Mellin transform of the percolation crossing threshold is the normalised completed L function of y^2 = x^3 + 1](https://vsokolov.org/books/langlands/results.html#percolation_crossing_threshold_and_the_l_function_of_y2_x3_1) (Theorem 27.5, page 506; proved): The aspect ratio at which a critical percolation rectangle stops being crossed is a random variable whose Mellin transform is, up to a constant, the completed L function of the elliptic curve y^2 = x^3 + 1 of conductor 36, so that its symmetry under inversion is equivalent to the functional equation, its normalising constant gives the central L value in closed form, and the Riemann hypothesis for this curve becomes the statement that the characteristic function of the log threshold has only real zeros, a reformulation that does not prove it. New in this book.\n- [Thorin representation of the reciprocal moments of the crossing threshold under the Riemann hypothesis for y^2 = x^3 + 1](https://vsokolov.org/books/langlands/results.html#thorin_representation_of_reciprocal_crossing_threshold_moments) (Corollary 27.6, page 507; conditional on the Riemann hypothesis for L(E, s), where E is the elliptic curve y^2 = x^3 + 1): Assuming the Riemann hypothesis for the curve y^2 = x^3 + 1, the reciprocal of the moment function of the percolation crossing threshold is the characteristic function of a sum of independent Laplace variables scaled by the reciprocals of the zero ordinates, a symmetric extended generalized gamma convolution with Thorin atoms at the zeros. New in this book.\n- [Cardy's annulus crossing probability is not the Laplace transform of a positive measure](https://vsokolov.org/books/langlands/results.html#annulus_crossing_probability_is_not_a_positive_laplace_transform) (Proposition 27.7, page 509; proved): The probability that an open path crosses an annulus in critical percolation, as a function of the modulus, is not the Laplace transform of a positive measure, so the signed spectral measure in its eta quotient expansion cannot be made positive. New in this book.\n- [The log crossing threshold is not infinitely divisible](https://vsokolov.org/books/langlands/results.html#log_crossing_threshold_is_not_infinitely_divisible) (Theorem 27.8, page 509; proved): The logarithm of the percolation crossing threshold is not infinitely divisible, and so not an extended generalized gamma convolution, because its characteristic function has real zeros, at the ordinates of the zeros of the L function of y^2 = x^3 + 1 that lie on the critical line, and the characteristic function of an infinitely divisible law never vanishes. New in this book.\n- [The percolation crossing threshold is not a generalized gamma convolution](https://vsokolov.org/books/langlands/results.html#crossing_threshold_is_not_a_generalized_gamma_convolution) (Theorem 27.10, page 510; proved): The percolation crossing threshold is not a generalized gamma convolution, since the continuation of its Laplace transform has a real zero between two consecutive poles whose residues have the same sign, and so its density, a multiple of the fourth power of the Dedekind eta function on the imaginary axis, is not hyperbolically completely monotone. New in this book.\n- [Numerical self decomposability of the percolation crossing threshold](https://vsokolov.org/books/langlands/results.html#crossing_threshold_self_decomposable_numerically) (Proposition 27.11, page 511; open): A numerical Laplace inversion indicates, without proof, that the percolation crossing threshold is infinitely divisible and self decomposable, with a positive decreasing Lévy function, although it is provably not a generalized gamma convolution; a proof is posed as an open computational problem. New in this book.\n- [Even cumulants of the log crossing threshold are zero sums of the L function of y^2 = x^3 + 1](https://vsokolov.org/books/langlands/results.html#cumulants_of_log_crossing_threshold_are_zero_sums) (Proposition 27.12, page 512; proved): Unconditionally, the odd cumulants of the logarithm of the percolation crossing threshold vanish and its even cumulants are explicit multiples of the sums of inverse even powers of the zeros of the L function of y^2 = x^3 + 1, so that moments of a crossing probability determine the low lying zeros, and under the Riemann hypothesis these sums are positive and their normalised roots increase to the first zero. New in this book.\n- [A criterion for the Riemann hypothesis of y^2 = x^3 + 1 in percolation cumulants](https://vsokolov.org/books/langlands/results.html#percolation_cumulant_criterion_for_grh_of_y2_x3_1) (Theorem 27.13, page 515; proved): Proves an equivalence and not the hypothesis, namely that the Riemann hypothesis for the L function of y^2 = x^3 + 1 holds if and only if the reciprocal of the moment function of the percolation crossing threshold is the characteristic function of a symmetric extended generalized gamma convolution, if and only if a generating function of the cumulants of the log threshold is a Stieltjes function, if and only if every Hankel matrix of the zero sums computed from those cumulants is positive semidefinite. New in this book.\n\n#### Key terms\n\ncritical percolation, crossing probability, Cardy's formula, modular lambda function, Dedekind eta function, crossing threshold, Mellin transform, elliptic curve y^2 = x^3 + 1, Riemann hypothesis, generalized gamma convolution, Thorin measure, 2 sin squared lemma, infinite divisibility, self decomposability, Stieltjes function"
   },
   {
    "key": "28",
-   "title": "Haar Measure and the p* Formula",
-   "stem": "28_haar_measure_and_the_p_formula",
-   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/28_haar_measure_and_the_p_formula.md",
-   "first_page": "515",
-   "last_page": "534",
-   "pages": 20,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/28_haar_measure_and_the_p_formula.md",
-   "summary": "The chapter sets Haar measure as the law of Frobenius on compact Sato Tate groups beside Haar measure as a prior in statistical inference. It computes left and right Haar measures and the modular function of the affine group of the line, which acts simply transitively on the upper half plane, shows that hyperbolic area is the image of left Haar measure, and presents Duke's equidistribution of Heegner points (CM points) as a noncompact analogue of Sato Tate. For transformation models it proves the classical theorems that Barndorff Nielsen's p* formula is exact and that invariant credible sets of the right Haar prior (Fraser's structural and Fisher's fiducial distributions) have exact frequentist coverage; in its examples the left Haar (Jeffreys) prior undercovers, with exact coverages for normal errors. The main new result concerns a conjugacy class, such as a Satake parameter, of a compact connected simple Lie group observed through noise whose density is a class function: Jeffreys' prior is Haar measure, whose image on classes is the Sato Tate measure, while the Berger Bernardo reference prior is uniform on the maximal torus, the arcsine law for SU(2). Haar normalisations of volumes, Tamagawa numbers and period formulas close the chapter.\n\n#### From the literature\n\n- Existence and uniqueness of Haar measure (Haar 1933; von Neumann 1934, 1936; Weil 1940).\n- Equidistribution of Heegner points (Duke 1988, after Iwaniec 1987 and Linnik 1968) and Waldspurger's formulas (Waldspurger 1981, 1985).\n- Fisher's conditional and fiducial arguments (Fisher 1934, 1935) and structural inference (Fraser 1968).\n- The p* formula and its exactness in transformation models (Barndorff Nielsen 1980, 1983).\n- Right Haar priors and best invariant procedures (Stein 1965; Hora and Buehler 1966); marginalisation paradoxes (Dawid, Stone and Zidek 1973).\n- Reference priors (Bernardo 1979; Berger and Bernardo 1992), for orbits (Chang and Eaves 1990).\n- Volumes of spaces of lattices (Siegel 1945) and the Tamagawa number of SL2 (Weil 1961).\n\n#### New results\n\nThe other theorems of the chapter are classical, as its Notes say.\n\n- [Reference prior for a conjugacy class of a compact Lie group observed through class function noise](https://vsokolov.org/books/langlands/results.html#reference_prior_for_conjugacy_classes_is_torus_haar_measure) (Proposition 28.16, page 529; proved): When an element of a compact connected simple Lie group is observed through noise whose density is a class function with finite nonsingular Fisher information, Jeffreys' prior is Haar measure, whose image on conjugacy classes is the Sato Tate measure, while the Berger Bernardo reference prior for the class is uniform on the maximal torus, which for SU(2) gives the arcsine law instead of the semicircle law. New in this book.\n\n#### Key terms\n\nHaar measure, left Haar measure, right Haar measure, modular function, unimodular group, affine group, ax+b group, Iwasawa decomposition, hyperbolic area, Duke's theorem, Heegner points, CM points, transformation model, structural inference, fiducial inference, p* formula, p star formula, Barndorff Nielsen formula, saddlepoint approximation, right Haar prior, probability matching prior, Jeffreys prior, marginalisation paradox, reference prior, Berger Bernardo algorithm, Chang Eaves prior, Satake parameter, Weyl integration formula, Tamagawa number"
+   "title": "Extreme Values and the L Functions of Eta Products",
+   "stem": "28_extreme_values_and_the_l_functions_of_eta_products",
+   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/28_extreme_values_and_the_l_functions_of_eta_products.md",
+   "first_page": "519",
+   "last_page": "532",
+   "pages": 14,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/28_extreme_values_and_the_l_functions_of_eta_products.md",
+   "summary": "On the imaginary axis the product in the Dedekind eta function is the distribution function of a maximum of independent exponential clocks. A Mellin transform argument then gives the extreme value representation, new in this book: the L function of Ramanujan's Delta function, and of every eta product ∏ η(mτ)^(r_m) with nonnegative integer r_m and Σ m r_m = 24 (among them the thirty multiplicative eta products), is entire and equals at every complex point the expectation of a regularised incomplete gamma function at such a maximum. For real positive s it is the probability that an independent gamma variable beats the maximum, so these L values lie strictly between 0 and 1 and increase to 1, and the central L value of the elliptic curve 11a, an Artin L value, Catalan's constant and π/4 become probabilities. Modularity becomes self similarity of the law, the Pólya kernel of Delta a Bayesian posterior, and Jacobi's triple product a link to the Kolmogorov distribution; a Monte Carlo estimator follows. The Riemann hypothesis for Delta is restated only as a reformulation, and the representation does not locate zeros.\n\n#### From the literature\n\n- Gumbel limits for maxima (Fisher and Tippett 1928, Gnedenko 1943); Rényi's representation (Rényi 1953).\n- Entire continuation of L(s, Delta) and its incomplete gamma expansion (Hecke 1936); the weight one eta product of level 23 as an Artin L function (Hecke 1937).\n- Multiplicative eta products (Dummit, Kisilevsky and McKay 1985) and multiplicative eta quotients (Martin 1996).\n- The newform of 11a (Eichler 1954, Shimura 1971), the Birch and Swinnerton Dyer formula (Birch and Swinnerton Dyer 1965), and rank zero from analytic rank zero (Kolyvagin 1988, Gross and Zagier 1986).\n- Riemann's xi as a moment of a Brownian excursion functional (Biane, Pitman and Yor 2001); zeros off the line without an Euler product (Davenport and Heilbronn 1936); real zero criteria (Pólya 1926, de Bruijn 1950, Newman 1976).\n- Kolmogorov's law (Kolmogorov 1933); diffusion passage times as sums of exponentials (Kent 1980).\n\n#### New results\n\nThe Notes claim the representation and its consequences as the authors' own.\n\n- [Product formula of the Dedekind eta function as the distribution function of a maximum of exponential clocks](https://vsokolov.org/books/langlands/results.html#eta_product_as_distribution_function_of_exponential_maximum) (Proposition 28.1, page 519; proved): The infinite product in the Dedekind eta function, read on the imaginary axis, is the distribution function of the maximum of independent exponential clocks with rates proportional to the positive integers, with explicit tails and a density given by the weight two Eisenstein series. New in this book.\n- [Extreme value representation of the L function of Ramanujan's Delta](https://vsokolov.org/books/langlands/results.html#l_function_of_ramanujan_delta_as_extreme_value_expectation) (Theorem 28.2, page 521; proved): At every complex point the L function of Ramanujan's Delta function equals the expectation of a regularised incomplete gamma function evaluated at a maximum of independent exponential clocks, and at positive real points it is the probability that an independent gamma variable beats that maximum. New in this book.\n- [L values of Ramanujan's Delta at positive real points lie strictly between 0 and 1](https://vsokolov.org/books/langlands/results.html#real_l_values_of_ramanujan_delta_lie_in_unit_interval) (Corollary 28.3, page 522; proved): Every value of the L function of Ramanujan's Delta function at a positive real point lies strictly between zero and one, being the probability of an event that has positive probability together with its complement. New in this book.\n- [Strict monotonicity of the L function of Ramanujan's Delta on the positive real axis](https://vsokolov.org/books/langlands/results.html#l_function_of_ramanujan_delta_increases_to_one) (Corollary 28.4, page 522; proved): On the positive real axis the L function of Ramanujan's Delta function increases strictly and tends to one, proved by a coupling of gamma variables. New in this book.\n- [Modularity of Ramanujan's Delta as self similarity of an extreme value law](https://vsokolov.org/books/langlands/results.html#modularity_of_delta_as_self_similarity_of_extreme_value_law) (Proposition 28.5, page 523; proved): The modular transformation of Ramanujan's Delta function becomes an exact self similarity of the law of the maximum of exponential clocks behind it, which exchanges the two tails of that law. New in this book.\n- [Pólya kernel of Ramanujan's Delta as a Bayesian posterior](https://vsokolov.org/books/langlands/results.html#polya_kernel_of_delta_as_posterior_law) (Proposition 28.6, page 524; proved): The Pólya kernel of Ramanujan's Delta function is the law of the logarithm of a gamma variable of shape six and rate two pi, conditioned to exceed the maximum of exponential clocks behind Delta, so its moment generating function is a ratio of completed L values. New in this book.\n- [Extreme value representation of L functions of eta products](https://vsokolov.org/books/langlands/results.html#extreme_value_representation_of_eta_product_l_functions) (Theorem 28.7, page 525; proved): For every eta product, that is every product of the functions eta(m tau) raised to nonnegative integer powers r_m with the sum of m r_m equal to 24 (the thirty multiplicative eta products among them), the L function is entire and equals at every complex point the expectation of a regularised incomplete gamma function evaluated at an explicit maximum of exponential clocks, so its values at positive real points are probabilities strictly between zero and one that increase strictly to one. New in this book.\n- [Squared Kolmogorov variable as a maximum of exponentials and an identity in law with the eta extreme value](https://vsokolov.org/books/langlands/results.html#kolmogorov_distribution_as_maximum_of_exponentials) (Proposition 28.9, page 529; proved): The square of the largest absolute value of a Brownian bridge, whose law is Kolmogorov's, is in law a maximum of independent exponential variables, and Jacobi's triple product becomes an identity in law linking it to the extreme value law behind the Dedekind eta function. New in this book.\n- [Brownian or Bessel functional with the extreme value law behind the Dedekind eta function](https://vsokolov.org/books/langlands/results.html#brownian_functional_with_eta_extreme_value_law) (Open Problem 28.1, page 529; open): Asks for a natural Brownian or Bessel functional whose law is the extreme value law behind the Dedekind eta function or Ramanujan's Delta function, or a proof that no first passage or last exit time of a one dimensional diffusion has it. New in this book.\n\n#### Key terms\n\nDedekind eta function, eta product, multiplicative eta products, eta quotient, Ramanujan Delta function, tau function, extreme value representation, maximum of exponentials, Gumbel law, regularised incomplete gamma function, Mellin transform, modular self similarity, Pólya kernel, Polya kernel, Eisenstein series E2, elliptic curve 11a, Artin L function, Catalan's constant, Kolmogorov distribution, Jacobi triple product, Monte Carlo L function"
   },
   {
    "key": "29",
-   "title": "Bayesian Identification of Sato Tate Groups",
-   "stem": "29_bayesian_identification_of_sato_tate_groups",
-   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/29_bayesian_identification_of_sato_tate_groups.md",
-   "first_page": "535",
-   "last_page": "546",
-   "pages": 12,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/29_bayesian_identification_of_sato_tate_groups.md",
-   "summary": "How can one tell from Frobenius traces which Sato Tate group an abelian variety has? The chapter recasts the moment matching of Fité, Kedlaya, Rotger and Sutherland as Bayesian model selection: the working model treats the normalised traces as an exchangeable sample from the image of Haar measure under the trace, and equidistribution takes the place of the strong law of large numbers. Its consistency theorem, new in this book, is deterministic: for a sequence equidistributed for a true law, atoms allowed, with finite divergence from one candidate and a log likelihood ratio continuous off the atoms, the clipped log Bayes factor of two candidates is asymptotically linear, and its slope tends, as the clipping level grows, to the difference of the Kullback Leibler divergences of the truth from the two candidates. For elliptic curves over the rationals this gives explicit rates for detecting complex multiplication. The chapter also treats Wald's sequential probability ratio test, moments against the likelihood, the trace laws of USp(4), SU(2)×SU(2) and diagonal SU(2), three genus 2 curves (one outside the candidate list), misspecification, and nonparametric and arithmetic priors. The theorems assume equidistribution and prove nothing new about the Sato Tate conjecture.\n\n#### From the literature\n\n- The 52 Sato Tate groups of abelian surfaces (Fité, Kedlaya, Rotger and Sutherland 2012) and the moment method in genus 2 (Kedlaya and Sutherland 2009).\n- Sato Tate for elliptic curves without complex multiplication (Barnet Lamb, Geraghty, Harris and Taylor 2011) and joint Sato Tate (Harris 2009).\n- Exchangeability (de Finetti 1937; Hewitt and Savage 1955), consistency of maximum likelihood (Wald 1949), the Kullback Leibler divergence (Kullback and Leibler 1951).\n- The sequential probability ratio test (Wald 1947; Wald and Wolfowitz 1948).\n- Supersingular primes (Elkies 1987); hyperelliptic Jacobians without complex multiplication (Zarhin 2000).\n- Misspecification (Berk 1966; Kleijn and van der Vaart 2006).\n- Dirichlet processes (Ferguson 1973), Pólya trees (Lavine 1992), canonical moments (Dette and Studden 1997), empirical Bayes (Robbins 1956), endomorphism rings (Costa, Mascot, Sijsling and Voight 2019).\n\n#### New results\n\nBoth results are the authors' own by the chapter's Notes.\n\n- [Consistency of Bayes factors under equidistribution](https://vsokolov.org/books/langlands/results.html#consistency_of_bayes_factors_under_equidistribution) (Theorem 29.1, page 536; proved): For any deterministic sequence, such as normalised Frobenius traces, that is equidistributed for a true law with finitely many atoms and finite Kullback Leibler divergence from one candidate law, and with a log likelihood ratio continuous off the atoms, the clipped log Bayes factor between two candidate laws is asymptotically linear in the number of observations, and as the clipping level grows its slope tends to the difference of the divergences of the true law from the two candidates, with no independence assumed. New in this book.\n- [Bayes factor rates for detecting complex multiplication of elliptic curves](https://vsokolov.org/books/langlands/results.html#bayes_factor_rates_for_complex_multiplication_of_elliptic_curves) (Corollary 29.3, page 538; proved): For an elliptic curve over the rationals, the clipped Bayes factor of a complex multiplication model against a Sato Tate model with a small atom at zero, computed from the normalised Frobenius traces at the good primes, has an explicit limiting rate per prime, as the clipping level grows, that is negative without complex multiplication and positive with it. New in this book.\n\n#### Key terms\n\nSato Tate group, Sato Tate distribution, abelian surface, genus 2 curve, Frobenius traces, L polynomial, Bayes factor, Bayesian model selection, posterior consistency, Kullback Leibler divergence, relative entropy, equidistribution, exchangeability, working model, misspecification, sequential probability ratio test, SPRT, complex multiplication, supersingular primes, arcsine law, semicircle law, USp(4), Weyl integration formula, moment method, Galois endomorphism type, Dirichlet process, Pólya tree, empirical Bayes"
+   "title": "Haar Measure and the p* Formula",
+   "stem": "29_haar_measure_and_the_p_formula",
+   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/29_haar_measure_and_the_p_formula.md",
+   "first_page": "534",
+   "last_page": "553",
+   "pages": 20,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/29_haar_measure_and_the_p_formula.md",
+   "summary": "The chapter sets Haar measure as the law of Frobenius on compact Sato Tate groups beside Haar measure as a prior in statistical inference. It computes left and right Haar measures and the modular function of the affine group of the line, which acts simply transitively on the upper half plane, shows that hyperbolic area is the image of left Haar measure, and presents Duke's equidistribution of Heegner points (CM points) as a noncompact analogue of Sato Tate. For transformation models it proves the classical theorems that Barndorff Nielsen's p* formula is exact and that invariant credible sets of the right Haar prior (Fraser's structural and Fisher's fiducial distributions) have exact frequentist coverage; in its examples the left Haar (Jeffreys) prior undercovers, with exact coverages for normal errors. The main new result concerns a conjugacy class, such as a Satake parameter, of a compact connected simple Lie group observed through noise whose density is a class function: Jeffreys' prior is Haar measure, whose image on classes is the Sato Tate measure, while the Berger Bernardo reference prior is uniform on the maximal torus, the arcsine law for SU(2). Haar normalisations of volumes, Tamagawa numbers and period formulas close the chapter.\n\n#### From the literature\n\n- Existence and uniqueness of Haar measure (Haar 1933; von Neumann 1934, 1936; Weil 1940).\n- Equidistribution of Heegner points (Duke 1988, after Iwaniec 1987 and Linnik 1968) and Waldspurger's formulas (Waldspurger 1981, 1985).\n- Fisher's conditional and fiducial arguments (Fisher 1934, 1935) and structural inference (Fraser 1968).\n- The p* formula and its exactness in transformation models (Barndorff Nielsen 1980, 1983).\n- Right Haar priors and best invariant procedures (Stein 1965; Hora and Buehler 1966); marginalisation paradoxes (Dawid, Stone and Zidek 1973).\n- Reference priors (Bernardo 1979; Berger and Bernardo 1992), for orbits (Chang and Eaves 1990).\n- Volumes of spaces of lattices (Siegel 1945) and the Tamagawa number of SL2 (Weil 1961).\n\n#### New results\n\nThe other theorems of the chapter are classical, as its Notes say.\n\n- [Reference prior for a conjugacy class of a compact Lie group observed through class function noise](https://vsokolov.org/books/langlands/results.html#reference_prior_for_conjugacy_classes_is_torus_haar_measure) (Proposition 29.16, page 548; proved): When an element of a compact connected simple Lie group is observed through noise whose density is a class function with finite nonsingular Fisher information, Jeffreys' prior is Haar measure, whose image on conjugacy classes is the Sato Tate measure, while the Berger Bernardo reference prior for the class is uniform on the maximal torus, which for SU(2) gives the arcsine law instead of the semicircle law. New in this book.\n\n#### Key terms\n\nHaar measure, left Haar measure, right Haar measure, modular function, unimodular group, affine group, ax+b group, Iwasawa decomposition, hyperbolic area, Duke's theorem, Heegner points, CM points, transformation model, structural inference, fiducial inference, p* formula, p star formula, Barndorff Nielsen formula, saddlepoint approximation, right Haar prior, probability matching prior, Jeffreys prior, marginalisation paradox, reference prior, Berger Bernardo algorithm, Chang Eaves prior, Satake parameter, Weyl integration formula, Tamagawa number"
   },
   {
    "key": "30",
-   "title": "Open Problems",
-   "stem": "30_open_problems",
-   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/30_open_problems.md",
-   "first_page": "547",
-   "last_page": "560",
-   "pages": 14,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/30_open_problems.md",
-   "summary": "Where can probability say something definite about the open problems of the Langlands programme? This chapter states twelve problems, each with its status and attributions, what probability and computation contribute, and what would be needed; it proves no theorem and settles no case of any of them. Five restate known problems: the Ramanujan Petersson conjecture for Maass forms with Selberg's eigenvalue conjecture, read through Sarnak's density hypothesis as a large deviation bound; the Lang Trotter conjecture, read as a local limit theorem; Sato Tate groups of abelian varieties and motives with the Katz Sarnak symmetry types; functoriality of tensor products in general and of symmetric powers for Maass forms; and deterministic Ramanujan graphs of every degree. The book poses the other seven: Brownian bridge limits of the Sato Tate empirical process in families of elliptic curves, in a problem on discrepancy that starts from the conjecture of Akiyama and Tanigawa, an inverse problem asking whether twisted prime sums can detect closeness to a newform, a probabilistic proof of the Thorin form of the Riemann hypothesis for Ramanujan's Delta, the reach of the extreme value representation, second order Kemeny constants of supersingular isogeny graphs, Bayesian identification of Sato Tate groups of abelian surfaces, and the family law of the rank bias.\n\n#### From the literature\n\nThe discrepancy conjecture of Akiyama and Tanigawa (1999); Deligne's theorem for holomorphic forms (Deligne 1974); Selberg's bound 3/16 (Selberg 1965) and the bounds of Kim and Sarnak (2003); Plancherel equidistribution of Hecke eigenvalues (Sarnak 1987); infinitely many supersingular primes (Elkies 1987); Lang Trotter on average (Fouvry and Murty 1996; David and Pappalardi 1999); Sato Tate over totally real fields (Clozel, Harris, Shepherd Barron and Taylor 2008 and 2010; Barnet Lamb, Geraghty, Harris and Taylor 2011); the 52 Sato Tate groups of abelian surfaces (Fité, Kedlaya, Rotger and Sutherland 2012); symmetric power functoriality for holomorphic newforms (Newton and Thorne 2021); explicit near Ramanujan graphs (Mohanty, O'Donnell and Paredes 2022); Chebyshev's bias (Rubinstein and Sarnak 1994); generalized gamma convolutions (Thorin 1977; Bondesson 1992).\n\n#### New results\n\nThe book's seven problems are catalogued as open.\n\n- [Brownian bridge limit of the Sato Tate empirical process in families of elliptic curves](https://vsokolov.org/books/langlands/results.html#sato_tate_discrepancy_brownian_bridge_in_families) (Open Problem 30.3, page 549; open): Asks for which growth rates of the number of primes, measured against the conductor, the normalised Sato Tate empirical process of a random elliptic curve converges to a Brownian bridge and its scaled discrepancy to the Kolmogorov law. New in this book.\n- [Inverse problem for automorphy from twisted sums over primes](https://vsokolov.org/books/langlands/results.html#inverse_problem_for_automorphy_from_twisted_prime_sums) (Open Problem 30.4, page 550; open): Asks whether rates and fluctuations of the twisted prime sums of a sequence, at the square root scale and uniformly over Dirichlet characters, can decide whether the sequence is close to the normalised Hecke eigenvalues of a holomorphic newform. New in this book.\n- [Hilbert's eighth problem for GL2 in Thorin form](https://vsokolov.org/books/langlands/results.html#thorin_form_of_hilberts_eighth_problem_for_ramanujan_delta) (Open Problem 30.8, page 554; open): Asks for a probabilistic proof that the heat sum over the zeros of the L function of Ramanujan's Delta is completely monotone, a statement the book shows to be equivalent to the Riemann hypothesis for that L function. New in this book.\n- [Extreme value representation for locating zeros and for other newforms](https://vsokolov.org/books/langlands/results.html#extreme_value_representation_zeros_and_other_newforms) (Open Problem 30.9, page 555; open): Asks whether the law of the maximum in the extreme value representation of the L function of Ramanujan's Delta can locate or count its zeros, and which newforms admit a representation of the same kind. New in this book.\n- [Second order term of Kemeny constants of supersingular 2 isogeny graphs](https://vsokolov.org/books/langlands/results.html#second_order_kemeny_constants_of_supersingular_isogeny_graphs) (Open Problem 30.10, page 556; open): Asks whether the correction to the first order law for Kemeny constants of supersingular isogeny graphs has a limiting distribution across the characteristics, and whether it stays bounded. New in this book.\n- [Bayesian identification of Sato Tate groups for abelian surfaces and effective bounds](https://vsokolov.org/books/langlands/results.html#bayesian_identification_of_sato_tate_groups_for_abelian_surfaces) (Open Problem 30.11, page 557; open): Asks to extend the book's consistency theorem for Bayes factors between Sato Tate groups to the groups of abelian surfaces and to motives of higher rank, and to bound, polynomially in the logarithm of the conductor and without the Riemann hypothesis, how many primes the identification needs. New in this book.\n- [Family limit law of the rank bias of elliptic curves](https://vsokolov.org/books/langlands/results.html#family_limit_law_of_the_rank_bias_of_elliptic_curves) (Open Problem 30.12, page 557; open): Asks whether, assuming the Riemann hypothesis for the L function of each curve, the fluctuations of the rank bias in weighted sums of Frobenius traces, normalised by the logarithm of the conductor, have a limit law over the elliptic curves of a fixed analytic rank, zero or one, and whether it is the law predicted by their low lying zeros. New in this book.\n\n#### Key terms\n\nRamanujan Petersson conjecture, Selberg eigenvalue conjecture, density hypothesis, Lang Trotter conjecture, Sato Tate discrepancy, Akiyama Tanigawa conjecture, Brownian bridge, Kolmogorov distribution, converse theorem, Sato Tate group, Katz Sarnak symmetry type, functoriality, Ramanujan graph, Hilbert's eighth problem, Thorin measure, generalized gamma convolution, GGC, complete monotonicity, Ramanujan Delta, extreme value representation, Kemeny constant, supersingular isogeny graph, random multiplicative series, Bayes factor, rank bias, Chebyshev bias"
+   "title": "Bayesian Identification of Sato Tate Groups",
+   "stem": "30_bayesian_identification_of_sato_tate_groups",
+   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/30_bayesian_identification_of_sato_tate_groups.md",
+   "first_page": "554",
+   "last_page": "565",
+   "pages": 12,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/30_bayesian_identification_of_sato_tate_groups.md",
+   "summary": "How can one tell from Frobenius traces which Sato Tate group an abelian variety has? The chapter recasts the moment matching of Fité, Kedlaya, Rotger and Sutherland as Bayesian model selection: the working model treats the normalised traces as an exchangeable sample from the image of Haar measure under the trace, and equidistribution takes the place of the strong law of large numbers. Its consistency theorem, new in this book, is deterministic: for a sequence equidistributed for a true law, atoms allowed, with finite divergence from one candidate and a log likelihood ratio continuous off the atoms, the clipped log Bayes factor of two candidates is asymptotically linear, and its slope tends, as the clipping level grows, to the difference of the Kullback Leibler divergences of the truth from the two candidates. For elliptic curves over the rationals this gives explicit rates for detecting complex multiplication. The chapter also treats Wald's sequential probability ratio test, moments against the likelihood, the trace laws of USp(4), SU(2)×SU(2) and diagonal SU(2), three genus 2 curves (one outside the candidate list), misspecification, and nonparametric and arithmetic priors. The theorems assume equidistribution and prove nothing new about the Sato Tate conjecture.\n\n#### From the literature\n\n- The 52 Sato Tate groups of abelian surfaces (Fité, Kedlaya, Rotger and Sutherland 2012) and the moment method in genus 2 (Kedlaya and Sutherland 2009).\n- Sato Tate for elliptic curves without complex multiplication (Barnet Lamb, Geraghty, Harris and Taylor 2011) and joint Sato Tate (Harris 2009).\n- Exchangeability (de Finetti 1937; Hewitt and Savage 1955), consistency of maximum likelihood (Wald 1949), the Kullback Leibler divergence (Kullback and Leibler 1951).\n- The sequential probability ratio test (Wald 1947; Wald and Wolfowitz 1948).\n- Supersingular primes (Elkies 1987); hyperelliptic Jacobians without complex multiplication (Zarhin 2000).\n- Misspecification (Berk 1966; Kleijn and van der Vaart 2006).\n- Dirichlet processes (Ferguson 1973), Pólya trees (Lavine 1992), canonical moments (Dette and Studden 1997), empirical Bayes (Robbins 1956), endomorphism rings (Costa, Mascot, Sijsling and Voight 2019).\n\n#### New results\n\nBoth results are the authors' own by the chapter's Notes.\n\n- [Consistency of Bayes factors under equidistribution](https://vsokolov.org/books/langlands/results.html#consistency_of_bayes_factors_under_equidistribution) (Theorem 30.1, page 555; proved): For any deterministic sequence, such as normalised Frobenius traces, that is equidistributed for a true law with finitely many atoms and finite Kullback Leibler divergence from one candidate law, and with a log likelihood ratio continuous off the atoms, the clipped log Bayes factor between two candidate laws is asymptotically linear in the number of observations, and as the clipping level grows its slope tends to the difference of the divergences of the true law from the two candidates, with no independence assumed. New in this book.\n- [Bayes factor rates for detecting complex multiplication of elliptic curves](https://vsokolov.org/books/langlands/results.html#bayes_factor_rates_for_complex_multiplication_of_elliptic_curves) (Corollary 30.3, page 557; proved): For an elliptic curve over the rationals, the clipped Bayes factor of a complex multiplication model against a Sato Tate model with a small atom at zero, computed from the normalised Frobenius traces at the good primes, has an explicit limiting rate per prime, as the clipping level grows, that is negative without complex multiplication and positive with it. New in this book.\n\n#### Key terms\n\nSato Tate group, Sato Tate distribution, abelian surface, genus 2 curve, Frobenius traces, L polynomial, Bayes factor, Bayesian model selection, posterior consistency, Kullback Leibler divergence, relative entropy, equidistribution, exchangeability, working model, misspecification, sequential probability ratio test, SPRT, complex multiplication, supersingular primes, arcsine law, semicircle law, USp(4), Weyl integration formula, moment method, Galois endomorphism type, Dirichlet process, Pólya tree, empirical Bayes"
   },
   {
    "key": "31",
+   "title": "Open Problems",
+   "stem": "31_open_problems",
+   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/31_open_problems.md",
+   "first_page": "566",
+   "last_page": "579",
+   "pages": 14,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/31_open_problems.md",
+   "summary": "Where can probability say something definite about the open problems of the Langlands programme? This chapter states twelve problems, each with its status and attributions, what probability and computation contribute, and what would be needed; it proves no theorem and settles no case of any of them. Five restate known problems: the Ramanujan Petersson conjecture for Maass forms with Selberg's eigenvalue conjecture, read through Sarnak's density hypothesis as a large deviation bound; the Lang Trotter conjecture, read as a local limit theorem; Sato Tate groups of abelian varieties and motives with the Katz Sarnak symmetry types; functoriality of tensor products in general and of symmetric powers for Maass forms; and deterministic Ramanujan graphs of every degree. The book poses the other seven: Brownian bridge limits of the Sato Tate empirical process in families of elliptic curves, in a problem on discrepancy that starts from the conjecture of Akiyama and Tanigawa, an inverse problem asking whether twisted prime sums can detect closeness to a newform, a probabilistic proof of the Thorin form of the Riemann hypothesis for Ramanujan's Delta, the reach of the extreme value representation, second order Kemeny constants of supersingular isogeny graphs, Bayesian identification of Sato Tate groups of abelian surfaces, and the family law of the rank bias.\n\n#### From the literature\n\nThe discrepancy conjecture of Akiyama and Tanigawa (1999); Deligne's theorem for holomorphic forms (Deligne 1974); Selberg's bound 3/16 (Selberg 1965) and the bounds of Kim and Sarnak (2003); Plancherel equidistribution of Hecke eigenvalues (Sarnak 1987); infinitely many supersingular primes (Elkies 1987); Lang Trotter on average (Fouvry and Murty 1996; David and Pappalardi 1999); Sato Tate over totally real fields (Clozel, Harris, Shepherd Barron and Taylor 2008 and 2010; Barnet Lamb, Geraghty, Harris and Taylor 2011); the 52 Sato Tate groups of abelian surfaces (Fité, Kedlaya, Rotger and Sutherland 2012); symmetric power functoriality for holomorphic newforms (Newton and Thorne 2021); explicit near Ramanujan graphs (Mohanty, O'Donnell and Paredes 2022); Chebyshev's bias (Rubinstein and Sarnak 1994); generalized gamma convolutions (Thorin 1977; Bondesson 1992).\n\n#### New results\n\nThe book's seven problems are catalogued as open.\n\n- [Brownian bridge limit of the Sato Tate empirical process in families of elliptic curves](https://vsokolov.org/books/langlands/results.html#sato_tate_discrepancy_brownian_bridge_in_families) (Open Problem 31.3, page 568; open): Asks for which growth rates of the number of primes, measured against the conductor, the normalised Sato Tate empirical process of a random elliptic curve converges to a Brownian bridge and its scaled discrepancy to the Kolmogorov law. New in this book.\n- [Inverse problem for automorphy from twisted sums over primes](https://vsokolov.org/books/langlands/results.html#inverse_problem_for_automorphy_from_twisted_prime_sums) (Open Problem 31.4, page 569; open): Asks whether rates and fluctuations of the twisted prime sums of a sequence, at the square root scale and uniformly over Dirichlet characters, can decide whether the sequence is close to the normalised Hecke eigenvalues of a holomorphic newform. New in this book.\n- [Hilbert's eighth problem for GL2 in Thorin form](https://vsokolov.org/books/langlands/results.html#thorin_form_of_hilberts_eighth_problem_for_ramanujan_delta) (Open Problem 31.8, page 573; open): Asks for a probabilistic proof that the heat sum over the zeros of the L function of Ramanujan's Delta is completely monotone, a statement the book shows to be equivalent to the Riemann hypothesis for that L function. New in this book.\n- [Extreme value representation for locating zeros and for other newforms](https://vsokolov.org/books/langlands/results.html#extreme_value_representation_zeros_and_other_newforms) (Open Problem 31.9, page 574; open): Asks whether the law of the maximum in the extreme value representation of the L function of Ramanujan's Delta can locate or count its zeros, and which newforms admit a representation of the same kind. New in this book.\n- [Second order term of Kemeny constants of supersingular 2 isogeny graphs](https://vsokolov.org/books/langlands/results.html#second_order_kemeny_constants_of_supersingular_isogeny_graphs) (Open Problem 31.10, page 575; open): Asks whether the correction to the first order law for Kemeny constants of supersingular isogeny graphs has a limiting distribution across the characteristics, and whether it stays bounded. New in this book.\n- [Bayesian identification of Sato Tate groups for abelian surfaces and effective bounds](https://vsokolov.org/books/langlands/results.html#bayesian_identification_of_sato_tate_groups_for_abelian_surfaces) (Open Problem 31.11, page 576; open): Asks to extend the book's consistency theorem for Bayes factors between Sato Tate groups to the groups of abelian surfaces and to motives of higher rank, and to bound, polynomially in the logarithm of the conductor and without the Riemann hypothesis, how many primes the identification needs. New in this book.\n- [Family limit law of the rank bias of elliptic curves](https://vsokolov.org/books/langlands/results.html#family_limit_law_of_the_rank_bias_of_elliptic_curves) (Open Problem 31.12, page 576; open): Asks whether, assuming the Riemann hypothesis for the L function of each curve, the fluctuations of the rank bias in weighted sums of Frobenius traces, normalised by the logarithm of the conductor, have a limit law over the elliptic curves of a fixed analytic rank, zero or one, and whether it is the law predicted by their low lying zeros. New in this book.\n\n#### Key terms\n\nRamanujan Petersson conjecture, Selberg eigenvalue conjecture, density hypothesis, Lang Trotter conjecture, Sato Tate discrepancy, Akiyama Tanigawa conjecture, Brownian bridge, Kolmogorov distribution, converse theorem, Sato Tate group, Katz Sarnak symmetry type, functoriality, Ramanujan graph, Hilbert's eighth problem, Thorin measure, generalized gamma convolution, GGC, complete monotonicity, Ramanujan Delta, extreme value representation, Kemeny constant, supersingular isogeny graph, random multiplicative series, Bayes factor, rank bias, Chebyshev bias"
+  },
+  {
+   "key": "32",
    "title": "A Computational Programme",
-   "stem": "31_a_computational_programme",
-   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/31_a_computational_programme.md",
-   "first_page": "561",
-   "last_page": "571",
+   "stem": "32_a_computational_programme",
+   "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/32_a_computational_programme.md",
+   "first_page": "580",
+   "last_page": "590",
    "pages": 11,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/31_a_computational_programme.md",
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/32_a_computational_programme.md",
    "summary": "How should the computations suggested by a probabilistic reading of the Langlands programme be organised, scaled and reported? This chapter gathers the open computational problems posed at the ends of the earlier chapters into one programme, the agenda of the second author's computational work. It sets standards for experiments on deterministic arithmetic sequences: certified computation where possible (point counts, Hecke matrices, isogeny graphs, zeros with rigorous error bounds), statistical tests whose statistic, null law and reference population are fixed in advance, breadth across families rather than depth when the conjectured limit is a law, and tables that can be regenerated from a script and a seed. The problems fall into six workstreams: Frobenius data at scale (point counting in average polynomial time, a Sato Tate atlas, Lang Trotter constants, Koblitz's conjecture, Chebotarev races); families and random matrices (one level densities, moments, spacings of zeros); buildings, graphs and hitting times (Plancherel rates, Kemeny constants, critical groups of isogeny graphs); L functions as laws (Thorin measures, the de Bruijn Newman constant, complete monotonicity and Pólya kernel tests); inference (classifiers for Sato Tate groups, Haar priors); and Kloosterman sums, Cohen Lenstra statistics and log correlated fields. A table gives each problem a scale and a priority, and a first year plan orders six steps, later ones reusing the infrastructure of earlier ones. The chapter poses tasks and proves nothing.\n\n#### From the literature\n\nThe programme builds on point counting in average polynomial time (Harvey 2014; Harvey and Sutherland 2014), the LMFDB and PARI/GP (The PARI Group 2023), and compares data with results and predictions such as the moment conjectures of Keating and Snaith (2000), the random Fourier series limit of Kloosterman paths (Kowalski and Sawin 2016), the maxima predicted by Fyodorov, Hiary and Keating (2012) and the Haar model for the sandpile groups of supersingular isogeny graphs (Munier and Shnidman 2023). Its Notes recall the machine computations of Birch and Swinnerton Dyer (1965) behind their conjecture.\n\n#### New results\n\nNo new results of this chapter are catalogued.\n\n#### Key terms\n\ncomputational programme, computational number theory, experimental mathematics, reproducibility, certified computation, interval arithmetic, ball arithmetic, point counting, average polynomial time, Frobenius traces, Sato Tate atlas, Lang Trotter constants, Koblitz conjecture, Chebotarev races, one level density, Hecke eigenvalues, isogeny graphs, Kemeny constant, Thorin measure, de Bruijn Newman constant, complete monotonicity, Pólya kernel, sequential classifier, Sato Tate groups, Kloosterman sums, Cohen Lenstra heuristics, log correlated fields, LMFDB, PARI/GP, Sage, Magma, smalljac"
   },
   {
@@ -449,8 +459,8 @@
    "title": "A Probability Toolkit",
    "stem": "A_a_probability_toolkit",
    "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/A_a_probability_toolkit.md",
-   "first_page": "572",
-   "last_page": "588",
+   "first_page": "591",
+   "last_page": "607",
    "pages": 17,
    "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/A_a_probability_toolkit.md",
    "summary": "The appendix collects the probability used in the book for readers trained in number theory, with short proofs or standard references: weak convergence, Lévy's continuity theorem and the method of moments on a compact interval; Weyl's equidistribution criterion, Haar measure, the Weyl integration formula for SU(2) and the Peter Weyl theorem; the Kolmogorov discrepancy and the Kolmogorov distribution; the Wiener Ikehara and Hardy Littlewood Karamata Tauberian theorems and infinitely divisible laws; Kolmogorov's two and three series theorems, random series with independent phases, Kronecker's theorem and the Gärtner Ellis large deviation principle; Bernstein's theorem on completely monotone functions, generalized gamma convolutions (GGC) and their Thorin measures, and Pólya frequency functions; the extremal types theorem, the Rényi representation and the maximum of scaled exponentials whose distribution function is the product in the Dedekind eta function; reversible Markov chains on graphs, with spectral decomposition, hitting times, Kac's formula, mixing on Ramanujan graphs and a complete proof of the spectral formula for Kemeny's constant; and Kullback Leibler divergence, Bayes factors, the sequential probability ratio test and posterior consistency. A table of notation closes it. The appendix contains no new results.\n\n#### From the literature\n\nWeak convergence (Billingsley 1968, 1995); Weyl's criterion (Weyl 1916); the Peter Weyl theorem (Peter and Weyl 1927); the limit law of the Kolmogorov statistic (Kolmogorov 1933); the Wiener Ikehara theorem (Ikehara 1931; Wiener 1932); Karamata's Tauberian theorem (Karamata 1931); the value distribution theorem of Bohr and Jessen (1930); Bernstein's theorem (Bernstein 1929); generalized gamma convolutions (Thorin 1977; Bondesson 1992); Pólya frequency functions (Schoenberg 1951); extreme value limits (Fisher and Tippett 1928; Gnedenko 1943); the Rényi representation (Rényi 1953); the spectral radius of random walk on the regular tree (Kesten 1959); Kemeny's constant (Kemeny and Snell 1960); Kullback Leibler divergence (Kullback and Leibler 1951); sequential tests (Wald 1947; Wald and Wolfowitz 1948); consistency of posteriors and estimators (Doob 1949; Wald 1949; Berk 1966).\n\n#### New results\n\nNo new results of this appendix are catalogued.\n\n#### Key terms\n\nweak convergence, method of moments, Lévy continuity theorem, Weyl criterion, equidistribution, Haar measure, Peter Weyl theorem, Weyl integration formula, Kolmogorov distribution, discrepancy, Tauberian theorem, Wiener Ikehara theorem, Karamata theorem, infinitely divisible law, Lévy Khintchine, three series theorem, Kronecker's theorem, large deviations, Gärtner Ellis theorem, completely monotone function, Bernstein's theorem, generalized gamma convolution, GGC, Thorin measure, Pólya frequency function, Schoenberg's theorem, extreme value theory, Gumbel law, Rényi representation, Markov chain, hitting time, Kemeny's constant, fundamental matrix, spectral gap, Ramanujan graph, Kullback Leibler divergence, Bayes factor, sequential probability ratio test, posterior consistency"
@@ -460,8 +470,8 @@
    "title": "Code for the Computations",
    "stem": "B_code_for_the_computations",
    "url": "https://github.com/VadimSokolov/langlands/blob/main/summaries/B_code_for_the_computations.md",
-   "first_page": "589",
-   "last_page": "601",
+   "first_page": "608",
+   "last_page": "620",
    "pages": 13,
    "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/langlands/main/summaries/B_code_for_the_computations.md",
    "summary": "Which code lies behind the numbers and figures of the book, and how is it organised? This appendix prints the core routines in condensed, cumulative Python listings that call PARI/GP through cypari2, with NumPy, SciPy and mpmath, and states in comments the values they return: Frobenius traces of elliptic curves by Legendre symbols, checked against PARI's ellap, and point counts on genus two curves; a PARI/GP function that builds supersingular isogeny graphs of prime degree from a root of a Hilbert class polynomial and the classical modular polynomials, whose adjacency matrices for primes congruent to 1 mod 12 are the Brandt matrices; Kemeny constants by the spectral formula, and hitting times both by direct solution and through the fundamental matrix; a Monte Carlo and quadrature evaluation of the extreme value representation of L(s, Delta) with the regularised incomplete gamma function; the Hadamard product over the zeros of L(s, Delta) behind its generalized gamma convolution, with a correction for the zeros above the cutoff; and clipped log Bayes factors between Sato Tate groups. A last section lists the stage scripts and JSON result files with the chapters that use them, the folders that hold the code of the later chapters, the archive of the scripts in a layout with relative paths, and the scripts that draw the figures, with notes on the order in which the scripts run and the files they read and write, on which of them reproduce the stored results when rerun and which do not run as they stand, on the two chapters that came without scripts, on the few printed numbers that come from checks made for the book, and on the scripts of Chapters 25 and 26, which have not been rerun for it. The appendix states no theorem.\n\n#### From the literature\n\nThe routines rely on PARI/GP (The PARI Group 2023) and on the fundamental matrix of a finite Markov chain (Kemeny and Snell 1960); the appendix presents code and the values it returns, not results.\n\n#### New results\n\nNo new results of this appendix are catalogued.\n\n#### Key terms\n\ncode, source code, Python, PARI/GP, cypari2, NumPy, SciPy, mpmath, reproducibility, scripts, JSON results, Frobenius traces, point counting, Legendre symbols, ellap, genus two curves, supersingular isogeny graph, Brandt matrix, Hilbert class polynomial, classical modular polynomial, Kemeny constant, hitting times, fundamental matrix, extreme value representation, incomplete gamma function, Monte Carlo, Hadamard product, zeros of L(s, Delta), lfunlambda, generalized gamma convolution, GGC, Bayes factor, Sato Tate group"
@@ -484,7 +494,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#equidistribution_does_not_determine_automorphy",
    "source": "book/chapters/ch01.tex",
    "label": "prop:01limits",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch01.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch01.tex"
   },
   {
    "id": "density_zero_invariant_statistics_cannot_detect_automorphy",
@@ -502,7 +512,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#density_zero_invariant_statistics_cannot_detect_automorphy",
    "source": "book/chapters/ch01.tex",
    "label": "cor:01functional",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch01.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch01.tex"
   },
   {
    "id": "sato_tate_discrepancy_logarithmic_density_conjecture",
@@ -520,7 +530,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#sato_tate_discrepancy_logarithmic_density_conjecture",
    "source": "book/chapters/ch05.tex",
    "label": "conj:05bridge",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch05.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch05.tex"
   },
   {
    "id": "kloosterman_paths_exact_second_moments",
@@ -538,7 +548,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#kloosterman_paths_exact_second_moments",
    "source": "book/chapters/ch06b.tex",
    "label": "prop:06bsecond",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch06b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch06b.tex"
   },
   {
    "id": "kloosterman_paths_variance_deficit",
@@ -556,7 +566,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#kloosterman_paths_variance_deficit",
    "source": "book/chapters/ch06b.tex",
    "label": "cor:06bdeficit",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch06b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch06b.tex"
   },
   {
    "id": "kloosterman_random_fourier_series_covariance_and_symmetry",
@@ -574,7 +584,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#kloosterman_random_fourier_series_covariance_and_symmetry",
    "source": "book/chapters/ch06b.tex",
    "label": "prop:06bcov",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch06b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch06b.tex"
   },
   {
    "id": "kloosterman_random_fourier_series_subgaussian_tail",
@@ -592,7 +602,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#kloosterman_random_fourier_series_subgaussian_tail",
    "source": "book/chapters/ch06b.tex",
    "label": "prop:06btail",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch06b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch06b.tex"
   },
   {
    "id": "tree_theorem_kesten_mckay_chebyshev_proof",
@@ -610,7 +620,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#tree_theorem_kesten_mckay_chebyshev_proof",
    "source": "book/chapters/ch07.tex",
    "label": "thm:07tree",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch07.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch07.tex"
   },
   {
    "id": "graph_riemann_hypothesis_three_equivalent_forms",
@@ -628,7 +638,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#graph_riemann_hypothesis_three_equivalent_forms",
    "source": "book/chapters/ch08.tex",
    "label": "prop:08three",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch08.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch08.tex"
   },
   {
    "id": "kemeny_constant_supersingular_isogeny_graphs_limit",
@@ -646,7 +656,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#kemeny_constant_supersingular_isogeny_graphs_limit",
    "source": "book/chapters/ch08.tex",
    "label": "thm:08kemeny",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch08.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch08.tex"
   },
   {
    "id": "discriminant_form_l_function_not_characteristic_function",
@@ -664,7 +674,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#discriminant_form_l_function_not_characteristic_function",
    "source": "book/chapters/ch09.tex",
    "label": "prop:ch09notcf",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09.tex"
   },
   {
    "id": "sato_tate_random_euler_product_mean_and_second_moment",
@@ -682,7 +692,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#sato_tate_random_euler_product_mean_and_second_moment",
    "source": "book/chapters/ch09.tex",
    "label": "prop:ch09martingale",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09.tex"
   },
   {
    "id": "sato_tate_random_euler_product_central_limit_theorem",
@@ -700,7 +710,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#sato_tate_random_euler_product_central_limit_theorem",
    "source": "book/chapters/ch09.tex",
    "label": "thm:ch09clt",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09.tex"
   },
   {
    "id": "exponential_left_tail_near_simple_zeros",
@@ -718,7 +728,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#exponential_left_tail_near_simple_zeros",
    "source": "book/chapters/ch09b.tex",
    "label": "prop:09blefttail",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex"
   },
   {
    "id": "finite_height_variance_conjecture_for_delta",
@@ -736,7 +746,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#finite_height_variance_conjecture_for_delta",
    "source": "book/chapters/ch09b.tex",
    "label": "conj:09bvar",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex"
   },
   {
    "id": "covariance_of_random_euler_product_field",
@@ -754,7 +764,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#covariance_of_random_euler_product_field",
    "source": "book/chapters/ch09b.tex",
    "label": "prop:09bcov",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex"
   },
   {
    "id": "tree_brownian_motion_first_moments_with_ballot_constraint",
@@ -772,7 +782,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#tree_brownian_motion_first_moments_with_ballot_constraint",
    "source": "book/chapters/ch09b.tex",
    "label": "prop:09bballot",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex"
   },
   {
    "id": "selberg_clt_for_delta_via_polya_characteristic_function",
@@ -791,7 +801,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#selberg_clt_for_delta_via_polya_characteristic_function",
    "source": "book/chapters/ch09b.tex",
    "label": "prop:09bpolya",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex"
   },
   {
    "id": "log_modulus_of_delta_as_thorin_potential",
@@ -810,7 +820,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#log_modulus_of_delta_as_thorin_potential",
    "source": "book/chapters/ch09b.tex",
    "label": "prop:09bpotential",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex"
   },
   {
    "id": "critical_line_of_delta_through_extreme_value_variable",
@@ -828,7 +838,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#critical_line_of_delta_through_extreme_value_variable",
    "source": "book/chapters/ch09b.tex",
    "label": "prop:09bmstar",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch09b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch09b.tex"
   },
   {
    "id": "polya_kernel_of_the_discriminant_form",
@@ -846,7 +856,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#polya_kernel_of_the_discriminant_form",
    "source": "book/chapters/ch10.tex",
    "label": "thm:ch10kernel",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10.tex"
   },
   {
    "id": "hadamard_product_and_variance_identity_for_delta",
@@ -864,7 +874,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#hadamard_product_and_variance_identity_for_delta",
    "source": "book/chapters/ch10.tex",
    "label": "thm:ch10hadamard",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10.tex"
   },
   {
    "id": "riemann_hypothesis_for_delta_as_ggc_property",
@@ -882,7 +892,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#riemann_hypothesis_for_delta_as_ggc_property",
    "source": "book/chapters/ch10.tex",
    "label": "thm:ch10ggc",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10.tex"
   },
   {
    "id": "grh_for_self_dual_l_functions_as_ggc_property",
@@ -900,7 +910,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#grh_for_self_dual_l_functions_as_ggc_property",
    "source": "book/chapters/ch10.tex",
    "label": "thm:ch10general",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10.tex"
   },
   {
    "id": "self_dual_completion_automorphic_l_function",
@@ -918,7 +928,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#self_dual_completion_automorphic_l_function",
    "source": "book/chapters/ch10b.tex",
    "label": "lem:10bcompletion",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex"
   },
   {
    "id": "thorin_equivalence_even_entire_functions",
@@ -936,7 +946,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_equivalence_even_entire_functions",
    "source": "book/chapters/ch10b.tex",
    "label": "thm:10babstract",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex"
   },
   {
    "id": "thorin_criteria_generalized_riemann_hypothesis_automorphic",
@@ -954,7 +964,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_criteria_generalized_riemann_hypothesis_automorphic",
    "source": "book/chapters/ch10b.tex",
    "label": "thm:10bmain",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex"
   },
   {
    "id": "polya_kernel_automorphic_l_function",
@@ -972,7 +982,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#polya_kernel_automorphic_l_function",
    "source": "book/chapters/ch10b.tex",
    "label": "lem:10bkernel",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex"
   },
   {
    "id": "cumulant_criterion_generalized_riemann_hypothesis",
@@ -990,7 +1000,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#cumulant_criterion_generalized_riemann_hypothesis",
    "source": "book/chapters/ch10b.tex",
    "label": "prop:10bcumulants",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex"
   },
   {
    "id": "central_order_of_vanishing_as_degenerate_thorin_atom",
@@ -1009,7 +1019,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#central_order_of_vanishing_as_degenerate_thorin_atom",
    "source": "book/chapters/ch10b.tex",
    "label": "prop:10brank",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex"
   },
   {
    "id": "gaussian_tilting_polya_kernel_thorin_property",
@@ -1027,7 +1037,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#gaussian_tilting_polya_kernel_thorin_property",
    "source": "book/chapters/ch10b.tex",
    "label": "thm:10btilting",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex"
   },
   {
    "id": "regularised_thorin_equivalence_order_two",
@@ -1045,7 +1055,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#regularised_thorin_equivalence_order_two",
    "source": "book/chapters/ch10b.tex",
    "label": "prop:10bregularised",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10b.tex"
   },
   {
    "id": "local_thorin_criterion_single_euler_factor",
@@ -1063,7 +1073,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#local_thorin_criterion_single_euler_factor",
    "source": "book/chapters/ch10c.tex",
    "label": "thm:10clocal",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "ramanujan_petersson_local_thorin_criterion",
@@ -1081,7 +1091,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#ramanujan_petersson_local_thorin_criterion",
    "source": "book/chapters/ch10c.tex",
    "label": "cor:10cramanujan",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "explicit_formula_prime_terms_from_local_thorin_combs",
@@ -1099,7 +1109,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#explicit_formula_prime_terms_from_local_thorin_combs",
    "source": "book/chapters/ch10c.tex",
    "label": "prop:10cdictionary",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "sato_tate_thorin_point_process_intensity",
@@ -1117,7 +1127,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#sato_tate_thorin_point_process_intensity",
    "source": "book/chapters/ch10c.tex",
    "label": "prop:10csatotate",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "thorin_criterion_riemann_hypothesis_curves_over_finite_fields",
@@ -1135,7 +1145,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_criterion_riemann_hypothesis_curves_over_finite_fields",
    "source": "book/chapters/ch10c.tex",
    "label": "thm:10ccurve",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "thorin_criterion_ramanujan_graphs",
@@ -1153,7 +1163,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_criterion_ramanujan_graphs",
    "source": "book/chapters/ch10c.tex",
    "label": "thm:10cihara",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "thorin_structure_hecke_walk_passage_times_tree",
@@ -1171,7 +1181,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_structure_hecke_walk_passage_times_tree",
    "source": "book/chapters/ch10c.tex",
    "label": "thm:10ctree",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "large_deviations_passage_times_regular_tree",
@@ -1189,7 +1199,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#large_deviations_passage_times_regular_tree",
    "source": "book/chapters/ch10c.tex",
    "label": "thm:10cldp",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "exponential_hitting_times_ramanujan_graphs",
@@ -1207,7 +1217,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#exponential_hitting_times_ramanujan_graphs",
    "source": "book/chapters/ch10c.tex",
    "label": "thm:10cexpo",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "exponential_hitting_times_supersingular_isogeny_graphs",
@@ -1225,7 +1235,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#exponential_hitting_times_supersingular_isogeny_graphs",
    "source": "book/chapters/ch10c.tex",
    "label": "cor:10cisogeny",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "max_infinite_divisibility_eta_extreme_value_law",
@@ -1243,7 +1253,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#max_infinite_divisibility_eta_extreme_value_law",
    "source": "book/chapters/ch10c.tex",
    "label": "prop:10cmaxid",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10c.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10c.tex"
   },
   {
    "id": "thorin_condition_van_dantzig_wald_duality",
@@ -1262,7 +1272,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_condition_van_dantzig_wald_duality",
    "source": "book/chapters/ch10d.tex",
    "label": "thm:10dduality",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex"
   },
   {
    "id": "grh_van_dantzig_wald_lukacs_equivalence",
@@ -1280,7 +1290,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#grh_van_dantzig_wald_lukacs_equivalence",
    "source": "book/chapters/ch10d.tex",
    "label": "thm:10dvdp",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex"
   },
   {
    "id": "sine_squared_transport_lemma",
@@ -1298,7 +1308,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#sine_squared_transport_lemma",
    "source": "book/chapters/ch10d.tex",
    "label": "lem:10dsin2",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex"
   },
   {
    "id": "shifted_thorin_representation_automorphic",
@@ -1316,7 +1326,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#shifted_thorin_representation_automorphic",
    "source": "book/chapters/ch10d.tex",
    "label": "thm:10dshift",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex"
   },
   {
    "id": "damped_cosine_measure_sine_squared_transport",
@@ -1335,7 +1345,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#damped_cosine_measure_sine_squared_transport",
    "source": "book/chapters/ch10d.tex",
    "label": "prop:10dsmooth",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex"
   },
   {
    "id": "zeta_subordinator_marginal_law",
@@ -1353,7 +1363,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#zeta_subordinator_marginal_law",
    "source": "book/chapters/ch10d.tex",
    "label": "prop:10dsublaw",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex"
   },
   {
    "id": "zeta_subordinator_first_passage_law",
@@ -1371,7 +1381,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#zeta_subordinator_first_passage_law",
    "source": "book/chapters/ch10d.tex",
    "label": "thm:10dballot",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex"
   },
   {
    "id": "patie_class_hausdorff_test",
@@ -1389,7 +1399,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#patie_class_hausdorff_test",
    "source": "book/chapters/ch10d.tex",
    "label": "prop:10dpatietest",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch10d.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch10d.tex"
   },
   {
    "id": "squarefree_constant_tilted_polya_means",
@@ -1407,7 +1417,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#squarefree_constant_tilted_polya_means",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "thm:sf:const",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "reciprocal_xi_ggc_riemann_hypothesis",
@@ -1425,7 +1435,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#reciprocal_xi_ggc_riemann_hypothesis",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "prop:sf:thorin",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "dedekind_zeta_thorin_ggc_equivalence",
@@ -1443,7 +1453,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dedekind_zeta_thorin_ggc_equivalence",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "prop:sf:thorinK",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "exponentially_smoothed_squarefree_count_rh",
@@ -1461,7 +1471,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#exponentially_smoothed_squarefree_count_rh",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "thm:sf:smooth",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "squarefree_error_mean_square_rh",
@@ -1479,7 +1489,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#squarefree_error_mean_square_rh",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "thm:sf:meansq",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "gamma_smoothed_squarefree_count_bound_uniform_in_shape",
@@ -1498,7 +1508,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#gamma_smoothed_squarefree_count_bound_uniform_in_shape",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "prop:sf:gamman",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "gamma2_smoothed_squarefree_error_mertens_representation",
@@ -1516,7 +1526,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#gamma2_smoothed_squarefree_error_mertens_representation",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "thm:sf:mertens",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "gamma2_smoothed_squarefree_count_riemann_hypothesis",
@@ -1534,7 +1544,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#gamma2_smoothed_squarefree_count_riemann_hypothesis",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "cor:sf:mertens",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "gamma_smoothing_mertens_positivity_threshold",
@@ -1552,7 +1562,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#gamma_smoothing_mertens_positivity_threshold",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "thm:sf:threshold",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "squarefree_ideal_constant_number_fields",
@@ -1570,7 +1580,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#squarefree_ideal_constant_number_fields",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "thm:sf:constK",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "xi_off_critical_line_brownian_subordination",
@@ -1588,7 +1598,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#xi_off_critical_line_brownian_subordination",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "cor:sf:sub",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "imaginary_quadratic_polya_kernel_positivity",
@@ -1606,7 +1616,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#imaginary_quadratic_polya_kernel_positivity",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "thm:sf:kernel",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "imaginary_quadratic_polya_kernel_sign_change",
@@ -1624,7 +1634,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#imaginary_quadratic_polya_kernel_sign_change",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "thm:sf:inert",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "density_of_positive_imaginary_quadratic_polya_kernels",
@@ -1642,7 +1652,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#density_of_positive_imaginary_quadratic_polya_kernels",
    "source": "book/chapters/ch_squarefree.tex",
    "label": "op:sfdensity",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_squarefree.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_squarefree.tex"
   },
   {
    "id": "dirichlet_beta_levy_form",
@@ -1660,7 +1670,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_levy_form",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:thm:levy",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "signed_sine_squared_lemma",
@@ -1678,7 +1688,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#signed_sine_squared_lemma",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:lem:2sin2",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_thorin_density",
@@ -1696,7 +1706,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_thorin_density",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:thm:thorin",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_ggc_basepoints_at_least_one",
@@ -1714,7 +1724,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_ggc_basepoints_at_least_one",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:thm:uncond",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_termwise_thorin_threshold",
@@ -1732,7 +1742,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_termwise_thorin_threshold",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:prop:crude",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_grh_as_thorin_positivity",
@@ -1750,7 +1760,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_grh_as_thorin_positivity",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:thm:grh",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "gaussian_field_thorin_domination",
@@ -1768,7 +1778,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#gaussian_field_thorin_domination",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:thm:dom",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_kronecker_sharpness",
@@ -1786,7 +1796,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_kronecker_sharpness",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:prop:kron",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_thorin_positivity_near_real_axis",
@@ -1804,7 +1814,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_thorin_positivity_near_real_axis",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:thm:realaxis",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_negative_thorin_windows",
@@ -1822,7 +1832,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_negative_thorin_windows",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:cor:height",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "zero_pair_comparison_lemma_sharp_constant",
@@ -1840,7 +1850,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#zero_pair_comparison_lemma_sharp_constant",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:lem:comp",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "log_derivative_comparison_across_vertical_lines",
@@ -1858,7 +1868,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#log_derivative_comparison_across_vertical_lines",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:thm:comp",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_explicit_log_derivative_lower_bound",
@@ -1876,7 +1886,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_explicit_log_derivative_lower_bound",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:cor:lower",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_minimum_on_real_axis",
@@ -1894,7 +1904,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_minimum_on_real_axis",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:thm:minall",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_thorin_measure_is_argument",
@@ -1912,7 +1922,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_thorin_measure_is_argument",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:thm:arg",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_grh_as_monotone_argument",
@@ -1930,7 +1940,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_grh_as_monotone_argument",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:cor:argmono",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "eta_cube_kernel_not_completely_monotone",
@@ -1948,7 +1958,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#eta_cube_kernel_not_completely_monotone",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:prop:nocm",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "real_characters_thorin_domination_and_comparison",
@@ -1966,7 +1976,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#real_characters_thorin_domination_and_comparison",
    "source": "book/chapters/ch_beta.tex",
    "label": "beta:thm:realchar",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "gaussian_field_thorin_coupling_below_one",
@@ -1984,7 +1994,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#gaussian_field_thorin_coupling_below_one",
    "source": "book/chapters/ch_beta.tex",
    "label": "op:betacoupling",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_negative_window_argument_bound",
@@ -2002,7 +2012,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_negative_window_argument_bound",
    "source": "book/chapters/ch_beta.tex",
    "label": "op:betawindows",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "dirichlet_beta_minimum_on_all_lines",
@@ -2020,7 +2030,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_beta_minimum_on_all_lines",
    "source": "book/chapters/ch_beta.tex",
    "label": "op:betalines",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "eta_reciprocal_side_positivity",
@@ -2038,7 +2048,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#eta_reciprocal_side_positivity",
    "source": "book/chapters/ch_beta.tex",
    "label": "op:betarecip",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_beta.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_beta.tex"
   },
   {
    "id": "signed_thorin_density_negative_lobe",
@@ -2056,7 +2066,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#signed_thorin_density_negative_lobe",
    "source": "book/chapters/ch_scholze.tex",
    "label": "prop:scholzelobe",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_scholze.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_scholze.tex"
   },
   {
    "id": "positive_polya_kernels_characterisation",
@@ -2074,7 +2084,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#positive_polya_kernels_characterisation",
    "source": "book/chapters/ch_scholze.tex",
    "label": "op:scholzekernel",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_scholze.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_scholze.tex"
   },
   {
    "id": "negative_lobe_masking",
@@ -2092,7 +2102,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#negative_lobe_masking",
    "source": "book/chapters/ch_scholze.tex",
    "label": "op:scholzelobe",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_scholze.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_scholze.tex"
   },
   {
    "id": "reciprocity_in_law",
@@ -2110,7 +2120,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#reciprocity_in_law",
    "source": "book/chapters/ch_recip.tex",
    "label": "cor:reciplaw",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "congruences_see_exactly_the_abelian_part",
@@ -2128,7 +2138,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#congruences_see_exactly_the_abelian_part",
    "source": "book/chapters/ch_recip.tex",
    "label": "prop:recipcongruence",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "frobenius_labelled_factorisation_gamma_process_limit",
@@ -2146,7 +2156,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#frobenius_labelled_factorisation_gamma_process_limit",
    "source": "book/chapters/ch_recip.tex",
    "label": "thm:recipgammaproc",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "chebotarev_gamma_process_and_arithmetic_arcsine_law",
@@ -2164,7 +2174,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#chebotarev_gamma_process_and_arithmetic_arcsine_law",
    "source": "book/chapters/ch_recip.tex",
    "label": "cor:recipchebgamma",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "frobenius_functionals_converge_to_generalized_gamma_convolutions",
@@ -2182,7 +2192,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#frobenius_functionals_converge_to_generalized_gamma_convolutions",
    "source": "book/chapters/ch_recip.tex",
    "label": "thm:recipggcfun",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "thorin_criteria_for_reciprocity",
@@ -2200,7 +2210,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_criteria_for_reciprocity",
    "source": "book/chapters/ch_recip.tex",
    "label": "thm:recipthorin",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "zero_two_law_for_frobenius_discrepancy_subordinators",
@@ -2218,7 +2228,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#zero_two_law_for_frobenius_discrepancy_subordinators",
    "source": "book/chapters/ch_recip.tex",
    "label": "thm:recipzerotwo",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "mixed_zero_two_law_conjecture",
@@ -2236,7 +2246,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#mixed_zero_two_law_conjecture",
    "source": "book/chapters/ch_recip.tex",
    "label": "conj:recipmixed",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "mixed_zero_two_law_known_cases_and_moment_bounds",
@@ -2254,7 +2264,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#mixed_zero_two_law_known_cases_and_moment_bounds",
    "source": "book/chapters/ch_recip.tex",
    "label": "prop:recipmixed",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "euler_kronecker_drift_of_chebotarev_gamma_limit",
@@ -2272,7 +2282,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#euler_kronecker_drift_of_chebotarev_gamma_limit",
    "source": "book/chapters/ch_recip.tex",
    "label": "thm:recipdrift",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "hecke_criterion_as_polya_kernel_symmetry",
@@ -2290,7 +2300,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#hecke_criterion_as_polya_kernel_symmetry",
    "source": "book/chapters/ch_recip.tex",
    "label": "prop:recipsym",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "gamma_shape_detects_irreducibility",
@@ -2308,7 +2318,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#gamma_shape_detects_irreducibility",
    "source": "book/chapters/ch_recip.tex",
    "label": "thm:recipgamma",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "galois_heat_trace_complete_monotonicity_criterion",
@@ -2326,7 +2336,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#galois_heat_trace_complete_monotonicity_criterion",
    "source": "book/chapters/ch_recip.tex",
    "label": "thm:recipcm",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "galois_heat_trace_sees_every_prime",
@@ -2344,7 +2354,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#galois_heat_trace_sees_every_prime",
    "source": "book/chapters/ch_recip.tex",
    "label": "prop:reciprigid",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "euler_half_line_thorin_criterion",
@@ -2362,7 +2372,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#euler_half_line_thorin_criterion",
    "source": "book/chapters/ch_recip.tex",
    "label": "thm:recipeuler",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "thorin_converse_theorem_level_one",
@@ -2380,7 +2390,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_converse_theorem_level_one",
    "source": "book/chapters/ch_recip.tex",
    "label": "cor:recipconverse",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "rankin_selberg_square_ggc_family",
@@ -2398,7 +2408,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#rankin_selberg_square_ggc_family",
    "source": "book/chapters/ch_recip.tex",
    "label": "prop:recipfamily",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "thorin_converse_theorem_for_twists_problem",
@@ -2416,7 +2426,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_converse_theorem_for_twists_problem",
    "source": "book/chapters/ch_recip.tex",
    "label": "op:recipgln",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "descending_the_base_point_problem",
@@ -2434,7 +2444,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#descending_the_base_point_problem",
    "source": "book/chapters/ch_recip.tex",
    "label": "op:recipdescent",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "signed_thorin_measures_artin_conjecture_problem",
@@ -2452,7 +2462,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#signed_thorin_measures_artin_conjecture_problem",
    "source": "book/chapters/ch_recip.tex",
    "label": "op:recipsigned",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "fejer_summation_for_primes_problem",
@@ -2470,7 +2480,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#fejer_summation_for_primes_problem",
    "source": "book/chapters/ch_recip.tex",
    "label": "op:recipfejer",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "reciprocity_in_law_versus_reciprocity_problem",
@@ -2488,7 +2498,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#reciprocity_in_law_versus_reciprocity_problem",
    "source": "book/chapters/ch_recip.tex",
    "label": "op:reciplaw",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "mixed_zero_two_law_problem",
@@ -2506,7 +2516,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#mixed_zero_two_law_problem",
    "source": "book/chapters/ch_recip.tex",
    "label": "op:recipmixed",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "joint_marked_processes_problem",
@@ -2524,7 +2534,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#joint_marked_processes_problem",
    "source": "book/chapters/ch_recip.tex",
    "label": "op:recipjoint",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "signs_of_euler_kronecker_drifts_problem",
@@ -2542,7 +2552,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#signs_of_euler_kronecker_drifts_problem",
    "source": "book/chapters/ch_recip.tex",
    "label": "op:recipdrift",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_recip.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_recip.tex"
   },
   {
    "id": "two_prime_kemeny_formula_for_supersingular_isogeny_walks",
@@ -2560,7 +2570,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#two_prime_kemeny_formula_for_supersingular_isogeny_walks",
    "source": "book/chapters/ch_hitting.tex",
    "label": "thm:hitkemeny",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "sandpile_group_and_modular_jacobian_isomorphism_criterion",
@@ -2578,7 +2588,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#sandpile_group_and_modular_jacobian_isomorphism_criterion",
    "source": "book/chapters/ch_hitting.tex",
    "label": "prop:hitsandpile",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "kirchhoff_index_and_commute_times_of_supersingular_isogeny_graphs",
@@ -2596,7 +2606,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#kirchhoff_index_and_commute_times_of_supersingular_isogeny_graphs",
    "source": "book/chapters/ch_hitting.tex",
    "label": "thm:hitresist",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "hasse_weil_bounds_for_kemeny_constants_and_spanning_trees",
@@ -2614,7 +2624,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#hasse_weil_bounds_for_kemeny_constants_and_spanning_trees",
    "source": "book/chapters/ch_hitting.tex",
    "label": "cor:hithasse",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "tree_entropy_as_asymptotic_class_number_of_modular_jacobians",
@@ -2632,7 +2642,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#tree_entropy_as_asymptotic_class_number_of_modular_jacobians",
    "source": "book/chapters/ch_hitting.tex",
    "label": "thm:hitentropy",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "chebotarev_densities_as_hitting_rates_of_largest_prime_factors",
@@ -2650,7 +2660,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#chebotarev_densities_as_hitting_rates_of_largest_prime_factors",
    "source": "book/chapters/ch_hitting.tex",
    "label": "thm:hitrate",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "explosion_time_criterion_for_zeros_on_the_critical_line",
@@ -2668,7 +2678,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#explosion_time_criterion_for_zeros_on_the_critical_line",
    "source": "book/chapters/ch_hitting.tex",
    "label": "thm:hitexplosion",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "thorin_converse_theorem_at_level_one_as_explosion",
@@ -2686,7 +2696,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_converse_theorem_at_level_one_as_explosion",
    "source": "book/chapters/ch_hitting.tex",
    "label": "cor:hitconverse",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "functional_equation_of_odd_dirichlet_l_functions_from_signed_brownian_exit",
@@ -2704,7 +2714,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#functional_equation_of_odd_dirichlet_l_functions_from_signed_brownian_exit",
    "source": "book/chapters/ch_hitting.tex",
    "label": "thm:hitexit",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "limiting_law_of_sandpile_groups_of_isogeny_graphs_in_the_level_aspect",
@@ -2722,7 +2732,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#limiting_law_of_sandpile_groups_of_isogeny_graphs_in_the_level_aspect",
    "source": "book/chapters/ch_hitting.tex",
    "label": "op:hitsandpile",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "vertex_hitting_times_of_isogeny_walks_and_gross_formula",
@@ -2740,7 +2750,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#vertex_hitting_times_of_isogeny_walks_and_gross_formula",
    "source": "book/chapters/ch_hitting.tex",
    "label": "op:hitgross",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_hitting.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_hitting.tex"
   },
   {
    "id": "gamma_law_of_the_eisenstein_discrepancy",
@@ -2758,7 +2768,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#gamma_law_of_the_eisenstein_discrepancy",
    "source": "book/chapters/ch_flt.tex",
    "label": "prop:flteisgamma",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_flt.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_flt.tex"
   },
   {
    "id": "fermat_last_theorem_restated_as_two_thorin_statements",
@@ -2776,7 +2786,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#fermat_last_theorem_restated_as_two_thorin_statements",
    "source": "book/chapters/ch_flt.tex",
    "label": "thm:flttwo",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_flt.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_flt.tex"
   },
   {
    "id": "hasse_weil_bound_from_hitting_times",
@@ -2794,7 +2804,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#hasse_weil_bound_from_hitting_times",
    "source": "book/chapters/ch_flt.tex",
    "label": "op:flthasse",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_flt.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_flt.tex"
   },
   {
    "id": "taylor_wiles_patching_as_a_gamma_process",
@@ -2812,7 +2822,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#taylor_wiles_patching_as_a_gamma_process",
    "source": "book/chapters/ch_flt.tex",
    "label": "op:fltpatch",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_flt.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_flt.tex"
   },
   {
    "id": "probabilistic_mazur_theorem_for_eisenstein_shapes",
@@ -2830,7 +2840,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#probabilistic_mazur_theorem_for_eisenstein_shapes",
    "source": "book/chapters/ch_flt.tex",
    "label": "op:fltmazur",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_flt.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_flt.tex"
   },
   {
    "id": "gaussian_window_bohr_inversion_of_the_sine_squared_transport",
@@ -2848,7 +2858,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#gaussian_window_bohr_inversion_of_the_sine_squared_transport",
    "source": "book/chapters/ch_laplace.tex",
    "label": "thm:lapbohr",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex"
   },
   {
    "id": "frobenius_traces_from_the_transported_density",
@@ -2866,7 +2876,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#frobenius_traces_from_the_transported_density",
    "source": "book/chapters/ch_laplace.tex",
    "label": "cor:lapfrob",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex"
   },
   {
    "id": "zeros_plus_cauchy_noise_at_a_shifted_basepoint",
@@ -2884,7 +2894,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#zeros_plus_cauchy_noise_at_a_shifted_basepoint",
    "source": "book/chapters/ch_laplace.tex",
    "label": "thm:lapcauchy",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex"
   },
   {
    "id": "sato_tate_law_minimises_the_good_gaskins_roughness",
@@ -2902,7 +2912,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#sato_tate_law_minimises_the_good_gaskins_roughness",
    "source": "book/chapters/ch_laplace.tex",
    "label": "thm:lapgg",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex"
   },
   {
    "id": "stable_recovery_of_frobenius_from_a_window",
@@ -2920,7 +2930,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#stable_recovery_of_frobenius_from_a_window",
    "source": "book/chapters/ch_laplace.tex",
    "label": "op:lapwindow",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex"
   },
   {
    "id": "good_gaskins_penalised_likelihood_for_thorin_densities",
@@ -2938,7 +2948,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#good_gaskins_penalised_likelihood_for_thorin_densities",
    "source": "book/chapters/ch_laplace.tex",
    "label": "op:lapgg",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_laplace.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_laplace.tex"
   },
   {
    "id": "chebotarev_as_a_dirichlet_process",
@@ -2956,7 +2966,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#chebotarev_as_a_dirichlet_process",
    "source": "book/chapters/ch_pd.tex",
    "label": "thm:pddirichlet",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex"
   },
   {
    "id": "dirichlet_process_limit_of_the_zeta_power_random_integer",
@@ -2974,7 +2984,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#dirichlet_process_limit_of_the_zeta_power_random_integer",
    "source": "book/chapters/ch_pd.tex",
    "label": "thm:pdtheta",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex"
   },
   {
    "id": "size_biased_prime_factor_frobenius_class_expansion",
@@ -2992,7 +3002,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#size_biased_prime_factor_frobenius_class_expansion",
    "source": "book/chapters/ch_pd.tex",
    "label": "thm:pdmertens",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex"
   },
   {
    "id": "independence_of_class_and_share_of_a_size_biased_prime_factor",
@@ -3010,7 +3020,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#independence_of_class_and_share_of_a_size_biased_prime_factor",
    "source": "book/chapters/ch_pd.tex",
    "label": "thm:pdsizebiased",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex"
   },
   {
    "id": "empty_chebotarev_class_and_lower_bound_for_the_rate",
@@ -3028,7 +3038,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#empty_chebotarev_class_and_lower_bound_for_the_rate",
    "source": "book/chapters/ch_pd.tex",
    "label": "thm:pdrate",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex"
   },
   {
    "id": "ewens_parameters_are_pole_orders",
@@ -3046,7 +3056,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#ewens_parameters_are_pole_orders",
    "source": "book/chapters/ch_pd.tex",
    "label": "thm:pdewens",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex"
   },
   {
    "id": "upper_bound_for_the_rate_of_chebotarev_shares",
@@ -3064,7 +3074,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#upper_bound_for_the_rate_of_chebotarev_shares",
    "source": "book/chapters/ch_pd.tex",
    "label": "op:pdrate",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex"
   },
   {
    "id": "signs_of_the_mertens_deficits",
@@ -3082,7 +3092,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#signs_of_the_mertens_deficits",
    "source": "book/chapters/ch_pd.tex",
    "label": "op:pdmertens",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex"
   },
   {
    "id": "an_arithmetic_product_for_frobenius_functionals",
@@ -3100,7 +3110,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#an_arithmetic_product_for_frobenius_functionals",
    "source": "book/chapters/ch_pd.tex",
    "label": "op:pdproduct",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_pd.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_pd.tex"
   },
   {
    "id": "complex_multiplication_doubles_the_gamma_shape",
@@ -3118,7 +3128,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#complex_multiplication_doubles_the_gamma_shape",
    "source": "book/chapters/ch_gl1.tex",
    "label": "thm:gl1cmshape",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_gl1.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_gl1.tex"
   },
   {
    "id": "thorin_form_of_grh_for_real_dirichlet_characters",
@@ -3136,7 +3146,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_form_of_grh_for_real_dirichlet_characters",
    "source": "book/chapters/ch_gl1.tex",
    "label": "thm:gl1thorin",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_gl1.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_gl1.tex"
   },
   {
    "id": "hecke_angle_discrepancy_limit_law",
@@ -3154,7 +3164,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#hecke_angle_discrepancy_limit_law",
    "source": "book/chapters/ch_gl1.tex",
    "label": "op:gl1disc",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_gl1.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_gl1.tex"
   },
   {
    "id": "euler_kronecker_constants_of_hecke_characters",
@@ -3172,7 +3182,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#euler_kronecker_constants_of_hecke_characters",
    "source": "book/chapters/ch_gl1.tex",
    "label": "op:gl1rate",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_gl1.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_gl1.tex"
   },
   {
    "id": "effective_gamma_shape_test_for_complex_multiplication",
@@ -3190,7 +3200,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#effective_gamma_shape_test_for_complex_multiplication",
    "source": "book/chapters/ch_gl1.tex",
    "label": "op:gl1cm",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_gl1.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_gl1.tex"
   },
   {
    "id": "ramanujan_at_a_prime_as_local_thorin_positivity_for_maass_forms",
@@ -3208,7 +3218,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#ramanujan_at_a_prime_as_local_thorin_positivity_for_maass_forms",
    "source": "book/chapters/ch_maass.tex",
    "label": "cor:msramanujan",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex"
   },
   {
    "id": "selberg_eigenvalue_conjecture_as_complete_monotonicity",
@@ -3226,7 +3236,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#selberg_eigenvalue_conjecture_as_complete_monotonicity",
    "source": "book/chapters/ch_maass.tex",
    "label": "thm:mscm",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex"
   },
   {
    "id": "thorin_representation_of_the_geodesic_euler_product",
@@ -3244,7 +3254,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_representation_of_the_geodesic_euler_product",
    "source": "book/chapters/ch_maass.tex",
    "label": "thm:msthorin",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex"
   },
   {
    "id": "random_geodesic_integers_are_poisson_dirichlet",
@@ -3262,7 +3272,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#random_geodesic_integers_are_poisson_dirichlet",
    "source": "book/chapters/ch_maass.tex",
    "label": "thm:mspd",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex"
   },
   {
    "id": "thorin_representation_of_the_geodesic_euler_product_at_the_centre",
@@ -3280,7 +3290,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_representation_of_the_geodesic_euler_product_at_the_centre",
    "source": "book/chapters/ch_maass.tex",
    "label": "op:mscentre",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex"
   },
   {
    "id": "chebotarev_theorem_for_closed_geodesics",
@@ -3298,7 +3308,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#chebotarev_theorem_for_closed_geodesics",
    "source": "book/chapters/ch_maass.tex",
    "label": "op:mschebotarev",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex"
   },
   {
    "id": "even_icosahedral_representations_and_maass_forms_of_eigenvalue_one_quarter",
@@ -3316,7 +3326,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#even_icosahedral_representations_and_maass_forms_of_eigenvalue_one_quarter",
    "source": "book/chapters/ch_maass.tex",
    "label": "op:mseven",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex"
   },
   {
    "id": "cutoff_for_brownian_motion_on_congruence_covers",
@@ -3334,14 +3344,159 @@
    "url": "https://vsokolov.org/books/langlands/results.html#cutoff_for_brownian_motion_on_congruence_covers",
    "source": "book/chapters/ch_maass.tex",
    "label": "op:mscutoff",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch_maass.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_maass.tex"
+  },
+  {
+   "id": "percolation_crossing_threshold_and_the_l_function_of_y2_x3_1",
+   "name": "The Mellin transform of the percolation crossing threshold is the normalised completed L function of y^2 = x^3 + 1",
+   "printed": "Theorem 27.5",
+   "page": "506",
+   "chapter": "27",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "The aspect ratio at which a critical percolation rectangle stops being crossed is a random variable whose Mellin transform is, up to a constant, the completed L function of the elliptic curve y^2 = x^3 + 1 of conductor 36, so that its symmetry under inversion is equivalent to the functional equation, its normalising constant gives the central L value in closed form, and the Riemann hypothesis for this curve becomes the statement that the characteristic function of the log threshold has only real zeros, a reformulation that does not prove it.",
+   "statement": "Let $E$ be the elliptic curve $y^2 = x^3+1$, of conductor $N = 36$, with $L(E,s) = \\sum_{n\\ge1}a_nn^{-s}$ (continued analytically to all $s\\in\\mathbb{C}$), where $\\eta(6\\tau)^4 = \\sum_{n\\ge1}a_ne^{2\\pi in\\tau}$ is the newform of weight $2$ and level $36$ attached to $E$ and $\\eta(\\tau) = e^{\\pi i\\tau/12}\\prod_{n\\ge1}(1-e^{2\\pi in\\tau})$ is the Dedekind eta function, and with completed function $\\Lambda(E,s) = (\\sqrt N/(2\\pi))^s\\,\\Gamma(s)\\,L(E,s) = (3/\\pi)^s\\,\\Gamma(s)\\,L(E,s)$. For a rectangle of aspect ratio $r$ (width over height) let $\\pi_h(r) = \\frac{\\Gamma(2/3)}{\\Gamma(1/3)^2}\\int_0^{\\lambda(ir)}t^{-2/3}(1-t)^{-2/3}\\,dt$ be Cardy's formula for the probability of an open left to right crossing in critical percolation in the scaling limit (a theorem of Smirnov for site percolation on the triangular lattice, and a universality hypothesis for other models), where $\\lambda(\\tau) = \\theta_2(q)^4/\\theta_3(q)^4$ with $q = e^{i\\pi\\tau}$, $\\theta_2(q) = \\sum_{n\\in\\mathbb{Z}}q^{(n+1/2)^2}$ and $\\theta_3(q) = \\sum_{n\\in\\mathbb{Z}}q^{n^2}$. Let $T = \\sup\\{r > 0 : [0,r]\\times[0,1]\\text{ has a horizontal open crossing}\\}$ be the crossing threshold, the random variable with $\\mathbb{P}(T > r) = \\pi_h(r)$, which by Kleban and Zagier's formula $d\\pi_h/dr = -\\kappa\\,\\eta(ir)^4$ has density $f_T(t) = \\kappa\\,\\eta(it)^4$ on $(0,\\infty)$, with $\\kappa = 2^{4/3}\\pi\\,\\Gamma(\\tfrac23)/\\Gamma(\\tfrac13)^2 \\approx 1.4936684$. Then: (1) $\\mathbb{E}[T^{s-1}] = \\kappa\\,\\Lambda(E,s)$ for all $s\\in\\mathbb{C}$, the integral converging absolutely; (2) $\\kappa = 1/\\Lambda(E,1)$, equivalently $L(E,1) = \\frac{\\Gamma(1/3)^2}{3\\cdot2^{4/3}\\,\\Gamma(2/3)} \\approx 0.7010911$; (3) $T \\overset{d}{=} 1/T$, and this is equivalent to the functional equation $\\Lambda(E,s) = \\Lambda(E,2-s)$ with root number $+1$; (4) the characteristic function of $\\log T$ is $\\Xi_E(t) = \\Lambda(E,1+it)/\\Lambda(E,1)$, so the Riemann hypothesis for $E$ is the statement that the characteristic function of the log crossing threshold has only real zeros.",
+   "url": "https://vsokolov.org/books/langlands/results.html#percolation_crossing_threshold_and_the_l_function_of_y2_x3_1",
+   "source": "book/chapters/ch_percolation.tex",
+   "label": "perc:thm:main",
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex"
+  },
+  {
+   "id": "thorin_representation_of_reciprocal_crossing_threshold_moments",
+   "name": "Thorin representation of the reciprocal moments of the crossing threshold under the Riemann hypothesis for y^2 = x^3 + 1",
+   "printed": "Corollary 27.6",
+   "page": "507",
+   "chapter": "27",
+   "status": "conditional",
+   "status_text": "conditional on the Riemann hypothesis for L(E, s), where E is the elliptic curve y^2 = x^3 + 1",
+   "conditions": "the Riemann hypothesis for L(E, s), where E is the elliptic curve y^2 = x^3 + 1",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "Assuming the Riemann hypothesis for the curve y^2 = x^3 + 1, the reciprocal of the moment function of the percolation crossing threshold is the characteristic function of a sum of independent Laplace variables scaled by the reciprocals of the zero ordinates, a symmetric extended generalized gamma convolution with Thorin atoms at the zeros.",
+   "statement": "Let $E$ be the elliptic curve $y^2 = x^3+1$ of conductor $36$, with completed L function $\\Lambda(E,s) = (3/\\pi)^s\\,\\Gamma(s)\\,L(E,s)$, where $L(E,s)$ is the Hasse Weil L function of $E$, and let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\\infty)$ with density $\\kappa\\,\\eta(it)^4$, where $\\eta(\\tau) = e^{\\pi i\\tau/12}\\prod_{n\\ge1}(1-e^{2\\pi in\\tau})$ is the Dedekind eta function and $\\kappa = 2^{4/3}\\pi\\,\\Gamma(\\tfrac23)/\\Gamma(\\tfrac13)^2$, so that $\\mathbb{E}[T^{s-1}] = \\Lambda(E,s)/\\Lambda(E,1)$ for all complex $s$. Let $\\Xi_E(t) = \\Lambda(E,1+it)/\\Lambda(E,1)$, an even entire function of order one with $\\Xi_E(0) = 1$ and Hadamard product $\\Xi_E(t) = \\prod_k(1-t^2/\\rho_k^2)$ over its zeros $\\rho_k$ with positive real part, listed with multiplicity. Assume the Riemann hypothesis for $E$, so that $\\rho_k = \\gamma_k > 0$. Then for real $y$, \\[\\frac{1}{\\mathbb{E}[T^y]} = \\frac{\\Lambda(E,1)}{\\Lambda(E,1+y)} = \\frac{1}{\\Xi_E(iy)} = \\prod_k\\frac{1}{1+y^2/\\gamma_k^2} = \\mathbb{E}\\,e^{iyW},\\qquad W = \\sum_k\\frac{\\varepsilon_k}{\\gamma_k},\\] with $\\varepsilon_k$ independent standard Laplace variables (density $\\tfrac12e^{-|x|}$ on $\\mathbb{R}$). $W$ is a symmetric extended generalized gamma convolution with Thorin measure $\\sum_k\\delta_{\\gamma_k}$ on each half line.",
+   "url": "https://vsokolov.org/books/langlands/results.html#thorin_representation_of_reciprocal_crossing_threshold_moments",
+   "source": "book/chapters/ch_percolation.tex",
+   "label": "perc:cor:recip",
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex"
+  },
+  {
+   "id": "annulus_crossing_probability_is_not_a_positive_laplace_transform",
+   "name": "Cardy's annulus crossing probability is not the Laplace transform of a positive measure",
+   "printed": "Proposition 27.7",
+   "page": "509",
+   "chapter": "27",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "The probability that an open path crosses an annulus in critical percolation, as a function of the modulus, is not the Laplace transform of a positive measure, so the signed spectral measure in its eta quotient expansion cannot be made positive.",
+   "statement": "For an annulus with radii $r < R$ and modulus $L = \\log(R/r)$, let $p_B(L)$ be the probability of an open crossing (an open path joining the two boundary circles) in critical percolation in the scaling limit, given by Cardy's formula, proved by Sun, Xu and Zhuang in 2024, \\[p_B = \\sqrt{\\tfrac32}\\,\\frac{\\eta(6\\tau)\\,\\eta(\\tfrac32\\tau)}{\\eta(2\\tau)\\,\\eta(3\\tau)},\\qquad\\tau = \\frac{iL}{2\\pi},\\] where $\\eta(\\tau) = e^{\\pi i\\tau/12}\\prod_{n\\ge1}(1-e^{2\\pi in\\tau})$ is the Dedekind eta function, so that, with $\\sigma(m)$ the sum of the divisors of $m$, \\[\\log p_B(L) = \\tfrac12\\log\\tfrac32-\\frac{5L}{48}-\\sum_{m\\ge1}\\frac{\\sigma(m)}{m}\\Bigl(e^{-\\frac32mL}+e^{-6mL}-e^{-2mL}-e^{-3mL}\\Bigr),\\] which has the shape of a Lévy Khintchine exponent in $L$ with drift $5/48$ and a spectral measure on the points $\\tfrac32m$, $2m$, $3m$, $6m$, $m\\ge1$, weighted by divisor sums with weights of both signs. Then $p_B$ is not the Laplace transform of a positive measure on $[0,\\infty)$; the signed measure in this expansion cannot be replaced by a positive one.",
+   "url": "https://vsokolov.org/books/langlands/results.html#annulus_crossing_probability_is_not_a_positive_laplace_transform",
+   "source": "book/chapters/ch_percolation.tex",
+   "label": "perc:prop:annulus",
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex"
+  },
+  {
+   "id": "log_crossing_threshold_is_not_infinitely_divisible",
+   "name": "The log crossing threshold is not infinitely divisible",
+   "printed": "Theorem 27.8",
+   "page": "509",
+   "chapter": "27",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "The logarithm of the percolation crossing threshold is not infinitely divisible, and so not an extended generalized gamma convolution, because its characteristic function has real zeros, at the ordinates of the zeros of the L function of y^2 = x^3 + 1 that lie on the critical line, and the characteristic function of an infinitely divisible law never vanishes.",
+   "statement": "Let $E$ be the elliptic curve $y^2 = x^3+1$ of conductor $36$, with completed L function $\\Lambda(E,s) = (3/\\pi)^s\\,\\Gamma(s)\\,L(E,s)$, where $L(E,s)$ is the Hasse Weil L function of $E$, and let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\\infty)$ with density $\\kappa\\,\\eta(it)^4$, where $\\eta(\\tau) = e^{\\pi i\\tau/12}\\prod_{n\\ge1}(1-e^{2\\pi in\\tau})$ is the Dedekind eta function and $\\kappa = 2^{4/3}\\pi\\,\\Gamma(\\tfrac23)/\\Gamma(\\tfrac13)^2$; the characteristic function of $\\log T$ is $\\mathbb{E}\\,e^{it\\log T} = \\Lambda(E,1+it)/\\Lambda(E,1)$. Then $\\log T$ is not infinitely divisible; in particular it is not an extended generalized gamma convolution.",
+   "url": "https://vsokolov.org/books/langlands/results.html#log_crossing_threshold_is_not_infinitely_divisible",
+   "source": "book/chapters/ch_percolation.tex",
+   "label": "perc:thm:notid",
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex"
+  },
+  {
+   "id": "crossing_threshold_is_not_a_generalized_gamma_convolution",
+   "name": "The percolation crossing threshold is not a generalized gamma convolution",
+   "printed": "Theorem 27.10",
+   "page": "510",
+   "chapter": "27",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "The percolation crossing threshold is not a generalized gamma convolution, since the continuation of its Laplace transform has a real zero between two consecutive poles whose residues have the same sign, and so its density, a multiple of the fourth power of the Dedekind eta function on the imaginary axis, is not hyperbolically completely monotone.",
+   "statement": "Let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\\infty)$ with density $f_T(t) = \\kappa\\,\\eta(it)^4$, where $\\eta(\\tau) = e^{\\pi i\\tau/12}\\prod_{n\\ge1}(1-e^{2\\pi in\\tau})$ is the Dedekind eta function and $\\kappa = 2^{4/3}\\pi\\,\\Gamma(\\tfrac23)/\\Gamma(\\tfrac13)^2$. Then $T$ is not a generalized gamma convolution. Consequently its density $\\kappa\\,\\eta(it)^4$ is not hyperbolically completely monotone.",
+   "url": "https://vsokolov.org/books/langlands/results.html#crossing_threshold_is_not_a_generalized_gamma_convolution",
+   "source": "book/chapters/ch_percolation.tex",
+   "label": "perc:thm:notggc",
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex"
+  },
+  {
+   "id": "crossing_threshold_self_decomposable_numerically",
+   "name": "Numerical self decomposability of the percolation crossing threshold",
+   "printed": "Proposition 27.11",
+   "page": "511",
+   "chapter": "27",
+   "status": "open",
+   "status_text": "open",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "A numerical Laplace inversion indicates, without proof, that the percolation crossing threshold is infinitely divisible and self decomposable, with a positive decreasing Lévy function, although it is provably not a generalized gamma convolution; a proof is posed as an open computational problem.",
+   "statement": "Let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\\infty)$ with density $\\kappa\\,\\eta(it)^4$, where $\\eta(\\tau) = e^{\\pi i\\tau/12}\\prod_{n\\ge1}(1-e^{2\\pi in\\tau})$ is the Dedekind eta function and $\\kappa = 2^{4/3}\\pi\\,\\Gamma(\\tfrac23)/\\Gamma(\\tfrac13)^2$. Its Laplace transform $\\varphi(s) = \\mathbb{E}\\,e^{-sT}$ extends to a meromorphic function on $\\mathbb{C}$ with simple poles at $s = -\\pi n/3$ for each $n$ with $a_n\\ne0$, where $\\eta(6\\tau)^4 = \\sum_{n\\ge1}a_ne^{2\\pi in\\tau}$ is the newform of the elliptic curve $y^2 = x^3+1$. Define $m$ by $-\\varphi'(s)/\\varphi(s) = \\int_0^\\infty e^{-sx}m(x)\\,dx$, formally $m(x) = \\sum_{a_n\\ne0}e^{-\\pi nx/3}-\\sum_{\\varphi(z)=0}e^{zx}$; $T$ is infinitely divisible exactly when $m\\ge0$, its Lévy measure then being $m(x)\\,dx/x$, and self decomposable exactly when $m$ is in addition nonincreasing. Numerically (Laplace inversion by de Hoog's method at 40 digits), on a grid of 39 points in $[0.02,5.9]$, $m(x)$ is positive (minimum $0.0021$) and strictly decreasing, and $m(x)e^{\\pi x/3}\\to1$ (to $10^{-8}$ by $x = 3$), reflecting the leading pole at $n = 1$. To working precision, therefore, $T$ is infinitely divisible and self decomposable. It is not a generalized gamma convolution because $m$ is not completely monotone: the zeros of $\\varphi$ enter with negative weight. The positivity and monotonicity of $m$ are numerical observations on a finite grid, not a proof; the chapter poses a proof as an open computational problem.",
+   "url": "https://vsokolov.org/books/langlands/results.html#crossing_threshold_self_decomposable_numerically",
+   "source": "book/chapters/ch_percolation.tex",
+   "label": "perc:prop:sd",
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex"
+  },
+  {
+   "id": "cumulants_of_log_crossing_threshold_are_zero_sums",
+   "name": "Even cumulants of the log crossing threshold are zero sums of the L function of y^2 = x^3 + 1",
+   "printed": "Proposition 27.12",
+   "page": "512",
+   "chapter": "27",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "Unconditionally, the odd cumulants of the logarithm of the percolation crossing threshold vanish and its even cumulants are explicit multiples of the sums of inverse even powers of the zeros of the L function of y^2 = x^3 + 1, so that moments of a crossing probability determine the low lying zeros, and under the Riemann hypothesis these sums are positive and their normalised roots increase to the first zero.",
+   "statement": "Let $E$ be the elliptic curve $y^2 = x^3+1$ of conductor $36$, with completed L function $\\Lambda(E,s) = (3/\\pi)^s\\,\\Gamma(s)\\,L(E,s)$, where $L(E,s)$ is the Hasse Weil L function of $E$, and let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\\infty)$ with $\\mathbb{E}[T^{s-1}] = \\Lambda(E,s)/\\Lambda(E,1)$ for all complex $s$ (its density is proportional to $\\eta(it)^4$, $\\eta$ the Dedekind eta function). Let $X = \\log T$, with cumulant generating function $K_X(y) = \\log\\mathbb{E}\\,e^{yX} = \\log\\bigl(\\Lambda(E,1+y)/\\Lambda(E,1)\\bigr)$ and characteristic function $\\Xi_E(t) = \\Lambda(E,1+it)/\\Lambda(E,1) = \\prod_\\rho(1-t^2/\\rho^2)$, the product over the zeros $\\rho$ of $\\Xi_E$ with $\\operatorname{Re}\\rho > 0$, listed with multiplicity. Let $Z_m = \\sum_\\rho\\rho^{-2m}$, the sum over the zeros of $\\Xi_E$ with $\\operatorname{Re}\\rho > 0$; there are none on the imaginary axis, since $\\Xi_E(iy) = \\mathbb{E}\\,e^{-yX} > 0$. Then, unconditionally, the odd cumulants of $X$ vanish and \\[\\kappa_{2m}(X) = (-1)^{m+1}\\,\\frac{(2m)!}{m}\\,Z_m,\\qquad m\\ge1,\\] where $\\kappa_j$ denotes the cumulant of order $j$. The candidate reciprocal law $W$, with characteristic function $\\varphi_W(y) = e^{-K_X(y)} = 1/\\mathbb{E}[T^y]$ (a probability law under the Riemann hypothesis for $E$), has cumulants (defined by $\\log\\varphi_W(y) = \\sum_j\\kappa_j(W)(iy)^j/j!$, which makes sense whether or not $W$ exists) $\\kappa_{2m}(W) = (-1)^{m+1}\\kappa_{2m}(X)$; in particular $\\mathrm{Var}(W) = \\mathrm{Var}(\\log T) = 2Z_1$. Under the Riemann hypothesis for $E$, when the zeros are $\\rho = \\gamma_k > 0$ with $\\gamma_1$ the smallest, $Z_m = \\sum_k\\gamma_k^{-2m} > 0$ for every $m$ and $Z_m^{-1/(2m)}$ increases to $\\gamma_1$.",
+   "url": "https://vsokolov.org/books/langlands/results.html#cumulants_of_log_crossing_threshold_are_zero_sums",
+   "source": "book/chapters/ch_percolation.tex",
+   "label": "perc:prop:cum",
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex"
+  },
+  {
+   "id": "percolation_cumulant_criterion_for_grh_of_y2_x3_1",
+   "name": "A criterion for the Riemann hypothesis of y^2 = x^3 + 1 in percolation cumulants",
+   "printed": "Theorem 27.13",
+   "page": "515",
+   "chapter": "27",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "Proves an equivalence and not the hypothesis, namely that the Riemann hypothesis for the L function of y^2 = x^3 + 1 holds if and only if the reciprocal of the moment function of the percolation crossing threshold is the characteristic function of a symmetric extended generalized gamma convolution, if and only if a generating function of the cumulants of the log threshold is a Stieltjes function, if and only if every Hankel matrix of the zero sums computed from those cumulants is positive semidefinite.",
+   "statement": "Let $E$ be the elliptic curve $y^2 = x^3+1$ of conductor $36$, with completed L function $\\Lambda(E,s) = (3/\\pi)^s\\,\\Gamma(s)\\,L(E,s)$, where $L(E,s)$ is the Hasse Weil L function of $E$, and let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\\infty)$ with $\\mathbb{E}[T^{s-1}] = \\Lambda(E,s)/\\Lambda(E,1)$ for all complex $s$ (its density is proportional to $\\eta(it)^4$, $\\eta$ the Dedekind eta function). Let $X = \\log T$ and $K_X(y) = \\log\\mathbb{E}\\,e^{yX} = \\log\\bigl(\\Lambda(E,1+y)/\\Lambda(E,1)\\bigr)$; let $\\rho$ run over the zeros, listed with multiplicity, of $\\Xi_E(t) = \\Lambda(E,1+it)/\\Lambda(E,1)$ with $\\operatorname{Re}\\rho > 0$, so that $K_X(y) = \\sum_\\rho\\log(1+y^2/\\rho^2)$; let $Z_m = \\sum_\\rho\\rho^{-2m} = (-1)^{m+1}\\frac{m\\,\\kappa_{2m}(\\log T)}{(2m)!}$, where $\\kappa_{2m}$ denotes the cumulant of order $2m$; and let \\[G(u) = \\frac{K_X'(\\sqrt u)}{2\\sqrt u} = \\sum_\\rho\\frac{1}{u+\\rho^2} = \\sum_{m\\ge1}(-u)^{m-1}Z_m.\\] The $2\\sin^2$ lemma (for a symmetric law $W$ with Lévy density $k(|x|)/|x|$, where $k(x) = \\int_0^\\infty e^{-xt}\\,U(dt)$, one has $-\\log\\mathbb{E}\\,e^{iyW} = \\int_{\\mathbb{R}}2\\sin^2(\\frac{xy}{2})\\frac{k(|x|)}{|x|}\\,dx = \\int_0^\\infty\\log(1+\\frac{y^2}{t^2})\\,U(dt)$), applied to $K_X$, identifies the candidate Thorin measure as $\\sum_\\rho\\delta_\\rho$. The following are equivalent. (1) The Riemann hypothesis holds for $L(E,s)$. (2) $y\\mapsto1/\\mathbb{E}[T^y]$ is the characteristic function of a symmetric extended generalized gamma convolution; that is, the Thorin measure produced by the $2\\sin^2$ lemma is positive. (3) $G$ is a Stieltjes function (a function $a+\\int_{[0,\\infty)}\\frac{\\mu(dt)}{u+t}$ with $a\\ge0$ and $\\mu$ a positive measure). (4) For every $n$ the Hankel matrix $H_n = [Z_{i+j+1}]_{i,j=0}^{n-1}$, built from the even cumulants of $\\log T$, is positive semidefinite.",
+   "url": "https://vsokolov.org/books/langlands/results.html#percolation_cumulant_criterion_for_grh_of_y2_x3_1",
+   "source": "book/chapters/ch_percolation.tex",
+   "label": "perc:thm:crit",
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch_percolation.tex"
   },
   {
    "id": "eta_product_as_distribution_function_of_exponential_maximum",
    "name": "Product formula of the Dedekind eta function as the distribution function of a maximum of exponential clocks",
-   "printed": "Proposition 27.1",
-   "page": "500",
-   "chapter": "27",
+   "printed": "Proposition 28.1",
+   "page": "519",
+   "chapter": "28",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3352,14 +3507,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#eta_product_as_distribution_function_of_exponential_maximum",
    "source": "book/chapters/ch11.tex",
    "label": "prop:ch11M",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex"
   },
   {
    "id": "l_function_of_ramanujan_delta_as_extreme_value_expectation",
    "name": "Extreme value representation of the L function of Ramanujan's Delta",
-   "printed": "Theorem 27.2",
-   "page": "502",
-   "chapter": "27",
+   "printed": "Theorem 28.2",
+   "page": "521",
+   "chapter": "28",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3370,14 +3525,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#l_function_of_ramanujan_delta_as_extreme_value_expectation",
    "source": "book/chapters/ch11.tex",
    "label": "thm:ch11main",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex"
   },
   {
    "id": "real_l_values_of_ramanujan_delta_lie_in_unit_interval",
    "name": "L values of Ramanujan's Delta at positive real points lie strictly between 0 and 1",
-   "printed": "Corollary 27.3",
-   "page": "503",
-   "chapter": "27",
+   "printed": "Corollary 28.3",
+   "page": "522",
+   "chapter": "28",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3388,14 +3543,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#real_l_values_of_ramanujan_delta_lie_in_unit_interval",
    "source": "book/chapters/ch11.tex",
    "label": "cor:ch11bounds",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex"
   },
   {
    "id": "l_function_of_ramanujan_delta_increases_to_one",
    "name": "Strict monotonicity of the L function of Ramanujan's Delta on the positive real axis",
-   "printed": "Corollary 27.4",
-   "page": "503",
-   "chapter": "27",
+   "printed": "Corollary 28.4",
+   "page": "522",
+   "chapter": "28",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3406,14 +3561,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#l_function_of_ramanujan_delta_increases_to_one",
    "source": "book/chapters/ch11.tex",
    "label": "cor:ch11monotone",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex"
   },
   {
    "id": "modularity_of_delta_as_self_similarity_of_extreme_value_law",
    "name": "Modularity of Ramanujan's Delta as self similarity of an extreme value law",
-   "printed": "Proposition 27.5",
-   "page": "504",
-   "chapter": "27",
+   "printed": "Proposition 28.5",
+   "page": "523",
+   "chapter": "28",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3424,14 +3579,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#modularity_of_delta_as_self_similarity_of_extreme_value_law",
    "source": "book/chapters/ch11.tex",
    "label": "prop:ch11selfsim",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex"
   },
   {
    "id": "polya_kernel_of_delta_as_posterior_law",
    "name": "Pólya kernel of Ramanujan's Delta as a Bayesian posterior",
-   "printed": "Proposition 27.6",
-   "page": "505",
-   "chapter": "27",
+   "printed": "Proposition 28.6",
+   "page": "524",
+   "chapter": "28",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3442,14 +3597,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#polya_kernel_of_delta_as_posterior_law",
    "source": "book/chapters/ch11.tex",
    "label": "prop:ch11posterior",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex"
   },
   {
    "id": "extreme_value_representation_of_eta_product_l_functions",
    "name": "Extreme value representation of L functions of eta products",
-   "printed": "Theorem 27.7",
-   "page": "506",
-   "chapter": "27",
+   "printed": "Theorem 28.7",
+   "page": "525",
+   "chapter": "28",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3460,14 +3615,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#extreme_value_representation_of_eta_product_l_functions",
    "source": "book/chapters/ch11.tex",
    "label": "thm:ch11general",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex"
   },
   {
    "id": "kolmogorov_distribution_as_maximum_of_exponentials",
    "name": "Squared Kolmogorov variable as a maximum of exponentials and an identity in law with the eta extreme value",
-   "printed": "Proposition 27.9",
-   "page": "510",
-   "chapter": "27",
+   "printed": "Proposition 28.9",
+   "page": "529",
+   "chapter": "28",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3478,14 +3633,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#kolmogorov_distribution_as_maximum_of_exponentials",
    "source": "book/chapters/ch11.tex",
    "label": "prop:ch11kolmogorov",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex"
   },
   {
    "id": "brownian_functional_with_eta_extreme_value_law",
    "name": "Brownian or Bessel functional with the extreme value law behind the Dedekind eta function",
-   "printed": "Open Problem 27.1",
-   "page": "510",
-   "chapter": "27",
+   "printed": "Open Problem 28.1",
+   "page": "529",
+   "chapter": "28",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -3496,14 +3651,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#brownian_functional_with_eta_extreme_value_law",
    "source": "book/chapters/ch11.tex",
    "label": "prob:ch11brownian",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11.tex"
   },
   {
    "id": "reference_prior_for_conjugacy_classes_is_torus_haar_measure",
    "name": "Reference prior for a conjugacy class of a compact Lie group observed through class function noise",
-   "printed": "Proposition 28.16",
-   "page": "529",
-   "chapter": "28",
+   "printed": "Proposition 29.16",
+   "page": "548",
+   "chapter": "29",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3514,14 +3669,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#reference_prior_for_conjugacy_classes_is_torus_haar_measure",
    "source": "book/chapters/ch11b.tex",
    "label": "thm:11brefprior",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch11b.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch11b.tex"
   },
   {
    "id": "consistency_of_bayes_factors_under_equidistribution",
    "name": "Consistency of Bayes factors under equidistribution",
-   "printed": "Theorem 29.1",
-   "page": "536",
-   "chapter": "29",
+   "printed": "Theorem 30.1",
+   "page": "555",
+   "chapter": "30",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3532,14 +3687,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#consistency_of_bayes_factors_under_equidistribution",
    "source": "book/chapters/ch12.tex",
    "label": "thm:12consist",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch12.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch12.tex"
   },
   {
    "id": "bayes_factor_rates_for_complex_multiplication_of_elliptic_curves",
    "name": "Bayes factor rates for detecting complex multiplication of elliptic curves",
-   "printed": "Corollary 29.3",
-   "page": "538",
-   "chapter": "29",
+   "printed": "Corollary 30.3",
+   "page": "557",
+   "chapter": "30",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -3550,14 +3705,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#bayes_factor_rates_for_complex_multiplication_of_elliptic_curves",
    "source": "book/chapters/ch12.tex",
    "label": "thm:12elliptic",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch12.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch12.tex"
   },
   {
    "id": "sato_tate_discrepancy_brownian_bridge_in_families",
    "name": "Brownian bridge limit of the Sato Tate empirical process in families of elliptic curves",
-   "printed": "Open Problem 30.3",
-   "page": "549",
-   "chapter": "30",
+   "printed": "Open Problem 31.3",
+   "page": "568",
+   "chapter": "31",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -3568,14 +3723,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#sato_tate_discrepancy_brownian_bridge_in_families",
    "source": "book/chapters/ch13.tex",
    "label": "op:disc",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex"
   },
   {
    "id": "inverse_problem_for_automorphy_from_twisted_prime_sums",
    "name": "Inverse problem for automorphy from twisted sums over primes",
-   "printed": "Open Problem 30.4",
-   "page": "550",
-   "chapter": "30",
+   "printed": "Open Problem 31.4",
+   "page": "569",
+   "chapter": "31",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -3586,14 +3741,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#inverse_problem_for_automorphy_from_twisted_prime_sums",
    "source": "book/chapters/ch13.tex",
    "label": "op:inverse",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex"
   },
   {
    "id": "thorin_form_of_hilberts_eighth_problem_for_ramanujan_delta",
    "name": "Hilbert's eighth problem for GL2 in Thorin form",
-   "printed": "Open Problem 30.8",
-   "page": "554",
-   "chapter": "30",
+   "printed": "Open Problem 31.8",
+   "page": "573",
+   "chapter": "31",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -3604,14 +3759,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#thorin_form_of_hilberts_eighth_problem_for_ramanujan_delta",
    "source": "book/chapters/ch13.tex",
    "label": "op:thorin",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex"
   },
   {
    "id": "extreme_value_representation_zeros_and_other_newforms",
    "name": "Extreme value representation for locating zeros and for other newforms",
-   "printed": "Open Problem 30.9",
-   "page": "555",
-   "chapter": "30",
+   "printed": "Open Problem 31.9",
+   "page": "574",
+   "chapter": "31",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -3622,14 +3777,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#extreme_value_representation_zeros_and_other_newforms",
    "source": "book/chapters/ch13.tex",
    "label": "op:ev",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex"
   },
   {
    "id": "second_order_kemeny_constants_of_supersingular_isogeny_graphs",
    "name": "Second order term of Kemeny constants of supersingular 2 isogeny graphs",
-   "printed": "Open Problem 30.10",
-   "page": "556",
-   "chapter": "30",
+   "printed": "Open Problem 31.10",
+   "page": "575",
+   "chapter": "31",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -3640,14 +3795,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#second_order_kemeny_constants_of_supersingular_isogeny_graphs",
    "source": "book/chapters/ch13.tex",
    "label": "op:kemeny",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex"
   },
   {
    "id": "bayesian_identification_of_sato_tate_groups_for_abelian_surfaces",
    "name": "Bayesian identification of Sato Tate groups for abelian surfaces and effective bounds",
-   "printed": "Open Problem 30.11",
-   "page": "557",
-   "chapter": "30",
+   "printed": "Open Problem 31.11",
+   "page": "576",
+   "chapter": "31",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -3658,14 +3813,14 @@
    "url": "https://vsokolov.org/books/langlands/results.html#bayesian_identification_of_sato_tate_groups_for_abelian_surfaces",
    "source": "book/chapters/ch13.tex",
    "label": "op:bayes",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex"
   },
   {
    "id": "family_limit_law_of_the_rank_bias_of_elliptic_curves",
    "name": "Family limit law of the rank bias of elliptic curves",
-   "printed": "Open Problem 30.12",
-   "page": "557",
-   "chapter": "30",
+   "printed": "Open Problem 31.12",
+   "page": "576",
+   "chapter": "31",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -3676,7 +3831,7 @@
    "url": "https://vsokolov.org/books/langlands/results.html#family_limit_law_of_the_rank_bias_of_elliptic_curves",
    "source": "book/chapters/ch13.tex",
    "label": "op:rankbias",
-   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.0.0/book/chapters/ch13.tex"
+   "source_url": "https://github.com/VadimSokolov/langlands/blob/v1.1.0/book/chapters/ch13.tex"
   }
  ]
 }

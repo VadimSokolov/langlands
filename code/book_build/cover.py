@@ -5,7 +5,7 @@ from matplotlib.collections import LineCollection
 from matplotlib.colors import LinearSegmentedColormap
 
 pages = int(sys.argv[1]) if len(sys.argv) > 1 else 180
-bleed, trimw, trimh = 0.125, 6.0, 9.0
+bleed, trimw, trimh = 0.125, 7.0, 10.0  # the 7 x 10 in KDP trim; width 14.25 + spine, height 10.25
 spine = pages * 0.002252
 W = 2 * bleed + 2 * trimw + spine; H = 2 * bleed + trimh
 BG = "#0B1026"
@@ -36,11 +36,11 @@ xs = rng.uniform(0, W, 2500); ys = rng.uniform(0, H, 2500)
 ax.scatter(xs, ys, s=rng.uniform(0.05, 0.6, 2500), color="white", alpha=0.25, lw=0)
 
 fx0 = bleed + trimw + spine  # left edge of front cover
-cx, cy = fx0 + trimw / 2, bleed + 4.15
+cx, cy = fx0 + trimw / 2, bleed + 4.6
 # glow
-for r, a in [(3.2, 0.05), (2.6, 0.06), (2.0, 0.07), (1.4, 0.08)]:
+for r, a in [(3.5, 0.05), (2.85, 0.06), (2.2, 0.07), (1.55, 0.08)]:
     ax.add_patch(plt.Circle((cx, cy), r, color="#2B5BA8", alpha=a, lw=0))
-segs, cols, widths = tree_segments(cx, cy, 2.75, depth=8, q=2)
+segs, cols, widths = tree_segments(cx, cy, 3.0, depth=8, q=2)
 lc = LineCollection(segs, colors=cmap(np.array(cols)), linewidths=widths, alpha=0.95, capstyle="round")
 ax.add_collection(lc)
 ends = np.array([s[1] for s in segs]); dd = np.array(cols)
@@ -50,20 +50,20 @@ ax.scatter([cx], [cy], s=60, color="#F4E3B1", zorder=4, lw=0)
 xg = np.linspace(-2, 2, 400)
 for q, c in zip([2, 3, 5, 11], ["#E3632D", "#E0B13A", "#1B9E9A", "#7FB2F0"]):
     d = (q + 1) / ((math.sqrt(q) + 1 / math.sqrt(q)) ** 2 - xg ** 2) * np.sqrt(np.clip(4 - xg ** 2, 0, None)) / (2 * np.pi)
-    ax.plot(cx + xg * 1.25, bleed + 0.95 + d * 2.2, color=c, lw=1.1, alpha=0.9)
+    ax.plot(cx + xg * 1.4, bleed + 1.0 + d * 2.4, color=c, lw=1.2, alpha=0.9)
 sc = np.sqrt(np.clip(4 - xg ** 2, 0, None)) / (2 * np.pi)
-ax.plot(cx + xg * 1.25, bleed + 0.95 + sc * 2.2, color="white", lw=0.9, ls=(0, (2, 2)), alpha=0.8)
+ax.plot(cx + xg * 1.4, bleed + 1.0 + sc * 2.4, color="white", lw=1.0, ls=(0, (2, 2)), alpha=0.8)
 
 serif = {"family": "serif"}
-ax.text(cx, bleed + trimh - 0.85, "THE LANGLANDS", ha="center", va="center", color="#F4E3B1", fontsize=34, fontdict=serif)
-ax.text(cx, bleed + trimh - 1.45, "CONJECTURES", ha="center", va="center", color="#F4E3B1", fontsize=34, fontdict=serif)
-ax.text(cx, bleed + trimh - 2.05, "Probabilistic Methods", ha="center", va="center", color="#E0B13A", fontsize=19, style="italic", fontdict=serif)
-ax.text(cx, bleed + 0.45, "NICK POLSON   ·   VADIM SOKOLOV", ha="center", va="center", color="white", fontsize=13, fontdict=serif)
+ax.text(cx, bleed + trimh - 0.9, "ON LANGLANDS", ha="center", va="center", color="#F4E3B1", fontsize=38, fontdict=serif)
+ax.text(cx, bleed + trimh - 1.55, "CONJECTURES", ha="center", va="center", color="#F4E3B1", fontsize=38, fontdict=serif)
+ax.text(cx, bleed + trimh - 2.2, "Probabilistic Methods", ha="center", va="center", color="#E0B13A", fontsize=21, style="italic", fontdict=serif)
+ax.text(cx, bleed + 0.5, "NICK POLSON   ·   VADIM SOKOLOV", ha="center", va="center", color="white", fontsize=14, fontdict=serif)
 
 # spine
 sx = bleed + trimw + spine / 2
-ax.text(sx, H / 2 + 0.6, "THE LANGLANDS CONJECTURES   Probabilistic Methods", rotation=-90, ha="center", va="center", color="#F4E3B1", fontsize=10.5, fontdict=serif)
-ax.text(sx, bleed + 1.2, "POLSON  SOKOLOV", rotation=-90, ha="center", va="center", color="white", fontsize=8.5, fontdict=serif)
+ax.text(sx, H / 2 + 0.6, "ON LANGLANDS CONJECTURES   Probabilistic Methods", rotation=-90, ha="center", va="center", color="#F4E3B1", fontsize=13, fontdict=serif)
+ax.text(sx, bleed + 1.3, "POLSON  SOKOLOV", rotation=-90, ha="center", va="center", color="white", fontsize=10, fontdict=serif)
 
 # back cover
 bx = bleed + 0.6; bw = trimw - 1.2
@@ -73,7 +73,13 @@ blurb = ("The Langlands conjectures predict that the Frobenius classes attached 
          "Part by part it develops the Weyl criterion and the Sato Tate law; Hecke operators as "
          "random walks on Bruhat Tits trees, Ihara zeta functions, Ramanujan graphs and hitting "
          "times on supersingular isogeny graphs; infinitely divisible laws, generalized gamma "
-         "convolutions and Thorin measures for L functions; an extreme value representation of the "
+         "convolutions and Thorin measures for L functions, and in the same language squarefree "
+         "integers, Dirichlet's beta function, quadratic reciprocity and Fermat's Last Theorem; "
+         "inverse Laplace transforms that pass between the faces of one L function; "
+         "random integers and the Poisson Dirichlet law; Dirichlet and Hecke characters and "
+         "complex multiplication; Maass forms and Brownian motion on the modular surface; "
+         "crossing probabilities in critical percolation and the L function of an elliptic curve; "
+         "an extreme value representation of the "
          "L functions of eta products; and Bayesian identification of Sato Tate groups.\n\n"
          "New results include an exact limit for the Kemeny constants of isogeny graphs, an "
          "equivalence between the Riemann hypothesis for Ramanujan's Delta and a generalized gamma "
@@ -81,14 +87,17 @@ blurb = ("The Langlands conjectures predict that the Frobenius classes attached 
          "expectations. Large scale computations accompany every chapter, and each chapter ends "
          "with open computational problems that together form a research programme.")
 blurb = blurb.replace("l/(l-1)", "ℓ/(ℓ−1)").replace("2 pi M", "2πM")
+# no line break inside these names (textwrap does not break at a no-break space)
+for pair in ("L functions", "L function", "Sato Tate", "Bruhat Tits"):
+    blurb = blurb.replace(pair, pair.replace(" ", " "))
 import textwrap
-y = bleed + trimh - 1.0
+y = bleed + trimh - 0.75
 for para in blurb.split("\n\n"):
-    for line in textwrap.wrap(para, 62):
-        ax.text(bx, y, line, ha="left", va="top", color="#E8E8EE", fontsize=10.2, fontdict=serif); y -= 0.215
-    y -= 0.18
-ax.text(bx, bleed + 2.45, "Nick Polson is Robert Law Jr. Professor of Econometrics and Statistics at the\nBooth School of Business, University of Chicago. Vadim Sokolov is on the\nfaculty of George Mason University.", ha="left", va="top", color="#B9BED0", fontsize=8.6, fontdict=serif, linespacing=1.5)
-ax.add_patch(plt.Rectangle((bleed + trimw - 2.35, bleed + 0.35), 2.0, 1.2, color="white", lw=0))  # barcode area
+    for line in textwrap.wrap(para, 68):
+        ax.text(bx, y, line, ha="left", va="top", color="#E8E8EE", fontsize=11, fontdict=serif); y -= 0.235
+    y -= 0.2
+ax.text(bx, bleed + 2.55, "Nick Polson is Robert Law Jr. Professor of Econometrics and Statistics at the\nBooth School of Business, University of Chicago. Vadim Sokolov is on the\nfaculty of George Mason University.", ha="left", va="top", color="#B9BED0", fontsize=9.5, fontdict=serif, linespacing=1.5)
+# no box for the barcode: KDP prints its own, on a white background of its own, over whatever is there (lower right of the back cover)
 fig.savefig("cover_wrap.pdf"); fig.savefig("cover_wrap.png", dpi=110)
 # front only
 fig2 = plt.figure(figsize=(trimw, trimh)); a2 = fig2.add_axes([0, 0, 1, 1]); a2.axis("off")
