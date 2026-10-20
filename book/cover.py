@@ -79,6 +79,7 @@ blurb = ("The Langlands conjectures predict that the Frobenius classes attached 
          "random integers and the Poisson Dirichlet law; Dirichlet and Hecke characters and "
          "complex multiplication; Maass forms and Brownian motion on the modular surface; "
          "crossing probabilities in critical percolation and the L function of an elliptic curve; "
+         "even Galois representations, torsion and potential modularity; "
          "an extreme value representation of the "
          "L functions of eta products; and Bayesian identification of Sato Tate groups.\n\n"
          "New results include an exact limit for the Kemeny constants of isogeny graphs, an "

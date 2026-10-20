@@ -1646,7 +1646,7 @@
 - id: eta_product_as_distribution_function_of_exponential_maximum
   name: Product formula of the Dedekind eta function as the distribution function of a maximum of exponential clocks
   label: prop:ch11M
-  chapter: "28"
+  chapter: "29"
   origin: book
   status: proved
   highlight: false
@@ -1656,7 +1656,7 @@
 - id: l_function_of_ramanujan_delta_as_extreme_value_expectation
   name: Extreme value representation of the L function of Ramanujan's Delta
   label: thm:ch11main
-  chapter: "28"
+  chapter: "29"
   origin: book
   status: proved
   highlight: false
@@ -1666,7 +1666,7 @@
 - id: real_l_values_of_ramanujan_delta_lie_in_unit_interval
   name: L values of Ramanujan's Delta at positive real points lie strictly between 0 and 1
   label: cor:ch11bounds
-  chapter: "28"
+  chapter: "29"
   origin: book
   status: proved
   highlight: false
@@ -1676,7 +1676,7 @@
 - id: l_function_of_ramanujan_delta_increases_to_one
   name: Strict monotonicity of the L function of Ramanujan's Delta on the positive real axis
   label: cor:ch11monotone
-  chapter: "28"
+  chapter: "29"
   origin: book
   status: proved
   highlight: false
@@ -1686,7 +1686,7 @@
 - id: modularity_of_delta_as_self_similarity_of_extreme_value_law
   name: Modularity of Ramanujan's Delta as self similarity of an extreme value law
   label: prop:ch11selfsim
-  chapter: "28"
+  chapter: "29"
   origin: book
   status: proved
   highlight: false
@@ -1696,7 +1696,7 @@
 - id: polya_kernel_of_delta_as_posterior_law
   name: Pólya kernel of Ramanujan's Delta as a Bayesian posterior
   label: prop:ch11posterior
-  chapter: "28"
+  chapter: "29"
   origin: book
   status: proved
   highlight: false
@@ -1706,7 +1706,7 @@
 - id: extreme_value_representation_of_eta_product_l_functions
   name: Extreme value representation of L functions of eta products
   label: thm:ch11general
-  chapter: "28"
+  chapter: "29"
   origin: book
   status: proved
   highlight: true
@@ -1716,7 +1716,7 @@
 - id: kolmogorov_distribution_as_maximum_of_exponentials
   name: Squared Kolmogorov variable as a maximum of exponentials and an identity in law with the eta extreme value
   label: prop:ch11kolmogorov
-  chapter: "28"
+  chapter: "29"
   origin: book
   status: proved
   highlight: false
@@ -1726,7 +1726,7 @@
 - id: brownian_functional_with_eta_extreme_value_law
   name: Brownian or Bessel functional with the extreme value law behind the Dedekind eta function
   label: prob:ch11brownian
-  chapter: "28"
+  chapter: "29"
   origin: book
   status: open
   highlight: false
@@ -1736,7 +1736,7 @@
 - id: reference_prior_for_conjugacy_classes_is_torus_haar_measure
   name: Reference prior for a conjugacy class of a compact Lie group observed through class function noise
   label: thm:11brefprior
-  chapter: "29"
+  chapter: "30"
   origin: book
   status: proved
   highlight: false
@@ -1746,7 +1746,7 @@
 - id: consistency_of_bayes_factors_under_equidistribution
   name: Consistency of Bayes factors under equidistribution
   label: thm:12consist
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: proved
   highlight: true
@@ -1756,7 +1756,7 @@
 - id: bayes_factor_rates_for_complex_multiplication_of_elliptic_curves
   name: Bayes factor rates for detecting complex multiplication of elliptic curves
   label: thm:12elliptic
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: proved
   highlight: false
@@ -1767,7 +1767,7 @@
 - id: sato_tate_discrepancy_brownian_bridge_in_families
   name: Brownian bridge limit of the Sato Tate empirical process in families of elliptic curves
   label: op:disc
-  chapter: "31"
+  chapter: "32"
   origin: book
   status: open
   highlight: false
@@ -1777,7 +1777,7 @@
 - id: inverse_problem_for_automorphy_from_twisted_prime_sums
   name: Inverse problem for automorphy from twisted sums over primes
   label: op:inverse
-  chapter: "31"
+  chapter: "32"
   origin: book
   status: open
   highlight: false
@@ -1787,7 +1787,7 @@
 - id: thorin_form_of_hilberts_eighth_problem_for_ramanujan_delta
   name: Hilbert's eighth problem for GL2 in Thorin form
   label: op:thorin
-  chapter: "31"
+  chapter: "32"
   origin: book
   status: open
   highlight: false
@@ -1797,7 +1797,7 @@
 - id: extreme_value_representation_zeros_and_other_newforms
   name: Extreme value representation for locating zeros and for other newforms
   label: op:ev
-  chapter: "31"
+  chapter: "32"
   origin: book
   status: open
   highlight: false
@@ -1807,7 +1807,7 @@
 - id: second_order_kemeny_constants_of_supersingular_isogeny_graphs
   name: Second order term of Kemeny constants of supersingular 2 isogeny graphs
   label: op:kemeny
-  chapter: "31"
+  chapter: "32"
   origin: book
   status: open
   highlight: false
@@ -1817,7 +1817,7 @@
 - id: bayesian_identification_of_sato_tate_groups_for_abelian_surfaces
   name: Bayesian identification of Sato Tate groups for abelian surfaces and effective bounds
   label: op:bayes
-  chapter: "31"
+  chapter: "32"
   origin: book
   status: open
   highlight: false
@@ -1827,7 +1827,7 @@
 - id: family_limit_law_of_the_rank_bias_of_elliptic_curves
   name: Family limit law of the rank bias of elliptic curves
   label: op:rankbias
-  chapter: "31"
+  chapter: "32"
   origin: book
   status: open
   highlight: false
@@ -1917,4 +1917,85 @@
   summary: Proves an equivalence and not the hypothesis, namely that the Riemann hypothesis for the L function of y^2 = x^3 + 1 holds if and only if the reciprocal of the moment function of the percolation crossing threshold is the characteristic function of a symmetric extended generalized gamma convolution, if and only if a generating function of the cumulants of the log threshold is a Stieltjes function, if and only if every Hankel matrix of the zero sums computed from those cumulants is positive semidefinite.
   statement: >-
     Let $E$ be the elliptic curve $y^2 = x^3+1$ of conductor $36$, with completed L function $\Lambda(E,s) = (3/\pi)^s\,\Gamma(s)\,L(E,s)$, where $L(E,s)$ is the Hasse Weil L function of $E$, and let $T$ be the crossing threshold of critical percolation in the scaling limit (the aspect ratio at which the rectangle $[0,r]\times[0,1]$ stops having an open left to right crossing as $r$ grows, so that $\mathbb{P}(T > r)$ is Cardy's crossing probability, a theorem of Smirnov for site percolation on the triangular lattice and a universality hypothesis for other models), the random variable on $(0,\infty)$ with $\mathbb{E}[T^{s-1}] = \Lambda(E,s)/\Lambda(E,1)$ for all complex $s$ (its density is proportional to $\eta(it)^4$, $\eta$ the Dedekind eta function). Let $X = \log T$ and $K_X(y) = \log\mathbb{E}\,e^{yX} = \log\bigl(\Lambda(E,1+y)/\Lambda(E,1)\bigr)$; let $\rho$ run over the zeros, listed with multiplicity, of $\Xi_E(t) = \Lambda(E,1+it)/\Lambda(E,1)$ with $\operatorname{Re}\rho > 0$, so that $K_X(y) = \sum_\rho\log(1+y^2/\rho^2)$; let $Z_m = \sum_\rho\rho^{-2m} = (-1)^{m+1}\frac{m\,\kappa_{2m}(\log T)}{(2m)!}$, where $\kappa_{2m}$ denotes the cumulant of order $2m$; and let \[G(u) = \frac{K_X'(\sqrt u)}{2\sqrt u} = \sum_\rho\frac{1}{u+\rho^2} = \sum_{m\ge1}(-u)^{m-1}Z_m.\] The $2\sin^2$ lemma (for a symmetric law $W$ with Lévy density $k(|x|)/|x|$, where $k(x) = \int_0^\infty e^{-xt}\,U(dt)$, one has $-\log\mathbb{E}\,e^{iyW} = \int_{\mathbb{R}}2\sin^2(\frac{xy}{2})\frac{k(|x|)}{|x|}\,dx = \int_0^\infty\log(1+\frac{y^2}{t^2})\,U(dt)$), applied to $K_X$, identifies the candidate Thorin measure as $\sum_\rho\delta_\rho$. The following are equivalent. (1) The Riemann hypothesis holds for $L(E,s)$. (2) $y\mapsto1/\mathbb{E}[T^y]$ is the characteristic function of a symmetric extended generalized gamma convolution; that is, the Thorin measure produced by the $2\sin^2$ lemma is positive. (3) $G$ is a Stieltjes function (a function $a+\int_{[0,\infty)}\frac{\mu(dt)}{u+t}$ with $a\ge0$ and $\mu$ a positive measure). (4) For every $n$ the Hankel matrix $H_n = [Z_{i+j+1}]_{i,j=0}^{n-1}$, built from the even cumulants of $\log T$, is positive semidefinite.
+
+- id: parity_from_positivity_in_every_weight
+  name: Parity from positivity of the Galois heat trace in every Hodge Tate weight
+  label: thm:calparity
+  chapter: "28"
+  origin: book
+  status: proved
+  highlight: false
+  summary: The Galois heat traces built with the holomorphic and with the even archimedean gamma factor of Hodge Tate weights zero and w differ, unconditionally, by an explicit completely monotone function, one quarter of the expectation of e^(-x C_w squared) for C_w the hyperbolic secant variable plus an independent Cauchy variable of scale w over 2, so that for an odd representation with entire L function and root number one, under the generalized Riemann hypothesis, the heat trace is completely monotone with the holomorphic factor and not with the even one.
+  statement: >-
+    Let $\rho$ be a self dual Galois representation with completed L function $\Lambda(s,\rho)$ satisfying $\Lambda(s,\rho)=\Lambda(1-s,\rho)$, and let $\Lambda_\rho(n)$ be the coefficients of $-L'/L(s,\rho)$. For a gamma factor $\gamma(s)$ and the conductor $N_\rho$ of $\rho$, the Galois heat trace is, for $x>0$, \[\mathcal{W}(x)=\frac{1}{4\pi}\int_{\mathbb{R}}e^{-xt^2}\Bigl(\log N_\rho+2\operatorname{Re}\frac{\gamma'}{\gamma}\bigl(\tfrac12+it\bigr)\Bigr)dt-\frac{1}{2\pi}\sum_{n\ge2}\frac{\Lambda_\rho(n)}{\sqrt n}\sqrt{\frac{\pi}{x}}\,e^{-(\log n)^2/(4x)}.\] For $w\ge0$ let $\mathcal{W}^{\mathrm{hol}}_\rho$ and $\mathcal{W}^{\mathrm{ev}}_\rho$ be the heat traces computed with the gamma factors $\Gamma_{\mathbb{C}}(s+\frac w2)=\Gamma_{\mathbb{R}}(s+\frac w2)\Gamma_{\mathbb{R}}(s+\frac w2+1)$ and $\Gamma_{\mathbb{R}}(s+\frac w2)^2$ respectively (where $\Gamma_{\mathbb{R}}(s)=\pi^{-s/2}\Gamma(s/2)$ and $\Gamma_{\mathbb{C}}(s)=2(2\pi)^{-s}\Gamma(s)$), with the same conductor and the same Frobenius data. (a) Unconditionally, \[\mathcal{W}^{\mathrm{hol}}_\rho(x)-\mathcal{W}^{\mathrm{ev}}_\rho(x)=\Delta_w(x):=\frac14\mathbb{E}\,e^{-xC_w^2}=\frac{1}{4\sqrt{\pi x}}\int_0^\infty\frac{e^{-wu/2}}{\cosh(u/2)}\,e^{-u^2/(4x)}\,du,\] where $C_w=C+\frac w2\,T$, $C$ has the hyperbolic secant distribution with density $\operatorname{sech}(\pi t)$ on $\mathbb{R}$, and $T$ is an independent standard Cauchy variable. So $\Delta_w$ is completely monotone, and $\Delta_w(x)\sim\frac14 f_w(0)\sqrt{\pi/x}$ as $x\to\infty$, where $f_w(0)=\int_{\mathbb{R}}\operatorname{sech}(\pi s)\,\frac{w/(2\pi)}{(w/2)^2+s^2}\,ds$ is the density of $C_w$ at $0$ (for $w=0$ read as $f_0(0)=1$; the values for $w=0,1,3,11$ are $1$, $0.4413$, $0.1953$, $0.0574$). (b) Suppose $\Lambda(s,\rho)$ is entire with root number $+1$ and satisfies the generalized Riemann hypothesis, and that $\rho$ is odd with Hodge Tate weights $(0,w)$, so that its gamma factor is $\Gamma_{\mathbb{C}}(s+\frac w2)$. Then $\mathcal{W}^{\mathrm{hol}}_\rho(x)=\frac12\sum e^{-x\gamma^2}$, the sum over all zeros $\frac12+i\gamma$ of $\Lambda(s,\rho)$ with multiplicity (so $\gamma$ and $-\gamma$ both occur), is completely monotone, and $\mathcal{W}^{\mathrm{ev}}_\rho$ is not: $\mathcal{W}^{\mathrm{ev}}_\rho(x)-\mathcal{W}^{\mathrm{ev}}_\rho(\infty)\sim-\frac14 f_w(0)\sqrt{\pi/x}$ as $x\to\infty$, which is negative and increasing.
+- id: dirichlet_process_with_sato_tate_base_measure_over_cm_fields
+  name: The Dirichlet process with Sato Tate base measure over a CM field
+  label: thm:calcm
+  chapter: "28"
+  origin: book
+  status: proved
+  highlight: false
+  summary: For an elliptic curve without complex multiplication over a CM field, the labelled prime factorisation of the random ideal with zeta weights converges to a Gamma process with Sato Tate label law and the normalised factorisation to the Dirichlet process with Sato Tate base measure, and every Frobenius functional converges to a generalized gamma convolution, now a theorem because Sato Tate and the nonvanishing of the twisted symmetric power L functions are known over CM fields.
+  statement: >-
+    Let $F$ be a CM field, let $E/F$ be an elliptic curve without complex multiplication, and for each prime $\mathfrak{p}$ of good reduction write $a_{\mathfrak p}=2\sqrt{N\mathfrak p}\cos\theta_{\mathfrak p}$ with $\theta_{\mathfrak p}\in[0,\pi]$ (so that the Sato Tate law is $\frac{2}{\pi}\sin^2\theta\,d\theta$). Let $\mathfrak{n}_\sigma$, for real $\sigma>1$, be the random integral ideal of $F$ with $\mathbb{P}(\mathfrak{n}_\sigma=\mathfrak n)=N\mathfrak n^{-\sigma}/\zeta_F(\sigma)$, with its prime factors labelled by $\theta_{\mathfrak p}$, and let $e_{\mathfrak p}$ be the exponent of $\mathfrak p$ in $\mathfrak n_\sigma$. As $\sigma\downarrow1$: (i) the labelled factorisation converges in law to the Gamma process with label law the Sato Tate law, and the normalised factorisation converges to the Dirichlet process with base measure $\frac2\pi\sin^2\theta\,d\theta$; (ii) for continuous $Q\ge0$ on $[0,\pi]$ the Frobenius functional $\Xi_\sigma(Q)=(\sigma-1)\sum_{\mathfrak p}e_{\mathfrak p}\log N\mathfrak p\,Q(\theta_{\mathfrak p})$ converges in law to the generalized gamma convolution whose Thorin measure is the image of the Sato Tate law under $\theta\mapsto1/Q(\theta)$, and for $Q=\cos^2$ the Thorin density is $\frac{2}{\pi t^2}\sqrt{t-1}$ on $(1,\infty)$; (iii) the same holds with the labels $(\theta_{\mathfrak p},\operatorname{Frob}_{\mathfrak p})\in[0,\pi]\times G$ for any finite Galois extension $L/F$ with group $G$, with base measure the product of the Sato Tate law and Haar measure on $G$, the joint equidistribution following from the Weyl criterion with the L functions $L(s,\operatorname{Sym}^m E\otimes\chi)$, $\chi$ an irreducible character of $\operatorname{Gal}(L/F)$, whose nonvanishing on $\operatorname{Re}s=1$ follows from the potential automorphy of all symmetric powers (Allen, Calegari, Caraiani, Gee, Helm, Le Hung, Newton, Scholze, Taylor and Thorne) by Brauer induction and the theorem of Jacquet and Shalika.
+- id: local_thorin_positivity_for_bianchi_forms
+  name: Unconditional local Thorin positivity for weight zero forms over CM fields
+  label: cor:calbianchi
+  chapter: "28"
+  origin: book
+  status: proved
+  highlight: false
+  summary: For a weight zero cuspidal automorphic representation of GL2 over a CM field, each unramified local L factor with Hecke eigenvalue different from 2, suitably normalised and evaluated at the square root of the Laplace variable, is the Laplace transform of a generalized gamma convolution with an explicit comb of Thorin atoms, unconditionally, because the Ramanujan bound at unramified places is now a theorem over CM fields.
+  statement: >-
+    Let $F$ be a CM field, let $\pi$ be a cuspidal automorphic representation of $\mathrm{GL}_2(\mathbb{A}_F)$ of weight zero (cohomological for the trivial coefficient system), and let $\mathfrak p$ be a prime of $F$ at which $\pi$ is unramified with trivial central character, with Hecke eigenvalue $\lambda(\mathfrak p)=\alpha_{\mathfrak p}+\alpha_{\mathfrak p}^{-1}=2\cos\theta_{\mathfrak p}$, $\theta_{\mathfrak p}\in(0,\pi]$, in the unitary normalisation, so that the local L factor is $L_{\mathfrak p}(s,\pi)=(1-\alpha_{\mathfrak p}N\mathfrak p^{-s})^{-1}(1-\alpha_{\mathfrak p}^{-1}N\mathfrak p^{-s})^{-1}$, and assume $\lambda(\mathfrak p)\ne2$. Then, unconditionally (the Ramanujan bound $|\lambda(\mathfrak p)|\le2$ being a theorem over CM fields), the function of $u>0$ given by $(2-\lambda(\mathfrak p))\,N\mathfrak p^{-\sqrt u}\,L_{\mathfrak p}(\sqrt u,\pi)=(2-\lambda(\mathfrak p))/(2\cosh(\sqrt u\log N\mathfrak p)-\lambda(\mathfrak p))$ is the Laplace transform, in $u$, of a generalized gamma convolution with drift zero and Thorin measure the comb $\sum_{k\in\mathbb{Z}}\delta_{((\theta_{\mathfrak p}+2\pi k)/\log N\mathfrak p)^2}$.
+- id: thorin_criterion_for_abelian_surfaces
+  name: Thorin criterion for the generalized Riemann hypothesis of an abelian surface
+  label: thm:calg2
+  chapter: "28"
+  origin: book
+  status: proved
+  highlight: false
+  summary: For an abelian surface over the rationals with geometric endomorphism ring the integers whose completed L function is entire and does not vanish at the centre (assumed in the statement; entire for the modular surfaces, of which Boxer, Calegari, Gee and Pilloni prove there are infinitely many), the generalized Riemann hypothesis holds exactly when the completed L function at the centre divided by its value at the square root of the Laplace variable is the Laplace transform of a generalized gamma convolution with Thorin atoms at the squared zero ordinates, and a shifted representation holds with no assumption on the zeros.
+  statement: >-
+    Let $A/\mathbb{Q}$ be an abelian surface with $\operatorname{End}_{\mathbb{C}}(A)=\mathbb{Z}$ (endomorphisms over $\mathbb{C}$), let $N_A$ be its conductor, let $L(s,A)$ be its Hasse Weil L function, and let $\Lambda(s,A)=N_A^{s/2}\,\Gamma_{\mathbb{C}}(s)^2\,L(s,A)$, with $\Gamma_{\mathbb{C}}(s)=2(2\pi)^{-s}\Gamma(s)$. Suppose $\Lambda(s,A)$ is entire (as it is for the modular surfaces, and is expected for all) and $\Lambda(1,A)\ne0$. Put $\Xi_A(w)=\Lambda(1+w,A)$, an even function of $w$ with zeros $\pm i\gamma_k$ (one $\gamma_k$ for each pair, with multiplicity), that is zeros $1\pm i\gamma_k$ in $s$. Then the generalized Riemann hypothesis for $L(s,A)$ holds if and only if $\Xi_A(0)/\Xi_A(\sqrt\lambda)$ is the Laplace transform, in $\lambda$, of a generalized gamma convolution; in that case the Thorin measure is $\sum_k\delta_{\gamma_k^2}$ and the generalized gamma convolution is $\sum_kE_k/\gamma_k^2$ with $E_k$ independent standard exponential variables. Moreover, with no assumption on the location of the zeros (but still assuming $\Lambda(s,A)$ entire and $\Lambda(1,A)\ne0$), for every $a\ge\frac12$ the function $\Xi_A(a)/\Xi_A(a+\sqrt\lambda)$ is the Laplace transform, in $\lambda$, of a generalized gamma convolution of drift zero and Thorin density $V_a(z)=\operatorname{Re}\bigl(\Xi_A'/\Xi_A\bigr)(a+i\sqrt z)/(2\pi\sqrt z)$, $z>0$ (the shifted Thorin representation at the basepoint $1+a$).
+- id: parity_without_grh_open_problem
+  name: Parity of the Galois heat trace without the generalized Riemann hypothesis
+  label: op:calparity
+  chapter: "28"
+  origin: book
+  status: open
+  highlight: false
+  summary: Prove without the generalized Riemann hypothesis that for a self dual Galois representation with distinct Hodge Tate weights at most one of the heat traces built with the holomorphic and the even gamma factor is completely monotone.
+  statement: >-
+    Let $\rho$ be a self dual Galois representation with distinct Hodge Tate weights $(0,w)$, $w>0$, and let $\mathcal{W}^{\mathrm{hol}}_\rho$ and $\mathcal{W}^{\mathrm{ev}}_\rho$ be its Galois heat traces computed with the gamma factors $\Gamma_{\mathbb{C}}(s+\frac w2)$ and $\Gamma_{\mathbb{R}}(s+\frac w2)^2$ respectively, so that $\mathcal{W}^{\mathrm{hol}}_\rho-\mathcal{W}^{\mathrm{ev}}_\rho=\Delta_w$ is completely monotone. Under the generalized Riemann hypothesis (with $\Lambda(s,\rho)$ entire and root number $+1$), $\mathcal{W}^{\mathrm{ev}}_\rho$ fails to be completely monotone for odd $\rho$. Find an unconditional proof that at most one of $\mathcal{W}^{\mathrm{hol}}_\rho$ and $\mathcal{W}^{\mathrm{ev}}_\rho$ is completely monotone; the question is whether a completely monotone function can differ from another by $\Delta_w$ when both are heat traces of the same Frobenius data.
+- id: euler_kronecker_drift_over_a_cm_field_open_problem
+  name: The Euler Kronecker drift of Frobenius functionals over a CM field
+  label: op:calshape
+  chapter: "28"
+  origin: book
+  status: open
+  highlight: false
+  summary: Determine the Euler Kronecker drift of the Rankin Selberg subordinator of an elliptic curve without complex multiplication over a CM field in terms of the Euler Kronecker constant of the field and a logarithmic derivative of a symmetric square L function, its dependence on the degree of the field, and whether the deficits of the Sato Tate classes can change sign with the field.
+  statement: >-
+    Let $F$ be a CM field and $E/F$ an elliptic curve without complex multiplication, with Galois representation $\rho$. The Rankin Selberg subordinator over $F$ (the Frobenius labelled subordinator attached to the Rankin Selberg L function of $\rho|_F$ with its contragredient, as in the book's chapter on reciprocity through the swap) has Gamma shape $1$, since $L(s,\rho|_F\otimes\check\rho|_F)=\zeta_F(s)L(s,\operatorname{ad}^0\rho|_F)$ and the second factor is holomorphic and nonzero at $s=1$ (by the potential automorphy theorem of Allen, Calegari, Caraiani, Gee, Helm, Le Hung, Newton, Scholze, Taylor and Thorne, Brauer induction and the theorem of Jacquet and Shalika). Determine the Euler Kronecker drift (the coefficient $\kappa_C$ of $\lambda(\sigma-1)$ in the expansion of the logarithm of the Laplace transform, at $\lambda$, of the Frobenius labelled functional as $\sigma\downarrow1$, as in the book's Euler Kronecker drift theorem over the rationals) over $F$ in terms of the Euler Kronecker constant of $F$ and $L'/L(1,\operatorname{Sym}^2E/F)$, and its dependence on the degree of $F$; and decide whether the deficits of the Sato Tate classes can change sign with the field.
+- id: sato_tate_for_abelian_surfaces_as_a_dirichlet_process_open_problem
+  name: Sato Tate for abelian surfaces as a Dirichlet process
+  label: op:calg2
+  chapter: "28"
+  origin: book
+  status: open
+  highlight: false
+  summary: State the Sato Tate conjecture for a generic abelian surface over the rationals as a Dirichlet process with the trace law of the unitary symplectic group of degree four as base measure, and determine which Frobenius functionals have Gamma limits provable from potential modularity of abelian surfaces alone.
+  statement: >-
+    State the Sato Tate conjecture for a generic abelian surface over $\mathbb{Q}$ (with geometric endomorphism ring $\mathbb{Z}$) in the form of the theorem on the Dirichlet process over a CM field, with base measure the law of the trace of a Haar distributed element of $\mathrm{USp}(4)$, and determine which Frobenius functionals have Gamma limits that are provable from the potential modularity of abelian surfaces over totally real fields (Boxer, Calegari, Gee and Pilloni) alone, that is from the Rankin Selberg L function and the standard L function of $\mathrm{GSp}_4$ without symmetric powers.
+- id: torsion_entropy_and_tree_entropy_open_problem
+  name: Torsion growth entropy and spanning tree entropy as one statement
+  label: op:caltorsion
+  chapter: "28"
+  origin: book
+  status: open
+  highlight: false
+  summary: Identify the Bergeron Venkatesh constant one over six pi as an entropy of a random walk or Brownian motion on hyperbolic three space, in the sense in which the spanning tree entropy of a regular tree governs the Jacobians of modular curves, and find the common statement of which the two are the p adic and the archimedean cases.
+  statement: >-
+    The Bergeron and Venkatesh conjecture is that $\log|H_1(\Gamma_N,\mathbb{Z})_{\mathrm{tors}}|/\operatorname{vol}(\Gamma_N\backslash\mathbb{H}^3)\to\frac{1}{6\pi}$ for $\Gamma_N$ running through principal congruence subgroups of an arithmetic lattice in $\mathrm{SL}_2(\mathbb{C})$, and the entropy theorem for Jacobians of modular curves in the book (after Tsfasman and Vl\u{a}du\c{t}) says that for a fixed prime $\ell$ and $N\to\infty$ through primes, $\frac1g\log|J_0(N)(\mathbb{F}_\ell)|\to\log\frac{\ell^\ell}{(\ell^2-1)^{(\ell-1)/2}}$, the spanning tree entropy of the $(\ell+1)$ regular tree, with $g$ the genus of $X_0(N)$. Identify the constant $\frac{1}{6\pi}$ as an entropy of a random walk or Brownian motion on hyperbolic three space in the sense in which $\log\frac{\ell^\ell}{(\ell^2-1)^{(\ell-1)/2}}$ is the spanning tree entropy of the $(\ell+1)$ regular tree, and find the common statement of which the two are the $p$ adic and the archimedean cases: a Jacquet Langlands invariant growth rate of torsion, computed from return probabilities on the universal cover.
 
