@@ -17,12 +17,12 @@ authors:
 credit_names: ""                 # how a citation names the authors, e.g. "Polson and Sokolov"; empty: built from the family names
 year: 2026
 edition: "1"
-version: "1.3.0"                 # the release tag is v<version>
-date_released: "2026-11-01"      # YYYY-MM-DD; the GitHub release and Zenodo show it
+version: "1.4.0"                 # the release tag is v<version>
+date_released: "2026-11-02"      # YYYY-MM-DD; the GitHub release and Zenodo show it
 publisher: "Independently published"   # the imprint KDP shows for a free KDP ISBN
 # no isbn: a free KDP ISBN may be used only on KDP, so it goes on the ISBN line of kdp.md (private) and is printed
 # only in the print edition (kdp.py interior); this file is published (references/publishing.md)
-doi: "10.5281/zenodo.23874307" # this edition's DOI; zenodo.py reserve writes it before the final build
+doi: "10.5281/zenodo.23904867" # this edition's DOI; zenodo.py reserve writes it before the final build
 license_text: CC-BY-4.0          # text, figures and PDF
 license_code: MIT
 repository: https://github.com/VadimSokolov/langlands   # the public repository; its name is the slug
@@ -50,7 +50,7 @@ short_description: "What probability can and cannot contribute to the Langlands 
 description: |
   This monograph asks what probability can contribute to the Langlands programme, and answers on two sides. The first is a limitation, proved in the opening chapter: no argument that sees only the limiting distribution of Frobenius data can detect automorphy, because equidistribution is a consequence of functoriality, not a route to it. The second is what probability does supply: consequences of the conjectures, calibration against data, and probabilistic reformulations.
 
-  The book covers Weyl's criterion, the Sato Tate law, murmurations of root numbers, random matrix models of the zeros of L functions, Hecke operators as random walks on Bruhat Tits trees, and hitting times on supersingular isogeny graphs. At its centre is the Thorin framework: for a cuspidal automorphic representation of GL(n) over the rationals, the generalized Riemann hypothesis is equivalent to the statement that the reciprocal of an even completion of its L function is the Laplace transform of a generalized gamma convolution. Later chapters turn the same devices on reciprocity, Fermat's last theorem, random integers and the Poisson Dirichlet law, Hecke characters, Maass forms, Calegari's theorems on even representations and potential modularity, and the crossing probabilities of critical percolation, whose threshold law is, up to normalisation, the Mellin transform of the completed L function of an elliptic curve. These are reformulations: no new case of reciprocity and no Riemann hypothesis is proved.
+  The book covers Weyl's criterion, the Sato Tate law, murmurations of root numbers, random matrix models of the zeros of L functions, Hecke operators as random walks on Bruhat Tits trees, and hitting times on supersingular isogeny graphs. At its centre is the Thorin framework: for a cuspidal automorphic representation of GL(n) over the rationals, the generalized Riemann hypothesis is equivalent to the statement that the reciprocal of an even completion of its L function is the Laplace transform of a generalized gamma convolution. Later chapters turn the same devices on reciprocity, Fermat's last theorem, random integers and the Poisson Dirichlet law, Hecke characters, Maass forms, Calegari's theorems on even representations, Apery's fraction for zeta(3), and the crossing probabilities of critical percolation, whose threshold law is, up to normalisation, the Mellin transform of the completed L function of an elliptic curve. These are reformulations: no new case of reciprocity and no Riemann hypothesis is proved.
 
   Results new to the book include the limit of the normalised Kemeny constants of supersingular isogeny graphs, the Thorin criteria for the generalized Riemann hypothesis and for the Ramanujan conjecture, an extreme value representation of the L functions of multiplicative eta products, the Gamma process limit of the Frobenius labelled factorisation of a random integer, and a consistency theorem for the Bayesian identification of Sato Tate groups. Open computational problems close every chapter, and the scripts and data behind the numbers are in the repository.
 source:
@@ -163,20 +163,23 @@ chapters:                        # from bookrepo.py scan; stems are public file 
     title: "Even Representations, Torsion and Potential Modularity"
     stem: 29_even_representations_torsion_and_potential_modularity
   - key: "30"
-    title: "Extreme Values and the L Functions of Eta Products"
-    stem: 30_extreme_values_and_the_l_functions_of_eta_products
+    title: "Zeta Values, Periods and Thorin Measures"
+    stem: 30_zeta_values_periods_and_thorin_measures
   - key: "31"
-    title: "Haar Measure and the p* Formula"
-    stem: 31_haar_measure_and_the_p_formula
+    title: "Extreme Values and the L Functions of Eta Products"
+    stem: 31_extreme_values_and_the_l_functions_of_eta_products
   - key: "32"
-    title: "Bayesian Identification of Sato Tate Groups"
-    stem: 32_bayesian_identification_of_sato_tate_groups
+    title: "Haar Measure and the p* Formula"
+    stem: 32_haar_measure_and_the_p_formula
   - key: "33"
-    title: "Open Problems"
-    stem: 33_open_problems
+    title: "Bayesian Identification of Sato Tate Groups"
+    stem: 33_bayesian_identification_of_sato_tate_groups
   - key: "34"
+    title: "Open Problems"
+    stem: 34_open_problems
+  - key: "35"
     title: "A Computational Programme"
-    stem: 34_a_computational_programme
+    stem: 35_a_computational_programme
   - key: "A"
     title: "A Probability Toolkit"
     stem: A_a_probability_toolkit

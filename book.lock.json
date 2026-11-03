@@ -1,9 +1,9 @@
 {
  "edition": "1",
  "pdf": {
-  "bytes": 6770382,
+  "bytes": 6829210,
   "file": "pdf/langlands.pdf",
-  "pages": 717,
+  "pages": 730,
   "parts": [
    {
     "first_page": "i",
@@ -218,61 +218,68 @@
    {
     "first_page": "550",
     "key": "30",
-    "last_page": "563",
-    "pages": 14,
-    "title": "Chapter 30. Extreme Values and the L Functions of Eta Products"
+    "last_page": "561",
+    "pages": 12,
+    "title": "Chapter 30. Zeta Values, Periods and Thorin Measures"
    },
    {
-    "first_page": "565",
+    "first_page": "562",
     "key": "31",
-    "last_page": "584",
-    "pages": 20,
-    "title": "Chapter 31. Haar Measure and the p* Formula"
+    "last_page": "575",
+    "pages": 14,
+    "title": "Chapter 31. Extreme Values and the L Functions of Eta Products"
    },
    {
-    "first_page": "585",
+    "first_page": "577",
     "key": "32",
     "last_page": "596",
-    "pages": 12,
-    "title": "Chapter 32. Bayesian Identification of Sato Tate Groups"
+    "pages": 20,
+    "title": "Chapter 32. Haar Measure and the p* Formula"
    },
    {
     "first_page": "597",
     "key": "33",
-    "last_page": "610",
-    "pages": 14,
-    "title": "Chapter 33. Open Problems"
+    "last_page": "608",
+    "pages": 12,
+    "title": "Chapter 33. Bayesian Identification of Sato Tate Groups"
    },
    {
-    "first_page": "611",
+    "first_page": "609",
     "key": "34",
-    "last_page": "621",
-    "pages": 11,
-    "title": "Chapter 34. A Computational Programme"
+    "last_page": "622",
+    "pages": 14,
+    "title": "Chapter 34. Open Problems"
    },
    {
-    "first_page": "622",
+    "first_page": "623",
+    "key": "35",
+    "last_page": "633",
+    "pages": 11,
+    "title": "Chapter 35. A Computational Programme"
+   },
+   {
+    "first_page": "634",
     "key": "A",
-    "last_page": "638",
+    "last_page": "650",
     "pages": 17,
     "title": "Appendix A. A Probability Toolkit"
    },
    {
-    "first_page": "639",
+    "first_page": "651",
     "key": "B",
-    "last_page": "653",
+    "last_page": "665",
     "pages": 15,
     "title": "Appendix B. Code for the Computations"
    },
    {
-    "first_page": "654",
+    "first_page": "666",
     "key": "",
-    "last_page": "693",
-    "pages": 40,
+    "last_page": "706",
+    "pages": 41,
     "title": "Bibliography"
    }
   ],
-  "sha256": "b5e0ea538d2eb0c5d048794c536dfeb4e125e6e6a7c20dec2d7d5c9c56c776b8"
+  "sha256": "8903359deb22511c4d7483c2027ad4436f3dae632cc8786b5ac6312c09558a66"
  },
  "results": {
   "an_arithmetic_product_for_frobenius_functionals": {
@@ -297,14 +304,58 @@
    "verified_fingerprint": "c46948ae9690",
    "verified_on": "2026-10-20"
   },
+  "apery_fraction_inverse_moment_of_thorin_measure": {
+   "environment": "theorem",
+   "file": "book/chapters/ch_zeta.tex",
+   "fingerprint": "5d58a5fec9ac",
+   "label": "thm:zvapery",
+   "number": "30.4",
+   "page": "553",
+   "printed": "Theorem 30.4",
+   "verified_fingerprint": "5d58a5fec9ac",
+   "verified_on": "2026-11-02"
+  },
+  "apery_matrix_large_level_asymptotics_open_problem": {
+   "environment": "problem",
+   "file": "book/chapters/ch_zeta.tex",
+   "fingerprint": "9bacf4811605",
+   "label": "op:zvpert",
+   "number": "30.1",
+   "page": "560",
+   "printed": "Open Problem 30.1",
+   "verified_fingerprint": "9bacf4811605",
+   "verified_on": "2026-11-02"
+  },
+  "apery_sequences_as_orthogonal_polynomials_at_zero": {
+   "environment": "theorem",
+   "file": "book/chapters/ch_zeta.tex",
+   "fingerprint": "5ccff9cdfc44",
+   "label": "thm:zvseq",
+   "number": "30.7",
+   "page": "556",
+   "printed": "Theorem 30.7",
+   "verified_fingerprint": "5ccff9cdfc44",
+   "verified_on": "2026-11-02"
+  },
+  "arithmetic_of_apery_denominators_from_the_measure_open_problem": {
+   "environment": "problem",
+   "file": "book/chapters/ch_zeta.tex",
+   "fingerprint": "ac44476359a3",
+   "label": "op:zvdenom",
+   "number": "30.2",
+   "page": "560",
+   "printed": "Open Problem 30.2",
+   "verified_fingerprint": "ac44476359a3",
+   "verified_on": "2026-11-02"
+  },
   "bayes_factor_rates_for_complex_multiplication_of_elliptic_curves": {
    "environment": "corollary",
    "file": "book/chapters/ch12.tex",
    "fingerprint": "b50fbaf1164d",
    "label": "thm:12elliptic",
-   "number": "32.3",
-   "page": "588",
-   "printed": "Corollary 32.3",
+   "number": "33.3",
+   "page": "600",
+   "printed": "Corollary 33.3",
    "verified_fingerprint": "b50fbaf1164d",
    "verified_on": "2026-10-20"
   },
@@ -313,20 +364,31 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "60397c6d6cbe",
    "label": "op:bayes",
-   "number": "33.11",
-   "page": "607",
-   "printed": "Open Problem 33.11",
+   "number": "34.11",
+   "page": "619",
+   "printed": "Open Problem 34.11",
    "verified_fingerprint": "60397c6d6cbe",
    "verified_on": "2026-10-20"
+  },
+  "beukers_variable_is_not_a_ggc": {
+   "environment": "theorem",
+   "file": "book/chapters/ch_zeta.tex",
+   "fingerprint": "f32425a0d69b",
+   "label": "thm:zvWnot",
+   "number": "30.9",
+   "page": "558",
+   "printed": "Theorem 30.9",
+   "verified_fingerprint": "f32425a0d69b",
+   "verified_on": "2026-11-02"
   },
   "brownian_functional_with_eta_extreme_value_law": {
    "environment": "problem",
    "file": "book/chapters/ch11.tex",
    "fingerprint": "d58529d6a048",
    "label": "prob:ch11brownian",
-   "number": "30.1",
-   "page": "560",
-   "printed": "Open Problem 30.1",
+   "number": "31.1",
+   "page": "572",
+   "printed": "Open Problem 31.1",
    "verified_fingerprint": "d58529d6a048",
    "verified_on": "2026-10-20"
   },
@@ -423,9 +485,9 @@
    "file": "book/chapters/ch12.tex",
    "fingerprint": "deb42f282c00",
    "label": "thm:12consist",
-   "number": "32.1",
-   "page": "586",
-   "printed": "Theorem 32.1",
+   "number": "33.1",
+   "page": "598",
+   "printed": "Theorem 33.1",
    "verified_fingerprint": "deb42f282c00",
    "verified_on": "2026-10-20"
   },
@@ -797,9 +859,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "dc9a4330233b",
    "label": "prop:ch11M",
-   "number": "30.1",
-   "page": "550",
-   "printed": "Proposition 30.1",
+   "number": "31.1",
+   "page": "562",
+   "printed": "Proposition 31.1",
    "verified_fingerprint": "dc9a4330233b",
    "verified_on": "2026-10-20"
   },
@@ -951,9 +1013,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "0a745133044c",
    "label": "thm:ch11general",
-   "number": "30.7",
-   "page": "556",
-   "printed": "Theorem 30.7",
+   "number": "31.7",
+   "page": "568",
+   "printed": "Theorem 31.7",
    "verified_fingerprint": "0a745133044c",
    "verified_on": "2026-10-20"
   },
@@ -962,9 +1024,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "410dad1abfa2",
    "label": "op:ev",
-   "number": "33.9",
-   "page": "605",
-   "printed": "Open Problem 33.9",
+   "number": "34.9",
+   "page": "617",
+   "printed": "Open Problem 34.9",
    "verified_fingerprint": "410dad1abfa2",
    "verified_on": "2026-10-20"
   },
@@ -973,9 +1035,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "9b5e9d252f2f",
    "label": "op:rankbias",
-   "number": "33.12",
-   "page": "607",
-   "printed": "Open Problem 33.12",
+   "number": "34.12",
+   "page": "619",
+   "printed": "Open Problem 34.12",
    "verified_fingerprint": "9b5e9d252f2f",
    "verified_on": "2026-10-20"
   },
@@ -1287,6 +1349,17 @@
    "verified_fingerprint": "c5af8990b882",
    "verified_on": "2026-10-20"
   },
+  "hyperbolic_complete_monotonicity_of_apery_ggc_open_problem": {
+   "environment": "problem",
+   "file": "book/chapters/ch_zeta.tex",
+   "fingerprint": "f4a450a97166",
+   "label": "op:zvhcm",
+   "number": "30.4",
+   "page": "560",
+   "printed": "Open Problem 30.4",
+   "verified_fingerprint": "f4a450a97166",
+   "verified_on": "2026-11-02"
+  },
   "imaginary_quadratic_polya_kernel_positivity": {
    "environment": "theorem",
    "file": "book/chapters/ch_squarefree.tex",
@@ -1325,11 +1398,22 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "6ea9eae8c90d",
    "label": "op:inverse",
-   "number": "33.4",
-   "page": "600",
-   "printed": "Open Problem 33.4",
+   "number": "34.4",
+   "page": "612",
+   "printed": "Open Problem 34.4",
    "verified_fingerprint": "6ea9eae8c90d",
    "verified_on": "2026-10-20"
+  },
+  "jacobi_construction_for_other_zeta_recurrences_open_problem": {
+   "environment": "problem",
+   "file": "book/chapters/ch_zeta.tex",
+   "fingerprint": "508dc6ea64e9",
+   "label": "op:zvbanded",
+   "number": "30.5",
+   "page": "561",
+   "printed": "Open Problem 30.5",
+   "verified_fingerprint": "508dc6ea64e9",
+   "verified_on": "2026-11-02"
   },
   "joint_marked_processes_problem": {
    "environment": "problem",
@@ -1413,9 +1497,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "62649f4f2b95",
    "label": "prop:ch11kolmogorov",
-   "number": "30.9",
-   "page": "560",
-   "printed": "Proposition 30.9",
+   "number": "31.9",
+   "page": "572",
+   "printed": "Proposition 31.9",
    "verified_fingerprint": "62649f4f2b95",
    "verified_on": "2026-10-20"
   },
@@ -1424,9 +1508,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "2cd0629f58d2",
    "label": "thm:ch11main",
-   "number": "30.2",
-   "page": "552",
-   "printed": "Theorem 30.2",
+   "number": "31.2",
+   "page": "564",
+   "printed": "Theorem 31.2",
    "verified_fingerprint": "2cd0629f58d2",
    "verified_on": "2026-10-20"
   },
@@ -1435,11 +1519,22 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "90203bcc9a0d",
    "label": "cor:ch11monotone",
-   "number": "30.4",
-   "page": "553",
-   "printed": "Corollary 30.4",
+   "number": "31.4",
+   "page": "565",
+   "printed": "Corollary 31.4",
    "verified_fingerprint": "90203bcc9a0d",
    "verified_on": "2026-10-20"
+  },
+  "laguerre_and_legendre_expansions_of_beukers_variable_open_problem": {
+   "environment": "problem",
+   "file": "book/chapters/ch_zeta.tex",
+   "fingerprint": "a6c2708abf23",
+   "label": "op:zvlegendre",
+   "number": "30.3",
+   "page": "560",
+   "printed": "Open Problem 30.3",
+   "verified_fingerprint": "a6c2708abf23",
+   "verified_on": "2026-11-02"
   },
   "large_deviations_passage_times_regular_tree": {
    "environment": "theorem",
@@ -1567,9 +1662,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "3af20a629c84",
    "label": "prop:ch11selfsim",
-   "number": "30.5",
-   "page": "554",
-   "printed": "Proposition 30.5",
+   "number": "31.5",
+   "page": "566",
+   "printed": "Proposition 31.5",
    "verified_fingerprint": "3af20a629c84",
    "verified_on": "2026-10-20"
   },
@@ -1666,9 +1761,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "2e89dae8207f",
    "label": "prop:ch11posterior",
-   "number": "30.6",
-   "page": "555",
-   "printed": "Proposition 30.6",
+   "number": "31.6",
+   "page": "567",
+   "printed": "Proposition 31.6",
    "verified_fingerprint": "2e89dae8207f",
    "verified_on": "2026-10-20"
   },
@@ -1682,6 +1777,17 @@
    "printed": "Theorem 14.6",
    "verified_fingerprint": "a8b1995e01cf",
    "verified_on": "2026-10-20"
+  },
+  "positive_jacobi_matrices_for_dirichlet_values_open_problem": {
+   "environment": "problem",
+   "file": "book/chapters/ch_zeta.tex",
+   "fingerprint": "ad4a81083ddc",
+   "label": "op:zvfractions",
+   "number": "30.6",
+   "page": "561",
+   "printed": "Open Problem 30.6",
+   "verified_fingerprint": "ad4a81083ddc",
+   "verified_on": "2026-11-02"
   },
   "positive_polya_kernels_characterisation": {
    "environment": "problem",
@@ -1787,9 +1893,9 @@
    "file": "book/chapters/ch11.tex",
    "fingerprint": "b6aa6b5e68e3",
    "label": "cor:ch11bounds",
-   "number": "30.3",
-   "page": "553",
-   "printed": "Corollary 30.3",
+   "number": "31.3",
+   "page": "565",
+   "printed": "Corollary 31.3",
    "verified_fingerprint": "b6aa6b5e68e3",
    "verified_on": "2026-10-20"
   },
@@ -1831,9 +1937,9 @@
    "file": "book/chapters/ch11b.tex",
    "fingerprint": "7510b2e8e612",
    "label": "thm:11brefprior",
-   "number": "31.16",
-   "page": "579",
-   "printed": "Proposition 31.16",
+   "number": "32.16",
+   "page": "591",
+   "printed": "Proposition 32.16",
    "verified_fingerprint": "7510b2e8e612",
    "verified_on": "2026-10-20"
   },
@@ -1875,9 +1981,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "2b7d94a070e7",
    "label": "op:disc",
-   "number": "33.3",
-   "page": "599",
-   "printed": "Open Problem 33.3",
+   "number": "34.3",
+   "page": "611",
+   "printed": "Open Problem 34.3",
    "verified_fingerprint": "2b7d94a070e7",
    "verified_on": "2026-10-20"
   },
@@ -1952,9 +2058,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "2d94273efd1a",
    "label": "op:kemeny",
-   "number": "33.10",
-   "page": "606",
-   "printed": "Open Problem 33.10",
+   "number": "34.10",
+   "page": "618",
+   "printed": "Open Problem 34.10",
    "verified_fingerprint": "2d94273efd1a",
    "verified_on": "2026-10-20"
   },
@@ -2271,9 +2377,9 @@
    "file": "book/chapters/ch13.tex",
    "fingerprint": "42b455bfd55e",
    "label": "op:thorin",
-   "number": "33.8",
-   "page": "604",
-   "printed": "Open Problem 33.8",
+   "number": "34.8",
+   "page": "616",
+   "printed": "Open Problem 34.8",
    "verified_fingerprint": "42b455bfd55e",
    "verified_on": "2026-10-20"
   },
@@ -2465,10 +2571,17 @@
    "verified_on": "2026-10-20"
   }
  },
- "updated": "2026-11-01",
+ "updated": "2026-11-02",
  "zenodo": {
   "concept_doi": "10.5281/zenodo.23419247",
   "doi": "10.5281/zenodo.23874307",
+  "draft": {
+   "doi": "10.5281/zenodo.23904867",
+   "html": "https://zenodo.org/deposit/23904867",
+   "id": 23904867,
+   "reserved_on": "2026-11-02",
+   "version": "1.4.0"
+  },
   "html": "https://zenodo.org/records/23874307",
   "latest_id": 23874307,
   "tag": "v1.3.0",

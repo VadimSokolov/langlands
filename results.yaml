@@ -1646,7 +1646,7 @@
 - id: eta_product_as_distribution_function_of_exponential_maximum
   name: Product formula of the Dedekind eta function as the distribution function of a maximum of exponential clocks
   label: prop:ch11M
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: proved
   highlight: false
@@ -1656,7 +1656,7 @@
 - id: l_function_of_ramanujan_delta_as_extreme_value_expectation
   name: Extreme value representation of the L function of Ramanujan's Delta
   label: thm:ch11main
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: proved
   highlight: false
@@ -1666,7 +1666,7 @@
 - id: real_l_values_of_ramanujan_delta_lie_in_unit_interval
   name: L values of Ramanujan's Delta at positive real points lie strictly between 0 and 1
   label: cor:ch11bounds
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: proved
   highlight: false
@@ -1676,7 +1676,7 @@
 - id: l_function_of_ramanujan_delta_increases_to_one
   name: Strict monotonicity of the L function of Ramanujan's Delta on the positive real axis
   label: cor:ch11monotone
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: proved
   highlight: false
@@ -1686,7 +1686,7 @@
 - id: modularity_of_delta_as_self_similarity_of_extreme_value_law
   name: Modularity of Ramanujan's Delta as self similarity of an extreme value law
   label: prop:ch11selfsim
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: proved
   highlight: false
@@ -1696,7 +1696,7 @@
 - id: polya_kernel_of_delta_as_posterior_law
   name: Pólya kernel of Ramanujan's Delta as a Bayesian posterior
   label: prop:ch11posterior
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: proved
   highlight: false
@@ -1706,7 +1706,7 @@
 - id: extreme_value_representation_of_eta_product_l_functions
   name: Extreme value representation of L functions of eta products
   label: thm:ch11general
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: proved
   highlight: true
@@ -1716,7 +1716,7 @@
 - id: kolmogorov_distribution_as_maximum_of_exponentials
   name: Squared Kolmogorov variable as a maximum of exponentials and an identity in law with the eta extreme value
   label: prop:ch11kolmogorov
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: proved
   highlight: false
@@ -1726,7 +1726,7 @@
 - id: brownian_functional_with_eta_extreme_value_law
   name: Brownian or Bessel functional with the extreme value law behind the Dedekind eta function
   label: prob:ch11brownian
-  chapter: "30"
+  chapter: "31"
   origin: book
   status: open
   highlight: false
@@ -1736,7 +1736,7 @@
 - id: reference_prior_for_conjugacy_classes_is_torus_haar_measure
   name: Reference prior for a conjugacy class of a compact Lie group observed through class function noise
   label: thm:11brefprior
-  chapter: "31"
+  chapter: "32"
   origin: book
   status: proved
   highlight: false
@@ -1746,7 +1746,7 @@
 - id: consistency_of_bayes_factors_under_equidistribution
   name: Consistency of Bayes factors under equidistribution
   label: thm:12consist
-  chapter: "32"
+  chapter: "33"
   origin: book
   status: proved
   highlight: true
@@ -1756,7 +1756,7 @@
 - id: bayes_factor_rates_for_complex_multiplication_of_elliptic_curves
   name: Bayes factor rates for detecting complex multiplication of elliptic curves
   label: thm:12elliptic
-  chapter: "32"
+  chapter: "33"
   origin: book
   status: proved
   highlight: false
@@ -1767,7 +1767,7 @@
 - id: sato_tate_discrepancy_brownian_bridge_in_families
   name: Brownian bridge limit of the Sato Tate empirical process in families of elliptic curves
   label: op:disc
-  chapter: "33"
+  chapter: "34"
   origin: book
   status: open
   highlight: false
@@ -1777,7 +1777,7 @@
 - id: inverse_problem_for_automorphy_from_twisted_prime_sums
   name: Inverse problem for automorphy from twisted sums over primes
   label: op:inverse
-  chapter: "33"
+  chapter: "34"
   origin: book
   status: open
   highlight: false
@@ -1787,7 +1787,7 @@
 - id: thorin_form_of_hilberts_eighth_problem_for_ramanujan_delta
   name: Hilbert's eighth problem for GL2 in Thorin form
   label: op:thorin
-  chapter: "33"
+  chapter: "34"
   origin: book
   status: open
   highlight: false
@@ -1797,7 +1797,7 @@
 - id: extreme_value_representation_zeros_and_other_newforms
   name: Extreme value representation for locating zeros and for other newforms
   label: op:ev
-  chapter: "33"
+  chapter: "34"
   origin: book
   status: open
   highlight: false
@@ -1807,7 +1807,7 @@
 - id: second_order_kemeny_constants_of_supersingular_isogeny_graphs
   name: Second order term of Kemeny constants of supersingular 2 isogeny graphs
   label: op:kemeny
-  chapter: "33"
+  chapter: "34"
   origin: book
   status: open
   highlight: false
@@ -1817,7 +1817,7 @@
 - id: bayesian_identification_of_sato_tate_groups_for_abelian_surfaces
   name: Bayesian identification of Sato Tate groups for abelian surfaces and effective bounds
   label: op:bayes
-  chapter: "33"
+  chapter: "34"
   origin: book
   status: open
   highlight: false
@@ -1827,7 +1827,7 @@
 - id: family_limit_law_of_the_rank_bias_of_elliptic_curves
   name: Family limit law of the rank bias of elliptic curves
   label: op:rankbias
-  chapter: "33"
+  chapter: "34"
   origin: book
   status: open
   highlight: false
@@ -2049,4 +2049,95 @@
   summary: Show, assuming the generalized Riemann hypothesis for the family, that the Fourier transform of the root number weighted average of rescaled Thorin measures, after subtracting its random matrix limit, converges in a window of width of order one over the logarithm of X around the edge, with the limit determined by the murmuration density; the authors doubt this is the right formulation.
   statement: >-
     For $X>0$ let $\mathcal{F}_X$ be the set of isogeny classes of elliptic curves over $\mathbb{Q}$ with conductor in $[X,2X)$. For $E\in\mathcal{F}_X$ with root number $\varepsilon_E$ and conductor $N_E$, assuming the generalized Riemann hypothesis for $L(s,E)$, let $U_E=\sum_k\delta_{\gamma_k^2}$ be the Thorin measure of the reciprocal of the completed $L$ function $\Lambda(s,E)$ with the central zero removed (the sum over the ordinates $\gamma_k\ne0$ of the noncentral zeros $\frac12+i\gamma_k$, with multiplicity), let $\tilde U_E$ be its image under $t\mapsto t\,(\log N_E/2\pi)^2$, and let $\Delta_X=\frac{1}{\#\mathcal{F}_X}\sum_{E\in\mathcal{F}_X}\varepsilon_E\,\tilde U_E$. Assuming the generalized Riemann hypothesis for the family, show that the Fourier transform of $\Delta_X$, after subtraction of its random matrix limit, converges in a window of width of order $1/\log X$ around $|u|=1$, and that the limit is determined by the murmuration density. The authors state that they do not know whether this is the right formulation; the question is whether the Thorin measures see murmurations at all.
+
+- id: apery_fraction_inverse_moment_of_thorin_measure
+  name: Apery's continued fraction as the first inverse moment of a Thorin measure
+  label: thm:zvapery
+  chapter: "30"
+  origin: book
+  status: proved
+  highlight: false
+  summary: The spectral measure of the positive Jacobi matrix with diagonal 34n^3+51n^2+27n+5 and off diagonal n^3 is a Thorin measure of mass one on the half line from 4, whose first inverse moment is zeta(3)/6, so the generalized gamma convolution it defines has mean zeta(3)/6.
+  statement: >-
+    Let $\mu$ be the spectral measure at $e_0$ of the Jacobi matrix with diagonal $b_n=34n^3+51n^2+27n+5$ and off diagonal $a_n=n^3$. Then $\zeta(3)/6=\int_0^\infty x^{-1}\mu(dx)$. Moreover $\mu$ has total mass one and support in $[4,\infty)$, so it is a Thorin measure, and the generalized gamma convolution $Y=\sum_k\lambda_k^{-1}G_{w_k}$, where $\mu=\sum_kw_k\delta_{\lambda_k}$ and the $G_{w_k}$ are independent Gamma variables of shapes $w_k$, has Laplace transform $\exp\{-\int\log(1+s/x)\,\mu(dx)\}$ and mean $\zeta(3)/6$.
+- id: apery_sequences_as_orthogonal_polynomials_at_zero
+  name: Apery's sequences as the orthogonal polynomials of the Thorin measure at zero
+  label: thm:zvseq
+  chapter: "30"
+  origin: book
+  status: proved
+  highlight: false
+  summary: The orthonormal polynomials of the Apery measure at zero are, up to sign, Apery's denominators, its second kind polynomials are his numerators over 6, his linear forms are the coefficients of 1/x and give the errors of Gauss quadrature, and the moment problem is determinate.
+  statement: >-
+    Let $p_n$ be the orthonormal polynomials of the measure $\mu$ of Ap\'ery's Jacobi matrix, $q_n$ the polynomials of the second kind, and $u_n,v_n$ Ap\'ery's numerators and denominators. Then (i) $p_n(0)=(-1)^nv_n$ and $q_n(0)=(-1)^{n+1}u_n/6$; (ii) $v_n\zeta(3)-u_n=6(-1)^n\int_0^\infty p_n(x)x^{-1}\mu(dx)$, and the error of Gauss quadrature for $1/x$ with $n$ nodes is $(v_n\zeta(3)-u_n)/(6v_n)$; (iii) $\sum_np_n(0)^2=\infty$, so the Hamburger moment problem for $\mu$ is determinate.
+- id: beukers_variable_is_not_a_ggc
+  name: The Beukers variable is not a generalized gamma convolution
+  label: thm:zvWnot
+  chapter: "30"
+  origin: book
+  status: proved
+  highlight: false
+  summary: The variable G over 1 minus exp(-G) with G of law Gamma(2), whose mean is twice zeta(3), is not a generalized gamma convolution with or without drift.
+  statement: >-
+    $W=G/(1-e^{-G})$ with $G\sim\mathrm{Gamma}(2)$ is not a generalized gamma convolution, with or without drift.
+- id: apery_matrix_large_level_asymptotics_open_problem
+  name: Eigenvalues and weights of the Apery matrix at large level
+  label: op:zvpert
+  chapter: "30"
+  origin: book
+  status: open
+  highlight: false
+  summary: Bound the errors of the perturbative formulas for the Apery matrix at small level and prove the behaviour found numerically at large level, namely eigenvalues asymptotic to C k^3 with C=33.960748 and log w_k over k tending to -12.16024.
+  statement: >-
+    Bound the errors of the perturbative formulas for the eigenvalues and weights of Ap\'ery's Jacobi matrix for small $k$, and prove the large $k$ behaviour $\lambda_k\sim Ck^3$ with $C=33.960748\ldots$ and $\log w_k/k\to-12.16024\ldots$. Is there a closed form for $\lambda_k$, for instance as the root of an explicit transcendental equation?
+- id: arithmetic_of_apery_denominators_from_the_measure_open_problem
+  name: The arithmetic of Apery's denominators as a property of the measure
+  label: op:zvdenom
+  chapter: "30"
+  origin: book
+  status: open
+  highlight: false
+  summary: Find the property of the Apery measure, or of its Jacobi matrix, that is equivalent to twice the cube of lcm(1,...,n) times the second kind polynomial at zero being an integer.
+  statement: >-
+    Find the property of the Ap\'ery measure $\mu$ (or of its Jacobi matrix $J$) equivalent to the statement that $2\,\mathrm{lcm}(1,\dots,n)^3\,q_n(0)\in\mathbb Z$.
+- id: laguerre_and_legendre_expansions_of_beukers_variable_open_problem
+  name: Laguerre and Legendre expansions of the Beukers function and the Apery measure
+  label: op:zvlegendre
+  chapter: "30"
+  origin: book
+  status: open
+  highlight: false
+  summary: Expand g over 1 minus exp(-g) in the Laguerre polynomials of the Gamma(2) weight and in the Legendre system of Beukers on the cube, relate the coefficients to the Apery measure, and decide whether the Laguerre coefficients are Apery like.
+  statement: >-
+    Expand $g\mapsto g/(1-e^{-g})$ in the Laguerre polynomials $L_n^{(1)}$ of the Gamma$(2)$ weight and in the Beukers Legendre system on the cube, and relate the coefficients to the spectral measure $\mu$. Are the Laguerre coefficients Ap\'ery like?
+- id: hyperbolic_complete_monotonicity_of_apery_ggc_open_problem
+  name: Hyperbolic complete monotonicity of the Apery generalized gamma convolution
+  label: op:zvhcm
+  chapter: "30"
+  origin: book
+  status: open
+  highlight: false
+  summary: Decide whether the generalized gamma convolution of the Apery measure is hyperbolically completely monotone, and whether it admits a van Dantzig pair.
+  statement: >-
+    Is the Ap\'ery generalized gamma convolution $Y$ hyperbolically completely monotone? Does $Y$ admit a van Dantzig pair, and if so what is the partner?
+- id: jacobi_construction_for_other_zeta_recurrences_open_problem
+  name: The Jacobi construction for other zeta recurrences and linear forms
+  label: op:zvbanded
+  chapter: "30"
+  origin: book
+  status: open
+  highlight: false
+  summary: Repeat the Jacobi construction for Zudilin's recurrence for zeta(4) and for linear forms in odd zeta values, decide which matrices are positive definite and find their Thorin measures.
+  statement: >-
+    Repeat the Jacobi construction for Zudilin's second order recurrence for $\zeta(4)$, and for the linear forms in odd zeta values of Ball and Rivoal and of Dupont, where a recurrence of higher order would give a banded rather than a tridiagonal matrix. Which are positive definite, and what are their Thorin measures?
+- id: positive_jacobi_matrices_for_dirichlet_values_open_problem
+  name: Positive Jacobi matrices for Dirichlet L values without a closed form
+  label: op:zvfractions
+  chapter: "30"
+  origin: book
+  status: open
+  highlight: false
+  summary: For L(3,chi_12) and L(2,chi_-3) find a three term recurrence with polynomial coefficients and a positive Jacobi matrix whose first inverse moment is the value.
+  statement: >-
+    For $L(3,\chi_{12})$ and $L(2,\chi_{-3})$, find a three term recurrence with polynomial coefficients and a positive Jacobi matrix whose first inverse moment is the value, in analogy with Ap\'ery's fraction for $\zeta(3)$.
 

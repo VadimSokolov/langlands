@@ -1,0 +1,297 @@
+\chapter{Zeta Values, Periods and Thorin Measures}\label{ch:zeta}
+
+\section{What is $\zeta(3)$?}
+
+Since the Basel problem, $\zeta(2)=\pi^2/6$ and more generally $\zeta(2n)\in\pi^{2n}\Q$, while the odd values $\zeta(3),\zeta(5),\dots$ have no known closed form. Ap\'ery proved in 1978 that $\zeta(3)$ is irrational \cite{apery1979}; Rivoal, Ball and Zudilin proved that infinitely many odd zeta values are irrational and that one of $\zeta(5),\zeta(7),\zeta(9),\zeta(11)$ is \cite{rivoal2000,ballrivoal2001,zudilin2001}; and recently Calegari, Dimitrov and Tang proved irrationality for the $2$ adic value $\zeta_2(5)$ \cite{calegaridimitrovtang2025,laisprangzudilin2025} and linear independence of $1$, $\zeta(2)$ and $L(2,\chi_{-3})$ \cite{calegaridimitrovtang2024} using a holonomy bound for $G$ functions. On the structural side, Deligne and Goncharov \cite{delignegoncharov2005} constructed the category of mixed Tate motives over $\Z$ and Brown \cite{brown2012} proved that its periods are spanned by multiple zeta values, so that the Grothendieck period conjecture would explain every algebraic relation among them. In that picture the irrationality of $\zeta(3)$, or even its transcendence, is a shadow of a deeper structural fact, and Ap\'ery's proof matters less for its conclusion than for the hint it gives of a hidden relation between algebraic $G$ functions and arithmetic.
+
+This chapter asks the probabilistic version of the question. The earlier chapters on $L$ functions (Chapters~\ref{ch:10b}, \ref{ch:beta} and \ref{ch:scholze} among them) treat $L(s,\chi)$ as a function of $s$ and ask for its Thorin measure. Here the objects are the numbers $\zeta(3)$ and $L(3,\chi)$. The answers turn out to be clean. The odd zeta values are the odd cumulants of the Gumbel law $-\log E$, whose Thorin measure is the counting measure on the positive integers; the values $L(3,\chi)$ are differences of cumulants of log Gamma laws with shapes $a/q$. Ap\'ery's continued fraction for $\zeta(3)$ is the Jacobi continued fraction of a positive definite Jacobi matrix, so $\zeta(3)/6$ is the first inverse moment of a probability measure $\mu$ on $[4,\infty)$, hence a Thorin measure, and the generalized Gamma convolution with Thorin measure $\mu$ has mean exactly $\zeta(3)/6$. Ap\'ery's fraction for $\zeta(2)$ has the opposite sign pattern; it comes from a probability measure with mass on both sides of the origin, which is not a Thorin measure. We prove nothing about irrationality; the aim is to find out what probabilistic object $\zeta(3)$ is, in the language used throughout this book, and to compute it. Numerical results are reported throughout and the chapter closes with open problems.
+
+\section{Odd zeta values are cumulants of the Gumbel law}
+
+Let $E\sim\mathrm{Exp}(1)$ and set $X=-\log E$, a standard Gumbel variable. Its moment generating function is $\E[e^{tX}]=\E[E^{-t}]=\Gamma(1-t)$ for $t<1$.
+
+\begin{proposition}[cumulants]\label{prop:zvcum}
+The cumulants of $X=-\log E$ are
+\[
+\kappa_1=\gamma,\qquad \kappa_n=(n-1)!\,\zeta(n)\quad(n\ge 2).
+\]
+In particular $\zeta(3)=\kappa_3/2$: $\zeta(3)$ is half the third cumulant of the Gumbel law, and $\zeta(3)/\zeta(2)^{3/2}=\kappa_3/(2\kappa_2^{3/2})$ is half its skewness.
+\end{proposition}
+
+\begin{proof}
+Weierstrass's product $1/\Gamma(1-t)=e^{\gamma(-t)}\prod_{k\ge1}(1-t/k)e^{t/k}$ gives
+\[
+\log\Gamma(1-t)=\gamma t-\sum_{k\ge1}\Big(\log(1-t/k)+t/k\Big)=\gamma t+\sum_{n\ge2}\frac{\zeta(n)}{n}t^n ,
+\]
+and the cumulants are $n!$ times the Taylor coefficients.
+\end{proof}
+
+The same product formula gives the structural statement.
+
+\begin{theorem}[Gumbel as a generalized Gamma convolution]\label{thm:zvgumbel}
+With $E_1,E_2,\dots$ independent standard exponentials,
+\[
+-\log E\;\overset{d}{=}\;\gamma+\sum_{k\ge1}\frac{E_k-1}{k},
+\]
+the series converging almost surely. Hence $-\log E$ is a shifted generalized Gamma convolution whose Thorin measure is the counting measure $U=\sum_{k\ge1}\delta_k$ on the positive integers (with the compensating drift $\sum_k 1/k$ absorbed into $\gamma$), and for $n\ge2$
+\[
+\zeta(n)=\int_0^\infty u^{-n}\,U(du)=\sum_{k\ge1}k^{-n}.
+\]
+The odd zeta values are the odd inverse moments of the Thorin measure of the Gumbel law.
+\end{theorem}
+
+\begin{proof}
+Each $(E_k-1)/k$ has cumulant generating function $-\log(1-t/k)-t/k$; summing and adding $\gamma t$ reproduces $\log\Gamma(1-t)$ by the product formula. The L\'evy measure of $\sum_k E_k/k$ is $\sum_k e^{-kx}\,dx/x$, which is Thorin's form $\int e^{-ux}\,U(du)\,dx/x$ with $U=\sum_k\delta_k$. The cumulants of a GGC are $\kappa_n=(n-1)!\int u^{-n}U(du)$, which with Proposition~\ref{prop:zvcum} gives the last display.
+\end{proof}
+
+Theorem~\ref{thm:zvgumbel} is classical as a representation of the Gumbel law. What is new for us is the reading: in the Thorin framework the Riemann zeta function at the integers is the inverse moment sequence of the simplest possible discrete Thorin measure. More generally, for $G_a\sim\mathrm{Gamma}(a)$, $-\log G_a$ is a shifted GGC with Thorin measure $\sum_{k\ge0}\delta_{a+k}$ and cumulants $(n-1)!\,\zeta(n,a)$ with $\zeta(\cdot,a)$ the Hurwitz zeta function.
+
+Numerically (mpmath, 30 digits): $\psi^{(n-1)}(1)$ and $(-1)^n(n-1)!\zeta(n)$ agree to all digits for $n=2,\dots,7$; a Monte Carlo of the truncated series in Theorem~\ref{thm:zvgumbel} with $K=20000$ terms and $10^4$ paths gives sample cumulants $1.649$ and $2.54$ against $\zeta(2)=1.645$ and $2\zeta(3)=2.404$, the third cumulant being noisy at that sample size as expected.
+
+\section{Dirichlet $L$ values at $s=3$}
+
+Let $\chi$ be a Dirichlet character mod $q$. Splitting the sum over residues,
+\begin{align*}
+L(n,\chi)=\sum_{k\ge1}\chi(k)k^{-n}&=q^{-n}\sum_{a=1}^{q}\chi(a)\,\zeta(n,a/q)\\
+&=\frac{q^{-n}}{(n-1)!}\sum_{a=1}^q\chi(a)\,\kappa_n\!\big(-\log G_{a/q}\big).
+\end{align*}
+
+\begin{corollary}
+$L(n,\chi)$ is a signed combination of the $n$th cumulants of the log Gamma laws with shapes $a/q$, equivalently $q^{-n}$ times the $n$th inverse moment of the signed Thorin measure $\sum_a\chi(a)\sum_{k\ge0}\delta_{a/q+k}$.
+\end{corollary}
+
+Two checks. For $\chi_4$ (the Dirichlet beta function of Chapter~\ref{ch:beta}),
+\begin{align*}
+L(3,\chi_4)&=\tfrac1{64}\big(\zeta(3,\tfrac14)-\zeta(3,\tfrac34)\big)
+=-\tfrac1{128}\big(\psi''(\tfrac14)-\psi''(\tfrac34)\big)\\
+&=0.96894614625936938\ldots=\frac{\pi^3}{32},
+\end{align*}
+confirmed to 30 digits. For $\chi_{12}$ (the character of the Dedekind eta function in Section~\ref{beta:sec:eta}, $\chi_{12}(1)=\chi_{12}(11)=1$, $\chi_{12}(5)=\chi_{12}(7)=-1$),
+\begin{align*}
+L(3,\chi_{12})&=12^{-3}\big(\zeta(3,\tfrac1{12})-\zeta(3,\tfrac5{12})-\zeta(3,\tfrac7{12})+\zeta(3,\tfrac{11}{12})\big)\\
+&=0.99004001943815995\ldots,
+\end{align*}
+confirmed against a direct partial sum of $2\times10^5$ terms. The even character $\chi_{12}$ at the odd argument $3$ has no known closed form, exactly like $\zeta(3)$; the odd character $\chi_4$ at $3$ is a rational multiple of $\pi^3$, exactly like $\zeta(2)$. In the cumulant language the dichotomy is between a difference of two log Gamma cumulants that reduces by the reflection formula $\psi''(x)-\psi''(1-x)$ and one that does not.
+
+\section{Beukers' integral and the Gamma(2) law}
+
+Beukers' proof of Ap\'ery's theorem \cite{beukers1979} starts from
+\[
+\int_0^1\!\!\int_0^1\frac{-\log(xy)}{1-xy}\,dx\,dy=2\zeta(3).
+\]
+Write $G=-\log(UV)=E_1+E_2\sim\mathrm{Gamma}(2)$ for independent uniforms $U,V$. Then
+\[
+2\zeta(3)=\E\!\left[\frac{G}{1-e^{-G}}\right],\qquad W:=\frac{G}{1-e^{-G}}.
+\]
+So $\zeta(3)$ is half the mean of $W$, a smooth increasing function of a Gamma$(2)$ variable. The sequence of Beukers integrals with shifted Legendre polynomials $P_n(x)P_n(y)$ in the numerator becomes $\E[W\,P_n(U)P_n(V)]$, a sequence of orthogonal polynomial corrections to the mean of $W$.
+
+Is $W$ itself a generalized Gamma convolution? If it were, $\zeta(3)$ would be half the total inverse first moment of its Thorin measure. Bondesson's criterion \cite{bondesson1992} requires $h(s)=-\frac{d}{ds}\log\E[e^{-sW}]=\E[We^{-sW}]/\E[e^{-sW}]$ to be a Stieltjes function, in particular completely monotone. Numerically (quadrature in mpmath) $h(0.1)=2.275$, $h(1)=1.723$, $h(8)=1.191$, and at $s=0.5,1,2$ the first three derivatives have the alternating signs $(-,+,-)$ required. The moments are $\E W=2\zeta(3)$, $\mathrm{Var}\,W=1.43258$, third cumulant $3.18511$. This is consistent with $W$ being a GGC, but Theorem~\ref{thm:zvWnot} below shows that it is not one: the obstruction sits at the ends of the support, where derivative checks at interior points cannot see it.
+
+\section{Ap\'ery's continued fraction is a positive Jacobi matrix}
+
+Ap\'ery's recurrence
+\[
+(n+1)^3u_{n+1}=(34n^3+51n^2+27n+5)\,u_n-n^3u_{n-1}
+\]
+yields his continued fraction
+\[
+\zeta(3)=\cfrac{6}{5-\cfrac{1^6}{117-\cfrac{2^6}{535-\cfrac{3^6}{1463-\cdots}}}},\qquad
+P(n)=34n^3+51n^2+27n+5 .
+\]
+Write $b_n=P(n)$ and $a_n=n^3$, and let $J$ be the Jacobi matrix with diagonal $(b_n)_{n\ge0}$ and off diagonal $(a_n)_{n\ge1}$. Since $b_n-a_n-a_{n+1}=32n^3+48n^2+24n+4>0$ for all $n\ge0$, $J$ is strictly diagonally dominant with positive diagonal, hence positive definite, and by Favard's theorem there is a probability measure $\mu$ on $(0,\infty)$, the spectral measure of $J$ at the vector $e_0$, whose monic orthogonal polynomials satisfy $p_{n+1}(x)=(x-b_n)p_n(x)-a_n^2p_{n-1}(x)$. The resolvent $\langle e_0,(J-z)^{-1}e_0\rangle=\int(x-z)^{-1}\mu(dx)$ has the Jacobi continued fraction $1/(b_0-z-a_1^2/(b_1-z-\cdots))$, and at $z=0$ this is Ap\'ery's fraction divided by $6$.
+
+\begin{theorem}[Ap\'ery's fraction as an inverse moment]\label{thm:zvapery}
+Let $\mu$ be the spectral measure of the Ap\'ery Jacobi matrix. Then
+\[
+\frac{\zeta(3)}{6}=\int_0^\infty\frac{\mu(dx)}{x}.
+\]
+Moreover $\mu$ has total mass one and support in $[4,\infty)$, so it is a Thorin measure in the sense of Definition~\ref{def:ch10ggc}, and the generalized Gamma convolution
+\[
+Y\overset{d}{=}\sum_{k\ge0}\frac{1}{\lambda_k}\,G_{w_k},\qquad G_{w_k}\sim\mathrm{Gamma}(w_k)\ \text{independent},\quad \mu=\sum_k w_k\delta_{\lambda_k},
+\]
+has Laplace transform $\exp\{-\int\log(1+s/x)\,\mu(dx)\}$ and mean $\E\,Y=\zeta(3)/6$.
+\end{theorem}
+
+\begin{proof}
+Convergence of Ap\'ery's fraction to $\zeta(3)$ is Ap\'ery's theorem (the convergents are the ratios $u_n/v_n$ of his two solutions of the recurrence, recalled in the next section). The $N$th truncation of $J$ has resolvent at $z=0$ equal to the $N$th convergent divided by $6$, by the standard three term recurrence for the resolvent of a finite Jacobi matrix, and equal to $\sum_{k<N}w_k^{(N)}/\lambda_k^{(N)}$ by diagonalisation. The eigenvalues of the truncations are bounded below by $\min_n(b_n-a_n-a_{n+1})=4$, so their spectral measures live on $[4,\infty)$. They converge weakly to $\mu$, because the moment problem is determinate (Theorem~\ref{thm:zvseq}(iii), whose proof does not use this theorem), so $\mu$ lives on $[4,\infty)$ too, and since $1/x$ is bounded and continuous there the inverse moments converge to that of $\mu$. A measure of mass one on $[4,\infty)$ satisfies the conditions of Definition~\ref{def:ch10ggc}. The logarithmic moment, used in the section on the Ap\'ery GGC, is finite because $\int\log(1+x)\,\mu(dx)\le\int x\,\mu(dx)=b_0=5$ (numerically it is $1.7905$). The mean of a GGC with Thorin measure $\mu$ is $\int x^{-1}\mu(dx)$.
+\end{proof}
+
+Table~\ref{tab:zvapery} reports the spectral data. The truncated inverse moment equals $\zeta(3)$ to all sixteen digits already at $N=10$ and is unchanged at $N=1000$. The eigenvalues sit just below the diagonal entries, $\lambda_k=P(k)-\epsilon_k$ with $\epsilon_0=0.0089$, $\epsilon_1=0.144$, $\epsilon_2=0.633$, and the weights fall off by about five decades per step. Almost all of the mass is at $\lambda_0=4.9911$, so $Y$ is very nearly $\mathrm{Gamma}(0.99992)$ scaled by $1/4.9911$, with mean $w_0/\lambda_0=0.200342134$, and the rest of $\zeta(3)/6=0.200342817$ is carried by the components $k\ge1$.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rrrr}
+\toprule
+$k$ & $P(k)$ & $\lambda_k$ & $w_k$\\
+\midrule
+0 & 5 & 4.99106250 & $0.999920109$\\
+1 & 117 & 116.855684 & $7.99\times10^{-5}$\\
+2 & 535 & 534.366967 & $1.31\times10^{-9}$\\
+3 & 1463 & 1461.28947 & $1.42\times10^{-14}$\\
+4 & 3105 & 3101.38769 & $1.26\times10^{-19}$\\
+5 & 5665 & 5658.42612 & $1.00\times10^{-24}$\\
+\bottomrule
+\end{tabular}
+\caption{Spectral measure of the Ap\'ery Jacobi matrix ($N=1000$ truncation). $6\sum_k w_k/\lambda_k=1.202056903159594=\zeta(3)$. The logarithmic moment is $\int\log(1+x)\,\mu(dx)=1.7905$.}
+\label{tab:zvapery}
+\end{table}
+
+\begin{remark}[the sign pattern separates $\zeta(2)$ from $\zeta(3)$]
+Ap\'ery's fraction for $\zeta(2)$ is
+\[
+\zeta(2)=\cfrac{5}{3+\cfrac{1^4}{25+\cfrac{2^4}{69+\cdots}}},\qquad 11n^2+11n+3,
+\]
+with plus signs. The positive Jacobi matrix with $b_n=11n^2+11n+3$, $a_n=n^2$ gives the minus sign fraction: $5$ times its spectral sum is $1.6894$, not $\zeta(2)=1.6449$. The plus signs do come from a real symmetric matrix, but an indefinite one. Replacing $b_n$ by $(-1)^nb_n$ turns every plus into a minus, so the matrix $J'$ with diagonal $(-1)^n(11n^2+11n+3)$ and off diagonal $n^2$ has $(J'^{-1})_{00}=\zeta(2)/5$. It is diagonally dominant, since $b_n-a_n-a_{n+1}=9n^2+9n+2\ge2$, so its spectral measure $\mu'$ at $e_0$ is a probability measure on the real line with no mass in $(-2,2)$, and $5\int x^{-1}\mu'(dx)=\zeta(2)$. Numerically, at $N=500$, the sum agrees with $\zeta(2)$ to fourteen digits, the spectrum has a gap $(-25.204,3.035)$, and $\mu'$ puts mass $0.998747$ on the positive side and $0.001253$ on the negative side. So what separates the two fractions is not the existence of a positive spectral measure: the measure of $\zeta(3)$ lives on a half line and is a Thorin measure, and that of $\zeta(2)$ has an atom on each side of the origin and is not. Whether this has anything to do with the mixed Tate picture (weight $2$ versus weight $3$) we do not know; two examples are not evidence of a pattern.
+\end{remark}
+
+\begin{remark}[the $2$ adic recurrence]
+The Ap\'ery like recurrence for $\zeta_2(5)$ \cite{laisprangzudilin2025},
+\[
+(n+1)^5\rho_{n+1}=32(2n+1)(8n^4+16n^3+20n^2+12n+3)\rho_n-2^{16}n^5\rho_{n-1},
+\]
+has the $\zeta(3)$ sign pattern, so the real Jacobi matrix with $b_n=32(2n+1)(8n^4+\cdots)$ and $a_n=256n^5$ is a candidate. It is not diagonally dominant ($b_n-a_n-a_{n+1}<0$ for $n\ge0$) but is numerically positive definite with smallest eigenvalue $78.06$, weight $w_0=0.99479$, and $\sum w_k/\lambda_k\approx0.012746$ for truncations up to $N=200$ (double precision degrades beyond that because the entries grow like $n^5$). This real number is the Archimedean value of a $2$ adic continued fraction and we attach no meaning to it; the structural point is that the recurrence that proves irrationality of a $2$ adic zeta value also defines a positive measure on the real line.
+\end{remark}
+
+\section{Ap\'ery's sequences are the orthogonal polynomials at zero}
+
+Ap\'ery's proof uses two solutions of his recurrence: the denominators $v_n=\sum_{k=0}^n\binom nk^2\binom{n+k}k^2$ ($1,5,73,1445,33001,\dots$) and the numerators $u_n$ ($0,6,351/4,\dots$), with $u_n/v_n\to\zeta(3)$ and the linear forms $r_n=v_n\zeta(3)-u_n$ tending to zero like $(\sqrt2-1)^{4n}$ while the denominators of $u_n$ divide $2\,\mathrm{lcm}(1,\dots,n)^3$. In the Jacobi picture these are standard objects.
+
+Let $p_n$ be the orthonormal polynomials of $\mu$, normalised by $a_{n+1}p_{n+1}(x)=(x-b_n)p_n(x)-a_np_{n-1}(x)$ with $a_n=n^3$, and let $q_n$ be the associated polynomials of the second kind, $q_n(z)=\int\frac{p_n(z)-p_n(x)}{z-x}\,\mu(dx)$.
+
+\begin{theorem}[Ap\'ery's sequences]\label{thm:zvseq}
+With the notation above:
+\begin{enumerate}
+\item $p_n(0)=(-1)^nv_n$ and $q_n(0)=(-1)^{n+1}u_n/6$. Ap\'ery's denominators are the orthonormal polynomials of $\mu$ evaluated at the origin.
+\item Ap\'ery's linear forms are the coefficients of the function $1/x$ in the orthonormal polynomials of $\mu$, and divided by $v_n$ they are the errors of Gauss quadrature for $1/x$ with $n$ nodes:
+\begin{gather*}
+v_n\,\zeta(3)-u_n=6\,(-1)^n\int_0^\infty\frac{p_n(x)}{x}\,\mu(dx),\\
+\frac{\zeta(3)}6-\sum_{k<n}\frac{w_k^{(n)}}{\lambda_k^{(n)}}=\frac{v_n\,\zeta(3)-u_n}{6\,v_n}.
+\end{gather*}
+\item $\sum_n p_n(0)^2=\sum_n v_n^2=\infty$, so the Hamburger moment problem for $\mu$ is determinate and $\mu$ is the unique measure with these moments.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Write $p_n(0)=(-1)^nc_n$ in the orthonormal recurrence at $x=0$: $(n+1)^3(-1)^{n+1}c_{n+1}=-P(n)(-1)^nc_n-n^3(-1)^{n-1}c_{n-1}$, that is $(n+1)^3c_{n+1}=P(n)c_n-n^3c_{n-1}$, which is Ap\'ery's recurrence with $c_0=1$, $c_1=P(0)=5$, so $c_n=v_n$. The second kind polynomials satisfy the same recurrence with initial values $q_0=0$, $q_1=1/a_1=1$, which is $u_n/6$ up to the alternating sign. The identity $p_n(z)S(z)-q_n(z)=\int p_n(x)(z-x)^{-1}\mu(dx)$ for the Stieltjes transform $S(z)=\int(z-x)^{-1}\mu(dx)$, evaluated at $z=0$ where $S(0)=-\zeta(3)/6$, gives the first formula of (ii). The nodes and weights of the Gauss rule with $n$ nodes are the eigenvalues and spectral weights of the $n$th truncation of $J$, so the sum in the second formula is the convergent $u_n/(6v_n)$. For (iii), a Hamburger moment problem is indeterminate if and only if $\sum_n|p_n(z)|^2<\infty$ for every complex $z$, real $z$ included; since $v_n\to\infty$ the sum diverges at $z=0$.
+\end{proof}
+
+Numerically (mpmath, 40 digits) the orthonormal recurrence at zero reproduces $1,-5,73,-1445,33001,\dots$ exactly, and the right side of (ii) computed from the $N=60$ spectral measure agrees with $v_n\zeta(3)-u_n$ to all fifteen printed digits for $n=0,\dots,8$: $1.20206$, $0.0102845$, $0.000153931$, $2.84339\times10^{-6}$, $5.86599\times10^{-8}$, $1.29549\times10^{-9}$, $\dots$. The ratio $r_n/r_{n-1}$ is $0.0185$, $0.0221$, $0.0245$ at $n=3,5,8$, climbing toward $(\sqrt2-1)^4=0.02944$.
+
+Statement (ii) is the probabilistic reading of Ap\'ery's theorem. Gauss quadrature with $n$ nodes integrates polynomials of degree $2n-1$ exactly, and $(v_n\zeta(3)-u_n)/(6v_n)$ is the error it makes on $1/x$. The rates come from the recurrence: the roots of its characteristic equation $\rho^2-34\rho+1=0$ are $(\sqrt2\pm1)^{\pm4}$, so $v_n$ grows like $(\sqrt2+1)^{4n}$, the linear form falls like $(\sqrt2-1)^{4n}$, and the quadrature error falls like $(\sqrt2-1)^{8n}$. What the quadrature picture does not explain is the arithmetic: why the second kind polynomials at zero have denominators dividing $2\,\mathrm{lcm}(1,\dots,n)^3$. That is the $G$ function content of Ap\'ery's proof, and it is left as Open Problem~\ref{op:zvdenom}.
+
+\section{Eigenvalues and weights of the Ap\'ery matrix}
+
+The gaps of the diagonal are $\Delta_k=b_{k+1}-b_k=102k^2+204k+112$ and the couplings are $a_k=k^3$. For small $k$ the gaps win, and second order perturbation theory in the off diagonal gives the eigenvalues while first order perturbation theory gives the weights.
+
+\begin{proposition}[perturbative formulas]\label{prop:zvpert}
+Second order perturbation theory for the eigenvalues and first order for the weights give
+\[
+\lambda_k\approx P(k)+\frac{k^6}{\Delta_{k-1}}-\frac{(k+1)^6}{\Delta_k},\qquad
+w_k\approx\prod_{j=1}^{k}\frac{j^6}{\big(P(k)-P(j-1)\big)^2}.
+\]
+The shift in the first formula is asymptotic to $-2k^3/51$, and the logarithm of the product in the second, divided by $k$, tends to
+\[
+-\Big(2\log 34+6+2\!\int_0^1\!\log(1-t^3)\,dt\Big)=-12.16236\ldots,
+\]
+that is, $-5.28204\ldots$ for the logarithm to base ten.
+\end{proposition}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rrrrrr}
+\toprule
+$k$ & $\lambda_k$ & $\epsilon_k$ & 2nd order & $w_k$ & 1st order product\\
+\midrule
+0 & 4.99106250 & 0.0089375 & 0.0089286 & $0.99992$ & $1$\\
+1 & 116.855684 & 0.144316 & 0.144181 & $7.98895\times10^{-5}$ & $7.97194\times10^{-5}$\\
+2 & 534.366967 & 0.633033 & 0.632450 & $1.30950\times10^{-9}$ & $1.30399\times10^{-9}$\\
+3 & 1461.28947 & 1.71053 & 1.70896 & $1.41563\times10^{-14}$ & $1.40672\times10^{-14}$\\
+5 & 5658.42612 & 6.57388 & 6.56786 & $1.00491\times10^{-24}$ & $9.94386\times10^{-25}$\\
+9 & 29131.2717 & 33.7283 & 33.6974 & $2.33247\times10^{-45}$ & $2.28860\times10^{-45}$\\
+\bottomrule
+\end{tabular}
+\caption{Perturbative formulas of Proposition~\ref{prop:zvpert} against the $N=60$ eigendecomposition in 40 digit arithmetic. The empirical slopes $\log_{10}(w_k/w_{k-1})$ are $-5.099$, $-5.192$, $-5.237$, $-5.252$ at $k=5,10,20,30$.}
+\end{table}
+
+The formulas are stated with $\approx$ because their errors have not been bounded. In the table the second order shift is about $0.09$ percent too small, and the product for the weight is too small by $0.2$ percent at $k=1$ and by $1.9$ percent at $k=9$.
+
+These errors do not disappear for large $k$. The ratio $a_k/\Delta_k$ of coupling to gap reaches $0.96$ at $k=100$ and grows like $k/102$, so past that point the perturbation series has no small parameter, and neither limit in the proposition is the limit of the true quantity. A heuristic gives the true ones. Near level $k$ the matrix acts like the symbol $n^3(34-2\cos\theta)$, and Bohr Sommerfeld quantisation gives $\lambda_k\sim Ck^3$ with
+\[
+C=\Big(\frac1{2\pi}\int_0^{2\pi}(34-2\cos\theta)^{-1/3}\,d\theta\Big)^{-3}=33.960748\ldots,
+\]
+so that $\epsilon_k=P(k)-\lambda_k\sim0.0392516\,k^3$, against $2k^3/51=0.0392157\,k^3$. The eigenvector decays below the turning point $t_*=(C/36)^{1/3}=0.98075$, and the WKB approximation gives
+\[
+\frac{\log w_k}{k}\;\longrightarrow\;-2\int_0^{t_*}\operatorname{arccosh}\frac{C-34t^3}{2t^3}\,dt=-12.16024\ldots,
+\]
+that is, $-5.28112\ldots$ to base ten. Computation supports both constants. With $N=6000$ the quantity $(\epsilon_k-\text{second order shift})/k^3$ falls to $3.589\times10^{-5}$ at $k=3000$, against the predicted $3.587\times10^{-5}$, and the ratio of $\epsilon_k$ to the second order shift settles at $1.000915$. The local slope of $\log_{10}w_k$, computed from the eigenvector by a two sided recurrence, is $-5.2806$ at $k=1600$ against $-5.2815$ for the product, and the difference is $0.00092$ at every $k$ we tried from $1$ to $1600$, which is the difference of the two limits. Neither constant is proved (Open Problem~\ref{op:zvpert}).
+
+The exact weights are the Christoffel numbers $w_k=1/\sum_np_n(\lambda_k)^2$, so by Theorem~\ref{thm:zvseq} they are reciprocal sums of squares of Ap\'ery type sequences evaluated at the eigenvalues rather than at zero.
+
+\section{The Beukers variable is not a generalized Gamma convolution}
+
+\begin{theorem}\label{thm:zvWnot}
+$W=G/(1-e^{-G})$ with $G\sim\mathrm{Gamma}(2)$ is not a generalized Gamma convolution, with or without drift.
+\end{theorem}
+
+\begin{proof}
+$W\ge1$ with equality only at $G=0$, and $W-1=G/2+G^2/12+O(G^3)$, so the density of $W-1$ behaves like $4x$ as $x\downarrow0$ (numerically $f_{W-1}(x)/x=3.988$ at $x=10^{-3}$). For large $G$, $W=G+Ge^{-G}+\dots$, so $f_W(w)\sim we^{-w}$ (numerically $f_W(w)/(we^{-w})=1+8\times10^{-4}$ at $w=10$ and $1+8\times10^{-8}$ at $w=20$). A GGC without drift has a density positive on all of $(0,\infty)$, which rules that case out. A GGC with drift $a$ and Thorin measure $U$ of infinite total mass has $P(X-a\le x)=o(x^r)$ as $x\downarrow0$ for every $r$, which is excluded too; with finite total mass $\beta$ it has density $\sim C(x-a)^{\beta-1}$ as $x\downarrow a$, so $a=1$ and $\beta=2$; and if $u_0=\inf\operatorname{supp}U$ carries an atom of mass $m$ the density is $\sim Cx^{m-1}e^{-u_0x}$ as $x\to\infty$, while if it carries no atom the polynomial prefactor is not of the form $x^{m-1}$ with integer $m=2$ \cite[Ch.~4]{bondesson1992}. Hence $u_0=1$, $m=2$, and since $m\le\beta=2$, $U=2\delta_1$. That would make $W-1\sim\mathrm{Gamma}(2,1)$ with variance $2$, but $\mathrm{Var}(W)=1.43258$. 
+\end{proof}
+
+So the Beukers variable, whose mean is $2\zeta(3)$, lies outside the Thorin class even though all the derivative sign checks on $h(s)$ in the previous section pass; the obstruction is at the two ends of the support, not in the middle. The Thorin object attached to $\zeta(3)$ by Beukers' integral is therefore not $W$ but the Gamma$(2)$ variable $G$ inside it, and the right question becomes how the Legendre expansion of $g\mapsto g/(1-e^{-g})$ in the Gamma$(2)$ weight relates to the Ap\'ery measure. This is Open Problem~\ref{op:zvlegendre}.
+
+\section{The Ap\'ery GGC}
+
+The GGC $Y$ of Theorem~\ref{thm:zvapery} is very close to a single Gamma variable. With the $N=60$ spectral data, $\E\,Y=\zeta(3)/6=0.200342817$ against $w_0/\lambda_0=0.200342134$, a gap of $6.84\times10^{-7}$ carried entirely by the components $k\ge1$; $\mathrm{Var}\,Y=0.0401401832$ against $w_0/\lambda_0^2=0.0401401773$. Writing $Y=G_{w_0}/\lambda_0+R$ with $R$ independent, $R\ge0$, $\E R=6.84\times10^{-7}$ and the density of $Y$ is the density of $\mathrm{Gamma}(0.99992,\,4.99106)$ smoothed by $R$; the two agree to within $3.5\times10^{-6}$ in total variation. Indeed, the Gamma density $f$ is decreasing because its shape is below one, so a shift by $r$ moves it by $\int_0^rf$ in total variation; this is concave in $r$, and Jensen's inequality bounds the mixture over $R$ by the value at $r=\E R$, which is $3.42\times10^{-6}$. The dominant component is a Gamma law of shape fractionally below one, with a weak singularity $x^{-0.00008}$ at the origin, but $Y$ itself has none: its Thorin measure has mass exactly one, and the finite logarithmic moment gives $s\,\E e^{-sY}\to\exp\int\log x\,\mu(dx)$ as $s\to\infty$, so $P(Y\le x)\sim4.99232\,x$ as $x\downarrow0$. In other words $\zeta(3)/6$ is, to six digits, the mean of a Gamma variable of shape $0.99992$ and rate $4.99106$, with the arithmetic hidden in the seventh digit and beyond.
+
+\section{Monte Carlo with Legendre control variates}
+
+We also ask how far control variates built from shifted Legendre polynomials take a Monte Carlo estimate of $\zeta(3)=\tfrac12\E[W]$. With $M=2\times10^6$ uniform pairs and controls $P_i(U)P_j(V)$, $0\le i,j\le m$, $(i,j)\ne(0,0)$, all of which have mean zero:
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+controls & estimate & standard error & variance ratio\\
+\midrule
+none & 1.202270 & 0.000423 & 1\\
+degree $\le1$ & 1.201998 & 0.000237 & 0.313\\
+degree $\le2$ & 1.202053 & 0.000162 & 0.147\\
+degree $\le3$ & 1.201897 & 0.000123 & 0.085\\
+degree $\le4$ & 1.202030 & 0.000099 & 0.055\\
+degree $\le6$ & 1.202147 & 0.000071 & 0.028\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The variance falls roughly geometrically in the degree, by a factor near $0.5$ per degree, far slower than the $\mathrm{lcm}(1,\dots,n)^3$ denominators of Ap\'ery's rational approximations. This is as it should be: Ap\'ery's approximations exploit the exact orthogonality of $P_n$ against polynomials, which Monte Carlo cannot see. The experiment is worth keeping because it shows a student in one table what Ap\'ery's trick buys over the generic variance reduction it superficially resembles.
+
+\section{Open problems}
+
+The Thorin property and determinacy of $\mu$ (Theorems~\ref{thm:zvapery} and \ref{thm:zvseq}), the identification of Ap\'ery's sequences with the orthogonal polynomials at zero (Theorem~\ref{thm:zvseq}), and the GGC question for the Beukers variable (Theorem~\ref{thm:zvWnot}, negatively) are settled above. What remains:
+
+\begin{problem}\label{op:zvpert}
+Bound the errors of the formulas of Proposition~\ref{prop:zvpert} for small $k$, and prove the large $k$ behaviour found above: $\lambda_k\sim Ck^3$ with $C=33.960748\ldots$ and $\log w_k/k\to-12.16024\ldots$. Is there a closed form for $\lambda_k$, for instance as the root of an explicit transcendental equation?
+\end{problem}
+
+\begin{problem}\label{op:zvdenom}
+Theorem~\ref{thm:zvseq} explains the size of Ap\'ery's linear forms as a Gauss quadrature error but not their arithmetic. Find the property of $\mu$ (or of $J$) equivalent to the statement that $2\,\mathrm{lcm}(1,\dots,n)^3\,q_n(0)\in\Z$. Beukers' Legendre polynomial proof suggests looking at $\mu$ as an image of Lebesgue measure on the unit cube.
+\end{problem}
+
+\begin{problem}\label{op:zvlegendre}
+Expand $g\mapsto g/(1-e^{-g})$ in the orthogonal polynomials of the Gamma$(2)$ weight (Laguerre polynomials $L_n^{(1)}$) and in the Beukers Legendre system on the cube, and relate the coefficients to the spectral measure $\mu$. Both expansions converge to $2\zeta(3)$ at order zero; the question is whether the Laguerre coefficients are Ap\'ery like.
+\end{problem}
+
+\begin{problem}\label{op:zvhcm}
+Is the Ap\'ery GGC $Y$ hyperbolically completely monotone? Sums of independent Gamma variables with distinct rates are GGC but not in general HCM, and the discrete Thorin measure here has rates $\lambda_k$ growing cubically. Does $Y$ admit a van Dantzig pair, and if so what is the partner?
+\end{problem}
+
+\begin{problem}\label{op:zvbanded}
+Repeat the Jacobi construction for Zudilin's second order recurrence for $\zeta(4)$ \cite{zudilin2003}, and for the linear forms in odd zeta values of Ball and Rivoal \cite{ballrivoal2001} and Dupont \cite{dupont2018}, where a recurrence of higher order would give a banded rather than a tridiagonal matrix. Which are positive definite, and what are their Thorin measures? Lai, Sprang and Zudilin \cite{laisprangzudilin2025} do not expect a three term recurrence for $\zeta(5)$ itself.
+\end{problem}
+
+\begin{problem}\label{op:zvfractions}
+For $L(3,\chi_{12})$ and $L(2,\chi_{-3})$, which have no known closed form (unlike $L(3,\chi_{-3})=4\pi^3/(81\sqrt3)$), find a three term recurrence with polynomial coefficients and a positive Jacobi matrix whose first inverse moment is the value, in analogy with Theorem~\ref{thm:zvapery}. The Calegari, Dimitrov and Tang result on $1$, $\zeta(2)$, $L(2,\chi_{-3})$ suggests starting with their $G$ functions.
+\end{problem}
+
+\section{Where this sits in the Langlands picture}
+
+The Langlands program pairs automorphic objects with Galois representations and their $L$ functions; the special values of those $L$ functions are periods, and the mixed Tate motives of Deligne, Goncharov and Brown are the part of the motivic Galois picture that governs $\zeta(3),\zeta(5),\dots$. This chapter adds a third column to the pairing: each special value is also a cumulant of a log Gamma type law, equivalently an inverse moment of a discrete Thorin measure, and Ap\'ery's proof is the statement that one such Thorin measure, the spectral measure of a positive Jacobi matrix with cubic entries, has first inverse moment $\zeta(3)/6$. Whether the motivic weight filtration corresponds to anything on the Jacobi side is the real question; the difference between the fractions of $\zeta(2)$ and $\zeta(3)$ in the remark above is the only data we have on it.

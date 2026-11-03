@@ -10,9 +10,9 @@ authors:
   given-names: Vadim
   orcid: https://orcid.org/0000-0002-6618-2965
   affiliation: Department of Systems Engineering and Operations Research, George Mason University
-version: 1.3.0
-doi: 10.5281/zenodo.23874307
-date-released: '2026-11-01'
+version: 1.4.0
+doi: 10.5281/zenodo.23904867
+date-released: '2026-11-02'
 license: CC-BY-4.0
 repository-code: https://github.com/VadimSokolov/langlands
 url: https://vsokolov.org/books/langlands/
@@ -33,7 +33,7 @@ keywords:
 abstract: 'This monograph asks what probability can contribute to the Langlands programme, and answers on two sides. The first is a limitation, proved in the opening chapter: no argument that sees only the limiting distribution of Frobenius data can detect automorphy, because equidistribution is a consequence of functoriality, not a route to it. The second is what probability does supply: consequences of the conjectures, calibration against data, and probabilistic reformulations.
 
 
-  The book covers Weyl''s criterion, the Sato Tate law, murmurations of root numbers, random matrix models of the zeros of L functions, Hecke operators as random walks on Bruhat Tits trees, and hitting times on supersingular isogeny graphs. At its centre is the Thorin framework: for a cuspidal automorphic representation of GL(n) over the rationals, the generalized Riemann hypothesis is equivalent to the statement that the reciprocal of an even completion of its L function is the Laplace transform of a generalized gamma convolution. Later chapters turn the same devices on reciprocity, Fermat''s last theorem, random integers and the Poisson Dirichlet law, Hecke characters, Maass forms, Calegari''s theorems on even representations and potential modularity, and the crossing probabilities of critical percolation, whose threshold law is, up to normalisation, the Mellin transform of the completed L function of an elliptic curve. These are reformulations: no new case of reciprocity and no Riemann hypothesis is proved.
+  The book covers Weyl''s criterion, the Sato Tate law, murmurations of root numbers, random matrix models of the zeros of L functions, Hecke operators as random walks on Bruhat Tits trees, and hitting times on supersingular isogeny graphs. At its centre is the Thorin framework: for a cuspidal automorphic representation of GL(n) over the rationals, the generalized Riemann hypothesis is equivalent to the statement that the reciprocal of an even completion of its L function is the Laplace transform of a generalized gamma convolution. Later chapters turn the same devices on reciprocity, Fermat''s last theorem, random integers and the Poisson Dirichlet law, Hecke characters, Maass forms, Calegari''s theorems on even representations, Apery''s fraction for zeta(3), and the crossing probabilities of critical percolation, whose threshold law is, up to normalisation, the Mellin transform of the completed L function of an elliptic curve. These are reformulations: no new case of reciprocity and no Riemann hypothesis is proved.
 
 
   Results new to the book include the limit of the normalised Kemeny constants of supersingular isogeny graphs, the Thorin criteria for the generalized Riemann hypothesis and for the Ramanujan conjecture, an extreme value representation of the L functions of multiplicative eta products, the Gamma process limit of the Frobenius labelled factorisation of a random integer, and a consistency theorem for the Bayesian identification of Sato Tate groups. Open computational problems close every chapter, and the scripts and data behind the numbers are in the repository.'
@@ -49,7 +49,7 @@ preferred-citation:
     orcid: https://orcid.org/0000-0002-6618-2965
     affiliation: Department of Systems Engineering and Operations Research, George Mason University
   year: 2026
-  doi: 10.5281/zenodo.23874307
+  doi: 10.5281/zenodo.23904867
   url: https://vsokolov.org/books/langlands/
   publisher:
     name: Independently published
